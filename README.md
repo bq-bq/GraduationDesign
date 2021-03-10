@@ -45,11 +45,11 @@
 
   - PC端服务器：
 
-    <img src="D:\用户\Desktop\graduationDesign3_8\GraduationDesign\BottleWeb\src\pc_test.png" alt="PC端服务器" style="zoom:40%;" />
+    <img src=".\src\pc_test.png" alt="PC端服务器" style="zoom:40%;" />
 
   - 移动端服务器
 
-    <img src="D:\用户\Desktop\graduationDesign3_8\GraduationDesign\BottleWeb\src\android_test.png" alt="Android端服务器" style="zoom:40%;" />
+    <img src=".\src\android_test.png" alt="Android端服务器" style="zoom:40%;" />
 
 #### 后期拟完成的研究工作
 
@@ -76,9 +76,9 @@
 - Android端：
 
   - 将static文件夹和views文件夹移动到QPython文件的根目录下，如下图：
-    	<img src="D:\用户\Desktop\graduationDesign3_8\GraduationDesign\BottleWeb\src\sample.png" style="zoom:40%;" />
+    	<img src=".\src\sample.png" style="zoom:40%;" />
 
   - 然后打开main.py文件，在QPython中进行运行，如下图：
 
-    <img src="D:\用户\Desktop\graduationDesign3_8\GraduationDesign\BottleWeb\src\run.png" style="zoom:40%;" />
+    <img src=".\src\run.png" style="zoom:40%;" />
 
