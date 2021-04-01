@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1596199317.8782027,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <sstream>\n#include <vector>\n#include <map> \n#include <algorithm>\nusing namespace std;\n",
+            "# 答案正确",
+            1594951200,
+            1596200400,
+            100,
+            1596199277.8381963
+        ]
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1591082335.72447,
+    "field_names": [
+        "page_id",
+        "show",
+        "ui_json"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "数据",
+            "登录后",
+            "{\"type\":\"VerticalFlowLayout\",\"children\":[{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"db_schema\",\"tag\":\"\",\"text\":\"\",\"init\":\"database_schema_svg\",\"files\":[\"db/database_schema_svg.js\"],\"data\":[\"data\"],\"vars\":[\"select\"],\"events\":[\"change_data\",\"delete\",\"change_select\"],\"class\":{},\"attr\":{\"editable\":[\"True\",\"False\"]},\"style\":{\"font_size\":[\"13\",\"11\",\"12\",\"10\",\"14\",\"15\",\"16\",\"17\",\"18\",\"19\",\"20\"],\"node_margin\":[\"20\",\"10\",\"40\"],\"text_margin\":[\"2\",\"1\",\"4\",\"8\"]}},\"init\":\"database_schema_svg\",\"files\":[\"db/database_schema_svg.js\"],\"data\":{\"data\":\"__schema__\",\"select\":\"$变量1\"},\"events\":{\"change_data\":\"@同步\",\"change_select\":\"@同步\"},\"attr\":{\"editable\":\"True\"},\"style\":{\"font_size\":\"13\",\"node_margin\":\"20\",\"text_margin\":\"2\"}}},{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"表格\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_table_py\",\"files\":[\"ui/ui_table.py\"],\"data\":[\"data\",\"selected\",\"text_data\"],\"ref\":[\"data\"],\"events\":[\"change_data\",\"change_selected\"],\"class\":{},\"attr\":{\"deletable\":[\"false\",\"true\"],\"editable\":[\"false\",\"true\"],\"insertable\":[\"false\",\"true\"],\"row_selectable\":[\"false\",\"true\"],\"selected_col\":[],\"text_data_col\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\"],\"text_data_init\":[]},\"style\":{\"margin\":[],\"width\":[]}},\"init\":\"ui_table_py\",\"files\":[\"ui/ui_table.py\"],\"data\":{},\"ref\":{\"data\":\"$变量1\"},\"events\":{\"change_data\":\"@同步\"},\"attr\":{\"deletable\":\"true\",\"editable\":\"true\",\"insertable\":\"true\",\"row_selectable\":\"false\",\"text_data_col\":\"0\"},\"style\":{\"margin\":\"10px 0px 0px 0px\"}}},{\"type\":\"UI_Placehoder\"}],\"config\":{\"__meta__\":{\"name\":\"纵向顺序布局\",\"tag\":\"#VerticalFlowLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{\"文本居中\":[\"\",\"text-center\"]},\"attr\":{},\"style\":{\"margin\":[],\"padding\":[],\"width\":[]}},\"tag\":\"#VerticalFlowLayout\",\"data\":{},\"events\":{},\"attr\":{},\"style\":{\"margin\":\"10px\"}}}"
+        ],
+        [
+            "登陆",
+            "登录前",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"登陆卡片\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_login_card_py\",\"files\":[\"ui/login_card.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{\"颜色\":[\"primary\",\"secondary\",\"success\",\"danger\",\"warning\",\"info\",\"light\",\"dark\"]},\"attr\":{\"卡片文字\":[],\"卡片题目\":[],\"按钮文字\":[]},\"style\":{\"margin\":[],\"width\":[]},\"from\":\"ui\"},\"init\":\"ui_login_card_py\",\"files\":[\"ui/login_card.py\"],\"data\":{},\"vars\":{},\"events\":{},\"class\":\"primary\",\"attr\":{\"卡片文字\":\"该网页需要登陆\",\"卡片题目\":\"请登陆\",\"按钮文字\":\"前往ME登陆\"},\"style\":{\"margin\":\"10px\",\"width\":\"160px\"}}}"
+        ]
+    ],
+    "table_name": "page"
+}

@@ -1,0 +1,760 @@
+{
+    "__update_time__": 1607852072.0818558,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "0.1 简介1",
+            "王震彬",
+            "#include <stdio.h>\n\nint main(){\n\tprintf(\"Hello world\\n\");\n}",
+            1602693159.6381686,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.2 简介2",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint x;\n   x=10;\n   printf(\"x is %d\", x);\n}",
+            1602646818.2808156,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.3 简介3",
+            "王震彬",
+            "#include <stdio.h>\n\nint main( ) {\n\tint size;\n\tscanf(\"%d\", &size);\n\tprintf(\"%d\\n\", size);\n}",
+            1602648198.972203,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.4 简介4",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tfloat x;\n   scanf(\"%f\", &x);\n\tprintf(\"%f\\n\", x);\n}",
+            1602648147.952149,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.5 简介5",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tdouble x;\n   scanf(\"%lf\",&x);\n\tprintf(\"%lf\", x);\n}",
+            1602648407.1744792,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.6 简介6",
+            "王震彬",
+            "#include <stdio.h>\n\ndouble sin(double x){\n\tdouble x3, f3;\n\tdouble x5, f5;\n\tdouble x7, f7;\n\tdouble res;\n\tx3 = x*x*x;\n\tx5 = x*x*x*x*x;\n\tx7 = x * x * x * x * x * x * x;\n\tf3 = 3 * 2 * 1;\n\tf5 = 5 * 4 * 3 * 2 * 1;\n\tf7 = 7 * 6 * 5 * 4 * 3 * 2 * 1;\n\tres = x - x3 / f3 + x5 / f5 - x7 / f7;\n\treturn res;\n}\n\nint main() {\n\tdouble x;\n\tdouble y;\n\tscanf(\"%lf\", &x);\n\ty = sin(x);\n\tprintf(\"%lf\\n\", y);\n}",
+            1602650850.1399598,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.7 简介7",
+            "王震彬",
+            "#include <stdio.h>\n\nint main( ) {\n\tfor (int i = 0; i <10; ++i) {\n\tprintf(\"hello, world\\n\");\n\t}\n}",
+            1602652070.5959651,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.8 简介8",
+            "王震彬",
+            "#include <stdio.h>\n\ndouble power(double x, int exp){\n     double result=1;\n     int i=0;\n     while (i<exp)   {\n\t     i=i+1;\n       result=result*x;\n     }\n     return result;\n  }\n\nint main() {\n\tdouble x;\n   scanf(\"%lf\", &x);\n\tprintf(\"%lf\\n\",power(x,3));\n\t\n}\n\n\t ",
+            1602655013.846658,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.9 简介9",
+            "王震彬",
+            "#include <stdio.h>\n\nint factorial(int n) {\n\tint result=1;\n\tfor (int i = 1; i <n+1 ; ++ i)  {\n\t\tresult=result*i;\n\t\t}\n\treturn result;\n}\n\nint main() {\n\tint n;\n\tscanf (\"%d\",&n);\n\tprintf (\"%d\\n\",factorial(n));\n\t\n}",
+            1602692318.0179422,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.10 简介10",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tchar c;\n\tfor (int i = 0; i < 10; ++ i) {\n\t\tc=getchar();\n\t\tputchar(c);\n\t}\n\t\n}",
+            1602692137.6892707,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.11 简介11",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint x;\n\tscanf(\"%d\",&x);\n\t\n\tif(x%2==0) {\n\t\tprintf(\"x is even\\n\");\n\t}\n\telse {\n\t\tprintf(\"x is odd\\n \");\n\t}\n\t\n\t\n\t\n\t\n}",
+            1602693005.737263,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.13 简介13",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint numbers[5];\n\tnumbers[1]=20;\n\tnumbers[2]=30;\n\tnumbers[3]=40;\n\tnumbers[4]=50;\n\tnumbers[0]=10;\n\tprintf(\"%d\\n\"  ,numbers[0]);\n\tprintf(\"%d %d\",numbers[3], numbers[4]);\n}",
+            1602693608.6779733,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.14 简介14",
+            "王震彬",
+            "#include <stdio.h>\nint main() {\n\t//declares 10 integers\n\tint numbers[5];\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tnumbers[i]=(i+1)*10;\n\t\t}\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tprintf(\"%d\\n\",numbers[i]);\n\t}\n\t\n}",
+            1602780008.748277,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.15 简介15",
+            "王震彬",
+            "#include <stdio.h>\n\nint main(){\n  int numbers[5];\n\tfor (int i = 0; i <5 ; ++ i) {\n\t\tscanf(\"%d\",&numbers[i]);\n\t}\n   for (int i = 0; i < 5; ++ i) {\n\t   printf(\"%d\\n\",numbers[i]);\n   }\n\t   \n\t\n}",
+            1602780470.4126656,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.16 简介16",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tfor (int i = 0; i <2 ; ++ i) {\n\t\tprintf(\"hello\\n\");\n\t}\n\t\n}",
+            1602780591.6501045,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.17 简介17",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tchar hello[6]=\"hello\";\n\tchar hello2[6]=\"hello\\n\";\n\tfor (int i = 0; i < 6; ++ i) \n\t\tputchar(hello2[i]);\n\t\n}",
+            1602782770.3460338,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.1 Hello world",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"hello, world\\n\");\n\t\n}",
+            1602829476.0619261,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.2 Hello world x3",
+            "王震彬",
+            "#include <stdio.h>\n\nint main(){\n\tfor (int i = 0; i <3 ; ++ i) {\n\t\tprintf(\"hello, world\\n\");\n\t}\n}",
+            1602829622.478373,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.19 简介19",
+            "王震彬",
+            "#include <stdio.h>\n\n\nvoid printTimes(){\n   int i;\n\t++i;\n\tprintf(\"visited %d times\\n\",i);\n}\nint main() {\n\tfor (int b= 0; b < 5; ++ b) {\n\tprintTimes();\t\n\t}\n}\n\t\n",
+            1602831525.5397809,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.20 简介20",
+            "王震彬",
+            "#include <stdio.h>\n\nint data=10;\n\nint main() {\n\tdata=20;\n\tif(data>0){\n\t\tint data=30;\n\t\tprintf(\"%d\\n\",data);\n\t}\n\tprintf(\"%d\\n\",data);\n}",
+            1602830575.9344637,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.1  Output 1",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"\\\\\\\\\\\"\\n\");    //it is good.\n   printf(\"\\\\n\");\n\t\n}",
+            1603456354.827041,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.3  Output 2",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"&#^-|!,@:=\\\\\\\\\\\\\\\\\\(`%%\\{>^_$%%+*\\'</?)} \\\\\\\"/.~\");\n  \n}\n",
+            1603470772.7981875,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.5  Variable",
+            "王震彬",
+            "#include <stdio.h>\nint year;\n\tdouble seconds;\n\tchar code;\n\nint main() {\n\t\n\tprintf(\"%ld\\n\", sizeof(year));\n\tprintf(\"%ld\\n\", sizeof(seconds));\n\tprintf(\"%ld\\n\", sizeof(code));\n}",
+            1603516718.6810377,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.7  Initialization",
+            "王震彬",
+            "#include <stdio.h>\nint year=1990;\n  double seconds=1234.56;\n  char code='C';\nint main() {\n   \n\tprintf(\"%d\\n\", year); \n\tprintf(\"%lf\\n\", seconds);\n\tprintf(\"%c\\n\", code);\n\n}",
+            1603516725.5180328,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.9  Float",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n   double real;\n\tint a;\n\tdouble b;\n\tscanf(\"%lf\", &real);\n\ta=(int)real;\n\tb=real-a;\n\t\n\tprintf(\"%d\\n\", a);\n\tprintf (\"%lf\\n\", b);\n}",
+            1603475392.4108238,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.11  Digits",
+            "王震彬",
+            "#include <stdio.h>\n\n\nint main() {\n\tint x;\n\tscanf(\"%d\", &x);\n\tint y = x % 2;\n  \n\tfor (int i = 0; i < 2 ; ++ i) {\n\tif (y == 1)\t{\n\t\tprintf(\"%d \", y);\n\t\tx=(x-1)/2 ;\n\t\ty=x%2;\n\t\t}\n\telse{\n\t\tprintf(\"%d \", y);\n\t\tx= x/2;\n\t\ty=x%2;\n\t}\n\t}\n\t\n\t \n }\n\n\n\n\t\t\n\n\t\n\t\t\n\t\n",
+            1603518220.879455,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.13 Equality",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint number1,number2;\n\tscanf(\"%d %d\", &number1,   &number2);\n\tnumber1==number2?printf(\"%d\",number1):printf(\"%d\",0);\n\t\n\t\n}",
+            1603616159.7931352,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.15 Characters",
+            "王震彬",
+            "#include <stdio.h>\n\n\nint main() {\n\tchar x ;\n\tscanf(\"%c\" , &x);\n\tint z = x;\n\tfor (int i = 0; i <3 ; ++ i) {\n\t\tchar y = z+i+1;\n\t\t\n\t\tprintf(\"%c\", y);\n\t}\n\t\n\t\n}\n",
+            1603605556.8692863,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.3 Circle Area",
+            "王震彬",
+            "#include <stdio.h>\n#define PI 3.14\n\nint main() {\n\tdouble R;\n\tscanf(\"%lf\" , &R);\n\tdouble S;\n\tS= PI*R*R;\n\tprintf(\"%lf\" , S);\n\t\n}",
+            1603605653.4627054,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.4 Rectangle Area",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tdouble x;\n\tscanf(\"%lf\" , &x);\n\tdouble y;\n\tscanf(\"%lf\" ,&y);\n\tdouble S;\n\tS=x*y;\n\tprintf(\"%lf\", S);\n\t\n}",
+            1603605866.7967024,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.5 Celsius to Fahrenheit",
+            "王震彬",
+            "\n#define celsiusToFahrenheit(celsius)   celsius*(9.000/5.00)+32;\n\n",
+            1603607659.9078827,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.6 Date and Time",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint seconds;\n\tscanf(\"%d\" ,&seconds);\n\tint days = seconds / 86400;\n\tint hours=(seconds-days*86400)/3600;\n\tint minutes=(seconds-days*86400-hours*3600)/60;\n\tseconds=seconds-days*86400-hours*3600-minutes*60;\n\tprintf(\"%dd %d:%d:%d \", days, hours ,minutes, seconds);\n\t\n\t\n\t\n}",
+            1603611675.5555544,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.7 Cylinder Volume",
+            "王震彬",
+            "#include<stdio.h>\n#define PI   3.14\nint main() {\n\tint r,S,h;\n\t\tscanf(\"%d %d\", &r ,&h);\n\tdouble V;\n\n\tS=PI *r * r;\n\tV= S * h;\n\tprintf(\"%lf\" , V);\n}",
+            1603612531.2032495,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.8 Feet to Meters",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tdouble feet,meters;\n\tscanf(\"%lf\", &feet);\n\tmeters=feet*0.305;\n\tprintf(\"%lf\", meters);\n}",
+            1603612757.2335665,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.9 Pounds into Kilograms",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tdouble pounds,kilos;\n\tscanf(\"%lf\" , &pounds);\n\tkilos=pounds * 0.454;\n\tprintf(\"%lf\" , kilos);\n\t\n}",
+            1603612999.2238393,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.10 Sum of Digits",
+            "王震彬",
+            "#include <stdio.h>\n   \nint main() {\n\tint x,y,z,w;\n   scanf(\"%d\" ,& x);\n\ty=x/100+x%100/10+x%100%10;\n   printf(\"%d\" , y);\n\n}",
+            1603613689.1896005,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.11 To Uppercase",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tchar x;\n\tscanf(\"%c\" , &x);\n\tint x1 = x+32;\n\tprintf(\"%c\", x1);\n\t\n}",
+            1603614246.2075224,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.1 Sum digits",
+            "王震彬",
+            "#include <stdio.h>\n\nint shuhe(int n){\n\tint sum=0;\n\tfor (int i = 0; i <7 ; ++ i) {\n\t\tint shu[i];\n\t\tshu[i]=n%10;\n\t\tsum+=shu[i];\n\t\tn=n/10;\n\t}\n\treturn sum;\n}\nint main() {\n\tint sum=0;\n\tfor (int i = 0; i <10 ; ++ i) {\n\t\tint number[i];\n\t\tscanf(\"%d\",&number[i]);\n\t}\n\tprintf(\"%d\\n\",shuhe(number[i]));\n}\n",
+            1604043274.445721,
+            18,
+            "In file included from main.c:1:0:\nsource.c: In function ‘main’:\nsource.c:19:22: error: ‘number’ undeclared (first use in this function)\n  printf(\"%d\\n\",shuhe(number[i]));\n                      ^~~~~~\nsource.c:19:22: note: each undeclared identifier is reported only once for each function it appears in\nsource.c:19:29: error: ‘i’ undeclared (first use in this function)\n  printf(\"%d\\n\",shuhe(number[i]));\n                             ^\n"
+        ],
+        [
+            "5.2 Reverse",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tfor (int i = 0; i < 10 ; ++ i) {\n\tint x,x1;\n\tint t,m,n;\n\tint sum = 0;\n\tscanf(\"%d\" , &x);\n\tx1=x;\n\tfor (int i = 1; x1> 0 ; ++ i) {\n          x1 = x1 / 10;\n\t\t  m=i;\n          }\n\tint q=m;\n\tfor (int p= 1; p < m +1  ; ++ p) {\n\t\tt = x % 10;\n\t\tx = x / 10;\n\t\t n=t;\n\tfor (int y = 0; y < q-1; ++ y) {\n\t\tn=n*10;\n\t\t\n      }\n      sum=sum+n;\n\t\tq=q-1;\n\t\t\t\t\t\t\t\t  }\n\t\t\n\tprintf(\"%d\\n\",sum);\n\t}\n}\n\n ",
+            1604139223.2527995,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.3 Pattern",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint x;\n\tscanf(\"%d\",&x);\n\tif (x == 1){printf (\"2\");}\n\telse {\n\t\tfor (int i = x ; i > 0 ; -- i) {\n\t\t  for (int j = x; j > 0 ; -- j) {\n\t\t\tint number = i * x + 1 ;\n\t\t\tif (i + j > x + 1 ) {\n\t\t\t\tprintf(\" \");\n\t\t\t}\n\t\t\telse{\n\t\t\t\tint y = number % x ;\n\t\t\t\tprintf(\"%d\",number) ;\n\t\t\t}\n\t\t}\n\t\t\n\t}\n} \n}",
+            1604139087.7592514,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n2\n\n\n# 参考答案:\n 1\n21\n\n\n# 我的答案:\n 533"
+        ],
+        [
+            "5.4 GCD",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tfor (int i = 0; i < 5  ; ++ i) {  \n\tint a , b ;\n\tscanf(\"%d %d\" , &a ,&b);\n\tint n ;\n\tif (a > b){\n\t\tn = b ;\n\t}\n\telse{\n\t\tn = a ;\n\t}\n\tfor (int i = n ; i > 0 ; -- i){   \n\tif ( a % i == 0 && b % i == 0 ){\n\t\tprintf (\"%d\\n\" , i);\n\t\tbreak;\n\t}\n\t}\n  }\n}",
+            1604145736.8912244,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.5 Characters",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tchar x = getchar();\n\tchar y = getchar();\n\tfor (int i = 0; i < 10 ; ++ i) {\n\tfor (int i = 0; i < 10 ; ++ i) {\n      printf(\"%c\",x);\n\t\tx += 1;\n\t\tif (x > y ) break;\n\t\t}\n\t   printf(\"\\n\");\n\t\tif (x > y ) break;\n\t}\n}",
+            1604166812.3010306,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.6 Prime",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n   int scan;\n\tscanf(\"%d\" , &scan);\n\t\n\tint m = 2;\n\tint p = 0 , x = 0;\n\tint y;\n\n\tfor (int i = 0; x < scan  ; ++ i) {\n\t  for (int n = m - 1 ; n > 1 ; -- n) {\n\t\tif ( m % n == 0) {\n\t\t\t++p;\n\t\t}\n\t   }\n\t\tif ( p == 0 ){\n\t\t\tprintf (\"%d \" , m);\n\t\t\t++x;\n\t\t\ty = 1;\n\t\t\t }\n\t\t++m;\n\t\tp = 0;\n\t  if ( x % 10 == 0 && y == 1){\n\t\t printf(\"\\n\");\n\t\t  y = 0 ;\n\t }\n  }\n}\n\t\n",
+            1604308689.953296,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.7 Pattern",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint x;\n\tscanf(\"%d\" , &x ) ;\n\t\n\tint m = x ;\n\tfor (int i = 0; i < m ; ++ i) {\n\t\tfor (int j = 0; j < x - 1 ; ++ j) {\n\t\tprintf(\"0\");\n\t\t}\n\t\tfor (int k = 0; k < m - x + 1 ; ++ k) {\n\t\tprintf(\"1\");\n\t\t}\n\t\t\tx = x - 1 ;\n\t   printf(\"\\n\");\n\t}\n\t\t\n\t\n\t\n}",
+            1604309608.9583218,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.8 Emirp",
+            "王震彬",
+            "#include<stdio.h>\n\nint checkprime(int x){\n int m;\n if(x>=2){\n for(m = x; m-->1 ; m){\n   if(x%m==0)\n    break;\n  }\n if(m==1)\n  return 1;\n else\n  return 0;\n }\n}\n\nint reverse(int input) {\n int output = 0, temp = 0;\n while (input > 0) {\n  temp = input % 10;\n  input /= 10;\n  output = temp + 10*output;\n }\n return output;\n}\n\nint prime (int n){\n int count = 0;\n int i,j;\n for (i = 2; i > 0; ++ i) {\n  for(j = i; j-->1 ; j){\n   if(i%j==0)\n    break;\n  }\n  if (j == 1&&checkprime(reverse(i))==1){\n   count++;\n   if(count%10!=0)\n    printf(\"%d \",i);\n   else\n    printf(\"%d\\n\",i);\n  } \n if (n==count)\n  return 0;\n }\n}\n\nint main(){\n int n;\n scanf(\"%d\",&n);\n prime(n);\n}\n\t\t\n\n\n\n\t\n",
+            1604404476.4997706,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.10 Flag",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint m , n ; // input the odd and the even\n\tscanf(\"%d  %d\", &m , &n );\n\tint m1 = ( m - 1 ) / 2 ; //m1 is the last of the star line number\n\tint n1 = n / 2 ;\n\tint ctc = 1;\n\tint ctl = 1;\n\tfor (int i = 0; i < m ; ++ i) {\n      for (int i = 0; i < n ; ++ i) {\n\t\t\n\t     if ( ctl <= m1){ \n\t\t     if( ctc <= n1 ){\n\t\t\t     if ( ctl % 2 ==1){\n\t\t\t       if( ctc % 2 == 1){\n\t\t\t\t     printf(\"*\");\n\t\t\t        }//end if ( ctc % 2 == 1)\n\t\t\t        else{\n\t\t\t\t     printf(\" \") ;\n\t\t\t        }\n\t\t\t     }//end if ( ctl % 2 == 1)\n\t\t      else{\n\t\t\t\t     if( ctc % 2 == 1){\n\t\t\t\t\t     printf(\" \");\n\t\t\t\t     }\n\t\t\t\t     else{\n\t\t\t\t\t     printf(\"*\");\n\t\t\t\t     }\n\t\t\t     }\n\t\t     }//end if ( ctc <= n1)\n\t\t     else{\n\t\t\t     if ( ctl % 2 == 1){\n\t\t\t\t     printf(\"=\");\n\t\t\t     }//\n\t\t\t     else{\n\t\t\t        \tprintf (\" \");\n\t\t\t     }\n\t\t     }\n\t     }//end if ( ctl <= m1 )\n\t     else{\n\t\t     if ( ctl % 2 == 0){\n\t\t\t     printf(\" \");\n\t\t     }\n\t\t     else{\n\t\t\t     printf(\"=\");\n\t\t     }\n\t     }//end main-else\n\t\t     ++ctc;\n\t       }//end even\n\tprintf(\"\\n\");\n\tctc = 1;\n   ++ctl;\n   }//end odd\n}",
+            1604391604.006273,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.9 Palindromic prime",
+            "王震彬",
+            "#include<stdio.h>\n\nint reverse(int input) {\n int output = 0, temp = 0;\n while (input > 0) {\n  temp = input % 10;\n  input /= 10;\n  output = temp + 10 * output;\n }\n return output;\n}\n\nint prime(int n) {\n int count = 0;\n int i, j;\n for (i = 2; i > 0; ++i) {\n  if (reverse(i) == i) {\n   for (j = i; j-- > 1; j) {\n    if (i % j == 0)\n     break;\n   }\n   if (j == 1) {\n    count++;\n    if (count % 10 != 0)\n     printf(\"%d \", i);\n    else\n     printf(\"%d\\n\", i);\n   }\n  }\n  if (n == count)\n   return 0;\n }\n}\n\nint main() {\n int n;\n scanf(\"%d\", &n);\n prime(n);\n}\n",
+            1604407357.6549199,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "4.16 Switch-statement",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n   for (int i = 0; i < 10 ; ++ i) {\n\tint x ; \n\tscanf(\"%d\" , &x );\n\tswitch(x){\n\t\tcase 1: \n\t\tcase 8:\n\t\tcase 21: \n\t\tcase 22:\n\t\t\t\tputchar('A') ;\n\t\t\t\tbreak;\n\t\tcase 6 :\n\t\tcase 13:\n\t\tcase 17:\n\t\tcase 25 :\n\t\t\t\tputchar('B') ;\n\t\t\t   break;\n\t\tcase 5 :\n\t\tcase 10: \n\t\tcase 18 :\n\t\tcase 26 :\n\t\t\t\tputchar('C') ;\n\t\t\t\tbreak ;\n\t\tcase 2 :\n\t\tcase 15 :\n\t\tcase 11 :\n\t\tcase 23 :\n\t\t\t   putchar('D') ;\n\t\t\t\tbreak ;\n\t\tcase 7 :\n\t\tcase 9 :\n\t\tcase 19 :\n\t\tcase 28: \n\t\tcase 30 :\n\t\t\t\tputchar('E') ;\n\t\t\t\tbreak;\n\t\tcase 3: \n\t\tcase 14 :\n\t\tcase 16 :\n\t\tcase 24 :\n\t\tcase 29:\n\t\t\t\tputchar('F') ;\n\t\t\t   break;\n\t\tcase 4 :\n\t\tcase 12 :\n\t\tcase 20 :\n\t\tcase 27 :\n\t\t\t   putchar('G');\n\t\t\t\tbreak;\n\t}\n\t}\n};",
+            1605245189.1277754,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-1",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n  int times;\n  scanf(\"%d\" , &times );\n\tfor (int i = 0; i < times ; ++ i) {\n\t\tint num1 ; \n\t\tlong double num2 ;\n\t\tscanf(\"%d\" , &num1  );\n\t\tscanf(\"%Lf\" , &num2 );\t\t\n\t\tprintf(\"%010d\\n\" , num1 );\n\t\tprintf(\"%.4Lf\\n\" , num2 ) ;\n\t\tprintf(\"%12.4Lf\\n\", num2) ;\n\t\t\n\t}\n\t\n}",
+            1605245904.6335907,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-2",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint n ;\n\tscanf(\"%d\" , &n );\n\t\n\tint c1 = 0 , c2 = 0 , c3 = 1 , temp3 , i = 1 ;\n\tdo{\n\t\ttemp3 = c3 ;\n\t\tc3 = temp3 + c2 ;\n\t\tc2 = c1 ;\n\t\tc1 = temp3 ;\n\t\t\n\t   i += 1 ;\n\t}while( i < n );\n   printf(\"%d\" , c1 + c2 + c3 )\t;\n}",
+            1605357192.505983,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-4",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tchar x , y ;\n\tscanf(\"%c %c\" , &x, &y ) ;\n\tint counter ;\n\tcounter = y - x + 1 ;\n\tfor (int i = 0; counter > 0 ; ++ i) {\n\t\tfor (int i = 0; i < 3 && counter > 0 ; ++ i) {\n\t\t\tprintf (\"%d\\t%c\\t\" , x ,x );\n\t\t\tx += 1;\n\t\t\t-- counter;\n\t\t}\n\t   printf(\"\\n\");\n\t}\n}",
+            1605319705.9179072,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.11",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint h ;\n\tscanf(\"%d\" , &h);\n\tint h1 = h , h2 = h / 2 , h3 = -2 ;\n\tfor (int j = 0; j < h / 2  ; ++ j){\n\t\th1 = h1 - 2 ;\n\t\tfor (int i = 0; i < j ; ++ i) {\n\t\t\tputchar('*');\n\t\t\t}\n\t\tputchar('\\\\');\n\t\tfor (int o = h1 ; o > 0  ; o -= 1) {  \n\t\t   putchar('+');\n\t\t\t }\n\t\tputchar('/');\n\t\tfor (int i = 0; i < j ; ++ i) {\n\t\t\tputchar('*');\n\t\t\t}\n\t\tputchar('\\n');\n\t\t}\n\t\n\tfor (int j = h / 2 - 1; j >= 0 ; -- j){\n\t\th1 = h1 - 2 ;\n\t\th2 = h2 - 1 ;\n\t\th3 = h3 + 1 ;\n\t\tfor (int i = h2 - 1 ; i >= 0 ; -- i) {\n\t\t\tputchar('*');\n\t\t\t}\n\t\tputchar('/');\n\t\tfor (int o = h3 ; o >= 0  ; o -= 1) {  \n\t\t   putchar('+');\n\t\t\tputchar('+');\n\t\t\t }\n\t\tputchar('\\\\');\n\t\tfor (int i = h2 - 1 ; i >= 0 ; -- i) {\n\t\t\tputchar('*');\n\t\t\t}\n\t\tputchar('\\n');\n\t\t}\n\t \n\t\n}",
+            1605251484.858584,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-7",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint x , y ;\n\tscanf(\"%d %d\", &x , &y );\n\tint yushu = 0;\n\tdo{\n\t   yushu = y % x ;\n\t\ty = y / x ;\n\t\tprintf(\"%d\" , yushu ) ;\n\t}while( y > 0 );\n\t\n\t\n}",
+            1605355965.3609633,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-3",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint x ;\n\tscanf(\"%d\" , &x);\n\tfor (int j = 0; j < x / 2 ; ++ j) {\n\t\tfor (int i = 0; i < x / 2 ; ++ i) {\n\t\tputchar('-');\n\t}\n\t\tfor (int i = 0; i < x / 2 ; ++ i) {\n\t   putchar('|');\n\t\t}\n\t\tfor (int i = 0; i < j ; ++ i) {\n\t\tputchar('/');\n\t\t}\n\t\tint j1 = j + 1;\n\t\tfor (int i = 0; i < x - j1 - j ; ++ i) {\n\t\tputchar('\\\\');\n\t\t}\n\t\tfor (int i = 0; i < j1 ; ++ i) {\n\t   printf(\"/\");\n\t\t}\n\t\tputchar('\\n');\n\t}\n\tfor (int j = x / 2 ; j > 0 ; -- j) {\n\t\tfor (int i = 0; i < x / 2 ; ++ i) {\n\t\tputchar('|');\n\t}\n\t\tfor (int i = 0; i < x / 2 ; ++ i) {\n\t   putchar('-');\n\t\t}\n\t\tint j1 = j ;\n\t\tfor (int i = j1 ; i > 0; -- i) {\n\t\tputchar('/');\n\t\t}\n\t\tfor (int i = 0; i < x - j1 - j + 1 ; ++ i) {\n\t\tputchar('\\\\');\n\t\t}\n\t\tfor (int i = 0; i < j1 - 1 ; ++ i) {\n\t   printf(\"/\");\n\t\t}\n\t\tputchar('\\n');\n\t}\n\t\t\t\n\t\n\t\n}",
+            1605319434.007736,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-5",
+            "王震彬",
+            "#include<stdio.h>\n\nint main (){\n int group = 0;\n scanf(\"%d\",&group);\n for (int i = 0; i < group; ++ i){\n  int amount = 0,temp = 0,c1=0,c2=0,csign = 0,sign = 1,min = 0;\n  scanf(\"%d\",&amount);\n  for (int j = 1; j <= amount; ++ j){\n   int num = 0;\n   scanf(\"%d\",&num);\n   if(temp!=num){\n    c1++;\n    temp=num;\n    sign = 1;\n   }else{\n    sign --;\n   }\n   if(sign==0){\n    c2++;\n   }\n   if(sign<csign){\n    csign=sign;\n    min = num;\n   }\n  }\n  printf(\"%d %d %d\\n\",c1,c2,min);\n } \n}",
+            1605711869.4689758,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n6\n13 1 1 3 3 3 5 6 6 6 6 7 7 7\n15 1 1 3 3 3 4 6 6 6 6 7 7 8 8 8\n5 1 1 2 7 9\n9 1 1 1 4 4 4 4 6 9\n9 1 3 3 6 7 7 7 8 9\n14 1 1 2 3 3 3 5 7 7 7 7 9 9 9\n\n\n# 参考答案:\n5 4 6\n6 5 6\n4 1 1\n4 2 4\n6 2 7\n6 4 7\n\n\n# 我的答案:\n5 4 6\n6 5 6\n4 1 0\n4 2 4\n6 2 7\n6 4 7\n"
+        ],
+        [
+            "2020-midterm-6",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"\\\\\\\"%%\\'\");\n\t\n}",
+            1605355387.7372785,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.3 Reverse",
+            "王震彬",
+            "int reverse(int x){\n\tint len = 0 , temp = 0 , bits = 0 , sum = 0 ;\n\tint x1 = x;\n\tfor (len = 0; x1 > 0 ; ++ len) {\n     x1 = x1 / 10 ;\n     temp = len ;\n\t}\n\tfor (int i = 0; i < len ; ++ i) {\n\tint bits = x % 10;\n\tfor (int j = 0; j < temp ; ++ j) {\n     bits = bits * 10;\n    }\n\t\ttemp = temp - 1;\n\t\tsum = sum + bits;\n\t\tx = x / 10;\n\t}\n\treturn sum ;\n}",
+            1605848620.985082,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.4 Largest",
+            "王震彬",
+            "int largest(int a, int b, int c){\n       if (b > a){\n           a = b;\n       }\n\t   if (c > a){\n           a = c;\n       }\n\treturn a;\n}",
+            1605848993.5612578,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.5 GCD",
+            "王震彬",
+            "int gcd ( int x,int y){\n\tint counter = 0;\n\tint x1;\n\tif ( x > y){\n        x1 = y;\n    }\n\telse {\n\t\tx1 = x; \n\t\t }\n\tfor (int i = x1 ; i > 0 ; -- i) { \n       if (x % i == 0 && y % i == 0 ){\n          counter = i;\n\t\t  break;\n        }\n  }\n   return counter;    \n}",
+            1605850361.0720727,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.6 LCM",
+            "王震彬",
+            "int lcm (int x , int y){\n    int a;\n\tif ( x > y ){\n       a = y;\n   }\n\telse {\n       a = x;\n   }\n\tint gcd;\n\tfor (int i = a; i > 0 ; -- i) {\n      if ( x % i == 0 && y % i == 0){\n              gcd = i ;\n\t\t      break;\n        }\n\t}\n\tint lcm = x * y / gcd;\n    return lcm;\n}",
+            1605850946.1322324,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.7 Is Prime",
+            "王震彬",
+            "int isPrime(int x){\n    int counter = 0;\n\tfor (int i = x - 1; i > 1 ; -- i) {\n           if (x % i == 0 ){\n                ++ counter;\n            }\n    }\n\tint rlt;\n\tif ( counter > 0 ) {\n          rlt = 0;\n     }\n\telse { rlt = 1 ;}\n\treturn rlt;\n}",
+            1605851524.8271198,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 1",
+            "王震彬",
+            "void print_pattern(int x){\n\tint temp = x - 2 ;\n\tfor (int i = -1; i < x / 2 ; ++ i) {\n\t  if (i == -1) {\n\t\t  putchar('Y');\n\t\t  for (int j = 0; j < x - 2 ; ++ j) {\n\t\t\tprintf(\"G\");}\n\t\t  putchar('Y');\n\t\t  putchar('\\n');\n\t\t  continue;\n\t  }\n\t\tfor (int j = 0; j < i + 1; ++ j) {\n\t\t\tprintf(\"B\");\n\t\t}\n\t\t\n\t\tprintf(\"Y\");\n\t\tfor (int j = 0; j < temp - 2 ; ++ j) {\n\t\t\tprintf(\"G\");\n\t\t}\n\t\ttemp -= 2 ;\n\t\tif ( i != (x - 2 ) / 2){\n\t\t\tprintf(\"Y\");\n\t\t}\n\t\tfor (int j = 0; j < i + 1; ++ j) {\n\t\t\tprintf(\"B\");\n\t\t}\n\t\tputchar('\\n');\n\t}\n\tint temp1 = 1;\n\tfor (int i = x / 2 ; i > 0 ; -- i) {\n\t\tfor (int j = 0; j < (i - 1) ; ++ j) {\n\t\t\tputchar('B');\n\t   }\n\t\tputchar('Y');\n\t\tfor (int j = 0; j < temp1 ; ++ j) {\n\t\t\tputchar('G');\n\t\t}\n\t\ttemp1 = temp1 + 2 ;\n\t\tputchar ('Y');\n\t\tfor (int j = 0; j < (i - 1) ; ++ j) {\n\t\t\tputchar('B');\n\t   }\n\t\t\n\t\tprintf(\"\\n\");\n\t\n\t}\n}",
+            1605856558.5232956,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.1 Lower Case",
+            "王震彬",
+            "char toLowercase(char cx){\n\tcx = cx + 32;\n\treturn (int)cx;\n}",
+            1605853671.4926205,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.2 Sum Digits",
+            "王震彬",
+            "int sumDigits(int x){\n\tint sum = 0;\n\tfor (int i = 0; x > 0 ; ++ i) {\n\t\t  int x1 = x % 10 ;\n\t\t     x = x / 10;\n\t\tsum = sum + x1;\n\t}\n\treturn sum ;\n}",
+            1605853989.0020635,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 2",
+            "王震彬",
+            "void print_pattern(int x, int y){\n\tint i = x / 9 ;\n\tint j = y - 5 * i ;\n\tfor (int l = 0; l < i ; ++ l) {\n\t   for (int k = 0; k < 2 * i ; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t   for (int k = 0; k < i ; ++ k) {\n\t\t   printf(\" \");\n\t   }\n\t   for (int k = 0; k < 2 * i; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t   for (int k = 0; k < j  ; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t\tputchar('\\n');\n\t}\n\tfor (int l = 0; l < i ; ++ l) {\n\t   for (int k = 0; k < 2 * i ; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t   for (int k = 0; k < i ; ++ k) {\n\t\t   printf(\" \");\n\t   }\n\t   for (int k = 0; k < 2 * i; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t\tputchar('\\n');\n\t}\n\tfor (int l = 0; l < i ; ++ l) {\n\t\tfor (int k = 0; k < y ; ++ k) {\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int k = 0; k < j ; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t\tputchar('\\n');\n\t}\n\n\tfor (int l = 0; l < i ; ++ l) {\n\t   for (int k = 0; k < 2 * i ; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t   for (int k = 0; k < i ; ++ k) {\n\t\t   printf(\" \");\n\t   }\n\t   for (int k = 0; k < 2 * i; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t\tputchar('\\n');\n\t}\n\tfor (int l = 0; l < i ; ++ l) {\n\t   for (int k = 0; k < 2 * i ; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t   for (int k = 0; k < i ; ++ k) {\n\t\t   printf(\" \");\n\t   }\n\t   for (int k = 0; k < 2 * i; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t   for (int k = 0; k < j  ; ++ k) {\n\t\t   printf(\"N\");\n\t   }\n\t\tputchar('\\n');\n\t}\n\tfor (int l = 0; l < i ; ++ l) {\n\t\tputchar('\\n');\n\t}\n\tfor (int l = 0; l < i ; ++ l) {\n\t\tfor (int k = 0; k < y ; ++ k) {\n\t\t\tprintf(\"N\");\n\t\t\t}\n\t\tputchar('\\n');\n\t}\n\tfor (int l = 0; l < i ; ++ l) {\n\t\tputchar('\\n');\n\t}\n\tfor (int l = 0; l < i ; ++ l) {\n\t\tfor (int k = 0; k < y ; ++ k) {\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tputchar('\\n');\n\t}\n\t\n\t\t\n}",
+            1605858757.0518317,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.10 Character pattern 3",
+            "王震彬",
+            "#include <stdio.h>\n\nint get_bits(int i,int lines){\n\tint x=0;\n\tfor (int j = 0; j < 32; ++ j){\n\t\tif((j-i)%((lines-1)*2)==0||(j+i)%((lines-1)*2)==0){x=x<<1;++x;}\n\t\telse{x=x<<1;}\n\t} \treturn x;\n}",
+            1606388715.3636749,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.5 Grades",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint  temp = 0 , highest = 0;\n\t\n\tint i ;\n\tint shuzu[100];\n\tfor ( i = 0; i < 100 ; ++ i) {\n\t\t scanf(\"%d\" , &shuzu[i] );\n\t    if( shuzu[i] > temp && shuzu[i] > highest){\n\t\t   highest = shuzu[i];\n\t     }\n\t    temp = shuzu[i] ;\n    }\n\tfor ( i = 0; i < 100 ; ++ i) {\n\t     if(shuzu[i] >= highest - 10) printf(\"A\");\n\t\t else if(shuzu[i] >= highest - 20 /*&& shuzu[i] < highest - 10*/) printf(\"B\");\n\t\t else if(shuzu[i] >= highest - 30 /*&& shuzu[i] < highest - 20*/) printf(\"C\");\n\t\t else if(shuzu[i] >= highest - 40 /*&& shuzu[i] < highest - 30*/) printf(\"D\");\n\t\t else printf(\"F\");\n   }\n\t\n\t\n}",
+            1605891890.8383439,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.6 Character functions",
+            "王震彬",
+            "int isDigit(char c){\n\tif (c > 48 && c < 58) return 1;\n\telse return 0;\n}\n\nint isLower(char c){\n\tif( c > 96 && c < 123) return 1 ;\n\telse return 0;\n}\n\nint isUpper(char c ){\n\tif( c > 64 && c < 91 ) return 1 ;\n\telse return 0 ;\n}\n\nint isAlphabit(char c ){\n\tif( c > 64 && c < 123 ) return 1 ;\n\telse return 0;\n}\n\nint isAlphabitOrNumber( char c ){\n\tif( isAlphabit(c) == 1 || isDigit(c) == 1 ) return 1 ;\n\telse return 0 ;\n}\n\nint isSpace(char c ){\n\tif( c == ' ' || c == '\\t' || c == '\\n' || c == '\\r' ) return 1;\n\telse return 0 ;\n}\n\nint isPrintable( char c ){\n\tif( c > 32 && c < 127 ) return 1 ;\n\telse return 0 ;\n}\n\nint isGraphical( char c ){\n\tif ( isSpace(c) != 1 ) return 1 ;\n\telse return 0 ;\n}\n\nint isPunctuation( char c ){\n\tif (isGraphical(c) == 1 && isAlphabitOrNumber(c) == 0) return 1;\n\telse return 0 ;\n}",
+            1606015498.8066244,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.10 Occurrences",
+            "王震彬",
+            "#include <string.h>\n\nvoid countDigits(const char digits[], int count[]){\n    for (int i = 0; i < 10 ; ++ i) {\n\t\tcount[i] = 0 ;\n\t}\n\tint stardard[11] = { 0,1,2,3,4,5,6,7,8,9};\n\tfor (int i = 0; i <10 ; ++ i) {\n\t\tfor (int j = 0; j < strlen(digits) ; ++ j) {\n\t\t\tif(stardard[i] == digits[j] - '0'){\n\t\t\t\t++count[i];\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            1606463765.7408748,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.1 Reverse",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint shuzu[11] = { 0 };\n\tfor (int i = 0; i < 10 ; ++ i) {\n\t\tscanf(\"%d\" , &shuzu[i]);\n\t}\n\tfor (int i = 10; i > 0  ; -- i) {\n\t\tprintf(\"%d \" , shuzu[i - 1 ]);\n\t}\n}\n",
+            1606461506.2874043,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 Max",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\tint shuzu[11] = { 0 };\n\tint max = 0;\n\tfor (int i = 0; i < 10 ; ++ i){\n\t\tscanf(\"%d\" , &shuzu[i]);\n\t\tif(shuzu[i] > max) max = shuzu[i];\n\t} \n\tprintf(\"%d\" , max);\n\t\n}",
+            1606461740.0725553,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.3 Count occurrences",
+            "王震彬",
+            "#include <stdio.h>\n#include<stdio.h>\n\nint number2[11];//11个需要统计的数字\n\nint repeat_number(const int number[]){//找到重复最多次的数字\t\n\tint repeattimes = 0;//重复最多次的数字重复次数\n\tint repeatnumber = 0;//重复最多的数字\n\tfor (int i = 0; i < 11; ++ i) {\n\t\tfor (int j = 0; j < 100; ++ j){\n\t\t\tif(number[j]==i) number2[i] += 1;\t\t\n\t\t}\n\t\tif(number2[i] > repeattimes)repeatnumber = i,repeattimes = number2[i];\n\t}\n\treturn repeatnumber;\n}\n\nint main (){\n\tint number[100];\n\tfor (int i = 0; i < 100; ++ i){\n\t\tscanf (\"%d\", &number[i]);\n\t}\n\tint a = repeat_number(number);\n\tprintf(\"%d %d \",a,number2[a] );\n}",
+            1606999944.9712405,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.18 Anagram",
+            "王震彬",
+            "#include <string.h>\n\nvoid sort( char s[]){\n\t \n}\n\nbool isAnagram(const char s1[], const char s2[]){\n     int counter = 0 ;\n     int conste = 0 ;\n\t  int length = strlen(s1) ;\n\t  char s3[100] = {0};\n     for (char i = '0'; i <= '9' ; ++ i) {\n         for (int j = 0; j <  strlen(s1) ; ++ j) {\n\t\t\t  if(s1[j] == i) {\n\t\t\t\t ++counter; \n\t\t\t  }\n\t\t }\n\t      for (int j = 0 ; j < counter ; ++ conste,++ j) {\n\t\t\t     s3[conste] = i ;\n          }\n\t\t  counter = 0;\n  }\n    for (int i = 0; i < conste ; ++ i) \n\t\ts3[i] = s3[i] ;\n     for (int i = conste ; i < 100 ; ++ i) \n       s3[i] = 0;\n\t int counter1 = 0;\n\t for (int i = 0; i < strlen(s3) ; ++ i) {\n\t\t char y = s3[i];\n\t\t char z = s2[i] ;\n\t\t if(y == z ) {\n\t\t\t ++counter1;\n\t\t }\n\t }\n\tif(counter1 == strlen(s1)) return 1;\n\telse return 0 ;\n}",
+            1606921619.608122,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.4 Count occurrences",
+            "王震彬",
+            "#include <stdio.h>\n\nint main() {\n\t  int a[1000] = {0};\n    int result[101] = {0};\n    for (int i = 0; i < 100; ++ i) {\n\t  scanf (\"%d\", &result[i]);\n\t}\n\n\t int n = 0 , i = 0;\n   for (int k = 0; k < 100 ; ++ k) {\n        int mark = 0;\n        for (int counter = 0; counter <= i - 1; counter++){\n            if (result[k] == a[counter]){\n                mark = 1;\n                break;\n            }\n        }\n        if (mark == 0){\n            a[i] = result[k];\n            i++; \n        }\n     }\n\n   \n  const int constnum = 10;\n\tint counter1[constnum];\n\tfor (int i = 0; i < 10 ; ++ i) {\n\t\t for (int j = 0; j < 100 ; ++ j) {\n\t\t\t if( a[i] == result[j] ) ++counter1[i];\n\t\t }\n\t }\n\t\tfor (int counter = 0; counter <= i - 1; counter++){\n        printf (\"%d %d\\n\", a[counter],counter1[counter] );\n    }\n  \n\n}\n    \n\t",
+            1606561028.2928298,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.7 Character array functions",
+            "王震彬",
+            "unsigned long strlen(const char text[]){\n\tint length = 0;\n\tfor (int i = 0; i < 100; ++ i) {\n\t\tif(text[i]==0)break;\n\t\t++length;\n\t}\n\treturn length;\n}\n\nchar * strcpy(char to[], const char from[]){\n\tfor (int i = 0; i < 100; ++ i) {\n\t\tto[i] = from[i];\n\t\tif (from[i]==0)break;\n\t}\n}\n\nchar * strcat(char to[], const char from[]){\n\tint len = strlen(to);\n\tstrcpy(&to[len],from);\n\t/*for (int i = 0; 1; ++ i) {\n\t\tif(to[i] != 0)continue;\n\t\tto[i] = from[i-len];\n\t\tif(from[i-len] == 0)break;\n\t}*/\n}\n\nint strcmp(const char s1[], const char s2[]){\n\tfor (int i = 0; 1; ++ i) {\n\t\tif(s1[i] > s2[i]) break;//return 1;\n\t\tif(s1[i] < s2[i]);// return -1;\n\t\tif(s1[i] == 0);//return 0;\n\t}\n\treturn -101;\n}\n\nint atoi(const char array[]){\n\t_Bool negative = (array[0] == '-');\n\tint value = 0;\n\tint i = (negative? 1 : 0);\n\tfor (; 1 ; ++ i){\n\t\tif(array[i] == 0)break;\n\t\tvalue = value * 10 + array[i] - '0';\n\t} \n\tvalue = (negative? -value : value);\n\treturn value;\n}\n\nint reverse(int number){\n\tint value = 0;\n\twhile (number != 0){\n\t     value = (number % 10) + 10*value;\n\t     number /= 10;\n\t}\n\treturn value;\n}\n\nvoid itoa(int value, char array[]){\n\tif(value < 0){\n\t\tint number = reverse(-value);\n\t\tarray[0] = '-';\n\t\tfor (int i = 1; 1 ; ++ i){\n\t\t\tarray[i] = number % 10 + '0';\n\t\t\tnumber /= 10;\n\t\t\tif(number == 0){\n\t\t\t  array[i+1] = 0;\n\t\t\t  return;\n\t\t\t}\n\t\t} \n\t}\n\telse{\n\t\tint number = reverse(number);\n\t\tfor (int i = 0; 1 ; ++ i){\n\t\t\tarray[i] = number % 10 + '0'+1;\n\t\t\tnumber /= 10;\n\t\t\tif(number == 0){\n\t\t\t  array[i+1] = 0;\n\t\t\t  return;\n\t      }\n      }\n\t}\n}\n\t\t\nvoid substring(char to[], const char text[], int start, int len){\n\tfor (int i = 0; i < len; ++ i){\n\t\tto[i] = text[i + start];\n\t} \n\tto[len] = 0; \n}\n\t\t\nvoid insert(char to[], int at, const char ins[]){\n\tint lenTo = strlen(to);\n\tint lenIns = strlen(ins);\n\tfor (int i = 0; i < lenTo - at; ++ i) {\n\t\tto[lenIns + lenTo - i- 1] = to[lenTo - 1 - i];\n\t}\n\tfor (int i = 0; i < lenIns; ++ i) {\n\t\tto[i + at] = ins[i];\n\t}\n\tto[lenIns + lenTo] = 0;\n}",
+            1607000122.6588118,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.8 Input",
+            "王震彬",
+            "#include<stdio.h>\n\nint readLine(int array[], int max){\n\tint i = 0 ;\n\tint c = 0 ;\n\tint counter = 0 ;\n\t\n\twhile( i < max )  {\n\t \tc = scanf(\"%d\" , &array[i]) ;\n\t\tif( c == 1 )  ++i ;\t\n    /* else if ( array[i] == 0 || array[i] == '\\n' )  {\n\t\tbreak ; \n\t }*/\n\t}\n    if ( i = max )  {\n\t\tprintf(\"%d\" , i);\n\t }\n\treturn i ;\n}",
+            1606751232.694306,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n     35     83     96     50     24     24     32     34     24     88     92     50     87     93      7\n      6     90      9     97     89     84     57     75     54     22     97     33\n\n\n# 参考答案:\n35 83 96 50 24 24 32 34 24 88 \n6 90 9 97 89 84 57 75 54 22 \n\n\n# 我的答案:\n1035 83 96 50 24 24 32 34 24 88 \n1092 50 87 93 7 6 90 9 97 89 \n"
+        ],
+        [
+            "7.9 Distinct numbers",
+            "王震彬",
+            "#include<stdio.h>\n\nint isRepeat(int array[], int length){\n\tfor (int i = 0; i < length; ++ i){\n\t\tif(array[i] == array[length])return 1;\n\t} \n\treturn 0;\n}\n\nvoid getLine(char array[], int length){\n\tfor (int i = 0; i < length; ++ i) {\n\t\tarray[i] = getchar();\n\t\tif(array[i] == '\\n'){\n\t\t\tarray[i] = 0;\n\t\t\treturn;\n\t\t}\n\t}\n}\n\nint readLineDistinct(int array[], int max){\n\tchar line[100];\n\tgetLine(line, 100);\n\tint j = 0;\n\tfor (int i = 0; i < max;){\n\t\tarray[i] = 0;\n\t\tfor (; 1; ){\n\t\t\t++ j;\n\t\t\tif(line[j] == ' ')break;\n\t\t\tif(line[j] == 0)return (isRepeat(array, i-1) == 1? i-1 : i);\n\t\t\tarray[i] = array[i]*10 + line[j]-'0';\n\t\t}\n\t\tif(line[j-1] != ' ')++i;\n\t\tif(isRepeat(array, i-1) == 1)--i;\n\t} \n\treturn max;\n}",
+            1607000376.1059954,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.13 Parse Hex",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n#define A 10\n#define B 11\n#define C 12\n#define D 13\n#define E 14\n#define F 15\n\nint parseHex(const char hexString[]){\n\tint x = strlen(hexString);\n\t/*for (int i = 0; 1 ; ++ i) {\n\tif( hexString[i] != 0 ) ++ x;\n\telse break;\n\t}*/\n\tint sum= 0  ;\n\tint temp1 = 0 ;\n\tfor (int i = 0; i < x ; ++ i) {\n        temp1 = hexString[i];\n\t\tif( temp1 >= 65 )  temp1 = temp1 - 55;\n\t\telse temp1 = temp1 - 48 ;\n\t\tfor (int j = 0; j < x - 1 - i ; ++ j)  {\n            temp1 *= 16 ;\n\t\t}\n\t\tsum += temp1 ;\n\t}\n\treturn sum;\n}\n",
+            1606825578.5177805,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.14 Parse Bin",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n\nint parseBin(const char line[]){\n\tint temp = 0 ;\n\tint sum = 0 ;\n\tint x = strlen(line);\n\tfor (int i = 0; i < strlen(line) ; ++ i) {\n    temp = line[i];\n\ttemp = temp - 48 ;\n\tfor (int j = 0; j < x - 1; ++ j) {\n           temp *= 2 ;\n\t}\n\tx -= 1 ;\n\tsum = sum + temp ;\n\t}\n\treturn sum;\n}",
+            1606826505.9552128,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.15 Dec to Hex",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n\nvoid decToHex(const char dec[], char hex[]){\n    for (int i = 0; i <100 ; ++ i) \n\t\thex[i] = 0;\n\tchar h = 0 ;\n\tint temp = 0 ;\n\tint length = strlen(dec);\n\tint length1 = length;\n\tint sum = 0 ;\n\tchar hex1[100] ;\n\tint counter = 0;\n\tfor (int i = 0; i < length ; ++ i) {\n\t\t temp = dec[i];\n\t\t temp = temp - '0';\n\t\tfor (int j = 0; j < length1 - i -1; ++ j) {\n\t\t\ttemp *= 10 ;\n\t\t}\n\t\tsum = sum + temp ;\n\t}//求出十进制数\n\tfor (int i = 0; sum > 0 ; ++ i,++counter) {\n\t   temp = sum % 16 ;\n\t   sum = sum / 16 ; \n\t\tif ( temp >= 0 && temp < 10 ) h = temp + '0' ;\n\t\telse if ( temp >= 10 && temp <= 15) h = temp + 'A'- 10 ;\n\t\thex1[i] = h ;\n\t\t\n\t}//求出逆序十六进制数\n\t \n\tfor (int i = 0; i < counter ; ++ i) {\n\t\t hex[i] = hex1[counter-1-i];\n\t}\n}",
+            1606906418.1804829,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.19 Common prefix",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n\nvoid commonPrefix(const char s1[], const char s2[], char prefix[]){\n   for (int i = 0; i < 100 ; ++ i) {\n         prefix[i] = 0 ;\n    }\n\tint lens1 = strlen(s1);\n   int lens2 = strlen(s2);\n   if( lens1 > lens2)  lens1 = lens2 ;\n   for (int i = 0; i < lens1 && s1[i] == s2[i] ; ++ i) {\n        prefix[i]  = s1[i] ;\n\t    \n  }\n      \n}\n\t",
+            1606901837.513367,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.16 Dec to Bin",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n\nvoid decToBin(const char dec[], char bin[]){\n    for (int i = 0; i < 100 ; ++ i) {\n        bin[i] = 0;\n   }\n\tint declen = strlen(dec);\n\tint sum = 0 ;\n\tchar yushu = 0 ;\n\tchar bin1[100] ;\n\tint counter = 0 ;\n\tfor (int i = 0; i < declen ; ++ i){\n    int temp = dec[i] - '0';\n\t\tfor (int j = 0; j < declen - i - 1 ; ++ j) {\n        temp = temp * 10;\n}\n     sum = sum + temp ;\n}//十进制数\n\tfor (int i = 0; sum > 0 ; ++ counter, ++ i) {\n       yushu = sum % 2 + '0';\n\t\tsum = sum / 2 ;\n\t   bin1[i] = yushu;\n}\n    \n\tfor (int i = 0; i < counter ; ++ i){\n\t\t/*int b = counter - i - 1;*/\n\t\tbin[i] = bin1[counter-1-i];\n\n} \n}",
+            1606905854.598919,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.17 Sort",
+            "王震彬",
+            "#include <string.h>\n\nvoid sort(char s[]){\n\t  int counter = 0 ;\n     int conste = 0 ;\n\t  int length = strlen(s) ;\n\t  char s1[100] = {0};\n     for (char i = '0'; i <= '9' ; ++ i) {\n         for (int j = 0; j <  strlen(s) ; ++ j) {\n\t\t\t  if(s[j] == i) {\n\t\t\t\t ++counter; \n\t\t\t  }\n\t\t }\n\t      for (int j = 0 ; j < counter ; ++ conste,++ j) {\n\t\t\t     s1[conste] = i ;\n          }\n\t\t  counter = 0;\n  }\n    for (int i = 0; i < conste ; ++ i) \n\t\ts[i] = s1[i] ;\n     for (int i = conste ; i < 100 ; ++ i) \n       s[i] = 0;\n}",
+            1606920533.061774,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.11 Count letters",
+            "王震彬",
+            "#include <string.h>\n\nint countLetters(const char s[]){\n\tint counter = 0 ;\n\tint mark = 0 ;\n\tint number = 0;\n\twhile(1){\n\tif (s[counter] == 0) break;\n\t/*for (int j = 0; j < counter ; ++ j) {\n\t\t\tif( s[j] == s[counter]){\n\t\t\t\t++mark;\n\t\t\t}\n\t\t}\n\t\tif( mark == 0 ){\n\t\t\t++number;\n\t\t}*/\n\t\tif( (s[counter] <= 'Z' && s[counter] >= 'A') || ( s[counter] <= 'z' && s[counter] >= 'a') ){\n\t\t\t++number;\n\t\t}\n\t\tmark = 0 ; \n\t  ++ counter;\n  }\n\treturn number;\n}",
+            1607066916.4492645,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.12 Count letters",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n\nvoid count(const char line[], int array[]){\n\n\tfor (int i = 0; i < 26; ++ i){\n\t\tarray[i] = 0;\n\t} \n\tchar s1[26] = {0};\n\tchar s2[26] = {0};\n\tfor (int i = 0; i < 26 ; ++ i) {\n\t\ts1[i] = 'A' + i;\n\t\ts2[i] = 'a' + i;\n\t}\n\t for (int j = 0; j < 26 ; ++ j) {\n\t\t for (int i = 0; 1 ; ++ i) {\n\t\tif( line[i] == '\\0') break;\n\t\tif( s1[j] == line[i] || s2[j] == line[i] ) {\n\t\t\t++array[j];\n\t   }\n\t }  \n  }\n}",
+            1607065824.6279142,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.20 get ints",
+            "王震彬",
+            "void get_ints( char  line[], char * ints[]){\n\tint counter = 0 ;\n\tfor (int i = 0; i < 100 ; ++ i) {\n\t\tif( line[i] == 0 ) break;\n\t\tif( line[i] == ' ') continue ;\n\t\tif( line[i] >= '0' && line[i] <= '9'){\n\n\t\t\t++counter;\n\t\t}\n\t}\n}",
+            1607174610.9546402,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n   zpx2492  fnxbts    ukqwxth55748  ttlpppoe    nmnuczdr \n\n# 参考答案:\n2492\n55748\n\n\n# 我的答案:\n"
+        ],
+        [
+            "7.21 get specific ints",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n\nint get_int(const char line[] , const char key[]){\n\tint i = 0 , counter = 0 ;\n\tchar ints[1000] = {0};\n\tint sum = 0 ;\n\tint p = 0;\n\tloop : for ( ;  ; ) {\n\t\tif( line[i] != key[counter]){\n\t\t   ++i;\n\t\t}\n\t\telse if( line[i] == key[counter]) {\n\t\t\tbreak;\n\t\t}\n\t}\n\twhile( line[i] == key[counter] ){\n      // if ( key[counter] == 0 ) break;\n\t\t// else {\n\t\t\t ++ i;\n\t\t\t ++ counter ;\n\t\t// }\n\t}\n\tif( counter  == strlen(key)){\n\t\tcounter = 0;\n\t\tfor (int j = 0 ; line[ i+1+j ] != ' '; ++ j) {\n\t\t\t ints[j] = line[ i+1+j ] - '0';\n\t\t\t++counter;\n\t\t\t\n\t\t}\n\t  \n\t\tfor (int k = 0; k < strlen(ints) ; ++ k) {\n\t\t  int temp = ints[k] ;\n\t\t  sum = sum * 10 + temp;\n\t\t}\n\t}\n   else goto loop;\n\treturn sum;\n}",
+            1607521727.3162591,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.22 Sort pointers",
+            "王震彬",
+            "int compare(char a[],char b[]){\n\tint i = 0;\n\twhile(a[i]==b[i]&&a[i]!=0&&b[i]!=0){\n\t\ti++;\n\t}\n\treturn (a[i]>b[i])?1:0;\n}\n\nvoid sort_words(char * words[],int num_words){\n\t\tfor (int i = 0; i < num_words-1; i++){\n\t\t\tfor (int j = num_words-1; j > 0; j--){\n\t\t\t\tif(compare(words[j-1],words[j])){\n\t\t\t\t\tchar* p =words[j-1];\n\t\t\t\t\twords[j-1]=words[j];\n\t\t\t\t\twords[j]=p;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n}",
+            1607602781.0467703,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.23 Matrix",
+            "王震彬",
+            "void fill2d( Matrix m,double val){\n\tfor (int i = 0; i < m.height; ++ i) {\n\t\tfor (int j = 0; j < m.width; ++ j) \n\t\t\tm.array2[i][j] = val;\n\t}\n}\n\nvoid print2d(Matrix m){\n\tfor (int i = 0; i < m.height ; ++ i) {\n\t\tfor (int j = 0; j < m.width; ++ j){\n\t\t\tprintf(\"%.2lf \",m.array2[i][j]);\n\t\t\t\n\t\t} \n\t\tputchar('\\n');\n\t}\n}",
+            1607531119.3552117,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.7 Insertion sort",
+            "王震彬",
+            "void insertionSort(int data[],int x){\n\tint i = 1 ;\n\t\n\twhile( i < x ){\n\t\tint j = i - 1 ;\n\t\tint insertnum = data[i];\n\t\tfor (  ; j >= 0 && data[j] > insertnum; -- j) {\n\t\t\t data[j + 1] =data[j];\n\t\t}\n\t\tdata[j + 1] = insertnum;\n\t\t++i;\n\t}\n}",
+            1607669698.284516,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.2 Subsequence",
+            "王震彬",
+            "#include <string.h>\n#include <stdio.h>\n\nint max( int a , int b){\n\treturn a > b ? a : b;\n}\n\nint LCS(char text1[] , char text2[] ){\n\tint i = strlen( text1 );\n\tint j = strlen( text2 );\n\tif ( i == 0 || j == 0 ){\n\t\treturn 0;\n\t}\n\tif( text1[0] == text2[0] ){\n\t\treturn LCS( &text1[1] , &text2[1] ) + 1;\n\t}\n\treturn max( LCS(&text1[1],text2) , LCS(text1 , &text2[1]));\n}",
+            1607844195.8904269,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.3 Subsequence 2",
+            "王震彬",
+            "#include <stdio.h>\n#include <string.h>\n\nint max_len(char a[] , char b[]){\n\treturn strlen(a) > strlen(b) ? 1 : 0 ;\n}\n\nstruct Result LCS( char test1[] , char test2[] ){\n\t int i = strlen( test1 );\n\t int j = strlen( test2 );\n\t\n\tif( test1[i] == test2[j] ){\n\t return test1[i] + LCS(&test1[i-1],&test2[j-1]);\n\t}\n\tif( i == 0 || j == 0 ){\n\t\treturn 0 ;\n\t}\n   if( test1[i] != test2[j] ) {\n\t  max_len( LCS(test1[i-1], test2[j]), LCS(test1[i], test2[j-1]) );\n   }\n}",
+            1607851798.5196977,
+            50,
+            "In file included from main.c:6:0:\nsource.c: In function ‘LCS’:\nsource.c:13:19: error: invalid operands to binary + (have ‘int’ and ‘struct Result’)\n   return test1[i] + LCS(&test1[i-1],&test2[j-1]);\n          ~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nsource.c:16:10: error: incompatible types when returning type ‘int’ but ‘struct Result’ was expected\n   return 0 ;\n          ^\nsource.c:19:17: warning: passing argument 1 of ‘LCS’ makes pointer from integer without a cast [-Wint-conversion]\n    max_len( LCS(test1[i-1], test2[j]), LCS(test1[i], test2[j-1]) );\n                 ^~~~~\nsource.c:8:15: note: expected ‘char *’ but argument is of type ‘char’\n struct Result LCS( char test1[] , char test2[] ){\n               ^~~\nsource.c:19:29: warning: passing argument 2 of ‘LCS’ makes pointer from integer without a cast [-Wint-conversion]\n    max_len( LCS(test1[i-1], test2[j]), LCS(test1[i], test2[j-1]) );\n                             ^~~~~\nsource.c:8:15: note: expected ‘char *’ but argument is of type ‘char’\n struct Result LCS( char test1[] , char test2[] ){\n               ^~~\nsource.c:19:44: warning: passing argument 1 of ‘LCS’ makes pointer from integer without a cast [-Wint-conversion]\n    max_len( LCS(test1[i-1], test2[j]), LCS(test1[i], test2[j-1]) );\n                                            ^~~~~\nsource.c:8:15: note: expected ‘char *’ but argument is of type ‘char’\n struct Result LCS( char test1[] , char test2[] ){\n               ^~~\nsource.c:19:54: warning: passing argument 2 of ‘LCS’ makes pointer from integer without a cast [-Wint-conversion]\n    max_len( LCS(test1[i-1], test2[j]), LCS(test1[i], test2[j-1]) );\n                                                      ^~~~~\nsource.c:8:15: note: expected ‘char *’ but argument is of type ‘char’\n struct Result LCS( char test1[] , char test2[] ){\n               ^~~\nsource.c:19:13: error: incompatible type for argument 1 of ‘max_len’\n    max_len( LCS(test1[i-1], test2[j]), LCS(test1[i], test2[j-1]) );\n             ^~~\nsource.c:4:5: note: expected ‘char *’ but argument is of type ‘struct Result’\n int max_len(char a[] , char b[]){\n     ^~~~~~~\nsource.c:19:40: error: incompatible type for argument 2 of ‘max_len’\n    max_len( LCS(test1[i-1], test2[j]), LCS(test1[i], test2[j-1]) );\n                                        ^~~\nsource.c:4:5: note: expected ‘char *’ but argument is of type ‘struct Result’\n int max_len(char a[] , char b[]){\n     ^~~~~~~\n"
+        ]
+    ],
+    "table_name": "答案"
+}

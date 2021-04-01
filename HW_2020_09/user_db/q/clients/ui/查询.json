@@ -1,0 +1,17 @@
+{
+    "__update_time__": 1587271967.527162,
+    "field_names": [
+        "名字",
+        "查询内容",
+        "config"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [],
+    "table_name": "查询"
+}

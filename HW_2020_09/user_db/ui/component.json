@@ -1,0 +1,78 @@
+{
+    "__update_time__": 1587992884.854414,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "UI_Source",
+            "{\"name\":\"UI_Source\",\"tag\":\"$UI_Source\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[\"data\"],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{\"for_layout\":[\"true\",\"false\"]},\"style\":{}}",
+            ""
+        ],
+        [
+            "UI_Editor",
+            "{\"name\":\"UI_Editor\",\"tag\":\"$UI_Editor\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[\"component\",\"config\"],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "config_edit_table",
+            "{\"name\":\"config_edit_table\",\"tag\":\"\",\"text\":\"\",\"init\":\"config_edit_table_obj_js\",\"files\":[\"ui/config_edit_table.js\"],\"data\":[\"data\"],\"vars\":[\"config\",\"page\"],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "page_config",
+            "{\"name\":\"page_config\",\"tag\":\"\",\"text\":\"\",\"init\":\"page_config_editor_obj_py\",\"files\":[\"ui/page_config_editor.py\"],\"data\":[],\"vars\":[\"component\"],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "UI_Trash",
+            "{\"name\":\"UI_Trash\",\"tag\":\"$UI_Trash\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "component_edit",
+            "{\"name\":\"component_edit\",\"tag\":\"\",\"text\":\"\",\"init\":\"component_edit_table_obj_js\",\"files\":[\"ui/component_edit_table.js\"],\"data\":[],\"vars\":[\"editing\"],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "设置编辑器",
+            "{\"name\":\"设置编辑器\",\"tag\":\"\",\"text\":\"\",\"init\":\"config_editor_obj\",\"files\":[\"ui/config_editor.py\"],\"data\":[],\"vars\":[\"item\"],\"events\":[],\"class\":{},\"attr\":{\"config_column\":[\"\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\"],\"config_names\":[],\"item_name\":[],\"key_column\":[\"\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\"],\"options\":[]},\"style\":{}}",
+            ""
+        ],
+        [
+            "登陆卡片",
+            "{\"name\":\"登陆卡片\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_login_card_py\",\"files\":[\"ui/login_card.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{\"颜色\":[\"primary\",\"secondary\",\"success\",\"danger\",\"warning\",\"info\",\"light\",\"dark\"]},\"attr\":{\"卡片文字\":[],\"卡片题目\":[],\"按钮文字\":[]},\"style\":{\"margin\":[],\"width\":[]}}",
+            ""
+        ],
+        [
+            "预览",
+            "{\"name\":\"预览\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_elt_preview_py\",\"files\":[\"ui/config_edit_table.js\",\"ui/ui_elt_preview.py\"],\"data\":[],\"vars\":[\"data\"],\"events\":[],\"class\":{},\"attr\":{\"data_column\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"]},\"style\":{\"margin\":[]}}",
+            ""
+        ],
+        [
+            "store_btn",
+            "{\"name\":\"store_btn\",\"tag\":\"\",\"text\":\"\",\"init\":\"elt_store_button_group\",\"files\":[\"elt/elt_store_button_group.py\"],\"data\":[],\"vars\":[],\"events\":[\"click_date\",\"click_price\",\"click_uses\"],\"class\":{},\"attr\":{},\"style\":{\"margin\":[]}}",
+            ""
+        ],
+        [
+            "store_pub",
+            "{\"name\":\"store_pub\",\"tag\":\"\",\"text\":\"\",\"init\":\"elt_store_pub_button\",\"files\":[\"elt/elt_store_pub_button.py\"],\"data\":[],\"vars\":[],\"events\":[\"publish_component\"],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "控件介绍框",
+            "{\"name\":\"控件介绍框\",\"tag\":\"\",\"text\":\"\",\"init\":\"elt_elt_description_py\",\"files\":[\"elt/elt_elt_description.py\"],\"data\":[],\"vars\":[\"data\"],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ]
+    ],
+    "table_name": "component"
+}

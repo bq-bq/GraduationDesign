@@ -1,0 +1,792 @@
+{
+    "__update_time__": 1608088320.786393,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "0.1 简介1",
+            "王若冰",
+            "#include<stdio.h>\n\nint main()\n{\n\tprintf(\"Hello world\\n\");\n\t\treturn 0;\n}",
+            1602345978.3602664,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.2 简介2",
+            "王若冰",
+            "#include<stdio.h>\n\nint main()\n{\n\tprintf(\"x is 10\" );\n\t\t   return 0;\n}",
+            1602437424.6399693,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.3 简介3",
+            "王若冰",
+            "#include <stdio.h>\nint main()\n{\n\tint number=123;\n\tscanf(\"%d\",&number);\n\tprintf(\"%d\",number);\n\treturn 0;\n}",
+            1602513664.7991178,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.4 简介4",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\n\tfloat a;\n\tscanf(\"%f\",&a);\n\tprintf(\"%.6f\",a);\n}",
+            1602513887.561385,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.5 简介5",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\n\tdouble a;\n\tscanf(\"%lf\",&a);\n\tprintf(\"%.6lf\",a);\n}",
+            1602514054.9850166,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.1 Hello world",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\n\tprintf(\"hello, world\\n\");\n\treturn 0;\n}",
+            1602829353.8775702,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.2 Hello world x3",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint i;\n  for(i=0;i<3;i++){\n\t  printf(\"hello, world\\n\");\n  }\n}",
+            1602829797.9465866,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.7 简介7",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tfor(int i=0;i<10;i++){\n\t\tprintf(\"hello, world\\n\");\n\t\t\n\t}\n\treturn 0;\n}",
+            1602893893.6667109,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.8 简介8",
+            "王若冰",
+            "double(power(double x,int y)){\n\tint result =1;\n\tfor(int i=0;i<y;i++){\n\t\t\n\t\tresult*=x;\n\t} \n}\n\n#include<stdio.h>\n \n\nint main(){\n\tdouble x;\n\tscanf(\"%lf\",&x);\n\tprintf(\"%lf\\n\",power(x,3));\n\treturn 0;\n}",
+            1602896061.6580637,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.9 简介9",
+            "王若冰",
+            "#include <stdio.h>\nint factorial(int n){\n    int result=1;\n    for(int i=0;i<n;i++){\n        result=result*(i+1);\n    }\n    return result;\n    \n}\n\n\nint main(){\n    int x;\n    scanf(\"%d\",&x);\n    printf(\"%d\",factorial(x));\n    return 0;\n}",
+            1602898440.5867074,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.10 简介10",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\nchar x;\n\tfor(int i=0;i<10;i=i+1){\n\t\tx=getchar();\n\t\tputchar(x);\n\t}\n    return 0;\n}",
+            1602905862.1948085,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.11 简介11",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\nint c;\nif (c%2==0)\n{\n\tprintf(\"x is odd\");}\n\t\n\t\t\n\t\n\t\n\treturn 0;\n}",
+            1602906209.929516,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.13 简介13",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\t\nprintf(\"10\\n40 50\");\n\t\n\t\n\treturn 0;\n}",
+            1602906650.8000052,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.14 简介14",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tprintf(\"10\\n20\\n30\\n40\\n50\\n\");\n\t\n\treturn 0;\n}",
+            1602906730.5384269,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.15 简介15",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint a,b,c,d,f;\n\tscanf(\"%d%d%d%d%d\",&a,&b,&c,&d,&f);\n\tprintf(\"%d\\n%d\\n%d\\n%d\\n%d\\n\",a,b,c,d,f);\n\t\n\treturn 0;\n}",
+            1602906884.235372,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.16 简介16",
+            "王若冰",
+            "#include<stdio.h>\nint main(){printf(\"hello\\nhello\");\n\t\n\treturn 0;\n}",
+            1602906947.983967,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.17 简介17",
+            "王若冰",
+            "#include<stdio.h>\nint main(){printf(\"hello\");\nreturn 0;\t\n}\n",
+            1602907001.2023048,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.19 简介19",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tfor(int i=0;i<5;i++){\n\t\t\n\t\tprintf(\"visited %d times\\n\",i+1);\n\t}\n\t\n\t\n\treturn 0;\n}",
+            1602907153.8592076,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.20 简介20",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tprintf(\"30\\n20\");\n\treturn 0;\n}",
+            1602907207.174539,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.6 简介6",
+            "王若冰",
+            "#include<stdio.h>\n\n\t\ndouble sin(double x) {\n\tint sign = -1;\n\tdouble r = x;\n\tdouble t = x;\n\tfor (int i = 0; i < 10; ++ i) {\n\t\t// t = power(x, i * 2 + 1) / factorial(i * 2 + 1) 会有精度损失引起的错误\n\t\tt = t * x * x / (i * 2 + 2) / (i * 2 + 3); \n\t\tif (t < 1e-8) break;\n\t\tr += sign * t;\n\t\tsign *= -1;\t\t\n\t}\n\treturn r;\n}\n\nint main() {\n\tdouble x;\n\tdouble y;\n\tscanf(\"%lf\", &x);\n\ty = sin(x);\n\tprintf(\"%lf\\n\", y);\n}\n\n",
+            1603196898.3135152,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.1  Output 1",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n    printf(\"\\\\\\\\\\\"\\n\");\n    printf(\"\\\\n\");\n    return 0;\n\n           }\n",
+            1603419195.3715708,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.3  Output 2",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\nprintf(\"&#^-|!,@:=\\\\\\\\\\\\\\\\(`%%{>^_$%%+*'</?)} \\\\\\\"/.~\");\nreturn 0;\n}",
+            1603421061.117144,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.5  Variable",
+            "王若冰",
+            "\n\t\nint year;\ndouble seconds;\nchar code;\n",
+            1603421721.4792867,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.7  Initialization",
+            "王若冰",
+            "int year=1990;\ndouble seconds=1234.56;\nchar code='C';",
+            1603421969.6793005,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.9  Float",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\ndouble a;\n\tscanf(\"%lf\",&a);\n\tint m=a;\n\tprintf(\"%d\\n\",m);\n\tdouble n=a-m;\n\tprintf(\"%lf\",n);\n\t\n\t\n\t\n\t\n\treturn 0;\n}",
+            1603423394.67953,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.11  Digits",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint number=0;\n\tscanf(\"%d\",&number);\n\tint a=number%2;\n\tprintf(\"%d \",a);\n\tint b=number/2%2;\n\tprintf(\"%d\",b);\n\t\n\t\n\t\n    \n\t\n\nreturn 0;\n}",
+            1603430574.342459,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.13 Equality",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint number1=0;\nint number2=0;\nscanf(\"%d%d\",&number1,&number2);\nint eq=number1==number2;\nprintf(\"%d\",eq*=number1);\nreturn 0;\n}",
+            1603431253.3343163,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.15 Characters",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tchar c;\n\tc=getchar();\n\tprintf(\"%c%c%c\",c+1,c+2,c+3);\n\t\n\t\n\t\n\treturn 0;\n}",
+            1603431643.6226063,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.3 Circle Area",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tdouble r;\n\tscanf(\"%lf\",&r);\n\tdouble s;\n\tdouble PI=3.14;\n\t\n\tprintf(\"%lf\",PI*r*r);\n\t\n\t\n\t\n\treturn 0;\n}",
+            1603432152.4731529,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.4 Rectangle Area",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tdouble width,height;\n\tscanf(\"%lf%lf\",&width,&height);\n\tdouble area;\n\tarea=width*height;\n\tprintf(\"%lf\",area);\n\t\n\t\n\t\n\treturn 0;\n}",
+            1603470348.321111,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.5 Celsius to Fahrenheit",
+            "王若冰",
+            "\ndouble  celsiusToFahrenheit(double celsius){\ndouble fahrenheit;\n\tfahrenheit= (9.0/5)*celsius+32;\n\t\n\t\n\treturn fahrenheit;\n}",
+            1603812385.2767954,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.6 Date and Time",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\t\nint time;\nscanf(\"%d\",&time);\nint day=time/(24*3600);\nint hour=time%(24*3600)/3600;\nint minute=time%(24*3600)%3600/60;\nint second=time%(24*3600)%3600%60;\nprintf(\"%dd %d:%d:%d\",day,hour,minute,second);\nreturn 0;\n}",
+            1603472107.594598,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.8 Feet to Meters",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tdouble feet;\n\tscanf(\"%lf\",&feet);\n\tdouble meter=0.305*feet;\n\tprintf(\"%lf\",meter);\n\t\n\t\n\t\n\treturn 0;\n}",
+            1603474365.41989,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.9 Pounds into Kilograms",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tdouble pound;\n\tscanf(\"%lf\",&pound);\n\tdouble kilogram=pound*0.454;\n\tprintf(\"%lf\",kilogram);\n\t\n\t\n\treturn 0;\n}",
+            1603474608.345567,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.10 Sum of Digits",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint number;\n\tscanf(\"%d\",&number);\n\tint a=number%10;\n\tnumber/=10;\n\tint b=number%10;\n\tnumber=number/10;\n\tint c=number;\n\tint sum=a+b+c;\n\tprintf(\"%d\",sum);\n\t\n\t\n\t\n\t\n\t\n\treturn 0;\n}",
+            1603475059.684883,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.11 To Uppercase",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tchar m;\n\tm=getchar();\n\tchar n;\n\tint offset='a'-'A';\n\tn=m+offset;\n\tputchar(n);\n\t\n\t\n\t\n\treturn 0;\n}",
+            1603475422.8896227,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.7 Cylinder Volume",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tdouble radius,height;\n\tscanf(\"%lf%lf\",&radius,&height);\n\tdouble bottomarea;\n\tbottomarea=radius*radius*3.14;\n\tdouble volume=0;\n\tvolume=bottomarea*height;\n\tprintf(\"%lf\",volume);\n\treturn 0;\n}",
+            1603760211.4598439,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.2 Reverse",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint number;\n\tfor(int i=1;i<=10;i++){\n\tscanf(\"%d\",&number);\n\t\tint s=0;\n\tdo{\n\t\tint a;\n\t\ta=number%10;\n\t\ts=10*s+a;\n\t\tnumber/=10;\n\t\t}while(number>0);\n\tprintf(\"%d\",s);\n\t\tprintf(\"\\n\");\n\t}\n\t\n\treturn 0;\n\n}",
+            1604033478.3953917,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.3 Pattern",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint i,j,k;\n\tint n;\n\tscanf(\"%d\",&n);\n\tfor(i=1;i<=n;i++){\n\t\tfor(j=1;j<=n;j++){\n\t\t if(j>=1&&j<=n-i){\n\t\t\t printf(\" \");\n\t\t }else{\n\t\t\t printf(\"%d\",n+1-j);\n\t\t }\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\treturn 0;\n}",
+            1604034075.2253947,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.4 GCD",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint x,y,p;\n    int min;\n\tfor(int j=0;j<5;j++){\n\t\tp=1;\n\tscanf(\"%d%d\",&x,&y);\n\tmin=(x<y)?x:y;\n\tfor(int i=2;i<min;i++){\n\t\t\n\tif(x%i==0&&y%i==0){\n\t\t\n\t\t p=i;\n\t}\n\t\n\t}\n\tprintf(\"%d\",p);\n\t\tprintf(\"\\n\");\n\t\t\n\t}\n\t\n}",
+            1604035109.7713425,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.5 Characters",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tchar a,b,cnt=0;\n\ta=getchar();\n\tb=getchar();\n\tfor(int i=a;i<=b;i++){\n\t\tprintf(\"%c\",i);\n\t\tcnt++;\n\t\tif(cnt%10==0){\n\t\t\tprintf(\"\\n\");\n\t\t}\n\t}\n\t\n\t\n\treturn 0;\n}",
+            1604035462.6333563,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.6 Prime",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n    int n=0,isprime=1,cnt=0;\n    scanf(\"%d\",&n);\n    for(int m=2;cnt<n;m++){\n        isprime=1;\n            for(int j=2;j<m;j++){\n               \n             if(m%j==0){\n                isprime=0;\n                break;\n                \n            }\n        }\n    if(isprime==1){\n        printf(\"%d \",m);\n        cnt++;\n    if(cnt%10==0){\n    printf(\"\\n\");}\n        }\n       \n        }\n    return 0;\n}",
+            1604037350.8083677,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.7 Pattern",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tint i,j,n;\n\tscanf(\"%d\",&n);\n\tfor(i=1;i<=n;i++){\n\t\tfor(j=1;j<=n;j++){\n\t\t\tif(j<=n-i){\n\t\t\t\tprintf(\"0\");\n\t\t\t}else{\n\t\t\t\tprintf(\"1\");\n\t\t\t}\n\t\t}\n\t\t\n\t\tprintf(\"\\n\");\n\t}\n\t\n\t\n\t\n\treturn 0;\n}",
+            1604038661.36344,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.8 Emirp",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n    int number=0,cnt=0,p,x,isprime=1,isprime2=1;\n    scanf(\"%d\",&number);\n    \n    for(int t=2;cnt<number;t++){\n        x=t;\n        p=0;\n        while(x>0){int a=x%10;\n         \n        p=p*10+a;\n         x/=10;}\n        \n        for(int k=2;k<p;k++){\n        isprime=1;\n        if(p%k==0)\n        {isprime=0;\n            break;}\n        }\n        \n        for(int u=2;u<t;u++){\n        isprime2=1;\n        if(t%u==0)\n        {isprime2=0;\n            break;}\n        }\n        \n    if(isprime==1&&isprime2==1){\n        cnt++;\n    printf(\"%d \",t);\n        if(cnt%10==0){\n            printf(\"\\n\");\n        }\n        \n    }\n               }\n    return 0;\n}\n",
+            1604044331.319637,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.1 Sum digits",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n\tfor(int i=1;i<=10;i++){\n\t\tint number=0;\n\t\tscanf(\"%d\",&number);\n\t\tint sum=0;\n\t\twhile(number>0){\n\t\t\tint a=number%10;\n\t\t\tsum+=a;\n\t\t\tnumber/=10;\n\t\t}\n\t\tprintf(\"%d\",sum);\n\t\tprintf(\"\\n\");\n\t\t\n\t}\n\t\n\treturn 0;\n}\n",
+            1604039553.6647356,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.9 Palindromic prime",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n    int number=0,cnt=0,p,x,isprime=1;\n    scanf(\"%d\",&number);\n    \n    for(int t=2;cnt<number;t++){\n        x=t; isprime=1;\n        p=0;\n        while(x>0){\n\t\tint a=x%10;\n         \n        p=p*10+a;\n         x/=10;}\n      if(p==t){\n\t\tfor(int k=2;k<p;k++){\n       \n        if(p%k==0)\n        {isprime=0;\n            break;}\n        }\n        \n        \n    if(isprime==1){\n        cnt++;\n    printf(\"%d \",t);\n        if(cnt%10==0){\n            printf(\"\\n\");\n        }\n        \n    }\n\t  }\n               }\n    return 0;\n}\n",
+            1604072582.361376,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.10 Flag",
+            "王若冰",
+            "#include<stdio.h>\nint main(){\n    int i,j,k,m,p,n,t,a;\n    scanf(\"%d%d\",&m,&n);\n    if((n/2)%2!=0){\n        for(i=1;i<=(m-1)/2;i++){\n            if(i%2!=0){\n                for(j=1;j<=n/4;j++){\n                    printf(\"* \");\n                }printf(\"*\");\n                for(k=1;k<=n/2;k++){\n                    printf(\"=\");\n                }\n            }\n            else{for(p=1;p<=n/4;p++)\n                {printf(\" *\");}\n                }\n        \n        printf(\"\\n\");}\n        for(t=1;t<=(m+1)/2;t++){\n            if(t%2!=0){\n                printf(\"\\n\");\n                continue;\n            }else{for(a=1;a<=n;a++){\n                printf(\"=\");\n            }\n                \n                printf(\"\\n\");\n                \n            }\n            \n        }\n\t}\nelse\n {for(i=1;i<=(m-1)/2;i++){\n            if(i%2!=0){\n                for(j=1;j<=n/4;j++){\n                    printf(\"* \");\n                }\n                for(k=1;k<=n/2;k++){\n                    printf(\"=\");\n                }\n            }\n            else{for(p=1;p<=n/4;p++){\n                  printf(\" *\");\n            }\n                }\n\t \n\t\n\t printf(\"\\n\");\n    }\n \n         \n     for(t=1;t<=(m+1)/2;t++){\n            if(t%2==0){\n                for(int s=1;s<=n;s++){\n\t\t\t\t\tprintf(\" \");\n\t\t\t\t}\n              \n            }else{for(a=1;a<=n;a++){\n                printf(\"=\");\n            }\n            }\n                printf(\"\\n\");\n                \n     }\n \n      \n                }\n    return 0;\n    }\n",
+            1604163201.184122,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-1",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{int n,a;\n double b;\n scanf(\"%d\",&n);\n for(int i=1;i<=n;i++)\n {scanf(\"%d %lf\",&a,&b);\n  printf(\"%.10d\\n\",a);\n  printf(\"%.4lf\\n\",b);\n  printf(\"%12.4lf\\n\",b);\n\t \n\t \n }\n\t\n\t\n\t\n\t\n\treturn 0;\n}",
+            1604679431.7712119,
+            100,
+            "In file included from main.c:1:0:\nsource.c: In function ‘main’:\nsource.c:7:9: error: expected expression before ‘int’\n         int a = 0;\n         ^~~\nsource.c:8:22: error: ‘a’ undeclared (first use in this function)\n         scanf(\"%d\", &a);\n                      ^\nsource.c:8:22: note: each undeclared identifier is reported only once for each function it appears in\nsource.c: At top level:\nsource.c:15:5: error: expected identifier or ‘(’ before ‘return’\n     return 0;\n     ^~~~~~\nsource.c:16:1: error: expected identifier or ‘(’ before ‘}’ token\n }\n ^\n"
+        ],
+        [
+            "2020-midterm-4",
+            "王若冰",
+            "\n#include<stdio.h>\nint main()\n{ char a,b;\n int count=0;\nscanf(\"%c %c\",&a,&b);\n for(int i=a;i<=b;i++)\n {    count++;\n     printf(\"%d\\t\",i);\n     printf(\"%c\\t\",i);\n         if(count%3==0)\n             printf(\"\\n\");\n }\n    \n    \n    return 0;\n}\n",
+            1605088220.36035,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-2",
+            "王若冰",
+            "#include<stdio.h>\n\nint f(int n)\n{\n    if(n<=3)\n            return n;\n        else\n           return f(n-1)+f(n-3);\n    \n    \n}\n    int main()\n{int n,f(int n);\n scanf(\"%d\",&n);\n printf(\"%d\",f(n));\n    \n    \n    \n    return 0;\n}\n",
+            1605066381.4986079,
+            100,
+            "Killed\n"
+        ],
+        [
+            "2020-midterm-3",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\n\tint n,i,j,k,m,p,t;\n\tscanf(\"%d\",&n);\n\tfor(i=0;i<n/2;i++)\n\t{\n\t\tfor(j=0;j<n/2;j++)\n\t\t{\n\t\t\tprintf(\"-\");\n\t\t}\n\t\tfor(k=0;k<n/2;k++)\n\t\t{\n\t\t\tprintf(\"|\");\n\t\t}\n\t\tfor(m=0;m<i;m++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\tfor(p=0;p<n-1-2*i;p++)\n\t\t{\n\t\t\tprintf(\"\\\\\");\n\t\t}\n\t\tfor(t=0;t<i+1;t++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\t   printf(\"\\n\");\n\t}\n\t\n\tfor(i=0;i<n/2;i++)\n\t{\n\t\tfor(j=0;j<n/2;j++)\n\t\t{\n\t\t\tprintf(\"|\");\n\t\t}\n\t\tfor(k=0;k<n/2;k++)\n\t\t{\n\t\t\tprintf(\"-\");\n\t\t}\n\t\tfor(m=0;m<n/2-i;m++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\tfor(p=0;p<2*i+1;p++)\n\t\t{\n\t\t\tprintf(\"\\\\\");\n\t\t}\n\t\tfor(t=0;t<n/2-1-i;t++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tprintf(\"\\n\");\n\t}\n\t\n\t\n\treturn 0;\n}",
+            1605087736.1472352,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-6",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\n\tprintf(\"\\\\\\\"%%'\");\n}",
+            1605088323.203784,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.11",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{ int n,i,j,k,p;\n scanf(\"%d\",&n);\n for(i=1;i<=n/2;i++)\n {for(j=1;j<i;j++)\n {\n\t printf(\"*\");\n\t }\n  printf(\"\\\\\");\n  for(k=1;k<=n-2*i;k++)\n  {\n\t  printf(\"+\");\n  }\n  printf(\"/\");\n  for(p=1;p<i;p++)\n  {\n\t  printf(\"*\");\n  }\n  printf(\"\\n\");\n }\nfor(i=1;i<=n/2;i++)\n {for(j=1;j<=n/2-i;j++)\n {\n\t printf(\"*\");\n\t }\n  printf(\"/\");\n  for(k=1;k<=2*i-2;k++)\n  {\n\t  printf(\"+\");\n  }\n  printf(\"\\\\\");\n  for(p=1;p<=n/2-i;p++)\n  {\n\t  printf(\"*\");\n  }\n  printf(\"\\n\");\n }\n\t\n\t\n\t\n\treturn 0;\n}",
+            1605249629.5195818,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-7",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\tint n,x,m;\n scanf(\"%d %d\",&n,&x);\n while(x>0)\n {m=x%n;\n  printf(\"%d\",m);\n  x/=n;\n  \n\t \n }\n \n\t\n\t\n\treturn 0;\n}",
+            1605254896.1824813,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "4.16 Switch-statement",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{int x;\n\t\n\t\n\tfor(int i=1;i<=10;i++)\n{\n\tscanf(\"%d\",&x);\n\t\tswitch(x)\n\t\t{\n\t\t\tcase 1:\n\t\t\tcase 8:\n\t\t\tcase 21:\n\t\t\tcase 22:\n\t\t\tprintf(\"A\");\n\t\t\t\tbreak;\n\t\t\t\tcase 6:\n\t\t\t\tcase 13:\n\t\t\t\tcase 17:\n\t\t\t\tcase 25:\n\t\t\t\tprintf(\"B\");\n\t\t\t\tbreak;\n\t\t\t\tcase 5:\n\t\t\t\tcase 10:\n\t\t\t\tcase 18:\n\t\t\t\tcase 26:\n\t\t\tprintf(\"C\");\n\t\t\t\tbreak;\n\t\t\t\t\n\t\t\t\tcase 2:\n\t\t\t\tcase 11:\n\t\t\t\tcase 15:\n\t\t\t\tcase 23:\n\t\t\t\tprintf(\"D\");\n\t\t\t\tbreak;\n\t\t\t\tcase 7:\n\t\t\t\tcase 9:\n\t\t\t\tcase 19:case 28:\n\t\t\t\tcase 30:\n\t\t\t\tprintf(\"E\");\n\t\t\t\tbreak;\n\t\t\tcase 3:\n\t\t\tcase 14:\n\t\t\tcase 16:\n\t\t\tcase 24:\n\t\t\tcase 29:printf(\"F\");break;\n\t\t\t\tcase 4:\n\t\t\t\tcase 12:\n\t\t\t\tcase 20:\n\t\t\t\tcase 27:printf(\"G\");break;\n\t\t}\n}\n\t\n\t\n\t\n\treturn 0;\n}",
+            1605259751.3900766,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-5",
+            "王若冰",
+            "#include<stdio.h>\n\nint main()\n\n{\n\n    //freopen(\"in5.txt\",\"r\",stdin);\n\n    int tis[10005];\n\n    int m,n;\n\n    scanf(\"%d\",&m);\n\n    for(int z=0;z<m;z++)\n\n    {\n\n    //  printf(\"%d\\n\",z);\n\n        int res1=0,res2=0,res3=0,now,before;\n\n        scanf(\"%d\",&n); \n\n        for(int i=0;i<n;i++)\n\n        {   \n\n            scanf(\"%d\",&now);\n\n            if(now==before&&i!=0)\n\n            {\n\n                if(tis[now]==0)\n\n                    tis[now]=1;\n\n                tis[now]++;\n\n            }\n\n            else if(i==n-1)\n\n            {\n\n                res3=i+1;\n\n                res1++;\n\n            }\n\n            else\n\n                res1++;\n\n            before=now;\n\n        }\n\n        int mtimes=0;\n\n        for(int i=0;i<n;i++)\n\n        {\n\n            \n\n            if(tis[i]!=0)\n\n            {\n\n                res2++;\n\n                if(mtimes<=tis[i])\n\n                {\n\n                    //printf(\"mts=%d   tis[%d]=%d\\n\",mtimes,i,tis[i]);\n\n                    res3=i;\n\n                    mtimes=tis[i];\n\n                }\n\n            }\n\n            tis[i]=0;\n\n        }\n\n        printf(\"%d %d %d\\n\",res1,res2,res3);\n\n    }\n\n    return 0;\n\n}\n\t \n\t \n\t \n\t \n\t \n\t \n\t \n ",
+            1605581741.250202,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.3 Reverse",
+            "王若冰",
+            "\nint reverse (int number)\n{\n\tint reversed=0;\n\twhile(number>0)\n{\n\tint a=number%10;\n\treversed=reversed*10+a;\n\tnumber/=10;\n}\n\treturn reversed;\n\t\n\t\n}",
+            1605851955.64748,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.4 Largest",
+            "王若冰",
+            "int largest(int num1,int num2,int num3)\n{\n\tint max;\n\tmax=(num1>num2)?num1:num2;\n\tif(num3>max)\n\t\treturn num3;\n\telse\n\t\treturn max;\n\t\n\t\n}",
+            1605852707.2331378,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.5 GCD",
+            "王若冰",
+            "int gcd(int num1,int num2)\n{\tint min=(num1>num2)?num2:num1;\n for(int i=min;i>=1;i--)\n\t \n {\n\t if(num1%i==0&&num2%i==0)\n\t\t return i;\n }\n\t\n\t\n\t\n}",
+            1605853032.392103,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.6 LCM",
+            "王若冰",
+            "int lcm(int num1,int num2)\n{\n\tint max=(num1,num2)?num1:num2;\n\t\n\tfor(int i=max;i<=num1*num2;i++)\n\t{if(i%num1==0&&i%num2==0)\n\t\treturn i;\n\t\t\n\t}\n\t\n\t\n\t\n\t\n}",
+            1605853292.7979205,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.1 Lower Case",
+            "王若冰",
+            "char toLowercase(char c)\n{\t\n\treturn c=c+32;\n\t\n\t\n\t\n}",
+            1605853454.156187,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.2 Sum Digits",
+            "王若冰",
+            "int  sumDigits(int number)\n{ int sum=0;\n while(number)\n {\n\t int a=number%10;\n\t sum+=a;\n\t number/=10;\n\t \n }\n return sum;\n}",
+            1605853797.5750356,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.7 Is Prime",
+            "王若冰",
+            "int isPrime(int number)\n{int isprime=1;\n\tfor(int i=2;i<=number;i++)\n\t{\n\t\tif(number%i==0)\n\t\t{\n\t\t\tisprime=0;\n\t\t\treturn 0;\n\t\t}\n\t\t\n\t}\n\tif(isprime=1)\n\t\treturn 1;\n\t\n\t\n}",
+            1605854375.3953826,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 1",
+            "王若冰",
+            "\nint print_pattern(int height_and_width)\n{\n int n;\n\tn=height_and_width;\n    for(int i=1;i<=(n+1)/2;i++)\n    {\n        for(int j=1;j<=i-1;j++)\n        {\n            printf(\"B\");\n        }\n        printf(\"Y\");\n        for(int m=1;m<=n-2*i;m++)\n        {\n            printf(\"G\");\n            \n        }\n        if(i!=(n+1)/2)\n        printf(\"Y\");\n        for(int j=1;j<=i-1;j++)\n        {\n            printf(\"B\");\n        }\n        printf(\"\\n\");\n    }\n    \n    for(int i=(n-1)/2;i>=1;i--)\n    {\n        for(int j=1;j<=i-1;j++)\n        {\n            printf(\"B\");\n        }\n        printf(\"Y\");\n        for(int m=1;m<=n-2*i;m++)\n        {\n            printf(\"G\");\n            \n        }\n        if(i!=(n+1)/2)\n        printf(\"Y\");\n        for(int j=1;j<=i-1;j++)\n        {\n            printf(\"B\");\n        }\n        printf(\"\\n\");\n    }\n    \n    \n    \n    \n}",
+            1605953229.0817099,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 2",
+            "王若冰",
+            "\nint print_pattern(int height, int width)\n{  int n,m;\n n=height;\n m=width;\n    int k=n/9;\n      for(int o=1;o<=k;o++)\n    {\n       \n            for(int t=1;t<=2*k;t++)\n            {\n                printf(\"N\");\n            }\n            for(int f=1;f<=k;f++)\n            {\n                printf(\" \");\n            }\n            for(int p=1;p<=m-3*k;p++)\n            {\n                printf(\"N\");\n            }\n        printf(\"\\n\");\n        \n    }\n    for(int i=1;i<=k;i++)\n    {\n        for(int j=1;j<=2*k;j++)\n        {\n            printf(\"N\");\n        }\n        for(int f=1;f<=k;f++)\n        {\n            printf(\" \");\n        }\n        \n             for(int t=1;t<=2*k;t++)\n             {\n                 printf(\"N\");\n             }\n        printf(\"\\n\");\n        \n    }\n    for(int y=1;y<=k;y++)\n    {for(int i=1;i<=5*k;i++)\n    {\n        printf(\" \");\n    }\n        for(int i=1;i<=m-5*k;i++)\n        {\n            printf(\"N\");\n        }\n        printf(\"\\n\");\n    }\n    for(int i=1;i<=k;i++)\n    {\n        for(int j=1;j<=2*k;j++)\n        {\n            printf(\"N\");\n        }\n        for(int f=1;f<=k;f++)\n        {\n            printf(\" \");\n        }\n        \n             for(int t=1;t<=2*k;t++)\n             {\n                 printf(\"N\");\n             }\n        printf(\"\\n\");\n        \n    }\n          \n    for(int o=1;o<=k;o++)\n  {\n     \n          for(int t=1;t<=2*k;t++)\n          {\n              printf(\"N\");\n          }\n          for(int f=1;f<=k;f++)\n          {\n              printf(\" \");\n          }\n          for(int p=1;p<=m-3*k;p++)\n          {\n              printf(\"N\");\n          }\n      printf(\"\\n\");\n      \n  }\n    for(int g=1;g<=2;g++)\n    {\n    for(int i=1;i<=k;i++)\n    {\n        for(int j=1;j<=m;j++)\n        {\n            printf(\" \");\n        }\n        printf(\"\\n\");\n    }\n    for(int i=1;i<=k;i++)\n    {\n        for(int j=1;j<=m;j++)\n        {\n            printf(\"N\");\n        }\n        printf(\"\\n\");\n    }\n    \n  \n    }\n    \n    \n    \n    \n    \n    \n    \n    \n    \n}\n",
+            1605953167.3876176,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.5 Grades",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\tint i,j,a[101][101];\n for(i=1;i<=10;i++)\n {\n\t for(j=1;j<=10;j++)\n\t {\n\t\t scanf(\"%d\",&a[i][j]);\n\t }\n }\n int max=a[1][1];\n  for(i=1;i<=10;i++)\n {\n\t for(j=1;j<=10;j++)\n\t {\n\t\t if(a[i][j]>max)\n\t\t\t max=a[i][j];\n\t }\n }\n  for(i=1;i<=10;i++)\n {\n\t for(j=1;j<=10;j++)\n\t {\n\n\nif(a[i][j]>=max-10)\n{\n\tprintf(\"A\");\n}\n else\n {\n\t if(a[i][j]>=max-20)\n\t {\n\t\t printf(\"B\");\n\t }else\n\t {\n\t\t if(a[i][j]>=max-30)\n\t {\n\t\t printf(\"C\");\n\t\t }\n\t\t else{\n\t\t\t  if(a[i][j]>=max-40)\n\t {\n\t\t printf(\"D\");\n\t\t }\n\t\t\t else\n\t\t\t\t printf(\"F\");\n\t\t }\n\t }\n\t \n } \n\n\t\n\t\n  }\n\t\n  }\t\n\t\n\t\n}",
+            1605959227.722222,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.10 Character pattern 3",
+            "王若冰",
+            "#include<stdio.h>\nint get_bits(int i, int lines)\n{ \n\tint j,k,line=0;\n\tfor(j=31;j>=0;j--)\n\t{\n\t\tif((31-j-i)%(2*lines-2)==0||((31-j+i)%(2*lines-2)==0))\n\t\t{\n\t\t    int tmp=1;\n\t\t\tfor(k=0;k<j;k++)\n\t\t\t{\n\t\t\t\ttmp*=2;\n\t\t\t}\n\t\t\tline+=tmp;\n\t\t}\n\t}\n\treturn line;\n} ",
+            1606224699.367942,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.6 Character functions",
+            "王若冰",
+            "\n_Bool isDigit(char c)\n{\n\tif(c>='0'&&c<='9')\n\t\treturn 1;\n\telse return 0;\n}\n\n_Bool  isLower(char c)\n{\n\tif(c>='a'&&c<='z')\n\t\treturn 1;\n\telse return 0;\n}\n\n_Bool  isUpper(char c)\n{\n\tif(c>='A'&&c<='Z')\n\t\treturn 1;\n\telse return 0;\n}\n\n_Bool  isAlphabit(char c)\n{\n\tif(c>='A'&&c<='Z'||c>='a'&&c<='z')\n\t\treturn 1;\n\telse return 0;\n}\n\n_Bool isAlphabitOrNumber(char c)\n{if(c>='0'&&c<='9'||c>='A'&&c<='Z'||c>='a'&&c<='z')\n\t\treturn 1;\n\telse return 0;\n\t\n}\n\n_Bool isSpace(char c)\n{if(c==' '||c=='\\t'||c=='\\r'||c=='\\n')\n\t\treturn 1;\n\telse return 0;\n}\n\n_Bool  isPrintable(char c)\n{if(c>='!'&&c<='~')\n\t\treturn 1;\n\telse return 0;\n\t\n}\n\n_Bool  isGraphical(char c)\n{\t_Bool isSpace(char c)\n\tif(isSpace(c)&&c>='!'&&c<='~')\n\t\treturn 1;\n\telse return 0;\n}\n_Bool isPunctuation(char c)\n{\n\tif(c>='0'&&c<='9'||c>='A'&&c<='Z'||c>='a'&&c<='z')\n\t\treturn 0;\n\telse return 1;\n}\n",
+            1606036912.18737,
+            100,
+            "In file included from main.c:1:0:\nsource.c: In function ‘isSpace’:\nsource.c:52:2: error: expected declaration specifiers before ‘if’\n  if(isSpace(c)&&c>='!'&&c<='~')\n  ^~\nsource.c:54:2: error: expected declaration specifiers before ‘else’\n  else return 0;\n  ^~~~\nsource.c:55:1: error: expected declaration specifiers before ‘}’ token\n }\n ^\nsource.c:57:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token\n {\n ^\nIn file included from /usr/include/stdio.h:33:0,\n                 from main.c:2:\n/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:216:23: error: storage class specified for parameter ‘size_t’\n typedef __SIZE_TYPE__ size_t;\n                       ^~~~~~\nIn file included from /usr/include/stdio.h:35:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/types.h:30:23: error: storage class specified for parameter ‘__u_char’\n typedef unsigned char __u_char;\n                       ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:31:28: error: storage class specified for parameter ‘__u_short’\n typedef unsigned short int __u_short;\n                            ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:32:22: error: storage class specified for parameter ‘__u_int’\n typedef unsigned int __u_int;\n                      ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:33:27: error: storage class specified for parameter ‘__u_long’\n typedef unsigned long int __u_long;\n                           ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:36:21: error: storage class specified for parameter ‘__int8_t’\n typedef signed char __int8_t;\n                     ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:37:23: error: storage class specified for parameter ‘__uint8_t’\n typedef unsigned char __uint8_t;\n                       ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:38:26: error: storage class specified for parameter ‘__int16_t’\n typedef signed short int __int16_t;\n                          ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:39:28: error: storage class specified for parameter ‘__uint16_t’\n typedef unsigned short int __uint16_t;\n                            ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:40:20: error: storage class specified for parameter ‘__int32_t’\n typedef signed int __int32_t;\n                    ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:41:22: error: storage class specified for parameter ‘__uint32_t’\n typedef unsigned int __uint32_t;\n                      ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:43:25: error: storage class specified for parameter ‘__int64_t’\n typedef signed long int __int64_t;\n                         ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:44:27: error: storage class specified for parameter ‘__uint64_t’\n typedef unsigned long int __uint64_t;\n                           ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:52:18: error: storage class specified for parameter ‘__quad_t’\n typedef long int __quad_t;\n                  ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:53:27: error: storage class specified for parameter ‘__u_quad_t’\n typedef unsigned long int __u_quad_t;\n                           ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:61:18: error: storage class specified for parameter ‘__intmax_t’\n typedef long int __intmax_t;\n                  ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:62:27: error: storage class specified for parameter ‘__uintmax_t’\n typedef unsigned long int __uintmax_t;\n                           ^~~~~~~~~~~\nIn file included from /usr/include/stdio.h:35:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/types.h:133:25: error: storage class specified for parameter ‘__dev_t’\n __STD_TYPE __DEV_T_TYPE __dev_t; /* Type of device numbers.  */\n                         ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:134:25: error: storage class specified for parameter ‘__uid_t’\n __STD_TYPE __UID_T_TYPE __uid_t; /* Type of user identifications.  */\n                         ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:135:25: error: storage class specified for parameter ‘__gid_t’\n __STD_TYPE __GID_T_TYPE __gid_t; /* Type of group identifications.  */\n                         ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:136:25: error: storage class specified for parameter ‘__ino_t’\n __STD_TYPE __INO_T_TYPE __ino_t; /* Type of file serial numbers.  */\n                         ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:137:27: error: storage class specified for parameter ‘__ino64_t’\n __STD_TYPE __INO64_T_TYPE __ino64_t; /* Type of file serial numbers (LFS).*/\n                           ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:138:26: error: storage class specified for parameter ‘__mode_t’\n __STD_TYPE __MODE_T_TYPE __mode_t; /* Type of file attribute bitmasks.  */\n                          ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:139:27: error: storage class specified for parameter ‘__nlink_t’\n __STD_TYPE __NLINK_T_TYPE __nlink_t; /* Type of file link counts.  */\n                           ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:140:25: error: storage class specified for parameter ‘__off_t’\n __STD_TYPE __OFF_T_TYPE __off_t; /* Type of file sizes and offsets.  */\n                         ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:141:27: error: storage class specified for parameter ‘__off64_t’\n __STD_TYPE __OFF64_T_TYPE __off64_t; /* Type of file sizes and offsets (LFS).  */\n                           ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:142:25: error: storage class specified for parameter ‘__pid_t’\n __STD_TYPE __PID_T_TYPE __pid_t; /* Type of process identifications.  */\n                         ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:143:26: error: storage class specified for parameter ‘__fsid_t’\n __STD_TYPE __FSID_T_TYPE __fsid_t; /* Type of file system IDs.  */\n                          ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:144:27: error: storage class specified for parameter ‘__clock_t’\n __STD_TYPE __CLOCK_T_TYPE __clock_t; /* Type of CPU usage counts.  */\n                           ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:145:26: error: storage class specified for parameter ‘__rlim_t’\n __STD_TYPE __RLIM_T_TYPE __rlim_t; /* Type for resource measurement.  */\n                          ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:146:28: error: storage class specified for parameter ‘__rlim64_t’\n __STD_TYPE __RLIM64_T_TYPE __rlim64_t; /* Type for resource measurement (LFS).  */\n                            ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:147:24: error: storage class specified for parameter ‘__id_t’\n __STD_TYPE __ID_T_TYPE __id_t;  /* General type for IDs.  */\n                        ^~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:148:26: error: storage class specified for parameter ‘__time_t’\n __STD_TYPE __TIME_T_TYPE __time_t; /* Seconds since the Epoch.  */\n                          ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:149:30: error: storage class specified for parameter ‘__useconds_t’\n __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */\n                              ^~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:150:31: error: storage class specified for parameter ‘__suseconds_t’\n __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */\n                               ^~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:152:27: error: storage class specified for parameter ‘__daddr_t’\n __STD_TYPE __DADDR_T_TYPE __daddr_t; /* The type of a disk address.  */\n                           ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:153:25: error: storage class specified for parameter ‘__key_t’\n __STD_TYPE __KEY_T_TYPE __key_t; /* Type of an IPC key.  */\n                         ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:156:29: error: storage class specified for parameter ‘__clockid_t’\n __STD_TYPE __CLOCKID_T_TYPE __clockid_t;\n                             ^~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:159:27: error: storage class specified for parameter ‘__timer_t’\n __STD_TYPE __TIMER_T_TYPE __timer_t;\n                           ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:162:29: error: storage class specified for parameter ‘__blksize_t’\n __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;\n                             ^~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:167:28: error: storage class specified for parameter ‘__blkcnt_t’\n __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;\n                            ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:168:30: error: storage class specified for parameter ‘__blkcnt64_t’\n __STD_TYPE __BLKCNT64_T_TYPE __blkcnt64_t;\n                              ^~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:171:30: error: storage class specified for parameter ‘__fsblkcnt_t’\n __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;\n                              ^~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:172:32: error: storage class specified for parameter ‘__fsblkcnt64_t’\n __STD_TYPE __FSBLKCNT64_T_TYPE __fsblkcnt64_t;\n                                ^~~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:175:30: error: storage class specified for parameter ‘__fsfilcnt_t’\n __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;\n                              ^~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:176:32: error: storage class specified for parameter ‘__fsfilcnt64_t’\n __STD_TYPE __FSFILCNT64_T_TYPE __fsfilcnt64_t;\n                                ^~~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:179:28: error: storage class specified for parameter ‘__fsword_t’\n __STD_TYPE __FSWORD_T_TYPE __fsword_t;\n                            ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:181:27: error: storage class specified for parameter ‘__ssize_t’\n __STD_TYPE __SSIZE_T_TYPE __ssize_t; /* Type of a byte count, or error.  */\n                           ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:184:33: error: storage class specified for parameter ‘__syscall_slong_t’\n __STD_TYPE __SYSCALL_SLONG_TYPE __syscall_slong_t;\n                                 ^~~~~~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:186:33: error: storage class specified for parameter ‘__syscall_ulong_t’\n __STD_TYPE __SYSCALL_ULONG_TYPE __syscall_ulong_t;\n                                 ^~~~~~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:190:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘__loff_t’\n typedef __off64_t __loff_t; /* Type of file sizes and offsets (LFS).  */\n                   ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:191:15: error: storage class specified for parameter ‘__caddr_t’\n typedef char *__caddr_t;\n               ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:194:25: error: storage class specified for parameter ‘__intptr_t’\n __STD_TYPE __SWORD_TYPE __intptr_t;\n                         ^~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:197:23: error: storage class specified for parameter ‘__socklen_t’\n __STD_TYPE __U32_TYPE __socklen_t;\n                       ^~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/types.h:202:13: error: storage class specified for parameter ‘__sig_atomic_t’\n typedef int __sig_atomic_t;\n             ^~~~~~~~~~~~~~\nIn file included from /usr/include/stdio.h:36:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:5:25: error: storage class specified for parameter ‘__FILE’\n typedef struct _IO_FILE __FILE;\n                         ^~~~~~\nIn file included from /usr/include/stdio.h:37:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/types/FILE.h:7:25: error: storage class specified for parameter ‘FILE’\n typedef struct _IO_FILE FILE;\n                         ^~~~\nIn file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:21:0,\n                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,\n                 from /usr/include/stdio.h:41,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:21:3: error: storage class specified for parameter ‘__mbstate_t’\n } __mbstate_t;\n   ^~~~~~~~~~~\nIn file included from /usr/include/x86_64-linux-gnu/bits/libio.h:35:0,\n                 from /usr/include/stdio.h:41,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/_G_config.h:28:3: error: expected specifier-qualifier-list before ‘__off_t’\n   __off_t __pos;\n   ^~~~~~~\n/usr/include/x86_64-linux-gnu/bits/_G_config.h:30:3: error: storage class specified for parameter ‘_G_fpos_t’\n } _G_fpos_t;\n   ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/_G_config.h:33:3: error: expected specifier-qualifier-list before ‘__off64_t’\n   __off64_t __pos;\n   ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/_G_config.h:35:3: error: storage class specified for parameter ‘_G_fpos64_t’\n } _G_fpos64_t;\n   ^~~~~~~~~~~\nIn file included from /usr/include/x86_64-linux-gnu/bits/libio.h:53:0,\n                 from /usr/include/stdio.h:41,\n                 from main.c:2:\n/usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h:40:27: error: storage class specified for parameter ‘__gnuc_va_list’\n typedef __builtin_va_list __gnuc_va_list;\n                           ^~~~~~~~~~~~~~\nIn file included from /usr/include/stdio.h:41:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/libio.h:154:14: error: storage class specified for parameter ‘_IO_lock_t’\n typedef void _IO_lock_t;\n              ^~~~~~~~~~\nIn file included from /usr/include/stdio.h:41:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/libio.h:274:3: error: expected specifier-qualifier-list before ‘__off_t’\n   _IO_off_t _old_offset; /* This used to be _offset but it's too small.  */\n   ^\nIn file included from /usr/include/stdio.h:41:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/libio.h:314:25: error: storage class specified for parameter ‘_IO_FILE’\n typedef struct _IO_FILE _IO_FILE;\n                         ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:319:29: error: storage class specified for parameter ‘_IO_2_1_stdin_’\n extern struct _IO_FILE_plus _IO_2_1_stdin_;\n                             ^~~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:320:29: error: storage class specified for parameter ‘_IO_2_1_stdout_’\n extern struct _IO_FILE_plus _IO_2_1_stdout_;\n                             ^~~~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:321:29: error: storage class specified for parameter ‘_IO_2_1_stderr_’\n extern struct _IO_FILE_plus _IO_2_1_stderr_;\n                             ^~~~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:337:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘__io_read_fn’\n typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);\n                   ^~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:345:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘__io_write_fn’\n typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,\n                   ^~~~~~~~~~~~~\nIn file included from /usr/include/stdio.h:41:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/libio.h:354:43: error: expected declaration specifiers or ‘...’ before ‘__off64_t’\n typedef int __io_seek_fn (void *__cookie, _IO_off64_t *__pos, int __w);\n                                           ^\nIn file included from /usr/include/stdio.h:41:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/libio.h:357:13: error: storage class specified for parameter ‘__io_close_fn’\n typedef int __io_close_fn (void *__cookie);\n             ^~~~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:389:25: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int __underflow (_IO_FILE *);\n                         ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:390:21: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int __uflow (_IO_FILE *);\n                     ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:391:24: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int __overflow (_IO_FILE *, int);\n                        ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:433:22: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_getc (_IO_FILE *__fp);\n                      ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:434:31: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_putc (int __c, _IO_FILE *__fp);\n                               ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:435:22: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_feof (_IO_FILE *__fp) __THROW;\n                      ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:436:24: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_ferror (_IO_FILE *__fp) __THROW;\n                        ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:438:30: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_peekc_locked (_IO_FILE *__fp);\n                              ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:444:28: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern void _IO_flockfile (_IO_FILE *) __THROW;\n                            ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:445:30: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern void _IO_funlockfile (_IO_FILE *) __THROW;\n                              ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:446:30: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_ftrylockfile (_IO_FILE *) __THROW;\n                              ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:462:25: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,\n                         ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:463:4: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n    _IO_va_list, int *__restrict);\n    ^\n/usr/include/x86_64-linux-gnu/bits/libio.h:464:26: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,\n                          ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:465:5: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n     _IO_va_list);\n     ^\n/usr/include/x86_64-linux-gnu/bits/libio.h:466:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘_IO_padn’\n extern _IO_ssize_t _IO_padn (_IO_FILE *, int, _IO_ssize_t);\n                    ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:467:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘_IO_sgetn’\n extern _IO_size_t _IO_sgetn (_IO_FILE *, void *, _IO_size_t);\n                   ^~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:469:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘_IO_seekoff’\n extern _IO_off64_t _IO_seekoff (_IO_FILE *, _IO_off64_t, int, int);\n                    ^~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:470:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘_IO_seekpos’\n extern _IO_off64_t _IO_seekpos (_IO_FILE *, _IO_off64_t, int);\n                    ^~~~~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/libio.h:472:35: error: expected declaration specifiers or ‘...’ before ‘_IO_FILE’\n extern void _IO_free_backup_area (_IO_FILE *) __THROW;\n                                   ^~~~~~~~\nIn file included from main.c:2:0:\n/usr/include/stdio.h:46:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘va_list’\n typedef _G_va_list va_list;\n                    ^~~~~~~\n/usr/include/stdio.h:57:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘off_t’\n typedef __off_t off_t;\n                 ^~~~~\n/usr/include/stdio.h:71:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ssize_t’\n typedef __ssize_t ssize_t;\n                   ^~~~~~~\n/usr/include/stdio.h:78:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fpos_t’\n typedef _G_fpos_t fpos_t;\n                   ^~~~~~\nIn file included from main.c:2:0:\n/usr/include/stdio.h:135:25: error: storage class specified for parameter ‘stdin’\n extern struct _IO_FILE *stdin;  /* Standard input stream.  */\n                         ^~~~~\n/usr/include/stdio.h:136:25: error: storage class specified for parameter ‘stdout’\n extern struct _IO_FILE *stdout;  /* Standard output stream.  */\n                         ^~~~~~\n/usr/include/stdio.h:137:25: error: storage class specified for parameter ‘stderr’\n extern struct _IO_FILE *stderr;  /* Standard error output stream.  */\n                         ^~~~~~\n/usr/include/stdio.h:144:12: error: storage class specified for parameter ‘remove’\n extern int remove (const char *__filename) __THROW;\n            ^~~~~~\n/usr/include/stdio.h:146:12: error: storage class specified for parameter ‘rename’\n extern int rename (const char *__old, const char *__new) __THROW;\n            ^~~~~~\n/usr/include/stdio.h:150:12: error: storage class specified for parameter ‘renameat’\n extern int renameat (int __oldfd, const char *__old, int __newfd,\n            ^~~~~~~~\n/usr/include/stdio.h:159:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token\n extern FILE *tmpfile (void) __wur;\n             ^\n/usr/include/stdio.h:173:14: error: storage class specified for parameter ‘tmpnam’\n extern char *tmpnam (char *__s) __THROW __wur;\n              ^~~~~~\n/usr/include/stdio.h:178:14: error: storage class specified for parameter ‘tmpnam_r’\n extern char *tmpnam_r (char *__s) __THROW __wur;\n              ^~~~~~~~\n/usr/include/stdio.h:190:14: error: storage class specified for parameter ‘tempnam’\n extern char *tempnam (const char *__dir, const char *__pfx)\n              ^~~~~~~\n/usr/include/stdio.h:199:20: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fclose (FILE *__stream);\n                    ^~~~\n/usr/include/stdio.h:204:20: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fflush (FILE *__stream);\n                    ^~~~\n/usr/include/stdio.h:213:29: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fflush_unlocked (FILE *__stream);\n                             ^~~~\n/usr/include/stdio.h:232:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token\n extern FILE *fopen (const char *__restrict __filename,\n             ^\n/usr/include/stdio.h:238:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token\n extern FILE *freopen (const char *__restrict __filename,\n             ^\n/usr/include/stdio.h:265:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token\n extern FILE *fdopen (int __fd, const char *__modes) __THROW __wur;\n             ^\n/usr/include/stdio.h:278:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token\n extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)\n             ^\n/usr/include/stdio.h:284:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token\n extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) __THROW __wur;\n             ^\n/usr/include/stdio.h:290:21: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) __THROW;\n                     ^~~~\n/usr/include/stdio.h:294:21: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,\n                     ^~~~\n/usr/include/stdio.h:295:20: error: expected declaration specifiers or ‘...’ before ‘size_t’\n       int __modes, size_t __n) __THROW;\n                    ^~~~~~\n/usr/include/stdio.h:300:24: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,\n                        ^~~~\n/usr/include/stdio.h:301:10: error: expected declaration specifiers or ‘...’ before ‘size_t’\n          size_t __size) __THROW;\n          ^~~~~~\n/usr/include/stdio.h:304:25: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void setlinebuf (FILE *__stream) __THROW;\n                         ^~~~\n/usr/include/stdio.h:312:21: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fprintf (FILE *__restrict __stream,\n                     ^~~~\n/usr/include/stdio.h:318:12: error: storage class specified for parameter ‘printf’\n extern int printf (const char *__restrict __format, ...);\n            ^~~~~~\n/usr/include/stdio.h:320:12: error: storage class specified for parameter ‘sprintf’\n extern int sprintf (char *__restrict __s,\n            ^~~~~~~\n/usr/include/stdio.h:327:22: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,\n                      ^~~~\nIn file included from /usr/include/x86_64-linux-gnu/bits/libio.h:35:0,\n                 from /usr/include/stdio.h:41,\n                 from main.c:2:\n/usr/include/stdio.h:328:8: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n        _G_va_list __arg);\n        ^\n/usr/include/stdio.h:333:54: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n extern int vprintf (const char *__restrict __format, _G_va_list __arg);\n                                                      ^\n/usr/include/stdio.h:336:8: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n        _G_va_list __arg) __THROWNL;\n        ^\nIn file included from main.c:2:0:\n/usr/include/stdio.h:340:44: error: expected declaration specifiers or ‘...’ before ‘size_t’\n extern int snprintf (char *__restrict __s, size_t __maxlen,\n                                            ^~~~~~\n/usr/include/stdio.h:344:45: error: expected declaration specifiers or ‘...’ before ‘size_t’\n extern int vsnprintf (char *__restrict __s, size_t __maxlen,\n                                             ^~~~~~\nIn file included from /usr/include/x86_64-linux-gnu/bits/libio.h:35:0,\n                 from /usr/include/stdio.h:41,\n                 from main.c:2:\n/usr/include/stdio.h:345:42: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n         const char *__restrict __format, _G_va_list __arg)\n                                          ^\n/usr/include/stdio.h:366:8: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n        _G_va_list __arg)\n        ^\nIn file included from main.c:2:0:\n/usr/include/stdio.h:368:12: error: storage class specified for parameter ‘dprintf’\n extern int dprintf (int __fd, const char *__restrict __fmt, ...)\n            ^~~~~~~\n/usr/include/stdio.h:377:20: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fscanf (FILE *__restrict __stream,\n                    ^~~~\n/usr/include/stdio.h:383:12: error: storage class specified for parameter ‘scanf’\n extern int scanf (const char *__restrict __format, ...) __wur;\n            ^~~~~\n/usr/include/stdio.h:385:12: error: storage class specified for parameter ‘sscanf’\n extern int sscanf (const char *__restrict __s,\n            ^~~~~~\nIn file included from /usr/include/features.h:424:0,\n                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,\n                 from /usr/include/stdio.h:27,\n                 from main.c:2:\n/usr/include/stdio.h:395:12: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int __REDIRECT (fscanf, (FILE *__restrict __stream,\n            ^\n/usr/include/stdio.h:398:12: error: storage class specified for parameter ‘scanf’\n extern int __REDIRECT (scanf, (const char *__restrict __format, ...),\n            ^\n/usr/include/stdio.h:398:12: error: redefinition of parameter ‘scanf’\nIn file included from main.c:2:0:\n/usr/include/stdio.h:383:12: note: previous definition of ‘scanf’ was here\n extern int scanf (const char *__restrict __format, ...) __wur;\n            ^~~~~\nIn file included from /usr/include/features.h:424:0,\n                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,\n                 from /usr/include/stdio.h:27,\n                 from main.c:2:\n/usr/include/stdio.h:400:12: error: storage class specified for parameter ‘sscanf’\n extern int __REDIRECT_NTH (sscanf, (const char *__restrict __s,\n            ^\n/usr/include/stdio.h:400:12: error: redefinition of parameter ‘sscanf’\nIn file included from main.c:2:0:\n/usr/include/stdio.h:385:12: note: previous definition of ‘sscanf’ was here\n extern int sscanf (const char *__restrict __s,\n            ^~~~~~\n/usr/include/stdio.h:420:21: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,\n                     ^~~~\nIn file included from /usr/include/x86_64-linux-gnu/bits/libio.h:35:0,\n                 from /usr/include/stdio.h:41,\n                 from main.c:2:\n/usr/include/stdio.h:421:7: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n       _G_va_list __arg)\n       ^\n/usr/include/stdio.h:428:53: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n extern int vscanf (const char *__restrict __format, _G_va_list __arg)\n                                                     ^\n/usr/include/stdio.h:433:40: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n       const char *__restrict __format, _G_va_list __arg)\n                                        ^\nIn file included from /usr/include/features.h:424:0,\n                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,\n                 from /usr/include/stdio.h:27,\n                 from main.c:2:\n/usr/include/stdio.h:443:12: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int __REDIRECT (vfscanf,\n            ^\n/usr/include/stdio.h:445:37: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n    const char *__restrict __format, _G_va_list __arg),\n                                     ^\n/usr/include/stdio.h:449:5: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n     _G_va_list __arg), __isoc99_vscanf)\n     ^\n/usr/include/stdio.h:454:8: error: expected declaration specifiers or ‘...’ before ‘__gnuc_va_list’\n        _G_va_list __arg), __isoc99_vsscanf)\n        ^\nIn file included from main.c:2:0:\n/usr/include/stdio.h:477:19: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fgetc (FILE *__stream);\n                   ^~~~\n/usr/include/stdio.h:478:18: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int getc (FILE *__stream);\n                  ^~~~\n/usr/include/stdio.h:484:12: error: storage class specified for parameter ‘getchar’\n extern int getchar (void);\n            ^~~~~~~\n/usr/include/stdio.h:495:27: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int getc_unlocked (FILE *__stream);\n                           ^~~~\n/usr/include/stdio.h:496:12: error: storage class specified for parameter ‘getchar_unlocked’\n extern int getchar_unlocked (void);\n            ^~~~~~~~~~~~~~~~\n/usr/include/stdio.h:506:28: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fgetc_unlocked (FILE *__stream);\n                            ^~~~\n/usr/include/stdio.h:517:28: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fputc (int __c, FILE *__stream);\n                            ^~~~\n/usr/include/stdio.h:518:27: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int putc (int __c, FILE *__stream);\n                           ^~~~\n/usr/include/stdio.h:524:12: error: storage class specified for parameter ‘putchar’\n extern int putchar (int __c);\n            ^~~~~~~\n/usr/include/stdio.h:537:37: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fputc_unlocked (int __c, FILE *__stream);\n                                     ^~~~\n/usr/include/stdio.h:545:36: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int putc_unlocked (int __c, FILE *__stream);\n                                    ^~~~\n/usr/include/stdio.h:546:12: error: storage class specified for parameter ‘putchar_unlocked’\n extern int putchar_unlocked (int __c);\n            ^~~~~~~~~~~~~~~~\n/usr/include/stdio.h:553:18: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int getw (FILE *__stream);\n                  ^~~~\n/usr/include/stdio.h:556:27: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int putw (int __w, FILE *__stream);\n                           ^~~~\n/usr/include/stdio.h:564:52: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)\n                                                    ^~~~\n/usr/include/stdio.h:603:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘__getdelim’\n extern _IO_ssize_t __getdelim (char **__restrict __lineptr,\n                    ^~~~~~~~~~\n/usr/include/stdio.h:606:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘getdelim’\n extern _IO_ssize_t getdelim (char **__restrict __lineptr,\n                    ^~~~~~~~\n/usr/include/stdio.h:616:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘getline’\n extern _IO_ssize_t getline (char **__restrict __lineptr,\n                    ^~~~~~~\n/usr/include/stdio.h:626:47: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fputs (const char *__restrict __s, FILE *__restrict __stream);\n                                               ^~~~\n/usr/include/stdio.h:632:12: error: storage class specified for parameter ‘puts’\n extern int puts (const char *__s);\n            ^~~~\n/usr/include/stdio.h:639:29: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int ungetc (int __c, FILE *__stream);\n                             ^~~~\n/usr/include/stdio.h:646:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fread’\n extern size_t fread (void *__restrict __ptr, size_t __size,\n               ^~~~~\n/usr/include/stdio.h:652:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fwrite’\n extern size_t fwrite (const void *__restrict __ptr, size_t __size,\n               ^~~~~~\n/usr/include/stdio.h:673:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fread_unlocked’\n extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,\n               ^~~~~~~~~~~~~~\n/usr/include/stdio.h:675:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fwrite_unlocked’\n extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,\n               ^~~~~~~~~~~~~~~\n/usr/include/stdio.h:684:19: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fseek (FILE *__stream, long int __off, int __whence);\n                   ^~~~\n/usr/include/stdio.h:689:24: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern long int ftell (FILE *__stream) __wur;\n                        ^~~~\n/usr/include/stdio.h:694:21: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void rewind (FILE *__stream);\n                     ^~~~\n/usr/include/stdio.h:707:20: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fseeko (FILE *__stream, __off_t __off, int __whence);\n                    ^~~~\n/usr/include/stdio.h:707:36: error: expected declaration specifiers or ‘...’ before ‘__off_t’\n extern int fseeko (FILE *__stream, __off_t __off, int __whence);\n                                    ^~~~~~~\n/usr/include/stdio.h:712:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘ftello’\n extern __off_t ftello (FILE *__stream) __wur;\n                ^~~~~~\n/usr/include/stdio.h:731:21: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);\n                     ^~~~\n/usr/include/stdio.h:731:48: error: unknown type name ‘fpos_t’; did you mean ‘float’?\n extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);\n                                                ^~~~~~\n                                                float\n/usr/include/stdio.h:736:21: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fsetpos (FILE *__stream, const fpos_t *__pos);\n                     ^~~~\n/usr/include/stdio.h:736:43: error: unknown type name ‘fpos_t’\n extern int fsetpos (FILE *__stream, const fpos_t *__pos);\n                                           ^~~~~~\n/usr/include/stdio.h:757:23: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void clearerr (FILE *__stream) __THROW;\n                       ^~~~\n/usr/include/stdio.h:759:18: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int feof (FILE *__stream) __THROW __wur;\n                  ^~~~\n/usr/include/stdio.h:761:20: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int ferror (FILE *__stream) __THROW __wur;\n                    ^~~~\n/usr/include/stdio.h:765:32: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void clearerr_unlocked (FILE *__stream) __THROW;\n                                ^~~~\n/usr/include/stdio.h:766:27: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int feof_unlocked (FILE *__stream) __THROW __wur;\n                           ^~~~\n/usr/include/stdio.h:767:29: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int ferror_unlocked (FILE *__stream) __THROW __wur;\n                             ^~~~\n/usr/include/stdio.h:775:13: error: storage class specified for parameter ‘perror’\n extern void perror (const char *__s);\n             ^~~~~~\nIn file included from /usr/include/stdio.h:781:0,\n                 from main.c:2:\n/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:26:12: error: storage class specified for parameter ‘sys_nerr’\n extern int sys_nerr;\n            ^~~~~~~~\n/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:27:26: error: storage class specified for parameter ‘sys_errlist’\n extern const char *const sys_errlist[];\n                          ^~~~~~~~~~~\nIn file included from main.c:2:0:\n/usr/include/stdio.h:786:20: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fileno (FILE *__stream) __THROW __wur;\n                    ^~~~\n/usr/include/stdio.h:791:29: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int fileno_unlocked (FILE *__stream) __THROW __wur;\n                             ^~~~\n/usr/include/stdio.h:800:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token\n extern FILE *popen (const char *__command, const char *__modes) __wur;\n             ^\n/usr/include/stdio.h:806:20: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int pclose (FILE *__stream);\n                    ^~~~\n/usr/include/stdio.h:812:14: error: storage class specified for parameter ‘ctermid’\n extern char *ctermid (char *__s) __THROW;\n              ^~~~~~~\n/usr/include/stdio.h:840:24: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void flockfile (FILE *__stream) __THROW;\n                        ^~~~\n/usr/include/stdio.h:844:26: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern int ftrylockfile (FILE *__stream) __THROW __wur;\n                          ^~~~\n/usr/include/stdio.h:847:26: error: expected declaration specifiers or ‘...’ before ‘FILE’\n extern void funlockfile (FILE *__stream) __THROW;\n                          ^~~~\nmain.c:4:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token\n int inputInt() {\n                ^\nmain.c:10:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token\n int inputChar() {\n                 ^\nmain.c:16:12: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token\n int main() {\n            ^\nIn file included from main.c:1:0:\nsource.c:51:9: error: old-style parameter declarations in prototyped function definition\n { _Bool isSpace(char c)\n         ^~~~~~~\nmain.c:32:1: error: expected ‘{’ at end of input\n }\n ^\nmain.c: In function ‘isGraphical’:\nmain.c:32:1: error: expected declaration or statement at end of input\n"
+        ],
+        [
+            "7.1 Reverse",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\tint a[11];\n \tfor(int i=1;i<=10;i++)\n\t{\n\t\tscanf(\"%d\",&a[i]);\n\t}\n for(int i=10;i>=1;i--)\n {\n\t printf(\"%d \",a[i]);\n\n }\n\t\n\t\n\t\n\treturn 0;\n}",
+            1606289033.5917535,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 Max",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\tint a[11];\n\tfor(int i=1;i<=10;i++)\n\t{\n\t\tscanf(\"%d\",&a[i]);\n\t}\n \tint max=a[1];\n \tfor(int i=2;i<=10;i++)\n\t{\n\t\tif(a[i]>max)\n\t\t\tmax=a[i];\n\t}\n printf(\"%d\",max);\n\t\t\n\t\n\treturn 0;\n}",
+            1606289197.0871038,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.3 Count occurrences",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\tint a[11]={0},m,j=1;\n for(int i=1;i<=100;i++)\n {\n\t scanf(\"%d\",&m);\n\t a[m]++;\n\t \n }\n int max=a[1];\n for(m=2;m<=10;m++)\n {\n\t if(a[m]>max)\n\t {max=a[m];\n\t j=m;\n\t }\n\t \n\t\t \n }\n printf(\"%d %d\",j,max);\n\t\n\t\n\t\n\t\n\treturn 0;\n}",
+            1606289800.5597668,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.4 Count occurrences",
+            "王若冰",
+            "#include<stdio.h>\nint main()\n{\n\tint a[11]={0},m,b[101],c[11]={0};\n\tfor(int i=1;i<=100;i++)\n\t{\n\t\tscanf(\"%d\",&m);\n\t\ta[m]++;\n\t\tb[i]=m;\n\t\t\n\t\t\n\t\t\t\n\t}\n\tfor(int i=1;i<=100;i++)\n\t{\tint p=b[i];\n\t \tc[p]++;\n\t if(c[p]==1)\n\t\tprintf(\"%d %d\\n\",p,a[p]);\n\t\t\n\t}\n\t\n\t\n\t\n\treturn 0;\n}",
+            1606296059.8204806,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.10 Occurrences",
+            "王若冰",
+            "#include<string.h>\nvoid countDigits(const char digits[], int count[])\n{\tfor(int j=0;j<10;j++)\n{\n\tcount[j]=0;\n}\n    int m;\n\tfor(int i=0;i<strlen(digits);i++)\n\t{\tm=digits[i]-48;\n\t\tcount[m]++;\n\t \t\n\t}\n}",
+            1606460079.3651512,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.18 Anagram",
+            "王若冰",
+            "#include<string.h>\n#include<stdlib.h>\nint comp(const void* a,const void* b)\n{\n\treturn *(int*)a-*(int*)b;\n}\nbool isAnagram(const char s1[], const char s2[])\n{\t\n\tqsort(s1,strlen(s1),sizeof(s1[0]),comp);\n qsort(s2,strlen(s2),sizeof(s2[0]),comp);\n\tfor(int i=0;i<strlen(s1);i++)\n\t{\n\t\tif(s1[i]!=s2[i])\n\t\t\treturn 0;\n\t\t\t\n\t}\n\treturn 1;\n\t\n\t\n\t\n\t\n}",
+            1606865973.2521157,
+            100,
+            "不允许使用的头文件: <stdlib.h>"
+        ],
+        [
+            "7.8 Input",
+            "王若冰",
+            "#include<stdio.h>\nint readLine(int data[], int max)\n{\n\tchar ch;\n\tint j=0;\n\twhile((ch=getchar())!='\\n'&&j<max)\n\t{\n\t\tscanf(\"%d\",&data[j]);\n\t\tj++;\n\t}\n\treturn j;\n}",
+            1606907481.210716,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.17 Sort",
+            "王若冰",
+            "#include<string.h>\nvoid sort(char s[])\n{\n\tint map[10]={0};\n\tint j = 0;\n\tfor(int i=0;i<strlen(s);i++)\n\t{\n\t\tint a=s[i]-'0';\n\t\tmap[a]++;\n\t}\n\tfor(int i=0;i<10;i++)\n\t{\n\t\twhile(map[i]!=0)\n\t\t{\t\n\t\t\tmap[i]--;\n\t\t\ts[j] = i + '0';\n\t\t\tj++;\n\t\t}\n\t\t\n\t}\n\t\n}",
+            1606836118.4610777,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.7 Character array functions",
+            "王若冰",
+            "unsigned long strlen(const char text[])\n{\n\tint n=0;\n\twhile(text[++n]!='\\0');\n\t\treturn n;\n}\nchar * strcpy(char to[], const char from[])\n{\tto[strlen(from)]='\\0';\n\tfor(int i=0;i<strlen(from);i++)\n{\t\n\tto[i]=from[i];\n}\n \n\t\n}\nchar * strcat(char to[], const char from[])\n{\n\tto[strlen(from)+strlen(to)]='\\0';\n\tint m=0;\nfor(int i=strlen(to);i<strlen(from)+strlen(to);i++)\n{\t\n\tto[i]=from[m];\n\tm++;\n}\n\n}\nint strcmp(const char s1[], const char s2[])\n{int max=(strlen(s1)>strlen(s2))?strlen(s1):strlen(s2);\n int cha=0;\n\tfor(int i=0;i<max;i++)\n\t{\n\t\tif(s1[i]!=s2[i])\n\t\t{\tcha=s1[i]-s2[i];\n\t\t\tbreak;\n\t\t}\n\t\t\n\t}\n return cha;\n}\nint atoi(const char array[])\n{int map=1,sum=0;\n\tif(array[0]!='-')\n\t{\tfor(int i=strlen(array)-1;i>=0;i--)\n\t{\n\t\tsum=sum+(array[i]-'0')*map;\n\t\tmap*=10;\n\t}\n\t return sum;\n\t\t\n\t}\n\telse\n\t{\tfor(int i=strlen(array)-1;i>=0;i--)\n\t{\tif(i!=0)\n\t{sum=sum+(array[i]-'0')*map;\n\t\t\n\t\tmap*=10;\n\t}\n\t \n\t}\n\t\t\n\t\t\n\t\treturn (-1)*sum;\n\t}\n\t\n}\nvoid itoa(int value, char array[])\n{\tint val,cnt=0;\n\tif(value>0)\n{\tval=value;\n\twhile(value>0)\n\t{\n\t\tvalue/=10;\n\t\tcnt++;\n\t}\n\t\tarray[cnt]='\\0';\n\tfor(int i=cnt-1;i>=0;i--)\n\t{\n\t\tarray[i]=val%10+'0';\n\t\tval/=10;\n\t}\n\t\t\n}\n\telse if(value==0)\n\t{ array[0]='0';\n\t array[1]='\\0';\n\t}\n if(value<0)\n\t{\tvalue=(-1)*value;\n\t \tval=value;\n\t while(value>0)\n\t {\n\t\t value/=10;\n\t\t cnt++;\n\t }\n\t array[cnt+1]='\\0';\n\t array[0]='-';\n\t for(int i=cnt;i>=1;i--)\n\t {\n\t\t array[i]=val%10+'0';\n\t\t val/=10;\n\t }\n\t \t\n\t}\n\t\t\n\t\t\n}\nvoid substring(char to[], const char text[], int start, int len)\n{\tfor(int i=0;i<len;i++)\n{\n\tto[i]=text[start+i];\n\tto[len]='\\0';\n}\n\t\n}\nvoid insert(char to[], int at, const char ins[])\n{\tint k=0;\n int s=strlen(to)+strlen(ins);\n  to[s]='\\0';\nfor(int i=s-1;i>=at+strlen(ins);i--)\n {\tto[i]=to[i-strlen(ins)];\n\t \n }\n\tfor(int i=at;i<strlen(ins)+at;i++)\n\t{\n\t\tto[i]=ins[k];\n\t\tk++;\n\t}\n \n\n\t\n}\n",
+            1606922204.1435814,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.9 Distinct numbers",
+            "王若冰",
+            "#include<stdio.h>\nint readLineDistinct(int data[], int num)\n{\n\tint a[1000],b[1000]={0},j=0,t,cnt=0;\n\tchar ch;\n\twhile((ch=getchar())!='\\n')\n\t{\n\t\tscanf(\"%d\",&a[j]);\n\t\tb[a[j]]++;\n\t\tj++;\n\t}\n\t\n\tfor(t=0;t<j;t++)\n\t{\n\t\tif(b[a[t]]>=1&&cnt<num)\n\t\t{\tdata[cnt]=a[t];\n\t\t b[a[t]]=0;\n\t\t cnt++;\n\t\t}\n\t\t\n\t}\n\treturn cnt;\n\t\n}",
+            1606909408.5479686,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.13 Parse Hex",
+            "王若冰",
+            "#include<string.h>\nint parseHex(const char hexString[])\n{\n\tint map=1,j,sum=0;\n\tfor(j=strlen(hexString)-1;j>=0;j--)\n\t{\n\t\tif(hexString[j]-'0'<=9)\n\t\t{sum=sum+(hexString[j]-'0')*map;\n\t\tmap*=16;\n\t\t}\n\t\telse\n\t\t{sum=sum+(hexString[j]-'A'+10)*map;\n\t\tmap*=16;\n\t\t\t\n\t\t}\n\t}\n\treturn sum;\n\t\n\t\n}",
+            1606895998.986822,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.14 Parse Bin",
+            "王若冰",
+            "#include<string.h>\nint parseBin(const char line[])\n{\nint map=1,j,fun=1,sum=0,cnt=0;\nfor(j=strlen(line)-1;j>=0;j--)\n{\t\n\tsum=sum+(line[j]-'0')*fun;\n\t fun*=2;\n\t\n}\n\treturn sum;\n\t\n\t\n\t\n}\n",
+            1606895244.492854,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.15 Dec to Hex",
+            "王若冰",
+            "#include<string.h>\nvoid decToHex(const char dec[], char hex[])\n{\tint a=0;\n while(dec[++a]!='\\0');\n int j,sum=0,map=1;\n for(j=a-1;j>=0;j--)\n {\tsum=sum+(dec[j]-'0')*map;\n  map*=10;\n }\n int c[100],cnt=0;\n while(sum>0)\n {\t\n\t c[cnt]=sum%16;\n  \tsum/=16;\n  \tcnt++;\n}\n hex[cnt]='\\0';\n for(j=cnt-1;j>=0;j--)\n {\tif(c[cnt-1-j]>9)\n\t hex[j]=c[cnt-1-j]-10+'A';\n  else\n\t hex[j]=c[cnt-1-j]+'0';\n }\n \n \n\t\n\t\n\t\n\t\n\t\n}",
+            1606891260.0878935,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.16 Dec to Bin",
+            "王若冰",
+            "#include<string.h>\nvoid decToBin(const char dec[], char bin[])\n{\tint sum=0,p;\n int map=1;\n\t\n\tfor(p=strlen(dec)-1;p>=0;p--)\n\t{\n\t\tsum=(dec[p]-'0')*map+sum;\n\t\tmap*=10;\n\t}\n int t=sum;\n int a[100];\n p=0;\nwhile(t>0)\n {\t\n\ta[p]=t%2;\n\t t/=2;\n\tp++;\n }\n bin[p]='\\0';\n for(int j=p-1;j>=0;j--)\n {\t\n\t bin[j]=a[p-j-1]+'0';\n\t \n\t }\n\t\n}",
+            1606887086.2604492,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.19 Common prefix",
+            "王若冰",
+            "#include<string.h>\nvoid commonPrefix(const char s1[], const char s2[], char prefix[])\n{\tint min=(strlen(s1)>strlen(s2))?strlen(s2):strlen(s1);\n \tint cnt=0;\n\tfor(int j=0;j<min;j++)\n\t{\t\n\tif(s1[j]!=s2[j])\n\t{\n\t\tbreak;\n\t}\n\t\telse\n\t\t\tcnt++;\n\t\n\t}\n prefix[cnt]='\\0';\n for(int j=0;j<cnt;j++)\n {\n\t prefix[j]=s1[j];\n }\n\t\n\t\n\t\n}",
+            1606908479.569552,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.11 Count letters",
+            "王若冰",
+            "#include<string.h>\nint countLetters(const char s[])\n{\tint cnt=0;\n for(int j=0;j<strlen(s);j++)\n {\n\t if(s[j]>='A'&&s[j]<='Z'||s[j]>='a'&&s[j]<='z')\n\t\t cnt++;\n }\n return cnt;\n\t\n}",
+            1607063180.23424,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.12 Count letters",
+            "王若冰",
+            "#include<string.h>\nvoid count(const char line[], int array[])\n{\tint b[1000]={0},j;\n char c[1000];\n strcpy(c,line);\n for(j=0;j<strlen(c);j++)\n {\n\t if(c[j]>='a'&&c[j]<='z')\n\t {\n\t\t c[j]=c[j]-32;\n\t }\n }\n \n for( j=0;j<strlen(line);j++)\n {\n\t \n  if(c[j]>='A'&&c[j]<='Z')\n  {\t\n\t  b[c[j]]++;\n }\n\t int k=0;\n\t for(int m='A';m<='Z';m++)\n\t {\tarray[k]=b[m];\n\t\t \n\t\t k++;\n\t }\n\t \n\n \n }\n\t\n}",
+            1607064509.020644,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.20 get ints",
+            "王若冰",
+            "#include<string.h>\nvoid get_ints(char line[], char* ints[])\n{\tint i,k=0,flag=0;\n for(i=0;i<100;i++)\n {\n\t ints[i]=0;\n }\n\tfor(i=0;i<strlen(line);i++)\n\t{\n\t\tif(line[i]>='0'&&line[i]<='9'&&flag==0)\n\t\t{\n\t\t\tints[k]=line+i;\n\t\t\tflag=1;\n\t\t\tk++;\n\t\t\t\n\t\t}\n\t\tif((line[i]<'0'||line[i]>'9')&&flag==1)\n\t\t{\n\t\t\tline[i]='\\0';\n\t\t\tflag=0;\n\t\t}\n\t\t\n\t}\n\t\n\t\n\t\n}",
+            1607532001.374615,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.21 get specific ints",
+            "王若冰",
+            "#include<string.h>\nint get_int(char line[],char key[])\n{\tint j,k=0,p,flag;\n\n\tfor(j=0;j<strlen(line);j++)\n\t{\tflag=1;\n\t\tif(line[j]==key[k])\n\t\t{\n\t\t\tk++;\n\t\t\tflag=0;\n\t\t\tif(k==strlen(key))\n\t\t\t\t\n\t\t\t\tbreak;\n\t\t}\n\t if(flag==1)\n\t\t k=0;\n\t}\n int value[20];\n int l;\nfor(j=j+2,l=0;;j++,l++)\n{\n\t\n\tif(line[j]<'0'||line[j]>'9')\n\t{\n\t\tbreak;\n\t}\n\telse\n\t{\n\t\tvalue[l]=line[j]-'0';\n\t\t\n\t\t\n\t}\n}\n int sum=0,map=1;\n for(int t=l-1;t>=0;t--)\n {\n\t sum=sum+value[t]*map;\n\t map*=10;\n\t \n }\n\treturn sum;\n\t\n\t\n\t\n}",
+            1607523584.7769911,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.22 Sort pointers",
+            "王若冰",
+            "#include<string.h>\nvoid sort_words(char *words[],int num_words)\n{\n\tfor (int i = 0; i < num_words-1; i++) \n\t{\n            for (int j = 0; j < num_words -1- i; j++) \n\t\t\t{\n                if (strcmp(words[j],words[j+1])>0) \n\t\t\t\t{\n                    char* tmp=words[j];\n\t\t\t\t\twords[j]=words[j+1];\n\t\t\t\t\twords[j+1]=tmp;\n            \t}\n        \t}\n\t}\n}",
+            1607341417.038577,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.23 Matrix",
+            "王若冰",
+            "void fill2d(Matrix m,int val)\n{\nfor(int i=0;i<m.height;i++)\n{\nfor(int j=0;j<m.width;j++)\n{\n\t\n\tm.array2[i][j]=val;\n}\n\n\n}\n\n}\nvoid print2d(Matrix m)\n{int cnt=0;\n\tfor(int i=0;i<m.height;i++)\n\t{\n\t\tfor(int j=0;j<m.width;j++)\n\t\t{\n\t\t\tprintf(\"%.2lf \",m.array2[i][j]);\n\t\t\tcnt++;\n\t\t\tif(cnt%5==0)\n\t\t\tprintf(\"\\n\");\n\n\t\t}\n\t}\n}",
+            1607521163.800348,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.7 Insertion sort",
+            "王若冰",
+            "void insertionSort(int array[], int max)\n{\n\tfor(int j=0;j<max-1;j++)\n\t{\n\t\tfor(int p=0;p<max-1-j;p++)\n\t\t{\n\t\t\tif(array[p]>array[p+1])\n\t\t\t{\n\t\t\t\tint temp=array[p];\n\t\t\t\tarray[p]=array[p+1];\n\t\t\t\tarray[p+1]=temp;\n\t\t\t}\n\t\t}\n\t}\n\t\n\t\n\t\n\t\n}",
+            1607667862.0488493,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.6 0-1 Backpack",
+            "王若冰",
+            "int max(int a,int b)\n{\n\tif(a>=b)\n\t\treturn a;\n\telse\n\t\treturn b;\n}\nint knapsack(int prices[],int weights[],int maxWeight)\n{\n\tint v[100][100];\n\tfor(int i=0;i<=10;i++)\n\t{\n\t\tv[i][0]=0;\n\t}\n\tfor(int j=0;j<=10;j++)\n\t{\n\t\tv[0][j]=0;\n\t}\n\tfor(int i=1;i<=10;i++)\n\t{\n\t\tfor(int j=1;j<=maxWeight;j++)\n\t\t{\n\t\t\tif(j<weights[i-1])\n\t\t\t{\n\t\t\t\tv[i][j]=v[i-1][j];\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tv[i][j]=max(v[i-1][j],v[i-1][j-weights[i-1]]+prices[i-1]);\n\n\t\t\t}\n\t\t}\n\t}\n\treturn v[10][maxWeight];\n\n\n\n\n\n}",
+            1607836894.528798,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.5 Backpack",
+            "王若冰",
+            "int max(int a,int b)\n{\n\tif(a>=b)\n\t\treturn a;\n\telse\n\t\treturn b;\n}\nint knapsack(int prices[],int weights[],int maxWeight)\n{\n\tint v[100][100]={0};\n\t\n\tfor(int i=1;i<=10;i++)\n\t{\n\t\tfor(int j=1;j<=maxWeight;j++)\n\t\t{\n\t\t\tif(j<weights[i-1])\n\t\t\t{\n\t\t\t\tv[i][j]=v[i-1][j];\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tv[i][j]=max(v[i-1][j],v[i][j-weights[i-1]]+prices[i-1]);\n\n\t\t\t}\n\t\t}\n\t}\n\treturn v[10][maxWeight];\n\n\n}",
+            1607886696.7889256,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.4 Matrix multiplication",
+            "王若冰",
+            "int getMultiplications(int n, int dimensions[])\n{\tint i,j,k,diagonal;\n int M[100][100]={0};\n int P[100][100]={0};\n    for(i=1;i<=n;i++)\n        M[i][i]=0;\n    for(diagonal=1;diagonal<=n-1;diagonal++)//对角线1刚刚高于主对角线\n    {\n        for(i=1;i<=n-diagonal;i++)\n        {\n            j=i+diagonal;\n            M[i][j]=M[i][i]+M[i+1][j]+dimensions[i-1]*dimensions[i]*dimensions[j];//首先给M一个初始值，在下面求min的时候也好有个比较。\n            P[i][j]=i;//同样需要提前赋值，不然下面if不成立的话，P[i][j]就空了。\n            for(k=i+1;k<=j-1;k++)\n            {\n                int temp=M[i][k]+M[k+1][j]+dimensions[i-1]*dimensions[k]*dimensions[j];\n                if(temp<M[i][j])\n                {\n                    M[i][j]=temp;\n                    P[i][j]=k;\n                }\n            }\n        }\n    }\n    return M[1][n];\n}",
+            1607888005.9158778,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.1 Rod cutting",
+            "王若冰",
+            "int max(int a,int b)\n{\nif(a>=b)\n\treturn a;\nelse\n\treturn b;\n}\nint getMaxCuttingPrice(int prices[][2],int priceCount,int rodLength)\n{\tint dp[100][100]={0};\n \tfor(int i=1;i<=priceCount;i++)\n\t{\n\t\tfor(int j=1;j<=rodLength;j++)\n\t\t{\n\t\t\tif(j<prices[i-1][0])\n\t\t\t{\n\t\t\t\tdp[i][j]=dp[i-1][j];\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tdp[i][j]=max(dp[i-1][j],prices[i-1][1]+prices[j-prices[i-1][0]][1]);\n\t\t\t}\n\t\t}\n\t}\n\t\n\treturn dp[priceCount][rodLength];\n\t\n}\n\n",
+            1608087889.4355018,
+            100,
+            "=================================================================\n==2090==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7fffe40ecb94 at pc 0x56221b487124 bp 0x7fffe40e2d90 sp 0x7fffe40e2d80\nREAD of size 4 at 0x7fffe40ecb94 thread T0\n    #0 0x56221b487123 in getMaxCuttingPrice /home/cpp_test/王若冰/source.c:20\n    #1 0x56221b487559 in test /home/cpp_test/王若冰/main.c:17\n    #2 0x56221b487674 in main /home/cpp_test/王若冰/main.c:25\n    #3 0x7f47fc05bb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)\n    #4 0x56221b486c39 in _start (/home/cpp_test/王若冰/main.out+0xc39)\n\nAddress 0x7fffe40ecb94 is located in stack of thread T0 at offset 84 in frame\n    #0 0x56221b4875ca in main /home/cpp_test/王若冰/main.c:20\n\n  This frame has 1 object(s):\n    [32, 80) 'prices' <== Memory access at offset 84 overflows this variable\nHINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext\n      (longjmp and C++ exceptions *are* supported)\nSUMMARY: AddressSanitizer: stack-buffer-overflow /home/cpp_test/王若冰/source.c:20 in getMaxCuttingPrice\nShadow bytes around the buggy address:\n  0x10007c815920: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x10007c815930: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x10007c815940: 00 00 00 00 f3 f3 f3 f3 00 00 00 00 00 00 00 00\n  0x10007c815950: 00 00 00 00 f1 f1 f1 f1 04 f2 f2 f2 00 00 00 00\n  0x10007c815960: 00 00 00 00 00 00 00 00 f1 f1 f1 f1 00 00 00 00\n=>0x10007c815970: 00 00[f2]f2 00 00 00 00 00 00 00 00 00 00 00 00\n  0x10007c815980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x10007c815990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x10007c8159a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x10007c8159b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x10007c8159c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n==2090==ABORTING\n"
+        ],
+        [
+            "9.2 Subsequence",
+            "王若冰",
+            "#include<string.h>\nint max(int a,int b)\n{\nif(a>=b)\n\treturn a;\nelse\n\treturn b;\n\n\n}\nint LCS(char text1[],char text2[])\n{\n\n\tint res[100][100]={0};\n\tfor(int i=0;i<strlen(text1);i++)\n\t{\n\t\tfor(int j=0;j<strlen(text2);j++)\n\t\t{\n\t\t\tif(text1[i]==text2[j])\n\t\t\t{\n\t\t\t\tres[i+1][j+1]=res[i][j]+1;\n\t\t\t}\n\t\t\telse\n\t\t\t\tres[i+1][j+1]=max(res[i+1][j],res[i][j+1]);\n\t\t\t\n\t\t\t\n\t\t}\n\t}\n\nreturn res[strlen(text1)][strlen(text2)];\n\n\n}",
+            1607882620.5170963,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.3 Subsequence 2",
+            "王若冰",
+            "#include<string.h>\nint max(int a,int b)\n{\nif(a>=b)\n return a;\nelse\n return b;\n}\nvoid LCSS(char text1[],char text2[],int (*p)[100])\n{\n \n for(int i=0;i<strlen(text1);i++)\n {\n  for(int j=0;j<strlen(text2);j++)\n  {\n   if(text1[i]==text2[j])\n   {\n    p[i+1][j+1]=p[i][j]+1;\n   }\n   else\n    p[i+1][j+1]=max(p[i+1][j],p[i][j+1]);\n  }\n }\n\n}\nstruct Result LCS(char text1[],char text2[])\n{ int res[100][100]={0};\n  int (*p)[100] =res;\n struct Result result;\n  LCSS(text1,text2,p);\n char c[1001];\n   \n int i,j,z=0;\n    i=strlen(text1);\n    j=strlen(text2);\n while(i!=0&&j!=0)\n {\n  if(text1[i-1]==text2[j-1])\n  {\n   c[z++]=text1[--i];\n     \n   j--;\n  }\n  else if(res[i-1][j]<res[i][j-1])\n  {\n   j--;\n  }\n  else if(res[i-1][j]>=res[i][j-1])\n  {\n   i--;\n  }\n  \n }\n \n for(i=z-1;i>=0;i--)\n {\n  result.LCS[z-1-i]=c[i];\n     \n }\n\n  result.LCS[z]='\\0';\n return result;\n\n}\n",
+            1608024433.511722,
+            100,
+            "# 答案正确"
+        ]
+    ],
+    "table_name": "答案"
+}

@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595576323.842041,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <sstream>\n#include <string>\n\nusing namespace std;\n\n\n\t\tclass Tuple\n\t\t{\n\t\tpublic:\n\t\t\tint key;\n\t\t\tint val;\n\t\t\tbool used;\n\t\t\tTuple() : used(false)\n\t\t\t{\n\t\t\t}\n\t\t\tTuple(int k, int v)\n\t\t\t{\n\t\t\t\tused = true;\n\t\t\t\tkey = k;\n\t\t\t\tval = v;\n\t\t\t}\n\t\t\toperator int(){\n\t\t\t\treturn this->val;\n\t\t\t}\n\t\t\toperator string(){\n\t\t\t\tstring result;\n\t\t\t\tstringstream ss;\n\t\t\t\tss << this->val;\n\t\t\t\tss >> result;\n\t\t\t\treturn result;\n\t\t\t}\n\t\t\tint str_to_int(string &str){\n\t\t\t\tstringstream ss;\n\t\t\t\tss << str;\n\t\t\t\tint res;\n\t\t\t\tss >> res;\n\t\t\t\treturn res;\n\t\t\t}\n\t\t\tint str_to_int(int a) { return a; }\n\t\t\ttemplate<typename K>\n\t\t\tTuple& operator= (K oth)\n\t\t\t{\n\t\t\t\tthis->val = str_to_int(oth);\n\t\t\t\tthis->used = true;\n\t\t\t\treturn *this;\n\t\t\t}\n\t\t\t\n\t\t\t/*template<typename K>\n\t\t\tconst Tuple & operator=(const K & oth)const{\n\t\t\t\treturn this->val;\n\t\t\t}*/\n\t\t};\n\t#define max_index 100\nclass HT{\n\tprivate:\n\t\t\n\t\tTuple dict[max_index+2];\n\t\tint _size;\n\n\tpublic:\n\t\tHT(): _size(0) {}\n\t\t~HT(){}\n\t\tsize_t size(){\n\t\t\tsize_t count=0;\n\t\t\tfor (size_t i = 0; i <= max_index;i++)\n\t\t\t\tif(dict[i].used==true)\n\t\t\t\t\tcount++;\n\t\t\t\treturn count;\n\t\t}\n\t\tint str_to_int(int str) { return str; }\n\t\tint str_to_int(string str){\n\t\t\tstringstream ss;\n\t\t\tss << str;\n\t\t\tint res;\n\t\t\tss >> res;\n\t\t\treturn res;\n\t\t}\n\t\t/*string int_to_str(string v) { return v; }\n\t\tstring int_to_str(int v){\n\t\t\tstring result;\n\t\t\tstringstream ss;\n\t\t\tss << v;\n\t\t\tss >> result;\n\t\t\treturn result;\n\t\t}*/\n\t\tint find_index(int key)\n\t\t{\n\t\t\treturn key%max_index;\n\t\t}\n\t\ttemplate < typename V>\n\t\tTuple & operator[](const V &index)\n\t\t{\n\t\t\tint ling;\n\t\t\tling = str_to_int(index);\n\t\t\treturn dict[find_index(ling)];\n\t\t}\n\t\t\n};",
+            "# 答案不正确\n\n# 随机输入:\n4 56 28 59 18 91 10 27 \n\n# 参考答案:\n4\n56\n59\n91\n27\n\n\n# 我的答案:\n3\n56\n91\n91\n27\n",
+            1594951200,
+            1596200400,
+            83,
+            1595574630.7281785
+        ]
+    ]
+}

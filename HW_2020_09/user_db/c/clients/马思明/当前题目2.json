@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1608089934.14363,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.3 Subsequence 2",
+            "<h3>Longest common subsequence problem (最长公共字串)</h3>\n\n如果字符串一的所有字符按其在字符串中的顺序出现在另外一个字符串二中，则字符串一称之为字符串二的子串。注意，并不要求子串（字符串一）的字符必须连续出现在字符串二中。请编写一个函数，输入两个字符串，求它们的最长公共子序列，并打印出最长公共子序列。<br><br>\n\n例如：输入两个字符串BDCABA和ABCBDAB，字符串BCBA和BDAB都是是它们的最长公共子序列，则输出BDAB。<br><br>\n\n当然这里，我们也是要先找递归的。假设我的两个sequence，一个是X，长度为n；另一个是Y，长度为m。\n现在假设我有两个point，一个是i，指在X的最后一个元素上，另一个是j，指在Y的最后一个元素上。我们的递归应该是分三种情况的。\n<ol>\n<li>如果X[i] == Y[j] 那么LCS(X[i],Y[j]) = X[i] + LCS(X[i-1],Y[j-1])<br>\n这个很明显，因为发现了一组公共元素，就看剩下的有多少公共元素。</li>\n\n<li>如果X[i] != Y[j] 那么 LCS(X[i],Y[j]) = max_len( LCS(X[i-1], Y[j]), LCS(X[i], Y[j-1]) )<br>\n这个其实也很容易相同，就是如果发现不同的，就去掉X或Y的最后一个，然后和另一个完整的比较，这样去掉X还是Y的最后一个，就有两种可能，所以就是要找中间max的一个。</li>\n\n<li>如果 i=0 或者 j=0，就return ''<br>\n因为有一个sequence已经完了。</li>\n\n</ol>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>\nBDCABA\nABCBDAB\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>\nBDAB\n</pre>",
+            "struct Result\n{\n\tchar LCS[100];\n};\n\n#include \"source.c\"\n\n#include <stdio.h>\n\nint main() {\n\tchar text1[100];\n\tchar text2[100];\n\tscanf(\"%s\", text1);\n\tscanf(\"%s\", text2);\n\t\n\tstruct Result result = LCS(text1, text2);\n\tprintf(\"%s\", result.LCS);\n}",
+            "int max(int a,int b){\n    int m;\n    if(a>b){m=a;}\n    else{m=b;}\n    return m;\n}\n\nint strlen1(char text[]){\n    int len=0;\n    for(int i=0;text[i]!=0;i++){len++;}\n    return len;\n}\n\nvoid strcpy1(char text1[],char text2[]){\n    int len1=strlen1(text1),len2=strlen1(text2);\n    for(int i=len1;i<len1+len2;i++){text1[i]=text2[i-len1];}\n    text1[len1+len2]=0;\n}\n\nstruct Result LCS(char text1[],char text2[]){\n    int len1=0,len2=0;\n    int max1=0,max2,max3;\n    char temp1[100],temp2[100],t[1];\n    struct Result res,res1,res2;\n    int k=0;\n    int lenr1=0,lenr2=0;\n\n    for(int i=0;text1[i]!=0;i++){len1++;}\n    for(int i=0;text2[i]!=0;i++){len2++;}\n    for(int i=0;i<100;i++){res.LCS[i]=0;res1.LCS[i]=0;res2.LCS[i]=0;}\n\n    if(len1==0||len2==0){return res;}\n    if(text1[len1-1]==text2[len2-1]){\n        t[0]=text1[len1-1];\n        strcpy1(res.LCS,t);\n        text1[len1-1]=0;text2[len2-1]=0;\n    }\n    if(text1[len1-1]!=text2[len2-1]){\n        for(int i=0;i<len1-1;i++){temp1[i]=text1[i];}temp1[len1-1]=0;\n        for(int i=0;i<len2-1;i++){temp2[i]=text2[i];}temp2[len2-1]=0;\n        res1=LCS(temp1,text2);\n        res2=LCS(text1,temp2);\n        lenr1=strlen1(res1.LCS);\n        lenr2=strlen1(res2.LCS);\n        if(lenr1>lenr2){strcpy1(res.LCS,res1.LCS);}\n        else{strcpy1(res.LCS,res2.LCS);}\n    }\n    \n    return res;\n}",
+            "=================================================================\n==18584==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffcb817f8f1 at pc 0x55972d1cccb5 bp 0x7ffcb817f5c0 sp 0x7ffcb817f5b0\nREAD of size 1 at 0x7ffcb817f8f1 thread T0\n    #0 0x55972d1cccb4 in strlen1 /home/cpp_test/马思明/source.c:10\n    #1 0x55972d1ccceb in strcpy1 /home/cpp_test/马思明/source.c:15\n    #2 0x55972d1cd386 in LCS /home/cpp_test/马思明/source.c:35\n    #3 0x55972d1cdd5b in main /home/cpp_test/马思明/main.c:16\n    #4 0x7efebd1dcb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)\n    #5 0x55972d1ccb49 in _start (/home/cpp_test/马思明/main.out+0xb49)\n\nAddress 0x7ffcb817f8f1 is located in stack of thread T0 at offset 513 in frame\n    #0 0x55972d1ccdfa in LCS /home/cpp_test/马思明/source.c:20\n\n  This frame has 6 object(s):\n    [32, 132) 'res'\n    [192, 292) 'res1'\n    [352, 452) 'res2'\n    [512, 513) 't' <== Memory access at offset 513 overflows this variable\n    [576, 676) 'temp1'\n    [736, 836) 'temp2'\nHINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext\n      (longjmp and C++ exceptions *are* supported)\nSUMMARY: AddressSanitizer: stack-buffer-overflow /home/cpp_test/马思明/source.c:10 in strlen1\nShadow bytes around the buggy address:\n  0x100017027ec0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x100017027ed0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f1 f1\n  0x100017027ee0: f1 f1 00 00 00 00 00 00 00 00 00 00 00 00 04 f2\n  0x100017027ef0: f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00\n  0x100017027f00: 00 00 04 f2 f2 f2 f2 f2 f2 f2 00 00 00 00 00 00\n=>0x100017027f10: 00 00 00 00 00 00 04 f2 f2 f2 f2 f2 f2 f2[01]f2\n  0x100017027f20: f2 f2 f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00\n  0x100017027f30: 00 00 04 f2 f2 f2 f2 f2 f2 f2 00 00 00 00 00 00\n  0x100017027f40: 00 00 00 00 00 00 04 f2 f2 f2 00 00 00 00 00 00\n  0x100017027f50: 00 00 00 00 f1 f1 f1 f1 00 00 00 00 00 00 00 00\n  0x100017027f60: 00 00 00 00 04 f2 f2 f2 f2 f2 f2 f2 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n==18584==ABORTING\n",
+            1607654400,
+            1608210000,
+            0,
+            1608089876.1074188
+        ]
+    ]
+}

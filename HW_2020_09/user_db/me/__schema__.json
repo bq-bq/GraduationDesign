@@ -1,0 +1,55 @@
+{
+    "__update_time__": 1588060372.048691,
+    "accounts": {
+        "field_names": [
+            "user_id",
+            "password_hash",
+            "user_type"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 0,
+        "primary_keys": [
+            "user_id"
+        ],
+        "table_name": "accounts",
+        "table_type": ""
+    },
+    "files": {
+        "field_names": [
+            "file"
+        ],
+        "field_types": [
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 1,
+        "posY": 82,
+        "primary_keys": [],
+        "table_name": "files",
+        "table_type": "client"
+    },
+    "settings": {
+        "field_names": [
+            "brand",
+            "theme",
+            "deploy"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "boolean"
+        ],
+        "foreign_keys": {},
+        "posX": 1,
+        "posY": 134,
+        "primary_keys": [],
+        "table_name": "settings",
+        "table_type": "client"
+    }
+}

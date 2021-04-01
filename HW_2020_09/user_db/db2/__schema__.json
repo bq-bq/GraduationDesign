@@ -1,0 +1,17 @@
+{
+    "__update_time__": 1590981719.911988,
+    "selected_db": {
+        "field_names": [
+            "db_id"
+        ],
+        "field_types": [
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "selected_db",
+        "table_type": ""
+    }
+}

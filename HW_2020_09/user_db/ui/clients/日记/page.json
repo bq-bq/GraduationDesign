@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1589539296.6593914,
+    "field_names": [
+        "page_id",
+        "show",
+        "ui_json"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "🐱",
+            "登录后",
+            "{\"type\":\"BorderLayout\",\"children\":[{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"选择列表\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_select_panel_py\",\"files\":[\"ui/ui_select_panel.py\"],\"data\":[\"data\"],\"vars\":[\"data\",\"selected\",\"text_data\"],\"events\":[\"change_data\",\"change_selected\"],\"class\":{},\"attr\":{\"expandable\":[\"false\",\"true\"],\"item_name\":[],\"key_column\":[],\"selected_cols\":[],\"text_data_col\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"],\"text_data_init\":[],\"width\":[]},\"style\":{}},\"init\":\"ui_select_panel_py\",\"files\":[\"ui/ui_select_panel.py\"],\"data\":{\"data\":\"日记\"},\"vars\":{\"selected\":\"$变量1\"},\"events\":{\"change_data\":\"@同步\"},\"attr\":{\"expandable\":\"true\",\"item_name\":\"日记\",\"text_data_col\":\"0\"},\"style\":{}}},{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"富文本\",\"tag\":\"\",\"text\":\"\",\"init\":\"summernote_obj_py\",\"files\":[\"ui/summernote.py\"],\"data\":[\"data\"],\"vars\":[\"data\"],\"events\":[\"change\"],\"class\":{},\"attr\":{\"data_column\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"],\"editable\":[\"True\",\"False\"]},\"style\":{\"margin\":[\"0px\",\"5px\",\"10px\",\"20px\",\"0 auto\"],\"width\":[]}},\"init\":\"summernote_obj_py\",\"files\":[\"ui/summernote.py\"],\"data\":{},\"vars\":{\"data\":\"$变量1\"},\"events\":{},\"attr\":{\"data_column\":\"1\",\"editable\":\"True\",\"innerHTML\":\"\"},\"style\":{\"margin\":\"5px\"}}},{\"type\":\"UI_Placehoder\"}],\"config\":{\"__meta__\":{\"name\":\"左右边缘布局\",\"tag\":\"#BorderLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"margin\":[],\"width\":[]}},\"tag\":\"#BorderLayout\",\"files\":[],\"data\":{},\"vars\":{},\"events\":{},\"attr\":{},\"style\":{}}}"
+        ]
+    ],
+    "table_name": "page"
+}

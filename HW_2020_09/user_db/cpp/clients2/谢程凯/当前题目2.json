@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1596115182.4552667,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <fstream>\n#include <vector>\n#include <string>\n#include <stdexcept>\n#include <cstring>\nusing namespace std;\n\n#define I(i,n) for (size_t i = 0; i < n; ++ i)\nclass NO {} ;\n\nclass Tuple {\n    public:\n    int key2 ;\n    string val ;\n};\n\nint turn(const string &val){\n        int get = 0;\n        for(int i = 0 ; i < val.size() ; i ++) {\n            get *= 10 ;\n            get += val[i] - '0';\n        }\n        return get ;\n}\n\nclass HT {\n    vector<Tuple> tuples;\n\n    size_t indexof(const int &key) const {\n        I(i , tuples.size()) if(tuples[i].key2 == key) return i ;\n        return -1 ;\n    }\n    size_t indexof(const string &key) const {\n        int key2 = turn(key) ;\n        I(i , tuples.size()) if(tuples[i].key2 == key2) return i ;\n        return -1 ;\n    }\n    public:\n\n    bool constains(const int  &key) const {\n        return indexof(key) != -1 ;\n    }\n    void put(const int &key , const string & val) {\n        size_t index = indexof(key) ;\n        if(index == -1) {\n            Tuple tuple ;\n            tuple.key2 = key ;\n            tuple.val =val ;\n            tuples.push_back(tuple) ;\n        }\n        else {\n            tuples[index].val = val ;\n        }\n    }\n    void put(const string &key_ , const string & val) {\n        int key = turn(key_) ;\n        size_t index = indexof(key) ;\n        if(index == -1) {\n            Tuple tuple ;\n            tuple.key2 = key ;\n            tuple.val =val ;\n            tuples.push_back(tuple) ;\n        }\n        else {\n            tuples[index].val = val ;\n        }\n    }\n    class TupleRef {\n        public :\n        HT *ht ;\n        Tuple * tu ;\n        int key2 ;\n\n        TupleRef(HT *ht , Tuple * tu  ,int key2) : ht(ht) , tu(tu) ,  key2(key2) {};\n\n        operator string() const {\n            if(tu == 0) throw NO() ;\n            return tu -> val ;\n        }\n\n        operator int() const{\n            if(tu == 0) throw NO() ;\n            int get = 0;\n            for(int i = 0 ; i < tu -> val.size() ; i ++) {\n            get *= 10 ;\n            get += tu -> val[i] - '0';\n            }\n            return get ;\n        }\n\n        TupleRef & operator = (const string & val) {\n            if(tu== 0) ht -> put(key2,val) ;\n            else tu-> val = val ;\n            return *this ;\n        }\n        TupleRef & operator = (const int & val_) {\n            const string &val = to_string(val_) ;\n            if(tu== 0) ht -> put(key2,val) ;\n            else tu-> val = val ;\n            return *this ;\n        }\n        };\n        TupleRef operator [] (const int &key) {\n            size_t index = indexof(key) ;\n            if(index == -1) {\n                return TupleRef(this , 0 ,key) ;\n            }\n            return TupleRef(this, &tuples[index],key) ;\n        }\n         TupleRef operator [] (const string &key_) {\n            int key = turn(key_) ;\n            size_t index = indexof(key) ;\n            if(index == -1) {\n                return TupleRef(this , 0 ,key) ;\n            }\n            return TupleRef(this, &tuples[index],key) ;\n        }\n        size_t size() const{\n        return tuples.size() ;\n        }\n\n} ;\n",
+            "",
+            1594951200,
+            1596200400,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

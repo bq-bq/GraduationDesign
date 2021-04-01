@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1607952556.2980475,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.1 Rod cutting",
+            "Input：有一个长n米的木头，和一个price table，table如下：<br>\n\n长度 i     1　　2　　3　　4　　5　　6 。。。<br>\n\n价格 Pi　1　　5　　8　　9　　10　　17。。。<br>\n<br>\n\n意思很明显，就是长度为1米的木头可以买1元，长5米的可以卖10元，依次类推<br>\n\nOutput：找一个cut的方法，使最后赚的钱最多。<br>\n\n很显然，这个递归的主要思路是我切一刀之后，分成两段，一段我按table的价钱卖了，另一段我当成一个新的子问题，继续作为我的函数的新的参数，这样不就递归了吗？但是问题是这一刀怎么切，没错，我们就来个找最大值，即max<sub>i =1 to n</sub> Pi + Cut(n-i).<br>\n<br>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>1 2 3 4 5 6\n1 5 8 9 10 17\n\n17 16 15 14 13 12 11 10 9 8\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>47\n44\n42\n39\n35\n34\n30\n27\n25\n22\n</pre>",
+            "#include \"source.c\"\n\n#include <stdio.h>\n\nvoid readPriceTable(int prices[][2], int priceCount) {\n\tfor (int i = 0; i < priceCount; ++ i) {\n\t\tscanf(\"%d\", &prices[i][0]);\n\t}\n\tfor (int i = 0; i < priceCount; ++ i) {\n\t\tscanf(\"%d\", &prices[i][1]);\n\t}\n}\n\nvoid test(int prices[][2], int priceCount) {\n\tint rodLength;\n\tscanf(\"%d\", &rodLength);\n\tprintf(\"%d\\n\", getMaxCuttingPrice(prices, priceCount, rodLength));\n}\n\nint main() {\n\tint prices[6][2];\n\treadPriceTable(prices, 6);\n\t\n\tfor (int i = 0; i < 10; ++ i) {\n\t\ttest(prices, 6);\n\t}\n}",
+            "int max (int x, int y){\n\treturn (x > y ? x : y);\n}\nint getMaxCuttingPrice(int prices[][2], int pricecount, int rodlength){\n\tint price = (rodlength > 6 ? 0 : prices[rodlength - 1][1]);\n\tfor (int first_cut = 1; first_cut < rodlength; ++ first_cut){\n\t\tint price_re = getMaxCuttingPrice(prices, pricecount,first_cut) \n\t\t\t\t  + getMaxCuttingPrice(prices, pricecount,rodlength - first_cut);\n\t\tprice = max(price,price_re);\n\t} \n\treturn price;\n}",
+            "In file included from main.c:1:0:\nsource.c: In function ‘getMaxCuttingPrice’:\nsource.c:11:9: error: ‘final_price’ undeclared (first use in this function)\n  return final_price;\n         ^~~~~~~~~~~\nsource.c:11:9: note: each undeclared identifier is reported only once for each function it appears in\n",
+            1607654400,
+            1608210000,
+            9,
+            1607952146.2038865
+        ]
+    ]
+}

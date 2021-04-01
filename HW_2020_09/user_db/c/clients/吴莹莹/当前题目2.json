@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1608089794.7068057,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.3 Subsequence 2",
+            "<h3>Longest common subsequence problem (最长公共字串)</h3>\n\n如果字符串一的所有字符按其在字符串中的顺序出现在另外一个字符串二中，则字符串一称之为字符串二的子串。注意，并不要求子串（字符串一）的字符必须连续出现在字符串二中。请编写一个函数，输入两个字符串，求它们的最长公共子序列，并打印出最长公共子序列。<br><br>\n\n例如：输入两个字符串BDCABA和ABCBDAB，字符串BCBA和BDAB都是是它们的最长公共子序列，则输出BDAB。<br><br>\n\n当然这里，我们也是要先找递归的。假设我的两个sequence，一个是X，长度为n；另一个是Y，长度为m。\n现在假设我有两个point，一个是i，指在X的最后一个元素上，另一个是j，指在Y的最后一个元素上。我们的递归应该是分三种情况的。\n<ol>\n<li>如果X[i] == Y[j] 那么LCS(X[i],Y[j]) = X[i] + LCS(X[i-1],Y[j-1])<br>\n这个很明显，因为发现了一组公共元素，就看剩下的有多少公共元素。</li>\n\n<li>如果X[i] != Y[j] 那么 LCS(X[i],Y[j]) = max_len( LCS(X[i-1], Y[j]), LCS(X[i], Y[j-1]) )<br>\n这个其实也很容易相同，就是如果发现不同的，就去掉X或Y的最后一个，然后和另一个完整的比较，这样去掉X还是Y的最后一个，就有两种可能，所以就是要找中间max的一个。</li>\n\n<li>如果 i=0 或者 j=0，就return ''<br>\n因为有一个sequence已经完了。</li>\n\n</ol>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>\nBDCABA\nABCBDAB\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>\nBDAB\n</pre>",
+            "struct Result\n{\n\tchar LCS[100];\n};\n\n#include \"source.c\"\n\n#include <stdio.h>\n\nint main() {\n\tchar text1[100];\n\tchar text2[100];\n\tscanf(\"%s\", text1);\n\tscanf(\"%s\", text2);\n\t\n\tstruct Result result = LCS(text1, text2);\n\tprintf(\"%s\", result.LCS);\n}",
+            "#include <stdio.h>\n#include <string.h>\n\nstruct Result LCS(char text1[], char text2[]){\n\tstruct Result first;\n\tfor (int k = 0; k < 100; ++ k) {\n\t\tfirst.LCS[k]=0;\n\t}\n   int lenth1=strlen(text1);\n\tint lenth2=strlen(text2);\n\tchar p[100];\n\tchar h[100];\n\tfor (int i = 0; i < lenth1-1; ++ i) {\n\t\tp[i]=text1[i];\n\t}\n\tp[lenth1-1]=0;\n\tfor (int j = 0; j < lenth2-1; ++ j) {\n\t\th[j]=text1[j];\n\t}\n\th[lenth2-1]=0;\n\t\n\tif(text1[lenth1-1]==0||text2[lenth2-1]==0) return first;\n\tif(text1[lenth1-1]==text2[lenth2-1]){\n\t\tchar temp=text1[lenth1-1];\n\t\ttext1[lenth1-1]=text2[lenth2-1]=0;\n\t\tfirst=LCS(text1,text2);\n\t\tint lenth3=strlen(first.LCS);\n\t\tfirst.LCS[lenth3-1]=temp;\n\t}\n\tif(text1[lenth1-1]!=text2[lenth2-1]){\n\t\tstruct Result a=LCS(text1,p);\n\t\tstruct Result b=LCS(h,text2);\n\t\tint x=strlen(a.LCS);\n\t\tint y=strlen(b.LCS);\n\t\tif(x>=y) \tfirst=LCS(text1,p);\n\t\tif(x<y)   first=LCS(h,text2);\n\t}\n\treturn first;\n}",
+            "In file included from main.c:6:0:\nsource.c: In function ‘LCS’:\nsource.c:22:39: error: lvalue required as left operand of assignment\n  if(text1[lenth1-1]=0||text2[lenth2-1]=0) return first;\n                                       ^\n",
+            1607654400,
+            1608210000,
+            100,
+            1608036781.634348
+        ]
+    ]
+}

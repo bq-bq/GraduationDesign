@@ -1,0 +1,25 @@
+{
+    "__update_time__": 1587889755.709942,
+    "store_component": {
+        "field_names": [
+            "component_id",
+            "publisher_id",
+            "publish_date",
+            "price",
+            "num_uses"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "time",
+            "number",
+            "number"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "store_component",
+        "table_type": ""
+    }
+}

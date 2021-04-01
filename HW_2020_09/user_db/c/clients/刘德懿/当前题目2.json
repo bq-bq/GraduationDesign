@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1608090029.7952998,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.6 0-1 Backpack",
+            "0-1 Kanpsack 问题<br>\n给定一组物品，每种物品都有自己的重量和价格，在限定的总重量内，我们如何选择，才能使得物品的总价格最高。问题的名称来源于如何选择最合适的物品放置于给定背包中。<br>\n<br>\n\n我们有n种物品，物品j的重量为w<sub>j</sub>，价格为p<sub>j</sub>。我们假定所有物品的重量和价格都是非负的。背包所能承受的最大重量为W。<br>\n<br>\n如果限定每种物品只能选择0个或1个，则问题称为0-1背包问题。<br>\n<br>\n\n<b>算法</b> 我们将在总重量不超过Y的前提下，前j种物品的总价格所能达到的最高值定义为A(j, Y)。\nA(j, Y)的递推关系为：\n<ul>\n<li>A(0, Y) = 0</li>\n<li>A(j, 0) = 0</li>\n<li>如果w<sub>j</sub> > Y, A(j, Y) = A(j - 1, Y)</li>\n<li>如果w<sub>j</sub> ≤ Y, A(j, Y) = max { A(j - 1, Y), p<sub>j</sub> + A(j - 1, Y - w<sub>j</sub>) }</li>\n</ul>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>\n     9     6    10    11     8     4     5     7    12    13\n    11     6    12     9    14    10    13     8    15     7\n    48\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>\n51\n</pre>",
+            "#include \"source.c\"\n#include <stdio.h>\n\nvoid read(int array[], int length) {\n\tfor (int i = 0; i < length;  ++ i) {\n\t\tscanf(\"%d\", &array[i]);\n\t}\n}\n\nint main() {\n\tint prices[10];\n\tread(prices, 10);\n\tint weights[10];\n\tread(weights, 10);\n\tint maxWeight;\n\tscanf(\"%d\", &maxWeight);\n\t\n\tprintf(\"%d\", knapsack(prices, weights, maxWeight)); \n}",
+            "int max(int x,int y){\n\treturn (x>y?x:y);\n}\n\nint knapsack(int prices[], int weights[], int maxWeight){\n\tint A[11][maxWeight+1];\n\tfor (int y = 1; y < maxWeight+1; ++ y) {\t// \n\t\tfor (int j = 1; j < 11; ++ j){\n\t\t\tif(weights[j-1]>y){\n\t\t\t\tA[j][y] = A[j-1][y];\n\t\t\t}\n\t\t\telse{\n\t\t\t\tA[j][y] = max(A[j-1][y],prices[j-2]+A[j-1][y-weights[j]]);\n\t\t\t}\n\t\t} \n\t}\n\treturn A[10][maxWeight];\n\t\n}",
+            "# 答案不正确\n\n# 随机输入:\n     6     5    19    11    14    10     7    20    16    15\n    12    11    16    10    18     5    14    15     9     8\n58\n\n\n# 参考答案:\n81\n\n# 我的答案:\n-536706704",
+            1607654400,
+            1608210000,
+            50,
+            1608089983.1741116
+        ]
+    ]
+}

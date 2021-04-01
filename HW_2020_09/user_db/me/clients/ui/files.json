@@ -1,0 +1,45 @@
+{
+    "__update_time__": 1587993713.2467,
+    "field_names": [
+        "file"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "ui/component_edit_table.js",
+            "ui/select_panel.js"
+        ],
+        [
+            "ui/config_edit_table.js"
+        ],
+        [
+            "ui/config_editor.py"
+        ],
+        [
+            "ui/form.py"
+        ],
+        [
+            "ui/page_config_editor.py"
+        ],
+        [
+            "ui/select_panel.py"
+        ],
+        [
+            "ui/summernote.py"
+        ],
+        [
+            "ui/table.py"
+        ],
+        [
+            "ui/login_card.py"
+        ],
+        [
+            "ui/ui_elt_preview.py"
+        ]
+    ],
+    "table_name": "files"
+}

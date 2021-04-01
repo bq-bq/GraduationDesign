@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1591237980.9721184,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "7.2 (C++)",
+            "完成split函数<br>\n\n<b>EXAMPLE INPUT<B>\n<pre>\n123   abcde   567     \n   ds   tete dfsd   567   \n  asd  te sdfs   567\n</pre>\n\n<b>EXAMPLE OUTPUT</b>\n<pre>\n123\nabcde\n567\nds\ntete\ndfsd\n567\nasd\nte\nsdfs\n567\n</pre>",
+            "#include \"source.cpp\"\n#include <iostream>\n#include <string>\n#include <vector>\nusing namespace std;\n\nvoid test() {\n\tstring line;\n\tgetline(cin, line);\n\tvector<string> words = split(line);\n\tfor (int i = 0; i < words.size(); ++ i) {\n\t\tcout << words[i] << endl;\n\t}\n}\n\nint main() {\n\ttest();\n\ttest();\n\ttest();\n}",
+            "",
+            "",
+            1591236000,
+            1591242000,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

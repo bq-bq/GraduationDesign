@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595475595.2941175,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.3 (C++)",
+            "在课堂上讲的哈希表的基础上，写一个以整数为键的只有一个类型参数的哈希表类, HT&lt;E&gt;。<br><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">另外，请添加一个函数 getKeys，该函数返回所有二元组(tuple)中的键(key)。</span></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem; font-weight: bolder;\">HINT</span><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">：尝试通过添加额外代码(&lt;10行)完成该题。</span><br></p><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">2000\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">2000\ntext51\ntext151\ntext251\ntext351\ntext451\ntext551\ntext651\ntext751\ntext851\ntext951\ntext1051\ntext1151\ntext1251\ntext1351\ntext1451\ntext1551\ntext1651\ntext1751\ntext1851\ntext1951\n0</pre>",
+            "\n#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tint test_count;\n\tcin >> test_count;\n\tHT<string> map;\n\tfor (int i = 0; i < test_count; ++ i) {\n\t\tstringstream ss;\n\t\tss << \"text\" << (1 + i);\n\t\tmap.put(i * 10, ss.str());\n\t}\n\tcout << map.size() << endl;\n\tfor (int i = 0; i < test_count; ++ i) {\n\t\tif (! map.containsKey(i * 10)) {\n\t\t\tcout << \"bad\" << endl;\n\t\t}\n\t\telse if (i % 100 == 50) {\n\t\t\tcout << map[i * 10] << endl;\n\t\t}\n\t}\n\tvector<int> keys = map.getKeys();\n\tfor (int i = 0; i < keys.size(); ++ i) {\n\t\tmap.remove(keys[i]);\n\t}\n\tcout << map.size() << endl;\n}",
+            "\n#include <vector>\n#include <stdexcept>\n#include <iostream>\nusing std::vector;\nusing std::cout;\nusing std::endl;\nusing std::logic_error;\n#define Loop(i, n) for (int i = 0; i < n; ++ i) \ntemplate<class E>\n\tclass HT\n\t{\n\t\tprivate:\n\t\t\tstruct Tuple\n\t\t\t{\n\t\t\t\t\tint key;\n\t\t\t\t    E value;\n\t\t\t\t\tbool in_use;\n\t\t\t\t\n\t\t\t\t\tTuple():in_use(false){}\n\t\t\t\t\tTuple(int key, const E& value):key(key), value(value), in_use(true){}\n\t\t\t};\n\t\tvector<Tuple> tuples;\n\t\tint in_use_size;\n\t\t\n\t\tint hash_function(int key)const{return key % tuples.size();}\n\t\tint indexOfkey(int key)const;\n\t\tvoid double_tuples();\n\t\tint get(int key)const{Loop(i,tuples.size())if(tuples[i].key == key)return i;}\n\t\tpublic:\n\t\t\tHT(int initial_size = 2001):in_use_size(0){tuples.resize(initial_size);}\n\t\t\tvoid put(int key, const E& value);\n\t\t\tconst E& operator[](int key)const;\n\t\t\tint size()const{return in_use_size;}\n\t\t\tvoid remove(int key);\n\t\t\tvector<int> getKeys()const;\n\t\t\tbool containsKey(int key)const;\n\t};\ntemplate<class E>\nint HT<E>::indexOfkey(int key)const\n{\n\tint index = hash_function(key);\n\twhile (tuples[index].in_use && tuples[index].key != key)\n\t{\n\t\tindex = (index + 1) % tuples.size();\n\t}\n\treturn index;\n}\ntemplate<class E>\nvoid  HT<E>::put(int key, const E& value)\n{\n\tint index = indexOfkey(key);\n\tTuple tuple(key, value);\n\ttuples[index] = tuple;\n\t++ in_use_size;\n\tif (2 * in_use_size > tuples.size())\n\t\tdouble_tuples();\n}\ntemplate<class E>\n\tvoid  HT<E>::double_tuples()\n\t{\n\t\tvector<Tuple> notEmpty;\n\t\tint preSize = tuples.size();\n\t\tLoop(i, preSize)\n\t\t\tif (tuples[i].in_use)\n\t\t\t\tnotEmpty.push_back(tuples[i]);\n\t\ttuples.clear();\n\t\tin_use_size = 0;\n\t\ttuples.resize(2 * preSize);\n\t\tLoop(i, notEmpty.size())\n\t\t\tput(notEmpty[i].key, notEmpty[i].value);\n\t}\ntemplate<class E>\nconst E& HT<E>::operator[](int key)const\n{\n\tint index = indexOfkey(key);\n\tif (!tuples[index].in_use) throw logic_error(\"Not such key!\\n\");\n\treturn tuples[index].value;\n}\ntemplate<class E>\nvoid HT<E>::remove(int key)\n{\n\n\tint index = get(key);\n\t\n\n\tif (!tuples[index].in_use) throw logic_error(\"Not such key!\\n\");\n\tfor (int i = index + 1; i < tuples.size() && tuples[i].in_use ; ++i)\n\t\tif (i != hash_function(tuples[i].key) && hash_function(tuples[i].key) <= index)\n\t\t{Tuple temp; temp = tuples[index]; tuples[index] = tuples[i]; tuples[i] = temp; index = i;}\n\t\t\t\n\ttuples[index] = tuples[tuples.size() - 1];\n\ttuples.pop_back();\n\t--in_use_size;\n\t\n}\ntemplate<class E>\nvector<int> HT<E>::getKeys()const\n{\n\tvector<int> Keys;\n\tLoop(i, tuples.size())\n\t\tif (tuples[i].in_use)\n\t\t\t{Keys.push_back(tuples[i].key);;}\n\t\t\n\treturn Keys;\n}\ntemplate<class E>\nbool HT<E>::containsKey(int key)const\n{\n\tint index = indexOfkey(key);\n\tif (tuples[index].in_use) return true;\n\treturn false\n\t}",
+            "In file included from main.cpp:5:0:\n/usr/include/c++/5/sstream: In member function ‘bool HT<E>::containsKey(int) const’:\n/usr/include/c++/5/sstream:41:1: error: expected ‘;’ before ‘namespace’\n namespace std _GLIBCXX_VISIBILITY(default)\n ^\nIn file included from /usr/include/c++/5/bits/stl_algobase.h:59:0,\n                 from /usr/include/c++/5/vector:60,\n                 from source.cpp:2,\n                 from main.cpp:2:\n/usr/include/c++/5/sstream:41:15: error: expected ‘=’ before ‘__attribute__’\n namespace std _GLIBCXX_VISIBILITY(default)\n               ^\n/usr/include/c++/5/sstream:41:15: error: expected identifier before ‘__attribute__’\n/usr/include/c++/5/sstream:41:15: error: expected ‘;’ before ‘__attribute__’\n/usr/include/c++/5/sstream:41:15: error: expected primary-expression before ‘__attribute__’\n/usr/include/c++/5/bits/sstream.tcc:39:15: error: expected ‘=’ before ‘__attribute__’\n namespace std _GLIBCXX_VISIBILITY(default)\n               ^\n/usr/include/c++/5/bits/sstream.tcc:39:15: error: expected identifier before ‘__attribute__’\n/usr/include/c++/5/bits/sstream.tcc:39:15: error: expected ‘;’ before ‘__attribute__’\n/usr/include/c++/5/bits/sstream.tcc:39:15: error: expected primary-expression before ‘__attribute__’\nmain.cpp:8:12: error: a function-definition is not allowed here before ‘{’ token\n int main() {\n            ^\nmain.cpp:31:1: error: expected ‘}’ at end of input\n }\n ^\n",
+            1595469600,
+            1595475600,
+            0,
+            1595475578.9941683
+        ]
+    ]
+}

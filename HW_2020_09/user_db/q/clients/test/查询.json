@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1587993892.449096,
+    "field_names": [
+        "名字",
+        "查询内容",
+        "config"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "查询转学生",
+            "{\"field_names\":[\"查询语句\",\"操作\",\"操作对象\"],\"field_types\":[\"text\",\"text\",\"text\"],\"rows\":[[\"query(select=[student.student_first_name, student.student_last_name], where=student.student_transfer==True)\",\"赋值≫\",\"result\"]]}",
+            "public_readonly,"
+        ],
+        [
+            "查询会计系的学生",
+            "{\"field_names\":[\"查询语句\",\"操作\",\"操作对象\"],\"field_types\":[\"text\",\"text\",\"text\"],\"rows\":[[\"query(select=[student.student_first_name, student.student_last_name], where=department.department_name == 'Accounting')\",\"赋值≫\",\"result\"]]}",
+            ""
+        ]
+    ],
+    "table_name": "查询"
+}

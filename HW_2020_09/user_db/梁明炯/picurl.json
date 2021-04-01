@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1588257500.493477,
+    "field_names": [
+        "url"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "梁明炯/1.jpg"
+        ],
+        [
+            "梁明炯/2.jpg"
+        ],
+        [
+            "梁明炯/3.jpg"
+        ]
+    ],
+    "table_name": "picurl"
+}

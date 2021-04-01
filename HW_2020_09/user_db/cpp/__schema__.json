@@ -1,0 +1,160 @@
+{
+    "__update_time__": 1588914432.740272,
+    "当前题目1": {
+        "field_names": [
+            "题目名",
+            "问题",
+            "主程序",
+            "答案程序",
+            "随机输入产生程序",
+            "开始时间",
+            "截止时间"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "time",
+            "time"
+        ],
+        "foreign_keys": {},
+        "posX": 418,
+        "posY": 1,
+        "primary_keys": [],
+        "table_name": "当前题目1",
+        "table_type": "client"
+    },
+    "当前题目2": {
+        "field_names": [
+            "题目名",
+            "问题",
+            "主程序",
+            "答案",
+            "评语",
+            "开始时间",
+            "截止时间",
+            "分数",
+            "提交时间"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "time",
+            "time",
+            "number",
+            "time"
+        ],
+        "foreign_keys": {},
+        "posX": 675,
+        "posY": 2,
+        "primary_keys": [],
+        "table_name": "当前题目2",
+        "table_type": "client"
+    },
+    "正在编写": {
+        "field_names": [
+            "题目名",
+            "答案"
+        ],
+        "field_types": [
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 298,
+        "posY": 1,
+        "primary_keys": [],
+        "table_name": "正在编写",
+        "table_type": "client"
+    },
+    "用户组": {
+        "field_names": [
+            "用户名",
+            "组名"
+        ],
+        "field_types": [
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "用户组",
+        "table_type": ""
+    },
+    "答案": {
+        "field_names": [
+            "题目名",
+            "用户名",
+            "答案",
+            "提交时间",
+            "分数",
+            "评语"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text",
+            "time",
+            "number",
+            "text"
+        ],
+        "foreign_keys": {
+            "题目名": [
+                "题目",
+                "题目名"
+            ]
+        },
+        "posX": 211,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "答案",
+        "table_type": "client"
+    },
+    "运行结果": {
+        "field_names": [
+            "结果"
+        ],
+        "field_types": [
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 558,
+        "posY": 2,
+        "primary_keys": [],
+        "table_name": "运行结果",
+        "table_type": "client"
+    },
+    "题目": {
+        "field_names": [
+            "题目名",
+            "问题",
+            "主程序",
+            "答案程序",
+            "随机输入产生程序",
+            "开始时间",
+            "截止时间"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "time",
+            "time"
+        ],
+        "foreign_keys": {},
+        "posX": 73,
+        "posY": 1,
+        "primary_keys": [],
+        "table_name": "题目",
+        "table_type": ""
+    }
+}

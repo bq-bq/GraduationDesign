@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1589853920.6669304,
+    "field_names": [
+        "url",
+        "menuText"
+    ],
+    "field_types": [
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "#",
+            "总览"
+        ],
+        [
+            "#",
+            "图表"
+        ],
+        [
+            "#",
+            "统计"
+        ]
+    ],
+    "table_name": "dropdowns"
+}

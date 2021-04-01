@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595474722.5960715,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.3 (C++)",
+            "在课堂上讲的哈希表的基础上，写一个以整数为键的只有一个类型参数的哈希表类, HT&lt;E&gt;。<br><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">另外，请添加一个函数 getKeys，该函数返回所有二元组(tuple)中的键(key)。</span></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem; font-weight: bolder;\">HINT</span><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">：尝试通过添加额外代码(&lt;10行)完成该题。</span><br></p><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">2000\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">2000\ntext51\ntext151\ntext251\ntext351\ntext451\ntext551\ntext651\ntext751\ntext851\ntext951\ntext1051\ntext1151\ntext1251\ntext1351\ntext1451\ntext1551\ntext1651\ntext1751\ntext1851\ntext1951\n0</pre>",
+            "\n#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tint test_count;\n\tcin >> test_count;\n\tHT<string> map;\n\tfor (int i = 0; i < test_count; ++ i) {\n\t\tstringstream ss;\n\t\tss << \"text\" << (1 + i);\n\t\tmap.put(i * 10, ss.str());\n\t}\n\tcout << map.size() << endl;\n\tfor (int i = 0; i < test_count; ++ i) {\n\t\tif (! map.containsKey(i * 10)) {\n\t\t\tcout << \"bad\" << endl;\n\t\t}\n\t\telse if (i % 100 == 50) {\n\t\t\tcout << map[i * 10] << endl;\n\t\t}\n\t}\n\tvector<int> keys = map.getKeys();\n\tfor (int i = 0; i < keys.size(); ++ i) {\n\t\tmap.remove(keys[i]);\n\t}\n\tcout << map.size() << endl;\n}",
+            "#include <iostream>\n#include <string>\n#include <vector>\nusing namespace std;\nconst int initial_size = 1;\n\nclass NoSuchKeyException {};\nclass NoSuchValueException {};\n\nsize_t circular_shift(size_t bits, int shift_bits) {\n\tconst int num_bits = 8 * sizeof(size_t);\n\tshift_bits = shift_bits % num_bits;\n\treturn bits << shift_bits | bits >> (num_bits - shift_bits);\n}\n\nsize_t hash_function(const int & key) {\n\tsize_t code = 0;\n\tint tmp = key;\n\tfor(int i = 0; tmp > 0; tmp /= 10, i ++) {\n\t\tcode ^= circular_shift(tmp % 10, i * 5);\n\t}\n\treturn code;\n}\ntemplate <typename V>\nclass HT {\n    class Tuple{\n    public:\n        int key;\n        V value;\n        bool in_use;\n\n        Tuple(): in_use(false) {}\n        Tuple(int key, V value): key(key), value(value), in_use(true) {}\n    };\n\n    vector<Tuple> tuples;\n    size_t _size;\n\npublic:\n    HT() {\n        _size = 0;\n        tuples.resize(initial_size);\n    }\n\n    size_t size() {return _size;}\n\n    size_t canonical_index(const int key) const {\n        size_t hash_code = hash_function(key);\n        return hash_code % tuples.size();\n    }\n\n    size_t indexOfKey(const int key) const {\n        size_t index = canonical_index(key);\n        while(true) {\n            if(!tuples[index].in_use) return index;\n            if(tuples[index].key == key) return index;\n            index = (index + 1) % tuples.size();\n        }\n    }\n\n    void put(const int key, const V & value) {\n        size_t index = indexOfKey(key);\n        tuples[index].key = key;\n        tuples[index].value = value;\n        if(tuples[index].in_use) return;\n        tuples[index].in_use = true;\n        _size ++;\n        if(_size * 2 > tuples.size()) _double_tuples();\n    }\n\n    void _double_tuples() {\n        vector<Tuple> non_empty_tuples;\n        for(int i = 0; i < tuples.size(); i ++) {\n            if(tuples[i].in_use) non_empty_tuples.push_back(tuples[i]);\n            tuples[i].in_use = false;\n        }\n\t\t_size = 0;\n        tuples.resize(2 * tuples.size());\n        for(int i = 0; i < non_empty_tuples.size(); i ++) {\n            put(non_empty_tuples[i].key, non_empty_tuples[i].value);\n        }\n    }\n\n    bool _between(size_t hole, size_t canonical, size_t tuple_index) {\n        if(hole < tuple_index) \n            return canonical > hole && canonical <= tuple_index;\n        else \n            return canonical > hole || canonical <= tuple_index;\n    }\n\n    void remove(const int key) {\n        size_t index = indexOfKey(key);\n        if(!tuples[index].in_use) throw NoSuchKeyException();\n        tuples[index].in_use = false;\n        _size --;\n        size_t hole = index;\n        size_t tuple_index = hole;\n        while(true) {\n            tuple_index = (tuple_index + 1) % tuples.size();\n            if(!tuples[tuple_index].in_use) return;\n            size_t canonical = canonical_index(tuples[tuple_index].key);\n            if(_between(hole, canonical, tuple_index)) continue;\n            tuples[hole] = tuples[tuple_index];\n            hole = tuple_index;\n            tuples[hole].in_use = false;\n        }\n    }\n\t\n\tV & operator [] (const int key) {\n        size_t index = indexOfKey(key);\n        if(tuples[index].in_use) return tuples[index].value;\n        else throw NoSuchKeyException();\n    }\n\n    const V & operator [] (const int key) const {\n        size_t index = indexOfKey(key);\n        if(tuples[index].in_use) return tuples[index].value;\n        else return V();\n    }\n\n    bool containsKey(const int key) {\n        size_t index = indexOfKey(key);\n        return tuples[index].in_use;\n    }\n\n    vector<int> getKeys() {\n        vector<int> keys;\n        for(int i = 0; i < tuples.size(); i ++) {\n            if(tuples[i].in_use)\n                keys.push_back(tuples[i].key);\n        }\n        return keys;\n    }\n};",
+            "# 答案不正确\n\n# 随机输入:\n1749\n\n\n# 参考答案:\n1749\ntext51\ntext151\ntext251\ntext351\ntext451\ntext551\ntext651\ntext751\ntext851\ntext951\ntext1051\ntext1151\ntext1251\ntext1351\ntext1451\ntext1551\ntext1651\n0\n\n\n# 我的答案:\n3798\ntext51\ntext151\ntext251\ntext351\ntext451\ntext551\ntext651\ntext751\ntext851\ntext951\ntext1051\ntext1151\ntext1251\ntext1351\ntext1451\ntext1551\ntext1651\n2049\n",
+            1595469600,
+            1595475600,
+            91,
+            1595474047.274042
+        ]
+    ]
+}

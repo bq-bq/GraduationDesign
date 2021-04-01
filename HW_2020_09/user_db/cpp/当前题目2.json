@@ -1,0 +1,29 @@
+{
+    "__update_time__": 1586959976.4013274,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [],
+    "table_name": "当前题目2"
+}

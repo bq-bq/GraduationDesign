@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1596112015.8086429,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <sstream>\n#include<vector>\n#include<map> \n#include<algorithm>\nusing namespace std;\nint _size;\nclass V {\npublic:\n\tstring s;\n\tint i;\n\tV(int _i) :i(_i) {}\n\tV(string _s) :s(_s) {}\n\t\n\toperator string() {\n\t\treturn s;\n\t}\n\t\n\toperator int() {\n\t\treturn i;\n\t}\n\t\n\tV& operator=(int val){\n\t\ti=val;\n   \t\treturn *this;\n \t}\n \t\n \tV& operator=(string val){\n\t\ts=val;\n \t \treturn *this;\n \t}\n};\n\nclass HT {\n \tclass Tuple1 {\n \tpublic:\n  \t\tint key;\n  \t\tV value;\n  \t\tTuple1(int _key, int _value) :key(_key), value(_value) { _size++; };\n  \t\tTuple1(int _key, string _value) :key(_key), value(_value) { _size++; };\n \t};\n \t\n \tclass Tuple2 {\n \tpublic:\n  \t\tstring key;\n  \t\tV value;\n  \t\tTuple2(string _key, string _value) :key(_key), value(_value) { _size++; };\n  \t\tTuple2(string _key, int _value) :key(_key), value(_value) { _size++; };\n  \t\tvoid operator=(int val){\n   \t\t\tvalue=val;\n  \t\t}\n  \t\tvoid operator=(string val){\n   \t\t\tvalue=val;\n  \t\t}\n \t};\n \tvector<Tuple1>t1;\n \tvector<Tuple2>t2;\n\t\n\tpublic:\n\tint size() { \n\t\treturn _size; \n\t}\n\t\n \tvoid put(int _key, int _value) {\n\t\tt1.push_back(Tuple1(_key, _value));\n \t}\n \tvoid put(int _key, string _value) {\n \t\tt1.push_back(Tuple1(_key, _value));\n\t}\n \tvoid put(string _key, int _value) {\n \t\tt2.push_back(Tuple2(_key, _value));\n\t}\n \tvoid put(string _key, string _value) {\n\t\tt2.push_back(Tuple2(_key, _value));\n\t}\n \tV& operator [] (const int& key) {\n \t\tfor (int i = 0; i < t1.size(); ++i) {\n  \t\t\tif (t1[i].key == key) return t1[i].value;\n  \t\t}\n \t \tput(key,5);\n \t \tfor (int i = 0; i < t1.size(); ++i) {\n  \t\t\t if (t1[i].key == key) {\n  \t \t\t \treturn t1[i].value;\n   \t\t\t}\n  \t\t}\n \t}\n \t\n \tV& operator [] (const string& key) {\n \t\tfor (int i = 0; i < t2.size(); ++i) {\n\t\t\tif (t2[i].key == key) return t2[i].value;\n \t\t}\n\t\tput(key,5);\n\t\tfor (int i = 0; i < t2.size(); ++i) {\n\t\t\tif (t2[i].key == key) {\n  \t\t\treturn t2[i].value;\n \t\t\t}\n  \t\t}\n\t }\n\n};",
+            "# 答案不正确\n\n# 随机输入:\n65 40 58 41 33 26 94 53 \n\n# 参考答案:\n4\n40\n41\n26\n53\n\n\n# 我的答案:\n4\n0\n41\n\n53\n",
+            1594951200,
+            1596200400,
+            66,
+            1596000938.1560664
+        ]
+    ]
+}

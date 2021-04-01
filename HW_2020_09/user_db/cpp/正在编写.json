@@ -1,0 +1,15 @@
+{
+    "__update_time__": 1586786302.6930718,
+    "field_names": [
+        "题目名",
+        "答案"
+    ],
+    "field_types": [
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [],
+    "table_name": "正在编写"
+}

@@ -1,0 +1,17 @@
+{
+    "__update_time__": 1579920039.769464,
+    "field_names": [
+        "file"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "db/database_schema_svg.js"
+        ]
+    ],
+    "table_name": "files"
+}

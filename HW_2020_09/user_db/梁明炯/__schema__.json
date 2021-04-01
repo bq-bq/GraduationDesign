@@ -1,0 +1,51 @@
+{
+    "__update_time__": 1590243355.729935,
+    "dropdowns": {
+        "field_names": [
+            "url",
+            "menuText"
+        ],
+        "field_types": [
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 187,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "dropdowns",
+        "table_type": "public"
+    },
+    "picurl": {
+        "field_names": [
+            "url"
+        ],
+        "field_types": [
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 3,
+        "primary_keys": [],
+        "table_name": "picurl",
+        "table_type": "public"
+    },
+    "plotlydata": {
+        "field_names": [
+            "a",
+            "b",
+            "c"
+        ],
+        "field_types": [
+            "number",
+            "number",
+            "number"
+        ],
+        "foreign_keys": {},
+        "posX": 432,
+        "posY": 15,
+        "primary_keys": [],
+        "table_name": "plotlydata",
+        "table_type": "public"
+    }
+}

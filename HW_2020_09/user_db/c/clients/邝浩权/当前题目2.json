@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1607859063.0559812,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.3 Subsequence 2",
+            "<h3>Longest common subsequence problem (最长公共字串)</h3>\n\n如果字符串一的所有字符按其在字符串中的顺序出现在另外一个字符串二中，则字符串一称之为字符串二的子串。注意，并不要求子串（字符串一）的字符必须连续出现在字符串二中。请编写一个函数，输入两个字符串，求它们的最长公共子序列，并打印出最长公共子序列。<br><br>\n\n例如：输入两个字符串BDCABA和ABCBDAB，字符串BCBA和BDAB都是是它们的最长公共子序列，则输出BDAB。<br><br>\n\n当然这里，我们也是要先找递归的。假设我的两个sequence，一个是X，长度为n；另一个是Y，长度为m。\n现在假设我有两个point，一个是i，指在X的最后一个元素上，另一个是j，指在Y的最后一个元素上。我们的递归应该是分三种情况的。\n<ol>\n<li>如果X[i] == Y[j] 那么LCS(X[i],Y[j]) = X[i] + LCS(X[i-1],Y[j-1])<br>\n这个很明显，因为发现了一组公共元素，就看剩下的有多少公共元素。</li>\n\n<li>如果X[i] != Y[j] 那么 LCS(X[i],Y[j]) = max_len( LCS(X[i-1], Y[j]), LCS(X[i], Y[j-1]) )<br>\n这个其实也很容易相同，就是如果发现不同的，就去掉X或Y的最后一个，然后和另一个完整的比较，这样去掉X还是Y的最后一个，就有两种可能，所以就是要找中间max的一个。</li>\n\n<li>如果 i=0 或者 j=0，就return ''<br>\n因为有一个sequence已经完了。</li>\n\n</ol>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>\nBDCABA\nABCBDAB\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>\nBDAB\n</pre>",
+            "struct Result\n{\n\tchar LCS[100];\n};\n\n#include \"source.c\"\n\n#include <stdio.h>\n\nint main() {\n\tchar text1[100];\n\tchar text2[100];\n\tscanf(\"%s\", text1);\n\tscanf(\"%s\", text2);\n\t\n\tstruct Result result = LCS(text1, text2);\n\tprintf(\"%s\", result.LCS);\n}",
+            "struct A{\n\t\tchar x[100];\n\t}\nstruct rational LCS(char* text1,char* text2){\n\tstruct A text;\n\tfor(int i=0;i<100;i++){\n\t\ttext.x[i]='a';\n\t}\n\treturn struct A text;\n}",
+            "In file included from main.c:6:0:\nsource.c:4:1: error: expected ‘;’, identifier or ‘(’ before ‘struct’\n struct rational LCS(char* text1,char* text2){\n ^~~~~~\nsource.c:4:17: error: return type is an incomplete type\n struct rational LCS(char* text1,char* text2){\n                 ^~~\nsource.c: In function ‘LCS’:\nsource.c:9:9: error: expected expression before ‘struct’\n  return struct A text;\n         ^~~~~~\nsource.c:9:9: warning: ‘return’ with a value, in function returning void\nsource.c:4:17: note: declared here\n struct rational LCS(char* text1,char* text2){\n                 ^~~\nmain.c: In function ‘main’:\nmain.c:16:25: error: invalid initializer\n  struct Result result = LCS(text1, text2);\n                         ^~~\n",
+            1607654400,
+            1608210000,
+            0,
+            1607839991.8097064
+        ]
+    ]
+}

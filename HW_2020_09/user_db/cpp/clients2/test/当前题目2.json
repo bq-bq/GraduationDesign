@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1601013710.299474,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "1.1 (C++)",
+            "Design a class, Matrix5x5, to represent 5 by 5 matrixes.<br> \nThis class should have the following member functions:\n<ol>\n<li>double get(int, int)</li>\n<li>void set(int, int, double)</li>\n<li>Matrix5x5 operator + (Matrix5x5 &amp;, Matrix5x5 &amp;) </li>\n</ol>\n\n<u>EXAMPLE INPUT</u>\n<pre>1\n2\n3\n4\n</pre>\n\n<u>EXAMPLE OUTPUT</u>\n<pre>4 0 0 0 0 \n0 0 0 0 0 \n0 0 0 0 0 \n0 0 0 4 0 \n0 0 0 0 2 \n</pre>",
+            "#include \"source.cpp\"\n#include <iostream>\nusing namespace std;\n\nvoid print(Matrix5x5 & matrix) {\n\tfor (int row = 0; row < 5; ++ row) {\n\t\tfor (int col = 0; col < 5; ++ col) {\n\t\t\tcout << matrix.get(row, col) << ' ';\n\t\t}\n\t\tcout << endl;\n\t}\n}\n\nint main() {\n\tMatrix5x5 m1, m2, m3;\n\tdouble value;\n\tcin >> value;\n\tm1.set(0, 0, value);\n\tcin >> value;\n\tm1.set(4, 4, value);\n\tcin >> value;\n\tm2.set(0, 0, value);\n\tcin >> value;\n\tm2.set(3, 3, value);\n\tm3 = m1 + m2;\n\tprint(m3);\n}",
+            "#include <iostream>\nusing namespace std;\n\nint main() { \n\tcout << ENDL;\n}",
+            "In file included from main.cpp:1:\n./source.cpp:5:10: error: use of undeclared identifier 'ENDL'\n        cout << ENDL;\n                ^\nmain.cpp:5:12: error: unknown type name 'Matrix5x5'\nvoid print(Matrix5x5 & matrix) {\n           ^\nmain.cpp:14:5: error: redefinition of 'main'\nint main() {\n    ^\n./source.cpp:4:5: note: previous definition is here\nint main() { \n    ^\nmain.cpp:15:2: error: unknown type name 'Matrix5x5'\n        Matrix5x5 m1, m2, m3;\n        ^\nmain.cpp:22:2: error: use of undeclared identifier 'm2'\n        m2.set(0, 0, value);\n        ^\nmain.cpp:24:2: error: use of undeclared identifier 'm2'\n        m2.set(3, 3, value);\n        ^\nmain.cpp:25:2: error: use of undeclared identifier 'm3'\n        m3 = m1 + m2;\n        ^\nmain.cpp:25:12: error: use of undeclared identifier 'm2'\n        m3 = m1 + m2;\n                  ^\nmain.cpp:26:8: error: use of undeclared identifier 'm3'\n        print(m3);\n              ^\n9 errors generated.\n",
+            1587693600,
+            1603976400,
+            0,
+            1601013707.868025
+        ]
+    ]
+}

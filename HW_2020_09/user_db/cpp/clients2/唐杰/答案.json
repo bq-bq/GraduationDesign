@@ -1,0 +1,48 @@
+{
+    "__update_time__": 1591237981.941218,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "测试2",
+            "唐杰",
+            "#include <iostream>\n#include <string.h>\nusing namespace std;\n//读入10个单词，并排序输出\nint main(){\n\tchar arr[10][20];\n\tfor (int i = 0;i < 10; ++ i){\n\t\tfor (int j = 0;; ++ j){\n\t\t\tchar c;\n\t\t\tcin >> c;\n\t\t\tif(c == '0' || c == ' '|| c == EOF){\n\t\t\t\tarr[i][j] = 0;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\telse arr[i][j] = c;\n\t\t} \n\t} \n\tfor (int i = 0; i < 9; ++ i){\n\t\tfor (int j = i + 1; j < 10; ++ j){\n\t\t\tif(strcmp(arr[i], arr[j]) > 0){\n\t\t\t\tchar brr[20];\n\t\t\t\tstrcpy(brr, arr[i]);\n\t\t\t\tstrcpy(arr[i], arr[j]);\n\t\t\t\tstrcpy(arr[j], brr);\n\t\t\t}\n\t\t} \n\t} \n\tfor (int i = 0; i < 10; ++ i){\n\t\tcout << arr[i] << ' ';\n\t} \n}",
+            1587610989.0906131,
+            0,
+            "Invalid include: <string.h>"
+        ],
+        [
+            "2020/05/08",
+            "唐杰",
+            "double & Tensor_get(int dimensions, const int sizes[], double data[], int x0, int x1, int x2, int x3){\n\tint z = 0;\n\tint x[4];\n\tx[0] = x0;\n\tx[1] = x1;\n\tx[2] = x2;\n\tx[3] = x3;\n\tfor(int i = 0;i < 4;i ++){\n\t\tif(x[i] >0){\n\t\t\tint temp = 1;\n\t\t\tfor(int j = dimensions;j > i;j --){\n\t\t\t\ttemp *= sizes[j];\n\t\t\t}\n\t\t\tz += x[i]*temp;\n\t\t}\n\t\tif(x[i] == -1)\n\t\tbreak;\n\t}\n\treturn data[z];\n}",
+            1588908261.8448257,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 (C++)",
+            "唐杰",
+            "",
+            1591237980.972142,
+            0,
+            "main.cpp: In function ‘void test()’:\nmain.cpp:10:35: error: ‘split’ was not declared in this scope\n  vector<string> words = split(line);\n                                   ^\n"
+        ]
+    ],
+    "table_name": "答案"
+}

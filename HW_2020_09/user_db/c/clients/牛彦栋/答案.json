@@ -1,0 +1,760 @@
+{
+    "__update_time__": 1607946214.677224,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "0.1 简介1",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb max(db a,db b){return a>b?a:b;}\ndb min(db a,db b){return a<b?a:b;}\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tprintf(\"Hello world\");\n\treturn 0;\n}",
+            1603268622.6958044,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.2 简介2",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tprintf(\"x is 10\"); \n\treturn 0;\n}",
+            1603268192.7572634,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.3 简介3",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\twrite(read()); \n\treturn 0;\n}",
+            1603268212.1733806,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.4 简介4",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tfloat x;\n\tscanf(\"%f\",&x);\n\tprintf(\"%f\",x);\n\treturn 0;\n}",
+            1603268329.0941904,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.5 简介5",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tWrite(Read());\n\treturn 0;\n}",
+            1603268344.7864673,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.7 简介7",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tfor(int i=1;i<=10;i++)printf(\"hello, world\\n\");\n\treturn 0;\n}",
+            1603268368.8078864,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.6 简介6",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 33\n#define L 30\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7; \nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\ndb fac[N];\ndb ksm(db x,int k)\n{\n\tdb ans=1;\n\twhile(k){if(k&1)ans*=x;k>>=1;x*=x;}\n\treturn ans;\n}\ndb Sin(db x)\n{\n\tx-=((int)(x/(2*pi)))*(2*pi);\n\tdb ans=0;\n\tfor(int i=0;i<=10;i++)\n\t{\n\t\tif(i&1)ans-=ksm(x,2*i+1)/fac[2*i+1];\n\t\telse ans+=ksm(x,2*i+1)/fac[2*i+1];\n\t}\n\treturn ans; \n}\nint main()\n{\n\tfac[0]=1;for(int i=1;i<=L;i++)fac[i]=fac[i-1]*i;\n\tWrite(Sin(Read()));\n\treturn 0;\n}",
+            1603256743.05014,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n8.42\n\n\n# 参考答案:\n0.910179\n\n\n# 我的答案:\n0.844043"
+        ],
+        [
+            "1.2 Hello world x3",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<math.h> \n#include<ctype.h>\n#include<string.h>\n#define N 110000\n#define eps 1e-7\n#define inf 1e9+7\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(!isdigit(ch)){ch=getchar();if(ch=='-')flag=-1;}\n\twhile(isdigit(ch)){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\ndouble Read(){double x;scanf(\"%lf\",&x);return x;}\nint main()\n{\n\tprintf(\"hello, world\\n\");\n    printf(\"hello, world\\n\");\n\tprintf(\"hello, world\\n\");\n    return 0;\n}",
+            1602829386.8579366,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.1 Hello world",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<math.h> \n#include<ctype.h>\n#include<string.h>\n#define N 110000\n#define eps 1e-7\n#define inf 1e9+7\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(!isdigit(ch)){ch=getchar();if(ch=='-')flag=-1;}\n\twhile(isdigit(ch)){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\ndouble Read(){double x;scanf(\"%lf\",&x);return x;}\nint main()\n{\n\tprintf(\"hello, world\\n\");\n   return 0;\n}",
+            1602829401.0950193,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.14 简介14",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tprintf(\"10\\n\");\n\tprintf(\"20\\n\");\n\tprintf(\"30\\n\");\n\tprintf(\"40\\n\");\n\tprintf(\"50\\n\");\n\treturn 0;\n}",
+            1603267936.7249782,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.8 简介8",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\ndb ksm(db x,int k)\n{\n\tdb ans=1;\n\twhile(k){if(k&1)ans*=x;k>>=1;x*=x;}\n\treturn ans;\n}\nint main()\n{\n\tdb x=Read();\n\tint k=3;\n\tWrite(ksm(x,k));\n\treturn 0;\n}",
+            1603257333.762962,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.9 简介9",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint fac[N];\nint main()\n{\t\n\tint n=read();\n\tfac[0]=1;for(int i=1;i<=n;i++)fac[i]=1ll*fac[i-1]*i%mo;\n\twrite(fac[n]);\n\treturn 0;\n}",
+            1603257461.1118472,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.10 简介10",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tint cnt=0;\n\twhile(1)\n\t{\n\t\tchar ch=getchar();\n\t\tif(ch=='\\n'||ch==EOF)break;\n\t\ts[++cnt]=ch;\n\t}\n\tfor(int i=1;i<=10;i++)putchar(s[i]);\n\treturn 0;\n}",
+            1603260043.4064605,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.11 简介11",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tif(read()&1)printf(\"x is odd\\n\");else printf(\"x is even\\n\");\n\treturn 0;\n}",
+            1603267817.998271,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.13 简介13",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tprintf(\"10\\n\");\n\tprintf(\"40 50\\n\");\n\treturn 0;\n}",
+            1603267912.2258787,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.15 简介15",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tfor(int i=1;i<=5;i++)write(read()),putchar('\\n');\n\treturn 0;\n}",
+            1603267985.402274,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.16 简介16",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tprintf(\"hello\\nhello\\n\");\t\n\treturn 0;\n}",
+            1603268032.9553072,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.17 简介17",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tprintf(\"hello\\n\");\t\n\treturn 0;\n}",
+            1603268046.4075894,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.19 简介19",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tfor(int i=1;i<=5;i++)printf(\"visited %d times\\n\",i);\t\n\treturn 0;\n}",
+            1603268100.4934819,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.20 简介20",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3;\nconst int ki=149;\nconst int mo=998244353;\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7;\nconst db inf=1e9+7;\nconst db pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar s[N];\nint main()\n{\n\tprintf(\"30\\n20\");\t\n\treturn 0;\n}",
+            1603268149.6929176,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.3  Output 2",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tprintf(\"&#^-|!,@:=\\\\\\\\(`%{>^_$%+*'</?)} \\\"/.~\");\n\treturn 0;\n}",
+            1603522116.1937063,
+            100,
+            "In file included from main.c:1:0:\nsource.c: In function ‘main’:\nsource.c:34:27: warning: unknown conversion type character ‘{’ in format [-Wformat=]\n  printf(\"&#^-|!,@:=\\\\\\\\(`%{>^_$%+*'</?)} \\\"/.~\");\n                           ^\nsource.c:34:35: warning: unknown conversion type character ‘'’ in format [-Wformat=]\n  printf(\"&#^-|!,@:=\\\\\\\\(`%{>^_$%+*'</?)} \\\"/.~\");\n                                   ^\n"
+        ],
+        [
+            "2.5  Variable",
+            "牛彦栋",
+            "int year;\ndouble  seconds;\nchar code;",
+            1603523916.3661892,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.1  Output 1",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tputchar('\\\\');\n\tputchar('\\\\');\n\tputchar('\"');\n\tputchar('\\n');\n\tputchar('\\\\');\n\tputchar('n');\n\treturn 0;\n}",
+            1603523068.4712386,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.7  Initialization",
+            "牛彦栋",
+            "#include <stdio.h>\nint year=1990;\ndouble seconds=1234.56;\nchar code='C';\nint main()\n{\n\tprintf(\"%d\\n\", year); \n\tprintf(\"%lf\\n\", seconds);\n\tprintf(\"%c\\n\", code);\n}",
+            1603523144.9651227,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.9  Float",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tdb x=Read();\n\twrite((int)x);\n\tputchar('\\n');\n\tWrite(x-(int)x);\n\treturn 0;\n}",
+            1603523208.804024,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.11  Digits",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tint x=read();\n\twrite(x&1);putchar(' ');write((x>>1)&1);\n\treturn 0;\n}",
+            1603523279.6445398,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.13 Equality",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tint a=read(),b=read();\n\twrite(a==b?a:0);\n\treturn 0;\n}",
+            1603523419.767113,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.15 Characters",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tputchar(ch+1);\n\tputchar(ch+2);\n\tputchar(ch+3);\n\treturn 0;\n}",
+            1603523530.115895,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.3 Circle Area",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.14;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tdb r=Read();\n\tWrite(pi*r*r); \n\treturn 0;\n}",
+            1603523580.8203666,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.4 Rectangle Area",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tWrite(Read()*Read()); \n\treturn 0;\n}",
+            1603523605.257119,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.5 Celsius to Fahrenheit",
+            "牛彦栋",
+            "double celsiusToFahrenheit(double x){return 1.8*x+32;}",
+            1603523884.728093,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.6 Date and Time",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tint x=read();\n\tint a=x/86400;x%=86400;\n\tint b=x/3600;x%=3600;\n\tint c=x/60;x%=60;\n\tint d=x/1;x%=1;\n\tprintf(\"%dd %d:%d:%d\",a,b,c,d);\n\treturn 0;\n}",
+            1603524295.8692048,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.7 Cylinder Volume",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tdb r=Read(),h=Read();\n\tWrite(3.14*r*r*h);\n\treturn 0;\n}",
+            1603524421.257344,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.8 Feet to Meters",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tWrite(Read()*0.305);\n\treturn 0;\n}",
+            1603524453.7446926,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.9 Pounds into Kilograms",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tWrite(Read()*0.454);\n\treturn 0;\n}",
+            1603524477.620045,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.10 Sum of Digits",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint f(int x)\n{\n\tint ans=0;\n\twhile(x)ans+=x%10,x/=10;\n\treturn ans;\n}\nint main()\n{\n\twrite(f(read()));\n\treturn 0;\n}",
+            1603524537.286345,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.11 To Uppercase",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x>=mo?x-mo:x;}\nint dec(int x,int k){x-=k;return x<0?x+mo:x;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint f(int x)\n{\n\tint ans=0;\n\twhile(x)ans+=x%10,x/=10;\n\treturn ans;\n}\nint main()\n{\n\tchar ch;scanf(\"%c\",&ch);putchar(ch+32);\n\treturn 0;\n}",
+            1603524593.6322343,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.1 Sum digits",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\nconst int h=3,ki=149,mo=998244353;\nldb max(ldb a,ldb b){return a>b?a:b;}\nldb min(ldb a,ldb b){return a<b?a:b;}\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;}\nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint f(int x){int ans=0;while(x)ans+=x%10,x/=10;return ans;}\nint main()\n{\n\tfor(int i=1;i<=10;i++)write(f(read())),putchar('\\n');\n\treturn 0;\n}",
+            1604042439.944191,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.2 Reverse",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nchar ch[N];\nint main()\n{\n\tfor(int i=1;i<=10;i++)\n\t{\n\t\tscanf(\"%s\",ch);\n\t\tint x=0,len=strlen(ch);\n\t\tfor(int i=0;i<=(len-1)/2;i++)swap(ch[i],ch[len-1-i]);\n\t\twhile(x<len-1&&ch[x]=='0')x++;\n\t\tfor(int i=x;i<len;i++)putchar(ch[i]);\n\t\tputchar('\\n');\n\t}\n\treturn 0;\n}",
+            1604043461.0156536,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.4 GCD",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define M 1100\n#define T 1000 \n#define N 1100000\n#define L 1000000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nbool is_prime[N];\nint cnt,prime[N],a[N],b[N],c[N],d[M][M];\nvoid table(int n)\n{\n\tmemset(is_prime,true,sizeof(is_prime));\n\tis_prime[0]=is_prime[1]=false;\n\ta[1]=1;b[1]=1;c[1]=1;\n\tfor(int i=2;i<=n;i++)\n\t{\n\t\tif(is_prime[i])prime[++cnt]=i,a[i]=1,b[i]=1,c[i]=i;\t\n\t\tfor(int j=1;j<=cnt;j++)\n\t\t{\n\t\t\tll x=1ll*i*prime[j];\n\t\t\tif(x>n)break;\n\t\t\tis_prime[x]=false;\n\t\t\ta[x]=a[i]*prime[j];b[x]=b[i];c[x]=c[i];\n\t\t\tif(a[x]>b[x])swap(a[x],b[x]);\n\t\t\tif(b[x]>c[x])swap(b[x],c[x]);\n\t\t\tif(i%prime[j]==0)break;\n\t\t}\n\t}\n\tfor(int i=0;i<=T;i++)d[0][i]=d[i][0]=i;\n\tfor(int i=1;i<=T;i++)for(int j=1;j<=T;j++)d[i][j]=d[min(i,j%i)][max(i,j%i)];\n}\nint gcd(int x,int y)\n{\n\tif(x>y)swap(x,y);\n\tif(!x||!y)return x+y; \n\tint t1,t2,ans=1;\n\tt1=min(x/ans,a[y]),t2=max(x/ans,a[y]);\n\twhile(true)\n\t{\n\t\tif(is_prime[t1]){ans*=(t2%t1)?1:t1;break;}\n\t\tif(is_prime[t2]){ans*=(t1%t2)?1:t2;break;}\n\t\tt2%=t1;if(t1>t2)swap(t1,t2);\n\t\tans*=d[t1][t2];break;\n\t}\n\t\t\n\tt1=min(x/ans,b[y]),t2=max(x/ans,b[y]);\n\twhile(true)\n\t{\n\t\tif(is_prime[t1]){ans*=(t2%t1)?1:t1;break;}\n\t\tif(is_prime[t2]){ans*=(t1%t2)?1:t2;break;} \n\t\tt2%=t1;if(t1>t2)swap(t1,t2);\n\t\tans*=d[t1][t2];break;\n\t}\n\t\n\tt1=min(x/ans,c[y]),t2=max(x/ans,c[y]); \n\twhile(true)\n\t{\n\t\tif(is_prime[t1]){ans*=(t2%t1)?1:t1;break;}\n\t\tif(is_prime[t2]){ans*=(t1%t2)?1:t2;break;} \n\t\tt2%=t1;if(t1>t2)swap(t1,t2);\n\t\tans*=d[t1][t2];break;\n\t}\n\treturn ans;\n}\nint main()\n{\n\ttable(L);\n\tfor(int i=1;i<=5;i++)write(gcd(read(),read())),putchar('\\n'); \n\treturn 0;\n}",
+            1604043929.521019,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.3 Pattern",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tint n=read();\n\tfor(int i=1;i<=n;i++){for(int j=1;j<=n-i;j++)putchar(' ');for(int j=i;j>=1;j--)putchar(j+48);putchar('\\n');}\n\treturn 0;\n}",
+            1604044208.318794,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.5 Characters",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tchar a=getchar(),b=getchar();\n\tfor(int i=a;i<=b;i++){putchar(i);if((i-a+1)%10==0)putchar('\\n');}\n\treturn 0;\n}",
+            1604044341.2455716,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.6 Prime",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define L 100000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nbool is_prime[N];\nint cnt,prime[N];\nvoid table(int n)\n{\n\tmemset(is_prime,true,sizeof(is_prime));\n\tis_prime[0]=is_prime[1]=false;\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tif(is_prime[i])prime[++cnt]=i;\n\t\tfor(int j=1;j<=cnt;j++)\n\t\t{\n\t\t\tll x=i*prime[j];\n\t\t\tif(x>n)break;\n\t\t\tis_prime[x]=false;\n\t\t\tif(i%prime[j]==0)break;\n\t\t}\n\t}\n}\nint main()\n{\n\ttable(L);\n\tint n=read();\n\tfor(int i=1;i<=n;i++){write(prime[i]);putchar(' ');if(i%10==0)putchar('\\n');}\n\treturn 0;\n}",
+            1604044648.8787878,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.7 Pattern",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tint n=read();\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tfor(int j=1;j<=n-i;j++)putchar('0');\n\t\tfor(int j=1;j<=i;j++)putchar('1');\n\t\tputchar('\\n');\n\t}\n\treturn 0;\n}",
+            1604044737.838791,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.10 Flag",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tint n=read(),m=read();\n\tfor(int i=1;i<=n/2;i++)\n\t{\n\t\tif(i&1)\n\t\t{\n\t\t\tfor(int j=1;j<=m/2;j++)putchar(j&1?'*':' ');\n\t\t\tfor(int j=1;j<=m/2;j++)putchar('=');\n\t\t}\n\t\telse\n\t\t{\n\t\t\tfor(int j=1;j<=m/2;j++)putchar(j&1?' ':'*');\n\t\t}\n\t\tputchar('\\n');\t\n\t}\n\tfor(int i=n/2+1;i<=n;i++)\n\t{\n\t\tif(i&1)for(int j=1;j<=m;j++)putchar('=');\n\t\tputchar('\\n');\n\t}\n\treturn 0;\n}",
+            1604051652.5527437,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.8 Emirp",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint rev(int x)\n{\n\tif(!x)return x;\n\tint len=0,ans=0,p[20];\n\t\n\twhile(x%10==0)x/=10;\n\twhile(x)p[++len]=x%10,x/=10;\n\t\n\tfor(int i=1;i<=len;i++)ans=ans*10+p[i];\n\treturn ans;\n}\nbool check(int n)\n{\n\tif(n<=1)return false;\n\tfor(int i=2;i*i<=n;i++)if(n%i==0)return false;\n\treturn true;\n}\nint main()\n{\n\tint n=read(),cnt=0;\n\tfor(int i=1;cnt<n;i++)if(check(i)&&check(rev(i)))cnt++,write(i),putchar(cnt%10?' ':'\\n');\n\treturn 0;\n}",
+            1604385857.735139,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.9 Palindromic prime",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 5500000\n#define L 5000000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint len(int x)\n{\n\tint len=0;\n\twhile(x)len++,x/=10;\n\treturn len;\n}\nint rev(int x)\n{\n\tif(!x)return x;\n\tint len=0,ans=0,p[20];\n\t\n\twhile(x%10==0)x/=10;\n\twhile(x)p[++len]=x%10,x/=10;\n\t\n\tfor(int i=1;i<=len;i++)ans=ans*10+p[i];\n\treturn ans;\n}\nbool is_prime[N];\nint cnt,prime[N];\nvoid table(int n)\n{\n\tmemset(is_prime,true,sizeof(is_prime));\n\tis_prime[0]=is_prime[1]=false;\n\tfor(int i=2;i<=n;i++)\n\t{\n\t\tif(is_prime[i])prime[++cnt]=i;\n\t\tfor(int j=1;j<=cnt;j++)\n\t\t{\n\t\t\tint x=i*prime[j];\n\t\t\tif(x>L)break;\n\t\t\tis_prime[x]=false;\n\t\t\tif(i%prime[j]==0)break; \n\t\t}\n\t}\n}\nint main()\n{\n\ttable(L);\n\tint n=read(),cnt=0;\t\n\tfor(int i=1;cnt<n;i++)\n\tif(is_prime[i]&&(i==11||len(i)&1)&&(i==rev(i)))\n\tcnt++,write(i),putchar(cnt%10?' ':'\\n');\n\treturn 0;\n}",
+            1604387012.6480846,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "4.16 Switch-statement",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\nint read(){int x;scanf(\"%d\",&x);return x;}\nchar f[110];\nint main()\n{\n    f[1]=f[8]=f[21]=f[22]='A';\n    f[6]=f[13]=f[17]=f[25]='B';\n    f[5]=f[10]=f[18]=f[26]='C';\n    f[2]=f[11]=f[15]=f[23]='D';\n    f[7]=f[9]=f[19]=f[28]=f[30]='E';\n    f[3]=f[14]=f[16]=f[24]=f[29]='F';\n    f[4]=f[12]=f[20]=f[27]='G';\n    for(int i=1;i<=10;i++)putchar(f[read()]);\n    return 0;\n}",
+            1605252772.3357816,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.11",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint main()\n{\n\tint n=read();\n\tfor(int i=1;i<=n/2;i++)\n\t{\n\t    for(int j=1;j<i;j++)putchar('*');\n\t    putchar('\\\\');\n\t\tfor(int j=1;j<=n-2*i;j++)putchar('+');\n\t\tputchar('/');\n\t\tfor(int j=1;j<i;j++)putchar('*');\n\t\tputchar('\\n');\n\t}\n\tfor(int i=n/2;i>=1;i--)\n\t{\n\t    for(int j=1;j<i;j++)putchar('*');\n\t    putchar('/');\n\t\tfor(int j=1;j<=n-2*i;j++)putchar('+');\n\t\tputchar('\\\\');\n\t\tfor(int j=1;j<i;j++)putchar('*');\n\t\tputchar('\\n');\n\t}\t\n\treturn 0;\n}",
+            1605253072.1033657,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-7",
+            "牛彦栋",
+            "#include<stdio.h>\nint read(){int x;scanf(\"%d\",&x);return x;}\nint main()\n{\n\tint k=read(),n=read();\n\twhile(n)printf(\"%d\",n%k),n/=k;\n\treturn 0;\n}",
+            1605761144.4916584,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-6",
+            "牛彦栋",
+            "#include<stdio.h>\nint read(){int x;scanf(\"%d\",&x);return x;}\nint main()\n{\n\tputchar('\\\\');\n\tputchar('\\\"');\n\tputchar('\\%');\n\tputchar('\\'');\n\treturn 0;\n}",
+            1605761302.9418948,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-4",
+            "牛彦栋",
+            "#include<stdio.h>\nint read(){int x;scanf(\"%d\",&x);return x;}\nint main()\n{\n\tchar a[4],b[4];\n\tscanf(\"%s\",a);\n\tscanf(\"%s\",b);\n\tfor(int i=a[0];i<=b[0];i++)\n\t{\n\t\tprintf(\"%d\\t%c\",i,(char)(i));\n\t\tputchar((i-a[0])%3==2?'\\n':'\\t');\n\t}\n\treturn 0;\n}",
+            1605762234.6252816,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-2",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 5\n#define ll long long\nconst int mo=998244353;\ntypedef struct\n{\n    int s[N][N];\n}matrix;\nmatrix I()\n{\n\tmatrix ans;\n    memset(ans.s,0,sizeof(ans.s));\n\tfor(int i=0;i<=4;i++)ans.s[i][i]=1;\n\treturn ans;\n}\nmatrix mul(matrix a,matrix b)\n{\n\tmatrix ans;\n    memset(ans.s,0,sizeof(ans.s));\n\tfor(int k=0;k<=4;k++)\n\tfor(int i=0;i<=4;i++)\n\tfor(int j=0;j<=4;j++)\n\tans.s[i][j]=(ans.s[i][j]+1ll*a.s[i][k]*b.s[k][j]%mo)%mo;\n\treturn ans;\n}\nmatrix ksm(matrix x,int k)\n{\n\tmatrix ans=I();\n\twhile(k){if(k&1)ans=mul(ans,x);k>>=1;x=mul(x,x);}\n\treturn ans;\n}\nmatrix f,g;\nint main()\n{\n\tint n;scanf(\"%d\",&n);\n\tif(n<=3){printf(\"1\");return 0;}\n\tf.s[1][1]=f.s[1][2]=f.s[1][3]=1;\n\tg.s[1][1]=g.s[3][1]=g.s[1][2]=g.s[2][3]=1;\n\tf=mul(f,ksm(g,n-3));\n\tll ans=((ll)f.s[1][1]+(ll)f.s[1][2]+(ll)f.s[1][3])%mo;\n\tprintf(\"%lld\",ans);\n\treturn 0;\n}",
+            1605764806.8031573,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-1",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\nint read(){int x=0;scanf(\"%d\",&x);return x;}\nint main()\n{\n\tint n=read();\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tchar a[15];double b;\n\t\t\n\t\tscanf(\"%s%lf\",a,&b);\n\t\tint len=strlen(a);\n\t\tfor(int i=1;i<=10-len;i++)putchar('0');\n\t\tfor(int i=0;i<len;i++)putchar(a[i]);\n\t\tputchar('\\n');\n\t\t\n\t\tprintf(\"%.4lf\\n\",b);\n\t\tprintf(\"%12.4lf\\n\",b);\n\t\t\n   }\n\treturn 0;\n}",
+            1605765670.8946757,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-3",
+            "牛彦栋",
+            "#include<stdio.h>\nint read(){int x;scanf(\"%d\",&x);return x;}\nint main()\n{\n\tint n=read();\n\tfor(int i=1;i<=n/2;i++)\n\t{\n\t\tfor(int j=1;j<=n/2;j++)putchar('-');\n\t\tfor(int j=1;j<=n/2;j++)putchar('|');\n\t\tfor(int j=1;j<=i-1;j++)putchar('/');\n\t\tfor(int j=1;j<=n-2*i+1;j++)putchar('\\\\');\n\t\tfor(int j=1;j<=i;j++)putchar('/');\n\t\tputchar('\\n');\n\t}\n\tfor(int i=1;i<=n/2;i++)\n\t{\n\t\tfor(int j=1;j<=n/2;j++)putchar('|');\n\t\tfor(int j=1;j<=n/2;j++)putchar('-');\n\t\tfor(int j=1;j<=n/2-i+1;j++)putchar('/');\n\t\tfor(int j=1;j<=2*i-1;j++)putchar('\\\\');\n\t\tfor(int j=1;j<=n/2-i;j++)putchar('/');\n\t\tputchar('\\n');\n    }\n\treturn 0;\n} ",
+            1605766240.0972269,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-5",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint a[N],cnt[N];;\nvoid work()\n{\n\tint n=read(),maxn=0,ans1=0,ans2=0,ans3=0;\n\tfor(int i=1;i<=n;i++)a[i]=read(),cnt[a[i]]++,maxn=max(maxn,a[i]);\n\tfor(int i=1;i<=maxn;i++)\n\tif(cnt[i]>=1)\n\t{\n\t\tans1++;\n\t\tif(cnt[i]>1)ans2++;\n\t\tif(cnt[ans3]<cnt[i])ans3=i;\n\t}\n\tprintf(\"%d %d %d\\n\",ans1,ans2,ans3);\n\tfor(int i=1;i<=n;i++)cnt[a[i]]--;\n} \nint main()\n{\n\tint t=read();\n\tfor(int i=1;i<=t;i++)work();\n\treturn 0;\n}",
+            1605766529.7434852,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.1 Lower Case",
+            "牛彦栋",
+            "char toLowercase(char x)\n{\n\treturn x-'A'+'a';\n}",
+            1605854595.0079944,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.2 Sum Digits",
+            "牛彦栋",
+            "int sumDigits(int x)\n{\n\tint ans=0;\n\twhile(x)ans+=x%10,x/=10;\n\treturn ans;\n}",
+            1605854646.2578495,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.3 Reverse",
+            "牛彦栋",
+            "int reverse(int x)\n{\n\tint len=0,ans=0,a[20];\n\twhile(x)a[++len]=x%10,x/=10;\n\tfor(int i=1;i<=len;i++)ans=ans*10+a[i];\n\treturn ans;\n}",
+            1605854865.2613509,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.5 GCD",
+            "牛彦栋",
+            "int gcd(int a,int b){return b?gcd(b,a%b):a;}",
+            1605854903.5732522,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.6 LCM",
+            "牛彦栋",
+            "int gcd(int a,int b){return b?gcd(b,a%b):a;}\nint lcm(int a,int b){return a*b/gcd(a,b);}",
+            1605854938.9519804,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.7 Is Prime",
+            "牛彦栋",
+            "int isPrime(int n)\n{\n\tif(n<=1)return 0;\n\tfor(int i=2;i*i<=n;i++)if(n%i==0)return 0;\n\treturn 1;\n}",
+            1605854981.0406346,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.4 Largest",
+            "牛彦栋",
+            "#define max(a,b) (a>b?a:b)\nint largest(int a,int b,int c){return max(a,max(b,c));}",
+            1605855037.7401004,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.10 Character pattern 3",
+            "牛彦栋",
+            "#include<stdio.h>\n\nint get_bits(int t,int n)\n{\n\tt++;int ans=0;\n\tfor(int i=31,x=1,flag=1;i>=0;i--,x+=flag,flag=(x==1||x==n)?-flag:+flag)ans+=(x==t)*(1<<i);\n\treturn ans;\n}",
+            1606135498.3378322,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 1",
+            "牛彦栋",
+            "char print_pattern(int a){\n\n\tfor (int i = 0; i <(a+1)/2 ; ++ i){\n\n\t\tfor (int j = 0; j <i ; ++ j){ \n\n\t\t\tprintf(\"B\");\n\n\t\t\t}\n\n\t\tprintf(\"Y\");\n\n\t\tfor (int j = 0; j <a-2*i-2 ; ++ j){\n\n\t\t\tprintf(\"G\");\n\n\t\t}\n\n\t\tif(i<(a+1)/2-1){\n\n\t\t\tprintf(\"Y\");\n\n\t\t}\n\n\t\tfor (int j = 0; j <i ; ++ j){ \n\n\t\t\tprintf(\"B\");\n\n\t\t\t}\n\n\t\tprintf(\"\\n\");\n\n\t}\n\n\tfor (int i = (a+1)/2; i <a ; ++ i){\n\n\t\tfor (int j = 0; j <a-i-1 ; ++ j){\n\n\t\t\tprintf(\"B\");\n\n\t\t}\n\n\t\tprintf(\"Y\");\n\n\t\tfor (int j = 0; j <2*i-a ; ++ j){\n\n\t\t\tprintf(\"G\");\n\n\t\t}\n\n\t\tif(i>(a+1)/2-1){\n\n\t\t\tprintf(\"Y\");\n\n\t\t}\n\n\t\tfor (int j = 0; j <a-i-1 ; ++ j){\n\n\t\t\tprintf(\"B\");\n\n\t\t}\n\n\t\tprintf(\"\\n\");\n\n\t} \n\n}",
+            1606224089.0251083,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 2",
+            "牛彦栋",
+            "char print_pattern(int h,int w){\n\tchar N;\n\tint i=h/9;\n\tint j=w-5*i;\n\tfor (int a = 0;  a<i ; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int a = i; a <2*i ; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tprintf(\"\\n\"); \n\t}\n\tfor (int a = 2*i; a < 3*i; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n\tfor (int a = 3*i; a < 4*i; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int a = 4*i;  a<5*i ; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int a = 5*i;  a<6*i ; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int a = 6*i;  a<7*i ; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int a = 7*i;  a<8*i ; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\" \");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int a = 8*i;  a<9*i ; ++ a){\n\t\tfor (int b = 0; b <2*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 2*i; b <3*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 3*i; b <5*i ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tfor (int b = 5*i; b <5*i+j ; ++ b){\n\t\t\tprintf(\"N\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}",
+            1606229770.549359,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.1 Reverse",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint a[N];\nint main()\n{\n\tfor(int i=1;i<=10;i++)a[i]=read();\n\tfor(int i=10;i>=1;i--)write(a[i]),putchar(' ');\n\treturn 0;\n}",
+            1606457704.7087615,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 Max",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint a[N];\nint main()\n{\n\tint ans=0;\n\tfor(int i=1;i<=10;i++)\n\t{\n\t\tint x=read();\n\t\tans=max(ans,x);\n\t}\n\twrite(ans);\n\treturn 0;\n}",
+            1606457860.7668912,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.3 Count occurrences",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint a[N],cnt[N];\nint main()\n{\n\tint ans=0;\n\tfor(int i=1;i<=100;i++)a[i]=read(),cnt[a[i]]++,ans=max(ans,cnt[a[i]]);\n\tfor(int i=1;i<=100;i++)if(cnt[a[i]]==ans)\n\t{\n\t\twrite(a[i]),putchar(' '),write(cnt[a[i]]);\n\t\treturn 0;\n\t}\n\treturn 0;\n}\t",
+            1606464130.9690154,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.4 Count occurrences",
+            "牛彦栋",
+            "#include<stdio.h>\n#include<string.h>\n#define N 110000\n#define true 1\n#define false 0\n#define bool int\n#define db double\n#define ll long long\n#define ldb long double\n#define ull unsigned long long\n#define max(a,b) (a>b?a:b)\n#define min(a,b) (a<b?a:b)\n#define swap(a,b) a=(a+b)-(b=a)\nconst int h=3,ki=149,mo=998244353;\nint inc(int x,int k){x+=k;return x<mo?x:x-mo;}\nint dec(int x,int k){x-=k;return x>=0?x:x+mo;} \nint read()\n{\n\tchar ch=0;\n\tint x=0,flag=1;\n\twhile(ch<'0'||ch>'9'){ch=getchar();if(ch=='-')flag=-1;}\n\twhile('0'<=ch&&ch<='9'){x=(x<<3)+(x<<1)+ch-'0',ch=getchar();}\n\treturn x*flag;\n}\nvoid write(int x)\n{\n\tif(!x)return (void)putchar(48);\n\tif(x<0)putchar(45),x=-x;\n\tint len=0,p[20];\n\twhile(x>0)p[++len]=x%10,x/=10;\n\tfor(int i=len;i>=1;i--)putchar(p[i]+48);\n}\nconst db eps=1e-7,inf=1e9+7,pi=3.141592653589;\ndb Read(){db x;scanf(\"%lf\",&x);return x;}\nvoid Write(db x){printf(\"%lf\",x);}\nint a[N],cnt[N];\nint main()\n{\n\tfor(int i=1;i<=100;i++)a[i]=read(),cnt[a[i]]++;\n\tfor(int i=1;i<=100;i++)if(cnt[a[i]])\n\t{\n\t\twrite(a[i]),putchar(' '),write(cnt[a[i]]),putchar('\\n');\n\t\tcnt[a[i]]=0;\n\t}\n\treturn 0;\n}\t",
+            1606464196.6854417,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.7 Character array functions",
+            "牛彦栋",
+            "#include<string.h>\nint strcmp(const char s1[], const char s2[])\n{\n\tint len1=strlen(s1),len2=strlen(s2),len;\n\tif(len1>len2)len=len1;else len=len2;\n\tfor(int i=0;i<len;i++)if(s1[i]-s2[i])return s1[i]-s2[i];\n\treturn 0;\n}\nint atoi(char s[])\n{\n\tint x=0,flag=1,ans=0,len=strlen(s);\n\tif(s[0]=='-')x++,flag=-1;\n\twhile(x<len)ans=ans*10+s[x++]-'0';\n\treturn ans*flag;\n}\nvoid itoa(int t,char s[])\n{\n\tint k=0,x=0;\n\tif(t<0)t=-t,s[x++]='-';\n\twhile(t)k=k*10+t%10,t/=10;\n\twhile(k)s[x++]=k%10+'0',k/=10;\n}\nvoid substring(char to[],char s[],int p,int len)\n{\n\tint x=0;\n\tfor(int i=p;i<=p+len-1;i++)to[x++]=s[i];\n\tto[x]=0;\n}\nvoid insert(char to[], int at,char ins[])\n{\n\tint len1=strlen(to),len2=strlen(ins);\n\tfor(int i=len1-1;i>=at;i--)to[i+len2]=to[i];\n\tfor(int i=at;i<at+len2;i++)to[i]=ins[i-at];\n}",
+            1606467328.0902371,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.8 Input",
+            "牛彦栋",
+            "#include <stdio.h>\n\nint readLine(int array[], int max){\n\tint i=1,x;\n\tscanf(\"%d\",&x);\n\tarray[0]=x;\n\twhile(getchar()!='\\n'){\n\t\tscanf(\"%d\",&x);\n\t\tif(i<max){\n\t\t\tarray[i]=x;\n\t\t\ti++;\n\t\t}\n\t}\n\tif(i>max-1){\n\t\ti=max-1;\n\t}\n\treturn max;\n}",
+            1606712963.5497344,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.9 Distinct numbers",
+            "牛彦栋",
+            "#include<stdio.h>\nint readLineDistinct(int array[],int max){\nint j=1,x;\n\tscanf(\"%d\",&x);\n\tarray[0]=x;\n\twhile(getchar()!='\\n'){\n\t\tscanf(\"%d\",&x);\n\t\tint flag=1;\n\t\tfor (int i = 0; i <j ; ++ i) {\n\t\t\tif(array[i]==x)\n\t\t\t\tflag=0;\n\t\t}\n\t\tif(j<10&&flag==1){\n\t\t\tarray[j]=x;\n\t\t\tj++;\n\t\t}\n\t}\n\treturn j;\n}",
+            1606712978.8663895,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.13 Parse Hex",
+            "牛彦栋",
+            "#include <string.h>\n\nint parseHex(const char h[]){\n\tint n=strlen(h);\n\tint x=1;\n\tint ans=0;\n\tfor (int i = n-1; i >=0 ; -- i){\n\t\tif(h[i]<='9'&&h[i]>='0'){\n\t\t\tans+=(h[i]-'0')*x;\n\t\t}\n\t\telse{\n\t\t\tans+=(h[i]+10-'A')*x;\n\t\t}\n\t\tx*=16;\n\t}\n\treturn ans;\n}",
+            1606712995.1560984,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.14 Parse Bin",
+            "牛彦栋",
+            "#include <string.h>\n\nint parseBin(const char h[]){\n\tint n=strlen(h);\n\tint x=1;\n\tint ans=0;\n\tfor (int i = n-1; i >=0 ; -- i){\n\t\tif(h[i]=='0'){\n\t\t\tans+=(h[i]-'0')*x;\n\t\t}\n\t\telse{\n\t\t\tans+=(h[i]-'0')*x;\n\t\t}\n\t\tx*=2;\n\t}\n\treturn ans;\n}",
+            1606713008.1057436,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.15 Dec to Hex",
+            "牛彦栋",
+            "void decToHex(const char dec[], char hex[]){\n\tint i=0,x=0;\n\tfor (int i = 0; i <100 ; ++ i) {\n\t\thex[i]=0;\n\t}\n\twhile(dec[i]!='\\0'){\n\t\tx=x*10+dec[i]-'0';\n\t\ti++;\n\t}\n\ti=0;\n\tint j=x,add;\n\twhile(j>0){\n\t\tj/=16;\n\t\ti++;\n\t}\n\tfor(i;i>=1;i--){\n\t\tadd=x%16;\n\t\tif(add<10){\n\t\t\thex[i-1]=add+'0';\n\t\t}\n\t\telse{\n\t\t\thex[i-1]=add-10+'A';\n\t\t}\n\t\tx/=16;\n\t}\n}\n",
+            1606713023.2234366,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.16 Dec to Bin",
+            "牛彦栋",
+            "void decToBin(const char dec[], char bin[]){\n\tint i=0,x=0;\n\tfor (int i = 0; i <100 ; ++ i) {\n\t\tbin[i]=0;\n\t}\n\twhile(dec[i]!='\\0'){\n\t\tx=x*10+dec[i]-'0';\n\t\ti++;\n\t}\n\ti=0;\n\tint j=x,add;\n\twhile(j>0){\n\t\tj/=2;\n\t\ti++;\n\t}\n\tfor(i;i>=1;i--){\n\t\tadd=x%2;\n\t\tbin[i-1]=add+'0';\n\t\tx/=2;\n\t}\n}",
+            1606713036.8785944,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.17 Sort",
+            "牛彦栋",
+            "#include <string.h>\n\nvoid sort(char s[]){\n\tint n=strlen(s);\n\tchar temp;\n\tfor (int i = 0; i <n-1 ; ++ i){\n\t\tfor (int j = 0; j <n-1-i ; ++ j){\n\t\t\tif(s[j]>s[j+1]){\n\t\t\t\ttemp=s[j];\n\t\t\t\ts[j]=s[j+1];\n\t\t\t\ts[j+1]=temp;\n\t\t\t}\n\t\t} \n\t} \n}",
+            1606713048.293043,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.18 Anagram",
+            "牛彦栋",
+            "#include <string.h>\n#include <stdio.h>\n\nbool isAnagram( char s1[],  char s2[]){\n\tint n=strlen(s1);\n\tchar temp1;\n\tchar true=1;\n\tchar false=0;\n\tfor (int i = 0; i <n-1 ; ++ i){\n\t\tfor (int j = 0; j <n-1-i ; ++ j){\n\t\t\tif(s1[j]>s1[j+1]){\n\t\t\t\ttemp1=s1[j];\n\t\t\t\ts1[j]=s1[j+1];\n\t\t\t\ts1[j+1]=temp1;\n\t\t\t}\n\t\t} \n\t}\n\tint m=strlen(s2);\n\tchar temp2;\n\tfor (int i = 0; i <n-1 ; ++ i){\n\t\tfor (int j = 0; j <n-1-i ; ++ j){\n\t\t\tif(s2[j]>s2[j+1]){\n\t\t\t\ttemp2=s2[j];\n\t\t\t\ts2[j]=s2[j+1];\n\t\t\t\ts2[j+1]=temp2;\n\t\t\t}\n\t\t} \n\t}\t\n\tfor (int i = 0; i < n; ++ i)\n\t{\n\t\tif(s1[i]!=s2[i]){\n\t\t\treturn 0;\n\t\t}\n\t}\n\treturn 1;\n}",
+            1606713060.3345058,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.11 Count letters",
+            "牛彦栋",
+            "int countLetters(char s[])\n{\n\tint ans=0;\n\tfor(int i=0;i<100;i++)\n\tans+=(('a'<=s[i]&&s[i]<='z')||('A'<=s[i]&&s[i]<='Z')),s[i]=0;\n\treturn ans;\n}",
+            1607065885.1494267,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.12 Count letters",
+            "牛彦栋",
+            "#include<string.h>\nvoid count(char s[],int cnt[])\n{\n\tfor(int i=0;i<26;i++)cnt[i]=0;\n\tfor(int i=0;i<100;i++)\n\t{\n\t\tif('a'<=s[i]&&s[i]<='z')cnt[s[i]-'a']++;\n\t\tif('A'<=s[i]&&s[i]<='Z')cnt[s[i]-'A']++;\n\t\ts[i]=0;\n\t}\n}",
+            1607066179.4545267,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.20 get ints",
+            "牛彦栋",
+            "void get_ints(char line[],char * ints[])\n{\n\tint len=0;\n\twhile (line[len]!='\\0')\n\t{\n\t\tif(line[len]<'0'||line[len]>'9')line[len]='\\0';\n\t\tlen++;\n\t}\n\tint cnt=0;\t\n\tfor(int i=0;i<len;i++)\n\t{\n\t\tif(('0'<=line[i]&&line[i]<='9')&&(i==0||(line[i-1]<'0'||line[i-1]>'9')))\n\t\tints[cnt++]=&line[i];\n\t}\n\tints[cnt]=0;\n}",
+            1607099083.537408,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.21 get specific ints",
+            "牛彦栋",
+            "int get_int(char s[],char t[])\n{\n\tint len=0;while (s[len]!='\\0')len++;\n\tint len_=0;while (t[len_]!='\\0')len_++;\n\tfor(int i=0;i+len_-1<len;i++)\n\t{\n\t\tint flag=1; \n\t\tfor(int j=0;j<len_;j++)if(s[i+j]!=t[j])flag=0;\n\t\tif(!flag)continue;\n\t\t\n\t\tint k=i,ans=0;\n\t\twhile('0'>s[k]||s[k]>'9')k++;\n\t\twhile('0'<=s[k]&&s[k]<='9')ans=ans*10+s[k]-'0',k++;\t\t\n\t\treturn ans;\n\t}\n}",
+            1607100187.3731897,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.22 Sort pointers",
+            "牛彦栋",
+            "int cmp(char *a,char *b)\n{\t\n\tint x=0;\t\n\twhile(a[x]==b[x])x++;\n\treturn a[x]>=b[x]; \n}\nvoid sort_words(char *f[],int n)\n{\t\n\tfor(int i=0;i<n;i++)\n\tfor(int j=0;j<n-i-1;j++)\n\tif(cmp(f[j],f[j+1]))\n\t{\n\t\tchar *t=f[j];\n\t\tf[j]=f[j+1];\n\t\tf[j+1]=t;\n\t}\n}",
+            1607101767.9782763,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.23 Matrix",
+            "牛彦栋",
+            "void fill2d(Matrix m,double k)\n{\n\tfor(int i=0;i<m.height;i++)\n\t  for(int j=0;j<m.width;j++)\n\t  m.array2[i][j]=k;\n}\nvoid print2d(Matrix m)\n{\n\tfor(int i=0;i<m.height;i++)\n\t  for(int j=0;j<m.width;j++)\n\t  printf(\"%.2lf%c\",m.array2[i][j],j==m.width-1?'\\n':' ');\n}",
+            1607523822.7381241,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.7 Insertion sort",
+            "牛彦栋",
+            "void insertionSort(int a[],int n)\n{\n\tfor(int i=0;i<n;i++)\n\tfor(int j=0;j<n-i-1;j++)\n\tif(a[j]>a[j+1]){int t=a[j];a[j]=a[j+1];a[j+1]=t;}\n}",
+            1607669907.5850255,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.1 Rod cutting",
+            "牛彦栋",
+            "int dp[22];\nint getMaxCuttingPrice(int prices[][2],int priceCount,int rodLength)\n{\n\t#define max(a,b) (a>b?a:b)\n\tif(!rodLength)return 0;\n\tif(dp[rodLength])return dp[rodLength];\n\tfor(int i=1;i<=20;i++)\n\tfor(int j=0;j<priceCount;j++)\n\tif(i>=prices[j][0])dp[i]=max(dp[i],dp[i-prices[j][0]]+prices[j][1]);\n\treturn dp[rodLength];\n}",
+            1607670775.8943415,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.2 Subsequence",
+            "牛彦栋",
+            "#include<string.h>\n#define N 110\n#define max(a,b) (a>b?a:b)\nint dp[N][N];\nint LCS(char s1[],char s2[])\n{\n\tint n=strlen(s1),m=strlen(s2);\t\n\tfor(int i=1;i<=n;i++)\n\tfor(int j=1;j<=m;j++)\n\t{\n\t\tdp[i][j]=max(dp[i][j-1],dp[i-1][j]);\n\t\tif(s1[i-1]==s2[j-1])dp[i][j]=max(dp[i][j],dp[i-1][j-1]+1);\n\t}\n\treturn dp[n][m];\n}",
+            1607918480.1986504,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.3 Subsequence 2",
+            "牛彦栋",
+            "#include<string.h>\n#define N 110\n#define max(a,b) (a>b?a:b)\nint dp[N][N],fg[N][N];\nstruct Result LCS(char *s1,char *s2)\n{\n\tint n=strlen(s1),m=strlen(s2);\t\n\tfor(int i=n;i>=1;i--)s1[i]=s1[i-1];\n\tfor(int i=m;i>=1;i--)s2[i]=s2[i-1];\n\t\n\tfor(int i=1;i<=n;i++)\n\tfor(int j=1;j<=m;j++)\n\t{\n\t\tdp[i][j]=max(dp[i][j-1],dp[i-1][j]);\n\t\tif(s1[i]==s2[j])dp[i][j]=max(dp[i][j],dp[i-1][j-1]+1);\n\t}\n\t\n\tfg[n][m]=1;\n\tfor(int i=n;i>=0;i--)\n\tfor(int j=m;j>=0;j--)\n\tif(fg[i][j])\n\t{\n\t\tif(i&&dp[i][j]==dp[i-1][j])fg[i-1][j]=1;\n\t\tif(j&&dp[i][j]==dp[i][j-1])fg[i][j-1]=1;\n\t\tif(i&&j&&s1[i]==s2[j]&&dp[i][j]==dp[i-1][j-1]+1)fg[i-1][j-1]=1;\n\t}\n\t\n\tstruct Result res;\n\tfor(int i=0;i<100;i++)res.LCS[i]=0;\t\n\tint x=0,y=0,t=0;\n\twhile(x!=n||y!=m)\n\t{\n\t\tif(s1[x+1]==s2[y+1]&&fg[x+1][y+1]){x++;y++;res.LCS[t++]=s1[x];continue;}\n\t\tif(fg[x][y+1]){y++;continue;}\n\t\tif(fg[x+1][y]){x++;continue;}\n\t}\n\treturn res;\n}",
+            1607673185.1185846,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.4 Matrix multiplication",
+            "牛彦栋",
+            "#define min(a,b) (a<b?a:b)\nint dp[110][110];\nint getMultiplications(int n,int a[])\n{\n\t\n\tfor(int i=0;i<=n+1;i++)for(int j=0;j<=n+1;j++)if(i!=j)dp[i][j]=1e9+7;\n\t\n\tfor(int l=n;l>=1;l--)\n\tfor(int r=l+1;r<=n;r++)\n\t{\n\t\tfor(int k=l;k<r;k++)\n\t\tdp[l][r]=min(dp[l][r],dp[l][k]+dp[k+1][r]+a[l-1]*a[k]*a[r]);\n\t}\n\treturn dp[1][n];\n}",
+            1607929665.9233804,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.6 0-1 Backpack",
+            "牛彦栋",
+            "#define max(a,b) (a>b?a:b)\nint dp[110];\nint knapsack(int v[],int w[],int m)\n{\n\tint n=10;\n\tfor(int i=0;i<n;i++)\n\tfor(int j=m;j>=w[i];j--)\n\tdp[j]=max(dp[j],dp[j-w[i]]+v[i]);\n\treturn dp[m];\n}",
+            1607929896.92442,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.5 Backpack",
+            "牛彦栋",
+            "#define max(a,b) (a>b?a:b)\nint dp[110];\nint knapsack(int v[],int w[],int m)\n{\n\tint n=10;\n\tfor(int i=0;i<n;i++)\n\tfor(int j=w[i];j<=m;j++)\n\tdp[j]=max(dp[j],dp[j-w[i]]+v[i]);\n\treturn dp[m];\n}",
+            1607946213.5197322,
+            100,
+            "# 答案正确"
+        ]
+    ],
+    "table_name": "答案"
+}

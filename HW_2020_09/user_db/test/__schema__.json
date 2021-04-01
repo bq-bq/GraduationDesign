@@ -1,0 +1,261 @@
+{
+    "__update_time__": 1590323528.0405006,
+    "classes": {
+        "field_names": [
+            "class_code",
+            "course_code",
+            "class_section",
+            "class_time",
+            "class_room",
+            "professor_employee_number"
+        ],
+        "field_types": [
+            "number",
+            "text",
+            "number",
+            "text",
+            "text",
+            "number"
+        ],
+        "foreign_keys": {
+            "course_code": [
+                "course",
+                "course_code"
+            ],
+            "professor_employee_number": [
+                "professor",
+                "employee_number"
+            ]
+        },
+        "posX": 150.203125,
+        "posY": 0,
+        "primary_keys": [
+            "class_code"
+        ],
+        "table_name": "classes",
+        "table_type": ""
+    },
+    "course": {
+        "field_names": [
+            "course_code",
+            "department_code",
+            "course_description",
+            "course_credit"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text",
+            "number"
+        ],
+        "foreign_keys": {
+            "department_code": [
+                "department",
+                "department_code"
+            ]
+        },
+        "posX": 370.25,
+        "posY": 0,
+        "primary_keys": [
+            "course_code"
+        ],
+        "table_name": "course",
+        "table_type": ""
+    },
+    "department": {
+        "field_names": [
+            "department_code",
+            "department_name",
+            "school_code",
+            "employee_number",
+            "department_address",
+            "department_extension"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text",
+            "number",
+            "text",
+            "number"
+        ],
+        "foreign_keys": {
+            "employee_number": [
+                "employee",
+                "employee_number"
+            ]
+        },
+        "posX": 556.34375,
+        "posY": 0,
+        "primary_keys": [
+            "department_code"
+        ],
+        "table_name": "department",
+        "table_type": ""
+    },
+    "employee": {
+        "field_names": [
+            "employee_number",
+            "employee_last_name",
+            "employee_first_name",
+            "employee_initial",
+            "employee_job_code",
+            "employee_hire_date",
+            "employee_date_of_birth"
+        ],
+        "field_types": [
+            "number",
+            "text",
+            "text",
+            "text",
+            "text",
+            "time",
+            "time"
+        ],
+        "foreign_keys": {},
+        "posX": 739.796875,
+        "posY": 1,
+        "primary_keys": [
+            "employee_number"
+        ],
+        "table_name": "employee",
+        "table_type": ""
+    },
+    "enroll": {
+        "field_names": [
+            "class_code",
+            "student_number",
+            "enroll_grade"
+        ],
+        "field_types": [
+            "number",
+            "number",
+            "text"
+        ],
+        "foreign_keys": {
+            "class_code": [
+                "classes",
+                "class_code"
+            ],
+            "student_number": [
+                "student",
+                "student_num"
+            ]
+        },
+        "posX": 0,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "enroll",
+        "table_type": ""
+    },
+    "professor": {
+        "field_names": [
+            "employee_number",
+            "department_code",
+            "professor_office",
+            "professor_extension",
+            "professor_high_degree"
+        ],
+        "field_types": [
+            "number",
+            "text",
+            "text",
+            "number",
+            "text"
+        ],
+        "foreign_keys": {
+            "department_code": [
+                "department",
+                "department_code"
+            ],
+            "employee_number": [
+                "employee",
+                "employee_number"
+            ]
+        },
+        "posX": 370.25,
+        "posY": 104,
+        "primary_keys": [],
+        "table_name": "professor",
+        "table_type": ""
+    },
+    "result": {
+        "field_names": [
+            "first_name",
+            "last_name"
+        ],
+        "field_types": [
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 783,
+        "posY": 205,
+        "primary_keys": [],
+        "table_name": "result",
+        "table_type": "public"
+    },
+    "scatter_data": {
+        "field_names": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "field_types": [
+            "number",
+            "number",
+            "number",
+            "number"
+        ],
+        "foreign_keys": {},
+        "posX": 574,
+        "posY": 242,
+        "primary_keys": [],
+        "table_name": "scatter_data",
+        "table_type": "public"
+    },
+    "student": {
+        "field_names": [
+            "student_num",
+            "student_last_name",
+            "student_first_name",
+            "student_init",
+            "student_date_of_birth",
+            "student_class_hours_took",
+            "student_class",
+            "student_gpa",
+            "student_transfer",
+            "department_code",
+            "student_phone",
+            "professor_number"
+        ],
+        "field_types": [
+            "number",
+            "text",
+            "text",
+            "text",
+            "time",
+            "number",
+            "text",
+            "number",
+            "boolean",
+            "text",
+            "number",
+            "number"
+        ],
+        "foreign_keys": {
+            "department_code": [
+                "department",
+                "department_code"
+            ]
+        },
+        "posX": 150.203125,
+        "posY": 134,
+        "primary_keys": [
+            "student_num"
+        ],
+        "table_name": "student",
+        "table_type": "public"
+    }
+}

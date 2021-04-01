@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1607922509.8735826,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.1 Rod cutting",
+            "Input：有一个长n米的木头，和一个price table，table如下：<br>\n\n长度 i     1　　2　　3　　4　　5　　6 。。。<br>\n\n价格 Pi　1　　5　　8　　9　　10　　17。。。<br>\n<br>\n\n意思很明显，就是长度为1米的木头可以买1元，长5米的可以卖10元，依次类推<br>\n\nOutput：找一个cut的方法，使最后赚的钱最多。<br>\n\n很显然，这个递归的主要思路是我切一刀之后，分成两段，一段我按table的价钱卖了，另一段我当成一个新的子问题，继续作为我的函数的新的参数，这样不就递归了吗？但是问题是这一刀怎么切，没错，我们就来个找最大值，即max<sub>i =1 to n</sub> Pi + Cut(n-i).<br>\n<br>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>1 2 3 4 5 6\n1 5 8 9 10 17\n\n17 16 15 14 13 12 11 10 9 8\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>47\n44\n42\n39\n35\n34\n30\n27\n25\n22\n</pre>",
+            "#include \"source.c\"\n\n#include <stdio.h>\n\nvoid readPriceTable(int prices[][2], int priceCount) {\n\tfor (int i = 0; i < priceCount; ++ i) {\n\t\tscanf(\"%d\", &prices[i][0]);\n\t}\n\tfor (int i = 0; i < priceCount; ++ i) {\n\t\tscanf(\"%d\", &prices[i][1]);\n\t}\n}\n\nvoid test(int prices[][2], int priceCount) {\n\tint rodLength;\n\tscanf(\"%d\", &rodLength);\n\tprintf(\"%d\\n\", getMaxCuttingPrice(prices, priceCount, rodLength));\n}\n\nint main() {\n\tint prices[6][2];\n\treadPriceTable(prices, 6);\n\t\n\tfor (int i = 0; i < 10; ++ i) {\n\t\ttest(prices, 6);\n\t}\n}",
+            "#define Max(x,y) (x>y ? x:y)\nint getMaxCuttingPrice(int array[][2],int arraylen,int length)\n{\nint cur_max_price=(length<=arraylen-1 ? array[length-1][1]:0);\n\t\tfor (int i = 0; i <length-1; ++ i) \n\t{\n\t\tint first_cut=i+1;\n\t\t\tint price=getMaxCuttingPrice(array,arraylen,first_cut)+getMaxCuttingPrice(array,arraylen,length-first_cut);\n\t\tcur_max_price=Max(price,cur_max_price);\n}\n return cur_max_price;\n\t}",
+            "=================================================================\n==25810==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffea477d7b4 at pc 0x55a479df1bd1 bp 0x7ffea477d660 sp 0x7ffea477d650\nREAD of size 4 at 0x7ffea477d7b4 thread T0\n    #0 0x55a479df1bd0 in getMaxCuttingPrice /home/cpp_test/贠湘楠/source.c:4\n    #1 0x55a479df1dcb in test /home/cpp_test/贠湘楠/main.c:17\n    #2 0x55a479df1ee6 in main /home/cpp_test/贠湘楠/main.c:25\n    #3 0x7f19b36ecb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)\n    #4 0x55a479df1a89 in _start (/home/cpp_test/贠湘楠/main.out+0xa89)\n\nAddress 0x7ffea477d7b4 is located in stack of thread T0 at offset 84 in frame\n    #0 0x55a479df1e3c in main /home/cpp_test/贠湘楠/main.c:20\n\n  This frame has 1 object(s):\n    [32, 80) 'prices' <== Memory access at offset 84 overflows this variable\nHINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext\n      (longjmp and C++ exceptions *are* supported)\nSUMMARY: AddressSanitizer: stack-buffer-overflow /home/cpp_test/贠湘楠/source.c:4 in getMaxCuttingPrice\nShadow bytes around the buggy address:\n  0x1000548e7aa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x1000548e7ab0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x1000548e7ac0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x1000548e7ad0: 00 00 00 00 00 00 00 00 f1 f1 f1 f1 04 f2 f2 f2\n  0x1000548e7ae0: 00 00 00 00 00 00 00 00 00 00 00 00 f1 f1 f1 f1\n=>0x1000548e7af0: 00 00 00 00 00 00[f2]f2 00 00 00 00 00 00 00 00\n  0x1000548e7b00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x1000548e7b10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x1000548e7b20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x1000548e7b30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x1000548e7b40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n==25810==ABORTING\n",
+            1607654400,
+            1608210000,
+            9,
+            1607919022.2014217
+        ]
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "__update_time__": 1587373165.670718,
+    "field_names": [
+        "class_code",
+        "student_number",
+        "enroll_grade"
+    ],
+    "field_types": [
+        "number",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {
+        "class code": [
+            "classes",
+            "class code"
+        ],
+        "student number": [
+            "student",
+            "student num"
+        ]
+    },
+    "primary_keys": [],
+    "rows": [
+        [
+            10014,
+            321452,
+            "F"
+        ],
+        [
+            10014,
+            324257,
+            "B"
+        ],
+        [
+            10018,
+            321452,
+            "A"
+        ],
+        [
+            10018,
+            324257,
+            "B"
+        ],
+        [
+            10021,
+            321452,
+            "C"
+        ],
+        [
+            10021,
+            324257,
+            "C"
+        ]
+    ],
+    "table_name": "enroll"
+}

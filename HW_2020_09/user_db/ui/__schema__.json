@@ -1,0 +1,57 @@
+{
+    "__update_time__": 1587832765.603586,
+    "component": {
+        "field_names": [
+            "component_id",
+            "config_template",
+            "description"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 80,
+        "primary_keys": [],
+        "table_name": "component",
+        "table_type": "client"
+    },
+    "page": {
+        "field_names": [
+            "page_id",
+            "show",
+            "ui_json"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 1,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "page",
+        "table_type": "client"
+    },
+    "standard_component": {
+        "field_names": [
+            "component_id",
+            "config_template",
+            "description"
+        ],
+        "field_types": [
+            "text",
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 161,
+        "primary_keys": [],
+        "table_name": "standard_component",
+        "table_type": "public"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "__update_time__": 1587897013.258923,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "store_btn",
+            "{\"name\":\"store_btn\",\"tag\":\"\",\"text\":\"\",\"init\":\"elt_store_button_group\",\"files\":[\"elt/elt_store_button_group.py\"],\"data\":[],\"vars\":[],\"events\":[\"click_date\",\"click_price\",\"click_uses\"],\"class\":{},\"attr\":{},\"style\":{\"margin\":[]}}",
+            ""
+        ],
+        [
+            "store_pub",
+            "{\"name\":\"store_pub\",\"tag\":\"\",\"text\":\"\",\"init\":\"elt_store_pub_button\",\"files\":[\"elt/elt_store_pub_button.py\"],\"data\":[],\"vars\":[],\"events\":[\"publish_component\"],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "控件介绍框",
+            "{\"name\":\"控件介绍框\",\"tag\":\"\",\"text\":\"\",\"init\":\"elt_elt_description_py\",\"files\":[\"elt/elt_elt_description.py\"],\"data\":[],\"vars\":[\"data\"],\"events\":[\"remove\",\"buy\"],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "控件预览",
+            "{\"name\":\"控件预览\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_elt_preview_py\",\"files\":[\"ui/config_edit_table.js\",\"ui/ui_elt_preview.py\"],\"data\":[],\"vars\":[\"data\"],\"events\":[],\"class\":{},\"attr\":{\"data_column\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"]},\"style\":{\"margin\":[]}}",
+            ""
+        ],
+        [
+            "登陆卡片",
+            "{\"name\": \"\\u767b\\u9646\\u5361\\u7247\", \"tag\": \"\", \"text\": \"\", \"init\": \"ui_login_card_py\", \"files\": [\"ui/login_card.py\"], \"data\": [], \"vars\": [], \"events\": [], \"class\": {\"\\u989c\\u8272\": [\"primary\", \"secondary\", \"success\", \"danger\", \"warning\", \"info\", \"light\", \"dark\"]}, \"attr\": {\"\\u5361\\u7247\\u6587\\u5b57\": [], \"\\u5361\\u7247\\u9898\\u76ee\": [], \"\\u6309\\u94ae\\u6587\\u5b57\": []}, \"style\": {\"margin\": [], \"width\": []}, \"from\": \"ui\"}",
+            ""
+        ]
+    ],
+    "table_name": "component"
+}

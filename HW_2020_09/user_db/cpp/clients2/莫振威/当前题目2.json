@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595865213.1959972,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <fstream>\n#include <vector>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\nclass NoSuchKeyException {};\nclass NoSuchValueException {};\n\nsize_t circular_shift(size_t bits, int shift_bits){\n\tconst int num_bits = 8 * sizeof(size_t);\n\tshift_bits = shift_bits % num_bits;\n\treturn bits << shift_bits | bits >> (num_bits - shift_bits);\n}\n\nsize_t hash_funtion(const string & key){\n\tsize_t code = 0;\n\tfor(int i = 0; i <  key.size(); i++){\n\t\tcode ^= circular_shift(key[i], i * 5);\n\t}\n\treturn code;\n}\n\nsize_t hash_funtion(const int & key){\n\tsize_t code = 0;\n\tint num = key;\n\tfor(int i = 0; num > 0; i++){\n\t\tcode ^= circular_shift(num % 10, i * 5);\n\t\tnum /= 10; \n\t}\n\treturn code;\n}\n\nclass HT\n{\n\tclass Tuple\n\t{\n\tpublic:\n\t\tstring str_key;\n\t\tstring str_val;\n\t\tbool str_use;\n\n\t\tint int_key;\n\t\tint int_val;\n\t\tint int_use;\n\n\t\tTuple() : str_use(false), int_use(false) {}\n\t};\n\n\tclass TupleRef {\n\tpublic:\n\t\tHT * ht;\n\t\tTuple * tp;\n\t\tstring str_key;\n\t\tint int_key;\n\n\t\tTupleRef(HT * ht, Tuple * tp, string str_key): ht(ht), tp(tp), str_key(str_key) {}\n\n\t\tTupleRef(HT * ht, Tuple * tp, int int_key): ht(ht), tp(tp), int_key(int_key) {}\n\n\t\toperator string() {\n\t\t\tif(tp == NULL) throw NoSuchKeyException();\n\t\t\treturn tp->str_val;\n\t\t}\n\n\t\toperator int() {\n\t\t\tif(tp == NULL) throw NoSuchValueException();\n\t\t\treturn tp->int_val;\n\t\t}\n\n\t\tTupleRef & operator= (const int & val){\n\t\t\ttp->int_val = val;\n\t\t\treturn *this;\n\t\t}\n\t\tTupleRef & operator= (const string & val){\n\t\t\ttp->str_val = val;\n\t\t\treturn *this;\n\t\t}\n\t};\n\n\tvector<Tuple> tuples;\n\tsize_t _size;\n\n\ttemplate <typename K>\n\tsize_t canonical_index(const K & key) const{\n\t\tsize_t hash_code = hash_funtion(key);\n\t\treturn hash_code % tuples.size();\n\t}\n\n\tsize_t indexOfKey(const string & key) const{\n\t\tsize_t index = canonical_index(key);\n\t\twhile (true){\n\t\t\tif(!tuples[index].str_use) return index;\n\t\t\tif(tuples[index].str_key == key) return index;\n\t\t\tindex = (index + 1) % tuples.size();\n\t\t}\n\t}\n\n\tsize_t indexOfKey(const int & key) const{\n\t\tsize_t index = canonical_index(key);\n\t\twhile(true){\n\t\t\tif(!tuples[index].str_use) return index;\n\t\t\tif(tuples[index].int_key == key) return index;\n\t\t\tindex = (index + 1) % tuples.size();\n\t\t}\n\t}\n\npublic:\n\tHT() : _size(0) {\n\t\ttuples.resize(40);\n\t}\n\n\tsize_t size() {return _size; }\n\n\tvoid put(const string & key, string & val){\n\t\tsize_t index = indexOfKey(key);\n\t\ttuples[index].str_key = key;\n\t\ttuples[index].str_val = val;\n\t\tif(tuples[index].str_use) return;\n\t\ttuples[index].str_use = true;\n\t\t_size++;\n\t\tif(2 * _size > tuples.size()) _double_tuples(); \n \t}\n\tvoid put(const string & key, int & val){\n\t\tsize_t index = indexOfKey(key);\n\t\ttuples[index].str_key = key;\n\t\ttuples[index].int_val = val;\n\t\tif(tuples[index].str_use) return;\n\t\ttuples[index].str_use = true;\n\t\t_size++;\n\t\tif(2 * _size > tuples.size()) _double_tuples(); \n \t}\n\tvoid put(const int & key, string & val){\n\t\tsize_t index = indexOfKey(key);\n\t\ttuples[index].int_key = key;\n\t\ttuples[index].str_val = val;\n\t\tif(tuples[index].int_use) return;\n\t\ttuples[index].int_use = true;\n\t\t_size++;\n\t\tif(2 * _size > tuples.size()) _double_tuples(); \n \t}\n\tvoid put(const int & key, int & val){\n\t\tsize_t index = indexOfKey(key);\n\t\ttuples[index].int_key = key;\n\t\ttuples[index].int_val = val;\n\t\tif(tuples[index].int_use) return;\n\t\ttuples[index].int_use = true;\n\t\t_size++;\n\t\tif(2 * _size > tuples.size()) _double_tuples(); \n \t}\n\t\n\tTupleRef operator[] (int key) {\n\t\tsize_t index = indexOfKey(key);\n\t\ttuples[index].int_key = key;\n\t\tif(tuples[index].int_use) return TupleRef(this, &tuples[index], key);\n\t\ttuples[index].int_use = true;\n\t\t_size ++;\n\t\tif(2 * _size > tuples.size()) _double_tuples();\n\t\treturn TupleRef(this, &tuples[index], key);\n\t}\n\tTupleRef operator[] (string key) {\n\t\tsize_t index = indexOfKey(key);\n\t\ttuples[index].str_key = key;\n\t\tif(tuples[index].str_use) return TupleRef(this, &tuples[index], key);\n\t\ttuples[index].str_use = true;\n\t\t_size ++;\n\t\tif(2 * _size > tuples.size()) _double_tuples();\n\t\treturn TupleRef(this, &tuples[index], key);\n\t}\n\n\tvoid _double_tuples() {\n\t\tvector<Tuple> non_empty_tuples;\n\t\tfor(int i = 0; i < tuples.size(); i++){\n\t\t\tif(tuples[i].str_use || tuples[i].int_use){\n\t\t\t\tnon_empty_tuples.push_back(tuples[i]);\n\t\t\t}\n\t\t}\n\t\tclear();\n\t\ttuples.resize(2 * tuples.size());\n\t\tfor(int i = 0; i < non_empty_tuples.size(); i++){\n\t\t\tif(non_empty_tuples[i].str_use) {\n\t\t\t\tput(non_empty_tuples[i].str_key, non_empty_tuples[i].str_val);\n\t\t\t}\n\t\t\tif(non_empty_tuples[i].int_use) {\n\t\t\t\tput(non_empty_tuples[i].int_key, non_empty_tuples[i].int_val);\n\t\t\t}\n\t\t}\n\t}\n\n\tvoid clear(){\n\t\tfor(int i = 0; i < tuples.size(); i++){\n\t\t\ttuples[i].str_use = false;\n\t\t\ttuples[i].int_use = false;\n\t\t}\n\t\t_size = 0;\n\t}\n};\n\n\n",
+            "",
+            1594951200,
+            1596200400,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1607601870.7458248,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "7.23 Matrix",
+            "课件中最后一个程序例子，定义了一些矩阵的操作(print2d,fill2d)。<br>\n能否把这个程序改得更好？我们可以把跟一个矩阵相关的3个数据(height,width,array2)定义为一个复合数据类型。<br>\n在本题中，请根据主函数把课件中的这个例子进行修改。<br>\n<br>\n注意：这个例子实际上展示了面向对象程序设计: \n<ul>\n<li>把矩阵定义为一个类型(Matrix)\n</li><li>并定义操作这个类型的一系列函数(make2d,print2d,fill2d,free2d)</li>\n</ul>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>888.00 888.00 888.00 888.00 888.00 \n888.00 888.00 888.00 888.00 888.00 \n888.00 888.00 888.00 888.00 888.00 \n888.00 888.00 888.00 888.00 888.00\n</pre>",
+            "#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct {\n\tdouble ** array2;\n\tint height;\n\tint width;\n} Matrix;\n\nMatrix make2d(int height, int width) {\n\tMatrix m;\n\tm.height = height;\n\tm.width = width;\n\tm.array2 = (double **)malloc(height * sizeof(double*));\n\tfor (int i = 0; i < height; ++ i)\n\t\tm.array2[i] = (double *)malloc(width * sizeof(double));\n\treturn m;\n}\n\nvoid free2d(Matrix m) {\n\tfor (int i = 0; i < m.height; ++ i) free(m.array2[i]);\n\tfree(m.array2);\n\tm.array2 = 0;\n}\n\n// 请编写 fill2d 和 print2d\n#include \"source.c\" \n\nint main()\n{\n\tMatrix m = make2d(4, 5);\n\tfill2d(m, 888);\n\tprint2d(m);\n\tfree2d(m);\n}",
+            "void fill2d(Matrix m, int value){\n\tfor (int i = 0; i < m.height; i++){\n\t\tfor (int j = 0; j < m.width; j++){\n\t\t\tm.array2[i][j]=value;\n\t\t}\n\t}\n}\nvoid print2d(Matrix m){\n\tfor (int i = 0; i < m.height; i++){\n\t\tfor (int j = 0; j < m.width; j++){\n\t\t\tprintf(\"%.2lf \",m.array2[i][j]);\n\t\t}\n\t\tputchar('\\n');\n\t}\n}",
+            "",
+            1607481600,
+            1607605200,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

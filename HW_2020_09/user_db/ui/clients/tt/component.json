@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1587614968.061594,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "卡片",
+            "{\"name\":\"卡片\",\"tag\":\"\",\"text\":\"\",\"init\":\"tt_card_obj\",\"files\":[\"tt/card.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{\"颜色\":[\"primary\",\"secondary\",\"success\",\"danger\",\"warning\",\"info\",\"light\",\"dark\"]},\"attr\":{\"卡片文字\":[],\"卡片题目\":[],\"按钮文字\":[],\"按钮链接\":[]},\"style\":{\"margin\":[],\"width\":[]}}",
+            null
+        ],
+        [
+            "视频卡片",
+            "{\"name\":\"视频卡片\",\"tag\":\"\",\"text\":\"\",\"init\":\"tt_video_card_obj\",\"files\":[\"tt/video_card.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{\"颜色\":[\"primary\",\"secondary\",\"success\",\"danger\",\"warning\",\"info\",\"light\",\"dark\"]},\"attr\":{\"卡片视频\":[],\"卡片题目\":[]},\"style\":{\"margin\":[],\"width\":[]}}",
+            null
+        ]
+    ],
+    "table_name": "component"
+}

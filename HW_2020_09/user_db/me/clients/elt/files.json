@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1587830572.186581,
+    "field_names": [
+        "file"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "elt/elt_elt_description.py"
+        ],
+        [
+            "elt/elt_store_button_group.py"
+        ],
+        [
+            "elt/elt_store_pub_button.py"
+        ]
+    ],
+    "table_name": "files"
+}

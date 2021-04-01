@@ -1,0 +1,32 @@
+{
+    "__update_time__": 1600773635.566772,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案程序",
+        "随机输入产生程序",
+        "开始时间",
+        "截止时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time"
+    ],
+    "rows": [
+        [
+            "1.1 (C++)",
+            "Design a class, Matrix5x5, to represent 5 by 5 matrixes.<br> \nThis class should have the following member functions:\n<ol>\n<li>double get(int, int)</li>\n<li>void set(int, int, double)</li>\n<li>Matrix5x5 operator + (Matrix5x5 &amp;, Matrix5x5 &amp;) </li>\n</ol>\n\n<u>EXAMPLE INPUT</u>\n<pre>1\n2\n3\n4\n</pre>\n\n<u>EXAMPLE OUTPUT</u>\n<pre>4 0 0 0 0 \n0 0 0 0 0 \n0 0 0 0 0 \n0 0 0 4 0 \n0 0 0 0 2 \n</pre>",
+            "#include \"source.cpp\"\n#include <iostream>\nusing namespace std;\n\nvoid print(Matrix5x5 & matrix) {\n\tfor (int row = 0; row < 5; ++ row) {\n\t\tfor (int col = 0; col < 5; ++ col) {\n\t\t\tcout << matrix.get(row, col) << ' ';\n\t\t}\n\t\tcout << endl;\n\t}\n}\n\nint main() {\n\tMatrix5x5 m1, m2, m3;\n\tdouble value;\n\tcin >> value;\n\tm1.set(0, 0, value);\n\tcin >> value;\n\tm1.set(4, 4, value);\n\tcin >> value;\n\tm2.set(0, 0, value);\n\tcin >> value;\n\tm2.set(3, 3, value);\n\tm3 = m1 + m2;\n\tprint(m3);\n}",
+            "class Matrix5x5\n{\npublic:\n\tdouble data[5][5];\n\t\n\tMatrix5x5() {\n\t\tfor (int row = 0; row < 5; ++ row) {\n\t\t\tfor (int col = 0; col < 5; ++ col) {\n\t\t\t\tthis->data[row][col] = 0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tdouble get(int row, int col) {\n\t\treturn this->data[row][col];\n\t}\n\t\n\tvoid set(int row, int col, double value) {\n\t\tthis->data[row][col] = value;\n\t}\n\t\n\tMatrix5x5 operator + (Matrix5x5 & that) {\n\t\tMatrix5x5 m;\n\t\tfor (int row = 0; row < 5; ++ row) {\n\t\t\tfor (int col = 0; col < 5; ++ col) {\n\t\t\t\tdouble sum = this->get(row, col) + that.get(row, col);\n\t\t\t\tm.set(row, col, sum);\n\t\t\t}\n\t\t}\n\t\treturn m;\n\t}\n};",
+            "from random import randint\nprint(randint(1,9))\nprint(randint(1,9))\nprint(randint(1,9))\nprint(randint(1,9))",
+            1587693600,
+            1588165200
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1594299218.1143122,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "15.1 (C++)",
+            "Please write a class <i>Table</i>, such that the main function outputs as follows.\n<br><br>\n<b>OUTPUT</b>\n<pre>{\n\theaders: ['AA','BB',],\n\trows: [\n\t\t['123','456',],\n\t\t['234','567',],\n\t],\n}\n</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <string>\n#include <vector>\nusing namespace std;\n\nostream & operator << (ostream & out, const Table & table) {\n\tout << table.json() << endl;\n\treturn out;\n}\n\nint main() {\n\tTable t1; // 空表\n\tt1.addCol(\"AA\"); // 变为一个有1列, 表头为[\"AA\"], 0行数据的表\n\tt1.addCol(\"BB\"); // 变为一个有2列, 表头为[\"AA\", \"BB\"], 0行数据的表\n\tvector<string> vec;\n\tvec.push_back(\"123\");\n\tvec.push_back(\"456\");\n\tt1[0] = vec; // 表格允许设置最后一个不存在的行(这时自动添加尾行), 变为一个有2列, 表头为[\"AA\", \"BB\"], 有1行数据的表\n\tvec[0] = \"234\";\n\tvec[1] = \"567\";\n\tt1[1] = vec; // 表格允许设置最后一个不存在的行(这时自动添加尾行), 变为一个有2列, 表头为[\"AA\", \"BB\"], 有2行数据的表\n\tcout << t1 << endl; // 以json格式输出表格(如example output所示), 以便其他程序读入\n}",
+            "#ifndef _PROJECT_SOURCE_HPP_\n#define _PROJECT_SOURCE_HPP_\n#include <iostream>\n#include <vector>\n#include <string>\n\n//std::ostream & operator << (std::ostream & out, void fuc())\n//{\n//    return out;\n//}\n\nstruct element\n{\n    std::vector<std::string> ele;\n};\n\nclass Table\n{\nprivate:\n    std::vector<std::string> str;\n    std::vector<element> val;\npublic:\n    Table() = default;\n    std::vector<std::string> operator [] (int index)\n    {\n        if (index > this->val.size())\n            return val[0].ele;\n        else\n            return val[index].ele;\n    }\n    void addCol(const char* str)\n    {\n        this->str.push_back(str);\n    }\n    std::ostream & json() const\n    {\n        std::cout << \"{\\n\" << \"\\theaders: ['\" << str[0] << \"','\" << str[1] << \"',],\" << \"}\\n\"\n            << \"rows: [\" << \"\\t\\t['\" << val[0].ele[0] << \"','\" << val[0].ele[1] << \"',],\\n\"\n            << \"rows: [\" << \"\\t\\t['\" << val[1].ele[0] << \"','\" << val[1].ele[1] << \"',],\\n\"\n            << \"\\t],\\n}\";\n        return std::cout;\n    }\n};\n\n#endif\n",
+            "",
+            1593741600,
+            1594299600,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

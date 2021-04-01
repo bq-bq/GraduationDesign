@@ -1,0 +1,792 @@
+{
+    "__update_time__": 1608089102.4056382,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "0.1 简介1",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tprintf(\"Hello world\\n\");\n}",
+            1602465409.858019,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.2 简介2",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tint x;\n\tx = 10;\n\tprintf(\"x is %d\\n\", x );\n}",
+            1602465571.4047217,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.3 简介3",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tint x;\n\tscanf(\"%d\", &x );\n\tprintf(\"%d\\n\", x );\n}",
+            1602465748.7654228,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.4 简介4",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tfloat x;\n\tscanf(\"%f\",&x);\n\tprintf(\"%f\\n\",x);\n}",
+            1602465878.7528563,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.5 简介5",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tdouble x;\n\tscanf(\"%lf\",&x);\n\tprintf(\"%lf\\n\",x);\n}",
+            1602465965.1896183,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.6 简介6",
+            "欧阳文静",
+            "#include <stdio.h>\n\ndouble sin(double x){\n\tint sign = -1;\n\tdouble r = x;\n\tdouble t = x;\n\tfor (int i = 0; i < 10; ++i){\n\t\tt = t * x * x / (i * 2 + 2)/(i * 2 + 3);\n\t\tif (t<1e-8)break;\n\t\tr += sign * t;\n\t\tsign *= -1;\n\t}\n\treturn r;\n}\n\nint main() {\n\tdouble x;\n\tdouble y;\n\tscanf(\"%lf\",&x);\n\ty=sin(x);\n\tprintf(\"%lf\\n\",y);\n}",
+            1603118741.6537988,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.7 简介7",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tint i;\n\ti=0;\n\twhile(i<10){\n\t\ti=i+1;\n\t\tprintf(\"hello, world\\n\");\n\t}\n}",
+            1602467555.033579,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.8 简介8",
+            "欧阳文静",
+            "#include <stdio.h>\ndouble power(double x, int exp){\n\tdouble result = 1;\n\tint i=0;\n\twhile(i<exp){\n\t\ti=i+1;\n\t\tresult = result * x;\n\t}\n\treturn result;\n}\nint main() {\n\tdouble x;\n\tscanf(\"%lf\",&x);\n\tprintf(\"%lf\\n\",power(x,3));\n}",
+            1602468326.9168098,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.9 简介9",
+            "欧阳文静",
+            "#include <stdio.h>\nint factorial(int n){\n\tint result = 1;\n\tint i = 0;\n\twhile(i<n){\n\t\ti = i + 1;\n\t\tresult = result * i;\n\t}\n\treturn result;\n}\nint main() {\n\tint n;\n\tscanf(\"%d\",&n);\n\tprintf(\"%d\\n\",factorial(n));\n}",
+            1602468923.4879487,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.10 简介10",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tchar c;\n\tfor (int i=0; i<10; i=i+1){\n\tc=getchar();\n\tputchar(c);\n\t}\n}",
+            1602481121.3423414,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.11 简介11",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint x;\n\tscanf(\"%d\",&x);\n\tif(x % 2 == 0){\n\t\tprintf(\"x is even\\n\");\n\t}\n\telse{\n\t\tprintf(\"x is odd\\n\");\n\t}\n}",
+            1602481371.5400445,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.13 简介13",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint numbers[5];\n\tnumbers[0]=10;\n\tnumbers[1]=20;\n\tnumbers[2]=30;\n\tnumbers[3]=40;\n\tnumbers[4]=50;\n\tprintf(\"%d\\n\",numbers[0]);\n\tprintf(\"%d %d\\n\",numbers[3],numbers[4]);\n}",
+            1602483551.0470564,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.14 简介14",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint numbers[5];\n\tfor (int i=0; i<5; ++i){\n\t\tnumbers[i]=(i+1)*10;\n\t}\n\tfor (int i=0; i<5; ++i){\n\t\tprintf(\"%d\\n\",numbers[i]);\n\t}\n}",
+            1602484185.0564234,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.15 简介15",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint numbers[5];\n\tfor(int i=0; i<5; ++i){\n\t\tscanf(\"%d\",&numbers[i]);\n\t}\n\tfor(int i=0; i<5; ++i){\n\t\tprintf(\"%d\\n\",numbers[i]);\n\t}\n}",
+            1602484560.6861038,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.16 简介16",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tchar hello[6]=\"hello\";\n\tchar hello2[7]=\"hello\\n\";\n\tprintf(\"%s\\n\",hello);\n\tprintf(\"%s\\n\",hello2);\n}",
+            1602485395.126956,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.17 简介17",
+            "欧阳文静",
+            "#include<stdio.h>\n\nint main() {\n\tchar hello[6]=\"hello\";\n\tchar hello2[7]=\"hello\\n\";\n\t\n\tfor (int i = 0; i < 6; ++ i)\n\t\tputchar(hello2[i]);\n\t\n}",
+            1602488614.534985,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.19 简介19",
+            "欧阳文静",
+            "#include <stdio.h>\nint counter = 0;\nvoid printTimes(){\n\textern int counter;\n\t++ counter;\n\tprintf(\"visited %d times\\n\",counter);\n}\n\nint main(){\n\tprintTimes();\n\tprintTimes();\n\tprintTimes();\n\tprintTimes();\n\tprintTimes();\n}",
+            1602487810.4079792,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.20 简介20",
+            "欧阳文静",
+            "#include<stdio.h>\nint data = 10;\n\nint main(){\n\tdata = 20;\n\tif (data>0){\n\t\tint data = 30;\n\t\tprintf(\"%d\\n\",data);\n\t}\n\tprintf(\"%d\\n\",data);\n}",
+            1602487869.4889376,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.1 Hello world",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tprintf(\"hello, world\");\n}",
+            1602829324.237578,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.2 Hello world x3",
+            "欧阳文静",
+            "#include <stdio.h>\nint main() {\n\tfor (int i = 0; i < 3; ++ i) {\n\t\tprintf(\"hello, world\\n\");\n\t}\n\t\n}",
+            1602829745.7621026,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.1  Output 1",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tputchar('\\\\');\n\tputchar('\\\\');\n\tputchar('\\\"');\n\tputchar('\\n');\n\tputchar('\\\\');\n\tputchar('n');\n\t\n}",
+            1603450037.3553715,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.3  Output 2",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tputchar('&');\n\tputchar('#');\n\tputchar('^');\n\tputchar('-');\n\tputchar('|');\n\tputchar('!');\n\tputchar(',');\n\tputchar('@');\n\tputchar(':');\n\tputchar('=');\n\tputchar('\\\\');\n\tputchar('\\\\');\n\tputchar('\\\\');\n\tputchar('\\\\');\n\tputchar('\\(');\n\tputchar('`');\n\tputchar('%');\n\tputchar('\\{');\n\tputchar('>');\n\tputchar('^');\n\tputchar('_');\n\tputchar('$');\n\tputchar('%');\n\tputchar('+');\n\tputchar('*');\n\tputchar('\\'');\n\tputchar('<');\n\tputchar('/');\n\tputchar('\\?');\n\tputchar(')');\n\tputchar('}');\n\tputchar(' ');\n\tputchar('\\\\');\n   putchar('\\\"');\n\tputchar('/');\n\tputchar('.');\n\tputchar('~');\t\t\n}",
+            1603696265.1491575,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.5  Variable",
+            "欧阳文静",
+            "int year;\ndouble seconds;\nchar code;",
+            1603462593.2965593,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.7  Initialization",
+            "欧阳文静",
+            "int year = 1990;\ndouble seconds = 1234.56;\nchar code = 'C';",
+            1603462840.4563386,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.9  Float",
+            "欧阳文静",
+            "#include<stdio.h>\nint main() {\n\tdouble x ;\n\tscanf(\"%lf\",&x);\n\tint y = x;\n\tdouble z = x-y;\n\tprintf(\"%d\\n\",y);\n\tprintf(\"%lf\\n\",z);\n}",
+            1603463891.277251,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.15 Characters",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tchar x,y,z,m;\n\tscanf(\"%c\",&x);\n\ty=x+1;\n\tz=x+2;\n\tm=x+3;\n\tputchar(y);\n\tputchar(z);\n\tputchar(m);\n}",
+            1603696057.009959,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.11  Digits",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint x;\n\tint even=0;\n\tint odd=1;\n\tscanf(\"%d\",&x);\n\tif (x % 2 ==0) {\n\t\t//printf(\"%d\\n\",even);\n\t\tint y = x / 2;\n\t\tif (y % 2 == 0){\n\t\t\tprintf(\"%d %d\\n\",even,even);\n\t\t}\n\t\telse{\n\t\t\tprintf(\"%d %d\\n\",even,odd);\n\t\t}\n\t}\n\telse{\n\t\t//printf(\"%d\\n\",odd);\n\t\tint z = (x-1)/2;\n\t\tif (z % 2 == 0){\n\t\t\tprintf(\"%d %d\\n\",odd,even);\n\t\t}\n\t\telse{\n\t\t\tprintf(\"%d %d\\n\",odd,odd);\n\t\t}\n\t}\n\t\n\t\n\t\n\t\n}",
+            1603508187.071522,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.13 Equality",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint x;\n\tint y;\n\tscanf(\"%d %d\",&x,&y);\n\tint eq = x == y;\n\tprintf(\"%d\\n\",eq*x);\n}",
+            1603696584.194788,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.3 Circle Area",
+            "欧阳文静",
+            "#include<stdio.h>\n#define PI 3.14\nint main() {\n\tdouble r;\n\tscanf(\"%lf\",&r);\n\tdouble s = PI * r * r;\n\tprintf(\"%lf\\n\",s);\n}",
+            1603510788.437608,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.4 Rectangle Area",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tdouble x;\n\tdouble y;\n\tscanf(\"%lf %lf\",&x,&y);\n\tdouble s = x*y;\n\tprintf(\"%lf\\n\",s);\n}",
+            1603510899.7911408,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.5 Celsius to Fahrenheit",
+            "欧阳文静",
+            "double fahrenheit; \ndouble celsiusToFahrenheit(double celsius){\n\t fahrenheit=celsius*9.0/5+32;\n }",
+            1603619822.7761016,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.6 Date and Time",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint seconds;\n\tint day;\n\tchar t='d';\n\tint hour;\n\tint minute;\n\tscanf(\"%d\",&seconds);\n\tday = seconds/86400;\n\tseconds=seconds-day*86400;\n\thour =seconds/3600;\n\tseconds=seconds-hour*3600;\n\tminute = seconds/60;\n\tseconds=seconds-minute*60;\n\tprintf(\"%d%c %d:%d:%d\\n\",day,t,hour,minute,seconds);\n\t\n\t\n\t\n}",
+            1603523058.7205415,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.7 Cylinder Volume",
+            "欧阳文静",
+            "#include<stdio.h>\n#define PI 3.14\nint main(){\n\tint r;\n\tint h;\n\tscanf(\"%d %d\",&r,&h);\n\tdouble v=PI*r*r*h;\n\tprintf(\"%lf\\n\",v);\n\t\n}",
+            1603523225.6034203,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.8 Feet to Meters",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tdouble feet;\n\tdouble meter;\n\tscanf(\"%lf\",&feet);\n\tmeter=feet*0.305;\n\tprintf(\"%lf\\n\",meter);\n}",
+            1603523373.9184344,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.9 Pounds into Kilograms",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tdouble pound;\n\tdouble kilo;\n\tscanf(\"%lf\",&pound);\n\tkilo=pound*0.454;\n\tprintf(\"%lf\\n\",kilo);\n}",
+            1603523536.3429615,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.10 Sum of Digits",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint x,y,z,m,n,t;\n\tscanf(\"%d\",&x);\n\ty=x%10;\n\tz=x/10;\n\tm=z%10;\n\tn=z/10;\n\tt=y+m+n;\n\tprintf(\"%d\\n\",t);\n}",
+            1603525068.056674,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.11 To Uppercase",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint offset='a'-'A';\n\tchar l;\n\tchar u;\n\tscanf(\"%c\",&u);\n\tl=u+offset;\n\tprintf(\"%c\\n\",l);\n}",
+            1603525777.0208402,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.1 Sum digits",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint sum;\n\tint x;\n\tfor (int i = 0; i < 10 ; ++ i){\n\t\tsum =0;\n\t\tscanf(\"%d\",&x);\n\t\twhile (x){\n\t\t\tsum = sum + x%10;\n\t\t\tx=x/10;\n\t\t}\n\t\tprintf(\"%d\\n\",sum);\n\t} \n}",
+            1604043872.4699633,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.2 Reverse",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint x;\n\tfor (int i = 0; i < 10; ++ i){\n\t\tscanf(\"%d\",&x);\n\t\tint reverse = 0;\n\t\twhile(x){\n\t\t\tint a = x % 10;\n\t\t\tx = x / 10;\n\t\t\treverse = reverse*10 + a;\n\t\t}\n\t\tprintf(\"%d\\n\",reverse);\n\t} \n}",
+            1604401403.9203954,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.3 Pattern",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint n;\n\tscanf(\"%d\",&n);\n\tfor (int i = n; i > 0; --i){\n\t\tfor (int k = n; k > 0; --k){\n\t\t\tint number =i+k-1 ;\n\t\t\tif(number > n ){\n\t\t\t\tprintf(\" \");\n\t\t\t}\n\t\t\telse{\n\t\t\t\tprintf(\"%d\",k);\n\t\t\t}\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n}",
+            1604401409.6537955,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.4 GCD",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint x, y;\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tint a = 1;\n\t  scanf(\"%d %d\\n\",&x, &y);\n\t  if (y > x){\n\t    while(a != 0){\n\t       a = y % x;\n\t       y = x;\n\t\t    x = a;\n\t    }\n\t    printf(\"%d\\n\",y);\n     }\n     else{\n    \t while(a != 0){\n\t       a = x % y;\n\t       x = y;\n\t\t    y = a;\n\t    }\n\t   printf(\"%d\\n\",x);\n\t  }\n\t}\n}",
+            1604128611.9414327,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.10 Flag",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint m,n;\n\tint x,y;\n\tscanf(\"%d %d\",&m, &n);\n\tx = (m+1)/2;\n\tfor (int i = 0; i < x-1; ++ i){\n\t\tfor (int k = 0; k < n/2; ++ k){\n\t\t\tif((i+k)%2==0){\n\t\t\t\tputchar('*');\n\t\t\t}\n\t\t\telse{\n\t\t\t\tputchar(' ');\n\t\t\t}\n\t\t}\n\t\tfor (int j = 0; j < n/2; ++ j){\n\t\t\tif(i%2==0){\n\t\t\t\tputchar('=');\n\t\t\t}\n\t\t\telse{\n\t\t\t\tputchar(' ');\n\t\t\t}\n\t\t} \t\n\t\tprintf(\"\\n\");\n\t}\n\t\n\tfor (int i = x - 1; i < m; ++ i){\n\t\tfor (int k = 0; k < n; ++ k){\n\t\t\tif(i%2==0){\n\t\t\t\tputchar('=');\n\t\t\t}\n\t\t\telse{\n\t\t\t\tputchar(' ');\n\t\t\t}\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}",
+            1604116865.09394,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.7 Pattern",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint n;\n\tscanf(\"%d\",&n);\n\tfor (int i = 0; i < n; ++ i){\n\t\tfor (int k = 0; k < n; ++ k){\n\t\t\tint number = i+k+1;\n\t\t\tif(number < n){\n\t\t\t\tputchar('0');\n\t\t\t}\n\t\t\telse{\n\t\t\t\tputchar('1');\n\t\t\t}\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n}",
+            1604118314.526334,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.5 Characters",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tchar m,n;\n\tscanf(\"%c%c\",&m,&n);\n\tint x = (n-m)/10+1;\n\tchar y;\n\tfor (int i = 0;i < x-1; ++ i){\n\t\tfor (int k = 1; k < 11; ++ k){\n\t\t\tchar y = m + (i*10+k-1);\n\t\t\tputchar(y);\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int i = x-1; i < x; ++ i){\n\t\tfor (int k = 0; k < (n-m)-(x-1)*10+1 ; ++ k){\n\t\t\tchar y = m + (x-1)*10 +k;\n\t\t\tputchar(y);\n\t\t} \n\t}\n}",
+            1604122467.1853273,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.6 Prime",
+            "欧阳文静",
+            "#include <stdio.h>\n//定义一个函数确定一个数是否是素数\nint prime(int x){\n\tfor (int i = 2; i < x; i++){ \n\t\tif(x%i==0){          //i 为小与x的除数\n\t\t\treturn 0;         //只要2~x-1中有一个能把x整除，表示x不是素数\n\t\t}\n\t}\n\treturn 1;              //除去能被整除的剩下的x就是素数\n}\n\nint main(){\n\tint n;   //需要的素数\n\tint m = 1;//现有的素数\n\tscanf(\"%d\",&n);\n\tprintf(\"2 \");\n\tfor (int j = 3; ; j++){    //从3开始验证一个数是否是素数\n\t\tif(prime(j)==1){\n\t\t\tm = m + 1;\n\t\t\tif(m > n) break;\n\t\t\telse{\n\t\t\t\tprintf(\"%d \",j);\n\t\t\t}\n\t\t\tif(m%10==0){\n\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t}\t\n\t} \t\n}",
+            1604321061.3147037,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.8 Emirp",
+            "欧阳文静",
+            "#include <stdio.h>\n//定义一个函数确定一个数是否是素数\nint prime(int x){\n\tfor (int i = 2; i < x; i++){ \n\t\tif(x%i==0){          //i 为小与x的除数\n\t\t\treturn 0;         //只要2~x-1中有一个能把x整除，表示x不是素数\n\t\t}\n\t}\n\treturn 1;              //除去能被整除的剩下的x就是素数\n}\n\n//定义一个函数确定一个数的逆是否是素数\nint emirp(int x){\n\tint reverse = 0;\n\twhile(x){\n\t  int a = x % 10;\n\t  x = x / 10;\n\t  reverse = reverse*10 + a;\n\t}\n\tif(prime(reverse)==1){\n\t\treturn 1;\n\t}\n}\n\nint main(){\n\tint n;\n\tint m = 1;\n\tscanf(\"%d\",&n);\n\tprintf(\"2 \");\n\tfor (int j = 3;  ; j++){\n\t\tif(emirp(j)==1 && prime(j)==1){\n\t\t\tm = m + 1;\n\t\t\tif(m>n) break;\n\t\t\telse{\n\t\t\t\tprintf(\"%d \",j);\n\t\t\t}\n\t\t\tif(m%10==0){\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t}\n\t\t\n\t} \n}",
+            1604385092.234171,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.9 Palindromic prime",
+            "欧阳文静",
+            "#include <stdio.h>\n//定义一个函数确定一个数是否是素数\nint prime(int x){\n\tfor (int i = 2; i < x; i++){ \n\t\tif(x%i==0){          //i 为小与x的除数\n\t\t\treturn 0;         //只要2~x-1中有一个能把x整除，表示x不是素数\n\t\t}\n\t}\n\treturn 1;              //除去能被整除的剩下的x就是素数\n}\n\n//定义一个函数确定一个数的逆是否是素数\nint reverse(int x){\n\tint reverse = 0;\n\twhile(x){\n\t  int a = x % 10;\n\t  x = x / 10;\n\t  reverse = reverse*10 + a;\n\t}\n}\n\nint main(){\n\tint n;\n\tint m = 1;\n\tscanf(\"%d\",&n);\n\tprintf(\"2 \");\n\tfor (int j = 3;  ; j++){\n\t   if(prime(j)==1&&reverse(j)==j){\n\t\t\tm = m + 1;\n\t\t\tif(m>n) break;\n\t\t\telse{\n\t\t\t\tprintf(\"%d \",j);\n\t\t\t}\n\t\t\tif(m%10==0){\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t\n\t   }\n\t} \n}",
+            1604377062.036988,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-4",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tchar x, y;\n\tscanf(\"%c\\n\",&x);\n\tscanf(\"%c\",&y);\n\tint n = y - x;\n\tfor (int i = 0; i <= n; i++){\n\t\tchar m = x + i;\n\t\tprintf(\"%d\t%c\t\",m,m);\n\t\tif ((i+1)%3==0){\n\t\t\tprintf(\"\\n\");\n\t\t}\n\t}\n}",
+            1605065838.7398424,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-1",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint test;\n\tscanf(\"%d\",&test);\n\tfor (int i = 0; i < test; ++ i){\n\t\tint x;\n\t\tfloat y;\n\t\tscanf(\"%d %f\",&x ,&y);\n\t\tprintf(\"%010d\\n\",x);\n\t\tprintf(\"%.4f\\n\",y);\n\t\tprintf(\"%12.4f\\n\",y);\n\t} \n\treturn 0;\n}",
+            1605086556.529967,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-3",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint h,m;\n\tscanf(\"%d\",&h);\n\tfor (int i = 0; i < h/2; ++ i){\n\t\tfor (int k = 0; k < h; ++k){\n\t\t\tif(k<h/2)\n\t\t\t\tputchar('-');\n\t\t\telse\n\t\t\t\tputchar('|');\n\t\t}\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tputchar('/');\n\t\t}\n\t\tfor (int k = 0; k < h-1-i; ++ k){\n\t\t\tputchar('\\\\');\n\t\t} \n\t\t\n\t\tprintf(\"\\n\");\n\t}\n\t\t\n\tfor (int i = h/2; i < h; ++ i) {\n\t\tfor (int k = 0; k < h; ++ k){\n\t\t\tif (k<h/2)\n\t\t\t\tputchar('|');\n\t\t\telse\n\t\t\t\tputchar('-');\n\t   }\n\t\tprintf(\"\\n\");\n\t}\n}",
+            1605065565.6238494,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n12\n\n\n# 参考答案:\n------||||||\\\\\\\\\\\\\\\\\\\\\\/\n------||||||/\\\\\\\\\\\\\\\\\\//\n------||||||//\\\\\\\\\\\\\\///\n------||||||///\\\\\\\\\\////\n------||||||////\\\\\\/////\n------||||||/////\\//////\n||||||------//////\\/////\n||||||------/////\\\\\\////\n||||||------////\\\\\\\\\\///\n||||||------///\\\\\\\\\\\\\\//\n||||||------//\\\\\\\\\\\\\\\\\\/\n||||||------/\\\\\\\\\\\\\\\\\\\\\\\n\n\n# 我的答案:\n------||||||\\\\\\\\\\\\\\\\\\\\\\\n------||||||/\\\\\\\\\\\\\\\\\\\\\n------||||||//\\\\\\\\\\\\\\\\\\\n------||||||///\\\\\\\\\\\\\\\\\n------||||||////\\\\\\\\\\\\\\\n------||||||/////\\\\\\\\\\\\\n||||||------\n||||||------\n||||||------\n||||||------\n||||||------\n||||||------\n"
+        ],
+        [
+            "2020-midterm-6",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tputchar('\\\\');\n\tputchar('\\\"');\n\tputchar('%');\n\tputchar('\\'');\n}",
+            1605789617.9316087,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-7",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint n,x;\n\tscanf(\"%d\",&n);\n\tscanf(\"%d\",&x);\n\tfor (int i = 0;  ; ++ i){\n\t\tint a = x % n;\n\t\tprintf(\"%d\",a);\n\t\tif(x % n == 0)\n\t\t\tx = x / n;\n\t\telse \n\t\t\tx = (x-a)/n;\n\t\tif(x<n){\n\t\t\tprintf(\"%d\",x);\n\t\t\tbreak;\n\t\t}\n\t} \n}",
+            1605326235.2685637,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-2",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint N;\n\tscanf(\"%d\",&N);\n\tint mature = 1;\n\t//int sum = 1;\n\tint a = 0, b = 0, c = 0;\n\t//mature是以成熟的母牛\n\t// a 是出生第1年的母牛\n\t// b 是出生第2年的母牛\n\t// c 是出生第3年的母牛\n\tfor (int i = 1; i < N; ++ i){\n\t\tmature = mature + c;\n\t\tc = b;\n\t\tb = a;\n\t\ta = mature;\n\t\t//sum = mature + a + b + c;\n\t} \n\tprintf(\"%d\",mature+a+b+c);\n}",
+            1605237233.2206242,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-5",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint N,n;\n\tscanf(\"%d\",&N);\n\tfor (int p = 0; p < N; ++ p) {\n\t   scanf(\"%d\",&n);\n\t\tint a[n];\n\t\tint max;\n\t\tint b = 0;\n\t\tint t = 0;\n\t\tint m = 0;\n\t\tfor (int i = 0; i < n; ++ i){\n\t\t\tscanf(\"%d\",&a[i]);\n\t\t} \n\t\tfor (int k = 0; k < n; ++k ){\n\t\t\tif(a[k]!=a[k-1])\n\t\t\t\tt = t + 1;\n\t\t}\n\t\t/*for (int k = 2; k <= n ; ++k){\n\t\t\tif(a[k-2]!=a[k-1]&&a[k-1]!=a[k])\n\t\t\t\tm = m + 1;\n\t\t} */\n\t   for(int i = 0;i < n;i ++){\n        int c = 0;\n        for(int j = 0;j < n;j ++){\n           if(a[i] == a[j]) c ++;\n        }\n\t\t   if(c==1) m = m + 1;\n        if(c >= b){\n           max = a[i];\n           b = c;\n\t\t   }\n      }\n    printf(\"%d %d %d\\n\",t,t-m,max);\n\t}\n}",
+            1605693517.0308487,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "4.16 Switch-statement",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint num;\n\tfor (int i = 0; i < 10; ++ i){ \n\t\tscanf(\"%d\",&num);\n\tswitch (num){\n\t\tcase 1:\n\t\tcase 8:\n\t\tcase 21:\n\t\tcase 22:\n\t\t\tputchar('A');\n\t\t\tbreak;\n\t\tcase 6:\n\t\tcase 13:\n\t\tcase 17:\n\t\tcase 25:\n\t\t\tputchar('B');\n\t\t\tbreak;\n\t\tcase 5:\n\t\tcase 10:\n\t\tcase 18:\n\t\tcase 26:\n\t\t\tputchar('C');\n\t\t\tbreak;\n\t\tcase 2:\n\t\tcase 11:\n\t\tcase 15:\n\t\tcase 23:\n\t\t\tputchar('D');\n\t\t\tbreak;\n\t\tcase 7:\n\t\tcase 9:\n\t\tcase 19:\n\t\tcase 28:\n\t\tcase 30:\n\t\t\tputchar('E');\n\t\t\tbreak;\n\t\tcase 3:\n\t\tcase 14:\n\t\tcase 16:\n\t\tcase 24:\n\t\tcase 29:\n\t\t\tputchar('F');\n\t\t\tbreak;\n\t\tcase 4:\n\t\tcase 12:\n\t\tcase 20:\n\t\tcase 27:\n\t\t\tputchar('G');\n\t\t\tbreak;\t\n\t}\n\t}\n}",
+            1605086338.3083892,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.11",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint n;\n\tscanf(\"%d\",&n);\n\tfor (int i = 0; i < n/2; ++ i){\n\t\tint m = n-(i+1)*2;\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tputchar('*');\n\t\t}\n\t\t\tputchar('\\\\');\n\t\tfor (int k=0; k < n-2*(i+1); ++ k){\n\t\t\tputchar('+');\n\t\t} \n\t\t\tputchar('/'); \n\t\tfor (int k = 0; k < i; ++ k) {\n\t\t\tputchar('*');\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n\tfor (int i = n/2; i < n; ++ i){\n\t\tfor (int k = 0; k < n-i-1; ++ k){\n\t\t\tputchar('*');\n\t\t}\n\t\t\tputchar('/');\n\t\tfor (int k=0; k < 2*i-n; ++ k){\n\t\t\tputchar('+');\n\t\t} \n\t\t\tputchar('\\\\');\n\t\tfor (int k = 0; k < n-i-1; ++ k) {\n\t\t\tputchar('*');\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n}",
+            1605251193.2834206,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.3 Reverse",
+            "欧阳文静",
+            "int reverse(int x){\n\tint reverse = 0;\n\tint a;\n\twhile(x){\n\t   a = x % 10;\n\t   x = x / 10;\n\t\treverse = reverse*10 + a;\n\t}\n\treturn reverse;\n}",
+            1605852730.2443063,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.4 Largest",
+            "欧阳文静",
+            "int largest(int x, int y, int z){\n\tif(x>y){\n\t\tif(x>z) return x;\n\t\telse return z;\n\t}\n\telse{\n\t\tif(y>z) return y;\n\t\telse return z;\n\t}\n}",
+            1605853068.7525222,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.1 Lower Case",
+            "欧阳文静",
+            "char toLowercase(char x){\n\tchar m = 'a';\n\tchar n = 'A';\n\tint offset = m - n;\n\tchar y;\n\ty = x + offset;\n\treturn y;\n}",
+            1605853455.640603,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.2 Sum Digits",
+            "欧阳文静",
+            "int sumDigits(int x){\n\tint sum = 0;\n\twhile(x){\n\t\tint a;\n\t\ta = x % 10;\n\t\tx = x /10;\n\t\tsum = sum +a;\n\t}\n\treturn sum;\n}",
+            1605853681.404892,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.5 GCD",
+            "欧阳文静",
+            "int gcd(int x, int y){\n\tint a = 1;\n\tif(x>y){\n\t\twhile (a != 0){\n\t\t   a = x % y;\n\t\t\tif(a == 0){\n\t\t\t\treturn y;\n\t\t\t\tbreak;\n\t\t\t}\t\t\t\t\n\t\t   x = y;\n\t\t   y = a;\n\t\t}\n\t}\n\telse{\n\t\tfor (int i = 0; ; ++ i) {\n\t\t   a = y % x;\n\t\t\tif(a == 0){\n\t\t\t\treturn x;\n\t\t\t\tbreak;\n\t\t\t}\t\t\t\t\n\t\t   y = x;\n\t\t   x = a;\n\t\t}\n\t}\n}",
+            1605854896.7134092,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.6 LCM",
+            "欧阳文静",
+            "int lcm(int num1, int num2){\n\tint x;\n\tx = num1 * num2;\n\tint a,y;\n\tif(num1>num2){\n\t\tfor (int i = 0; ; ++ i){\n\t\t\ta = num1%num2;\n\t\t\tif(a==0)break;\n\t\t\tnum1=num2;\n\t\t\tnum2=a;\n\t\t}\n\t\ty = num2;\n\t}\n\telse{\n\t\tfor (int i = 0; ; ++ i){\n\t\t\ta = num2%num1;\n\t\t\tif(a==0)break;\n\t\t\tnum2=num1;\n\t\t\tnum1=a;\n\t\t}\n\t\ty = num1;\n\t}\n\tint z;\n\tz = x / y;\n\treturn z;\n}",
+            1605857707.7030938,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.7 Is Prime",
+            "欧阳文静",
+            "int isPrime(int x){\n\tint a;\n\tfor (int i = 2; i < x; ++ i){\n\t\ta = x % i;\n\t\tif(a==0){\n\t\t\treturn 0;\n\t\t   break;\n\t\t}\n\t} \n\treturn 1;\n}",
+            1605858038.1381075,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.6 Character functions",
+            "欧阳文静",
+            "# define bool int\nbool isDigit(char c){\n\tchar x = '0';\n\tchar y = '9';\n\tif(c>=x&&c<=y) return 1;\n\telse return 0;\n}\n\nbool isLower(char c){\n\tchar x = 'a';\n\tchar y = 'z';\n\tif(c>=x&&c<=y) return 1;\n\telse return 0;\n}\n\nbool isUpper(char c){\n\tchar x = 'A';\n\tchar y = 'Z';\n\tif(c>=x&&c<=y) return 1;\n\telse return 0;\n}\n\nbool isAlphabit(char c){\n\tint m = isLower(c);\n\tint n = isUpper(c);\n\tif(m==1 || n==1) return 1;\n\telse return 0;\n}\n\nbool isAlphabitOrNumber(char c) {\n\tint x = isAlphabit(c);\n\tint y = isDigit(c);\n\tif(x == 1 || y == 1) return 1;\n\telse return 0;\n}\n\nbool isSpace(char c){\n\tchar x = '\\t';\n\tchar y = '\\r';\n\tchar z = '\\n';\n\tif(c==x) return 1;\n\telse if(c==y) return 1;\n\telse if(c==z) return 1;\n\telse return 0;\n}\n\nbool isPrintable(char c){\n\tchar x = '!';\n\tchar y = '~';\n\tif(c>=x&&c<=y) return 1;\n\telse return 0;\n}\n\nbool isGraphical(char c){\n\tint x = isSpace(c);\n\tint y = isPrintable(c);\n\tif(x!=1 && y ==1) return 1;\n\telse return 0;\n}\n\nbool isPunctuation(char c){\n\tint x = isGraphical(c);\n\tint y = isAlphabitOrNumber(c);\n\tif(x==1&&y==0) return 1;\n\telse return 0;\n}",
+            1605860241.8670955,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 1",
+            "欧阳文静",
+            "void print_pattern(int n){\n\tfor (int i = 0; i < n/2; ++ i){\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tputchar('B');\n\t\t} \n\t\tputchar('Y');\n\t\tfor (int k = 0; k <n-(i+1)*2 ; ++ k){\n\t\t\tputchar('G');\n\t\t}\n\t\tputchar('Y');\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tputchar('B');\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int i = n/2; i <=n/2 ; ++ i){\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tputchar('B');\n\t\t} \n\t\tputchar('Y');\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tputchar('B');\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int i = n/2+1; i < n; ++ i){\n\t\tfor (int k = 0; k < n-i-1; ++ k){\n\t\t\tputchar('B');\n\t\t} \n\t\tputchar('Y');\n\t\tfor (int k = 0; k < n-(n-i)*2 ; ++ k){\n\t\t\tputchar('G');\n\t\t}\n\t\tputchar('Y');\n\t\tfor (int k = 0; k < n-i-1; ++ k){\n\t\t\tputchar('B');\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n}",
+            1605861819.9019372,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 2",
+            "欧阳文静",
+            "void print_pattern(int h, int w){\n\tint n = h/9;\n\tfor (int i = 0; i < n; ++ i){\n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j <n ; ++ j){\n\t\t\tputchar(' ');\n\t\t} \n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j < w-n*5; ++ j){\n\t\t\tputchar('N');\n\t\t}\n\t\tprintf(\"\\n\");\n\t}  \n\tfor (int i = 0; i < n; ++ i){\n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j <n ; ++ j){\n\t\t\tputchar(' ');\n\t\t} \n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j < w-n*5; ++ j){\n\t\t\tputchar(' ');\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n\tfor (int i = 0; i < n; ++ i){\n\t\tfor (int j = 0; j < n*5; ++j){\n\t\t\tputchar(' ');\n\t\t}\n\t\tfor (int j = 0; j < w-n*5; ++ j){\n\t\t\tputchar('N');\n\t\t}\n\t\tprintf(\"\\n\");\n   }\n\tfor (int i = 0; i < n; ++ i){\n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j <n ; ++ j){\n\t\t\tputchar(' ');\n\t\t} \n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j < w-n*5; ++ j){\n\t\t\tputchar(' ');\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n\tfor (int i = 0; i < n; ++ i){\n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j <n ; ++ j){\n\t\t\tputchar(' ');\n\t\t} \n\t\tfor (int j = 0; j < n*2; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tfor (int j = 0; j < w-h/9*5; ++ j){\n\t\t\tputchar('N');\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n\tfor (int i = 0; i < h/9; ++ i){\n\t\tfor (int j = 0; j < w; ++ j){\n\t\t\tputchar(' ');\n\t\t} \n\t\tprintf(\"\\n\");\n   }\n\tfor (int i = 0; i < h/9; ++ i){\n\t\tfor (int j = 0; j < w; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tprintf(\"\\n\");\n   }\n\tfor (int i = 0; i < h/9; ++ i){\n\t\tfor (int j = 0; j < w; ++ j){\n\t\t\tputchar(' ');\n\t\t} \n\t\tprintf(\"\\n\");\n   }\n\tfor (int i = 0; i < h/9; ++ i){\n\t\tfor (int j = 0; j < w; ++ j){\n\t\t\tputchar('N');\n\t\t} \n\t\tprintf(\"\\n\");\n   }\n}",
+            1605880905.3296885,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.10 Character pattern 3",
+            "欧阳文静",
+            "#include<stdio.h>\nint pow2(int exp) {\n\tint result = 1;\n\tint i = 0;\n\twhile (i < exp) {\n\t\ti = i + 1;\n\t\tresult = result * 2;\n\t}\n\treturn result;\n}\n\nint get_bits(int i, int lines){\n\tint line = 0;\n\tint m = 0,n = 0;\n\tif(i>0&&i<lines-1){\n\t\t/*for (int k = 31;k >= 0; k=k-(lines-1)*2) {\n\t\t\tm += pow2(k-i);\n\t\t\tn += pow2(k+i);\n\t\t\tline = n + m ;\n\t\t}*/\n\t\tfor (int k = 31+i; k >= 0; k=k-(lines-1)*2){\n\t\t\t m += pow2(k);\n\t\t}\n\t   for (int k = 31-i; k >= 0; k=k-(lines-1)*2){\n\t\t\t m += pow2(k);\n\t\t}\n\t\t\tline = m + n;\n\t}\n\telse{\n\t\tfor (int k = 31-i; k >= 0 ; k=k-(lines-1)*2) {\n\t\t\tline += pow2(k);\n\t\t}\n\t}\n\treturn line;\n}",
+            1606284945.6859002,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.5 Grades",
+            "欧阳文静",
+            "#include <stdio.h>\n\nchar level(int x,int highest){\n\tchar a='A';\n\tchar y='B';\n\tchar z='C';\n\tchar m='D';\n\tchar n='F';\n\tif(x>=highest-10) return a;\n\telse if(x>=highest-20&&x<=highest-10) return y;\n\telse if(x>=highest-30&&x<=highest-20) return z;\n\telse if(x>=highest-40&&x<=highest-30) return m;\n\telse return n;\n}\n\n\nint main(){\n\tint highest = 0;\n\tint a[100];\n\tfor (int i = 0; i < 100; ++ i){\n\t\tscanf(\"%d\",&a[i]);\n\t\tif(a[i]>=highest) highest = a[i];\n\t}\n\tfor (int j = 0; j < 100; ++ j) {\n\tchar y = level(a[j],highest);\n\tprintf(\"%c\",y);\n\t}\n}",
+            1605877720.8480723,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.1 Reverse",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint a[10];\n\tfor (int i = 0; i < 10; ++ i){\n\t\tscanf(\"%d\",&a[i]);\n\t}\n\tfor (int k = 9; k >= 0 ; -- k){\n\t\tprintf(\"%d \",a[k]);\n\t}\n\treturn 0;\n}",
+            1606284911.0887325,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 Max",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint a[10];\n\tfor (int i = 0; i < 10; ++ i){\n\t\tscanf(\"%d\",&a[i]);\n\t}\n\tfor (int k = 1; k < 10; ++ k){\n\t\tif(a[k]>=a[k-1]) a[k]=a[k];\n\t\telse a[k]=a[k-1];\n\t}\n\tprintf(\"%d\",a[9]);\n}",
+            1606285609.5844448,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.3 Count occurrences",
+            "欧阳文静",
+            "#include<stdio.h>\nint main(){\n\tint a[100];\n\tint c=1;\n\tint max;\n\tfor (int i = 0; i < 100; ++ i){\n\t\tscanf(\"%d\",&a[i]);\n\t} \n\tfor (int j = 0; j < 100; ++ j){\n\t\tint times = 0;\n\t\tfor (int k = 0; k < 100; ++ k){\n\t\t\tif(a[j]==a[k]) ++times;\n\t\t}\n\t\tif(times>c){\n\t\t\tmax = a[j];\n\t\t\tc = times;\n\t\t}\n\t}\n\tprintf(\"%d %d\",max,c);\n}",
+            1606447087.0935066,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.4 Count occurrences",
+            "欧阳文静",
+            "#include <stdio.h>\nint main(){\n\tint a[100];\n\tfor (int i = 0; i < 100; ++ i){\n\t\tscanf(\"%d\",&a[i]);\n\t}\n\tfor (int i = 0; i < 100; ++ i){\n\t\tint times = 0;\n\t\tint x;\n\t\tfor (int k = 0; k < 100; ++ k){\n\t\t\tif(a[i]==a[k]) ++times;\n\t\t}\n\t\tif(i==0){\n\t\t\tprintf(\"%d %d\\n\",a[0],times);\n\t\t}\n\t\telse{\n\t\t\tfor (int j = 0; j < i; ++ j){\n\t\t\t\tif(a[j]==a[i]){\n\t\t\t\t\tx = 0;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t\telse x = 1;\n\t\t\t}\n\t\t\tif(x==1){\n\t\t\t\tprintf(\"%d %d\\n\",a[i],times);\n\t\t\t}\n\t\t}\n   }\n}",
+            1606446696.5015175,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.10 Occurrences",
+            "欧阳文静",
+            "void countDigits(const char digits[], int count[]){\n\tfor (int k = 0; k <= 9; ++ k){\n\t\tcount[k]=0;\n\t\tfor (int i = 0; digits[i]!='\\0'; ++ i){\n\t\t\tint x = digits[i]-'0';\n\t\t\tif(x==k) count[k]++;\n\t\t}\n\t}\n}",
+            1606461657.0718505,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.7 Character array functions",
+            "欧阳文静",
+            "unsigned long strlen(const char text[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(text[i]==0) return i;\n\t} \n}\nchar * strcpy(char to[], const char from[]){\n\tfor (int i = 0; ; ++ i){\n\t\tto[i]=from[i];\n\t\tif(from[i]==0) break;\n\t} \n}\nchar * strcat(char to[], const char from[]){\n\tint length = strlen(to);\n\tstrcpy(&to[length],from);\n}\nint strcmp(const char s1[], const char s2[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(s1[i]>s2[i]) return 1;\n\t\tif(s1[i]<s2[i]) return -101;\n\t\tif(s1[i]==0) return 0;\n\t} \n}\nint atoi(const char array[]){\n\tint x;\n\tif(array[0]=='-'){\n\t\tx = 1;\n\t}\n\telse x = 0;\n\tint value = 0;\n\tint i = (x ? 1 : 0);\n\tfor (; i < strlen(array); ++ i){\n\t\tvalue = value * 10 + (array[i]-'0');\n\t} \n\treturn (x ? -value :value);\n}\nvoid reverse(char array[]){\n\tint length = strlen(array);\n\tfor (int i = 0; i < length/2; ++ i){\n\t\tchar temp = array[i];\n\t\tarray[i] = array[length-1-i];\n\t\tarray[length-1-i]=temp;\n\t} \n}\nvoid itoaPositive(int value, char array[]){\n\tint i = 0;\n\tfor (;value > 0 ; ++ i){\n\t\tarray[i]=value%10+'0';\n\t\tvalue /= 10;\n\t} \n\tarray[i]=0;\n\treverse(array);\n}\nvoid itoa(int value, char array[]){\n\tif(value==0){\n\t\tarray[0]='0';\n\t\tarray[1]=0;\n\t}\n\telse if(value > 0){\n\t\titoaPositive(value,array);\n\t}\n\telse{\n\t\tarray[0]='-';\n\t\titoaPositive(-value,&array[1]);\n\t}\n}\nvoid substring(char to[], const char text[], int start, int len){\n\tfor (int i = 0; i < len; ++ i){\n\t\tto[i]=text[i+start];\n\t} \n\tto[len]=0;\n}\nvoid insert(char to[], int at, const char ins[]){\n\tint lenTo = strlen(to);\n\tint lenIns = strlen(ins);\n\tfor (int i = 0; i < lenTo-at; ++ i){\n\t\tto[lenTo+lenIns-i-1]=to[lenTo-1-i];\n\t} \n\tto[lenTo+lenIns]=0;\n\tfor (int i = 0; i < lenIns; ++ i){\n\t\tto[at+i]=ins[i];\n\t} \n}",
+            1606668844.9369504,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.8 Input",
+            "欧阳文静",
+            "#include<stdio.h>\nint readLine(int data[], int max) {\n\tint n = 0;\n\tint array[100];\n\tfor (int i = 0; i < 100 ; ++ i){\n\t\tscanf(\"%d\",&array[i]);\n\t\t++n;\n\t\tchar c = getchar();\n\t\tif(c == '\\n') break;\n\t}\n\tif(n<=max){\n\t\t for (int i = 0; i < n; ++ i){\n\t\t\t data[i]=array[i];\n\t\t }\n\t\treturn n;\n\t}\n\tif(n>max){\n\t\tfor (int i = 0; i < max; ++ i){\n\t\t\tdata[i]=array[i];\n\t\t} \n\t\treturn max;\n\t}\n}",
+            1606920492.667819,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.13 Parse Hex",
+            "欧阳文静",
+            "unsigned long strlen(const char text[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(text[i]==0) return i;\n\t} \n}\nint pow16(int exp) {\n\tint result = 1;\n\tint i = 0;\n\twhile (i < exp) {\n\t\ti = i + 1;\n\t\tresult = result * 16;\n\t}\n\treturn result;\n}\n\nint parseHex(const char hexString[]){\n\tint value = 0;\n\tint length = strlen(hexString);\n\tfor (int i = 0; hexString[i]!=0; ++ i){\n\t\tint x,n;\n\t\tif(hexString[i]<='9') {\n\t\t\tx = hexString[i]-'0';\n\t\t}\n\t\telse {\n\t\t\tx = hexString[i]-'7';\n\t\t}\n\t\tn = length-i-1;\n\t\tvalue = value + x*pow16(n);\n\t} \n\treturn value;\n}",
+            1606703445.5337164,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.14 Parse Bin",
+            "欧阳文静",
+            "unsigned long strlen(const char text[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(text[i]==0) return i;\n\t} \n}\nint pow2(int exp) {\n\tint result = 1;\n\tint i = 0;\n\twhile (i < exp) {\n\t\ti = i + 1;\n\t\tresult = result * 2;\n\t}\n\treturn result;\n}\n\nint parseBin(const char line[]){\n\tint value = 0;\n\tint length = strlen(line);\n\tfor (int i = 0; line[i]!=0 ; ++ i){\n\t\tint x = line[i] - '0';\n\t\tint n = length - i - 1;\n\t\tvalue = value + x * pow2(n);\n\t} \n\treturn value;\n}",
+            1606703841.452217,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.15 Dec to Hex",
+            "欧阳文静",
+            "unsigned long strlen(const char text[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(text[i]==0) return i;\n\t} \n}\nvoid reverse(char array[]){\n\tint length = strlen(array);\n\tfor (int i = 0; i < length/2; ++ i){\n\t\tchar temp = array[i];\n\t\tarray[i] = array[length-1-i];\n\t\tarray[length-1-i]=temp;\n\t} \n}\nvoid decToHex(const char dec[], char hex[]){\n\tint value = 0;\n\tfor (int i = 0; dec[i]!=0 ; ++ i){\n\t\tint x = dec[i]-'0';\n\t\tvalue = value * 10 + x;\n\t} //将char十进制转换成int十进制\n\tint count = 0;\n\twhile(value>=16){\n\t\tint a = value%16;\n\t\tvalue/=16;\n\t\tif(a<=9) {\n\t\t\thex[count]=a+'0';\n\t\t}\n\t\telse{\n\t\t\thex[count]='A'+ a - 10;\n\t\t}\n\t\tif(value<=9) {\n\t\t\thex[count+1]=value+'0';\n\t\t\thex[count+2]=0;\n\t\t}\n\t\tif(value>9&&value<16){\n\t\t\thex[count+1]='A'+value-10;\n\t\t\thex[count+2]=0;\n\t\t}\n\t\t++count;\n\t}\n\treverse(hex);\n}",
+            1606715892.553043,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.16 Dec to Bin",
+            "欧阳文静",
+            "unsigned long strlen(const char text[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(text[i]==0) return i;\n\t} \n}\nvoid reverse(char array[]){\n\tint length = strlen(array);\n\tfor (int i = 0; i < length/2; ++ i){\n\t\tchar temp = array[i];\n\t\tarray[i] = array[length-1-i];\n\t\tarray[length-1-i]=temp;\n\t} \n}\nvoid decToBin(const char dec[], char bin[]){\n\tint value = 0;\n\tfor (int i = 0; dec[i]!=0 ; ++ i){\n\t\tint x = dec[i]-'0';\n\t\tvalue = value * 10 + x;\n\t} //将char十进制转换成int十进制\n\tint count = 0;\n\twhile(value>=2){\n\t\tint a = value%2;\n\t\tvalue /= 2;\n\t\tbin[count]=a+'0';\n\t\tif(value<2){\n\t\t\tbin[count+1]=value+'0';\n\t\t\tbin[count+2]=0;\n\t\t}\n\t\t++count;\n\t}\n\treverse(bin);\n}",
+            1606716191.0896773,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.17 Sort",
+            "欧阳文静",
+            "unsigned long strlen(const char text[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(text[i]==0) return i;\n\t} \n}\nvoid sort(char s[]){\n\tint length=strlen(s);\n\tint a[length];\n\tfor (int i = 0; s[i]!=0 ; ++ i){\n\t\ta[i] = s[i]-'0';\n\t}//将char变为int\n\tfor (int i = 0; i < length; ++ i){\n\t\tfor (int k = i+1; k < length; ++ k){\n\t\t\tint temp;\n\t\t\tif(a[k]<a[i]){\n\t\t\t\ttemp = a[i];\n\t\t\t\ta[i] = a[k];\n\t\t\t\ta[k] = temp;\n\t\t\t}\n\t\t} \n\t} //将数组a中的元素从小到大排序\n\tfor (int i = 0; i < length; ++ i){\n\t\ts[i]=a[i]+'0';\n\t\tif(i==length-1){\n\t\t\ts[i+1]=0;\n\t\t}//将已排序的int变为char\n\t} \t\n}",
+            1606725100.772778,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.18 Anagram",
+            "欧阳文静",
+            "unsigned long strlen(const char text[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(text[i]==0) return i;\n\t} \n}\nbool isAnagram(const char s1[], const char s2[]){\n\tint length1=strlen(s1);\n\tint length2=strlen(s2);\n\tint a[length1];\n\tint b[length2];\n\tfor (int i = 0;s1[i]!=0 ; ++ i){\n\t\ta[i]=s1[i]-'0';\n\t} \n\tfor (int i = 0;s2[i]!=0 ; ++ i){\n\t\tb[i]=s2[i]-'0';\n\t} \n\tfor (int i = 0; i < length1; ++ i){\n\t\tfor (int k = i+1; k < length1; ++ k){\n\t\t\tint temp;\n\t\t\tif(a[k]<a[i]){\n\t\t\t\ttemp = a[i];\n\t\t\t\ta[i] = a[k];\n\t\t\t\ta[k] = temp;\n\t\t\t}\n\t\t} \n\t} //将数组a中的元素从小到大排序\n\tfor (int i = 0; i < length2; ++ i){\n\t\tfor (int k = i+1; k < length2; ++ k){\n\t\t\tint temp;\n\t\t\tif(b[k]<b[i]){\n\t\t\t\ttemp = b[i];\n\t\t\t\tb[i] = b[k];\n\t\t\t\tb[k] = temp;\n\t\t\t}\n\t\t} \n\t} //将数组b中的元素从小到大排序\n\tfor (int i = 0; i < length1; ++ i){\n\t\tif(a[i]!=b[i]) return 0;\n\t} \n}",
+            1606726984.330931,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.9 Distinct numbers",
+            "欧阳文静",
+            "#include<stdio.h>\nint readLineDistinct(int data[],int length){\n\tint n = 0;\n\tint m = 0;\n\tint array[100];\n\tfor (int i = 0; i < 100 ; ++ i){\n\t\tscanf(\"%d\",&array[i]);\n\t\t++n;\n\t\tchar c = getchar();\n\t\tif(c == '\\n') break;\n\t}\n\tfor (int i = 0; i < n; ++ i){\n\t\tint x;\n\t\tif(i==0){\n\t\t\tdata[0]=array[0];\n\t\t\tm = 1;\n\t\t}\n\t\telse{\n\t\t\tfor (int k = 0; k < i; ++k){\n\t\t\t   if(array[k]==array[i]){\n\t\t\t\t\tx = 0;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t   else {\n\t\t\t\t     x = 1;\n\t\t\t   }\n\t\t   }\n\t\t   if(x==1){\n\t\t\t    data[m]=array[i];\n\t\t\t    ++m;\n\t\t   }\n\t   }\n\t}\n\treturn m;\n}",
+            1606920657.7450945,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.19 Common prefix",
+            "欧阳文静",
+            "void commonPrefix(const char s1[], const char s2[], char prefix[]){\n\tint n = 0;\n\tfor (int i = 0; s1[i]!=0,s1[i]!=0 ; ++ i){\n\t\tif(s1[i]!=s2[i]) {\n\t\t\tprefix[n]=0;\n\t\t\tbreak;\n\t\t}\n\t\tif(s1[i]==s2[i]) {\n\t\t\tprefix[n] = s1[i];\n\t\t\t++n;\n\t\t}\n\t} \n}",
+            1606901323.4444852,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.11 Count letters",
+            "欧阳文静",
+            "int countLetters(const char s[]){\n\tint count = 0;\n\tfor (int i = 0;s[i]!=0; ++ i){\n\t\tif(s[i]>='A'&&s[i]<='z'){\n\t\t\t++count;\n\t\t}\n\t}\n\treturn count;\n}",
+            1607063104.235784,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.12 Count letters",
+            "欧阳文静",
+            "void count(const char line[], int array[]){\n\tfor (int i = 0; i < 26; ++ i){\n\t\tarray[i]=0;\n\t}\n\tfor (int m = 0; m < 26; ++ m) {\n\t for (int i = 0;line[i]!=0 ; ++ i){\n\t\tif(line[i]==m+'a'||line[i]==m+'A'){\n\t\t\tarray[m]++;\n\t\t}\n\t}\n\t}\n}",
+            1607065015.757801,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.20 get ints",
+            "欧阳文静",
+            "#include <stdio.h>\n#include <string.h>\nvoid get_ints(char line[],char *ints[]){\n\tint length = strlen(line);\n\tfor (int i = 0; line[i]!=0 ; ++ i){\n\t\tif(line[i]<'0'||line[i]>'9'){\n\t\t\tline[i]='\\0';\n\t\t}\n\t}\n\tint m = 0;\n\tfor (int i = 0; i < length; ++ i) {\n\t\tif((line[i]>='0'&&line[i]<='9')&&(i==0||line[i-1]<'0'||line[i-1]>'9')){\n\t\t\tints[m++]=&line[i];\n\t\t}\n\t\telse ints[m]=0;\n\t}\n}",
+            1607255334.5539315,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.21 get specific ints",
+            "欧阳文静",
+            "#include<stdio.h>\nint get_int(char line[],char key[]){\n\tchar words[10][100];\n\tint w1 = 0;\n\tint w2 = 0;\n\tfor (int i = 0; line[i]!= 0 ; ++ i){\n\t\tif((line[i]>='a'&&line[i]<='z')||line[i]=='_'){\n\t\t\twords[w1][w2++]=line[i];\n\t\t}\n\t\tif(line[i]=='='){\n\t\t\twords[w1][w2]=0;\n\t\t\tw2 = 0;\n\t\t\t++w1;\n\t\t}\n\t}\n\tchar num[10][100];\n\tint n1 = 0;\n\tint n2 = 0;\n\tfor (int i = 0; line[i]!=0 ; ++ i){\n\t\tif(line[i]>='0'&&line[i]<='9'){\n\t\t\tnum[n1][n2++]=line[i];\n\t\t}\n\t\tif(line[i]==' '){\n\t\t\tnum[n1][n2]=0;\n\t\t\tn2 = 0;\n\t\t\t++n1;\n\t\t}\n\t}\n\tint array[n1];\n\tfor (int i = 0; i < n1 ; ++ i){\n\t\tarray[i]=0;\n\t\tfor (int k = 0; num[i][k]!=0 ; ++k){\n\t\t\tarray[i]=(num[i][k]-'0')+array[i]*10;\n\t\t}\n\t}\n\tint value = 0;\n\tfor (int i = 0; i < w1; ++ i){\n\t\tfor (int k = 0; words[i][k]!=0,key[k]!=0 ; ++ k){\n\t\t\tif(words[i][k]==key[k]){\n\t\t\t\tvalue = array[i];\n\t\t\t}\n\t\t} \n\t}\n\treturn value;\n}",
+            1607577720.4991925,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.22 Sort pointers",
+            "欧阳文静",
+            "int compare(char words1[],char words2[]){\n\tfor (int i = 0; ; ++ i){\n\t\tif(words1[i]<words2[i]) return 1;\n\t\tif(words1[i]>words2[i]) return -1;\n\t\tif(words1[i]==0) return 0;\n\t} \n}\n\nvoid sort_words(char * words[],int num_words){\n\tchar *temp[100]={0};\n\tfor (int i = 0; i < num_words; ++ i){\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tif(compare(words[i],words[k])==1){\n\t\t\t\t*temp = words[i];\n\t\t\t\twords[i] = words[k];\n\t\t\t\twords[k] = *temp;\n\t\t\t}\n\t\t} \n\t} \n}",
+            1607517671.3972929,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.23 Matrix",
+            "欧阳文静",
+            "void fill2d(Matrix m,int x){\n\tfor (int i = 0; i < m.height; ++ i){\n\t\tfor (int k = 0; k < m.width; ++ k){\n\t\t\tm.array2[i][k]=x;\n\t\t} \n\t}\n}\n\nvoid print2d(Matrix m){\n\tfor (int i = 0; i < m.height; ++ i){\n\t\tfor (int k = 0; k < m.width; ++ k){\n\t\t\tprintf(\"%.2lf \",m.array2[i][k]);\n\t\t}\n\t\tputchar('\\n');\n\t}\n}",
+            1607517614.9390655,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.7 Insertion sort",
+            "欧阳文静",
+            "void insertionSort(int data[], int length){\n\tfor (int i = 0; i < length ; ++ i){\n\t\tint temp;\n\t\tfor (int k = 0; k < i; ++ k){\n\t\t\tif(data[k]>data[i]){\n\t\t\t\ttemp = data[i];\n\t\t\t\tdata[i] = data[k];\n\t\t\t\tdata[k] = temp;\n\t\t\t}\n\t\t} \n\t} \n}",
+            1607667823.1936123,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.1 Rod cutting",
+            "欧阳文静",
+            "int max_price_memory[1000]={0};\nint getMaxCuttingPrice(int prices[][2], int priceCount, int rodlength){\n\tint max_price = 0;\n\tif(max_price_memory[rodlength]>0){\n\t\tmax_price = max_price_memory[rodlength];\n\t}\n\tif(rodlength <= priceCount){\n\t\tmax_price = prices[rodlength-1][1];\n\t}\n\tfor (int i = 0; i < rodlength-1 ; ++ i){\n\t\tint first_cut = i + 1;\n\t\tint price = getMaxCuttingPrice(prices, priceCount, first_cut)+getMaxCuttingPrice(prices, priceCount, rodlength-first_cut);\n\t\tif(max_price<=price) max_price = price;\n\t} \n\tmax_price_memory[rodlength]=max_price;\n\treturn max_price;\n}",
+            1607847139.7016666,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.2 Subsequence",
+            "欧阳文静",
+            "#include<string.h>\nint MAX(int a,int b){\n\tif(a>b) return a;\n\telse return b;\n}\nint LCS(char text1[],char text2[]){\n\tint len1 = strlen(text1);\n\tint len2 = strlen(text2);\n\tint count = 0;\n\tchar temp1[100];\n\tchar temp2[100];\n\tfor (int i = 0; text1[i]!=0; ++ i){\n\t\ttemp1[i]=text1[i];\n\t} \n\tfor (int i = 0; text2[i]!=0 ; ++ i){\n\t\ttemp2[i]=text2[i];\n\t} \n\tif(len1==0||len2==0){\n\t\treturn 0;\n\t}\n\tif(text1[len1-1]==text2[len2-1]){\n\t\ttext1[len1-1]=0;\n\t\ttext2[len2-1]=0;\n\t\tcount = LCS(text1,text2)+1;\n\t\treturn count;\n\t}\n\telse{\n\t\ttemp1[len1-1]=0;\n\t\ttemp2[len2-1]=0;\n\t\tcount = MAX(LCS(temp1,text2),LCS(text1,temp2));\n\t\treturn count;\n\t}\n}",
+            1608085994.70508,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.4 Matrix multiplication",
+            "欧阳文静",
+            "int getMultiplications(int n,int dimensions[]){ //n为几个矩阵，dimensions为每个矩阵的维度\n\tint m[n+1][n+1]; //用m[i][j]的table存放Ai到Aj相乘的最小次数\n\tfor (int i = 1; i < n+1; ++i){\n\t\tm[i][i]=0;  //只有一个矩阵时，乘法次数为0\n\t} \n\tfor (int L = 1; L < n; ++L){  //L为当前需要相乘矩阵的数量，从1开始\n\t\tfor (int i = 1; i < n-L+1; ++i){\n\t\t\tint j = i+L;\n\t\t\tm[i][j]=m[i][i]+m[i+1][j]+dimensions[i-1]*dimensions[i]*dimensions[j];\n\t\t\t//以i为初始分界点，移动分界点后在与之比较\n\t\t\tfor (int k = i+1; k < j; ++k){\n\t\t\t\tint temp = m[i][k]+m[k+1][j]+dimensions[i-1]*dimensions[k]*dimensions[j];\n\t\t\t\tif(temp<m[i][j]){\n\t\t\t\t\tm[i][j]=temp;\n\t\t\t\t}\n\t\t\t} \n\t\t}\n\t}\n\treturn m[1][n];\n}",
+            1608087661.8491795,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.5 Backpack",
+            "欧阳文静",
+            "int max(int x,int y){\n\tif(x>y) return x;\n\telse return y;\n}\nint max_price_memory[1000]={0};\nint knapsack(int prices[],int weights[],int maxWeight){\n\tint maxPrice = 0;\n\tif(max_price_memory[maxWeight]>0){\n\t\tmaxPrice=max_price_memory[maxWeight];\n\t}\n\tfor (int i = 0; i < 10; ++ i){\n\t\tint current_price = 0;\n\t\tif(maxWeight==weights[i]){\n\t\t\tmaxPrice = prices[i];\n\t\t}\n\t\telse{\n\t\t current_price = knapsack(prices,weights,weights[i])+knapsack(prices,weights,maxWeight-weights[i]);\n\t\t}\n\t\tif(current_price>maxPrice){\n\t\t\tmaxPrice = current_price;\n\t\t}\n\t\tmax_price_memory[maxWeight]=maxPrice;\n\t}\n\treturn maxPrice;\n}",
+            1608045963.1782205,
+            100,
+            "ASAN:DEADLYSIGNAL\n=================================================================\n==9986==ERROR: AddressSanitizer: stack-overflow on address 0x7ffca9434ff8 (pc 0x5614ebf11bff bp 0x7ffca9435020 sp 0x7ffca9434fe0 T0)\n    #0 0x5614ebf11bfe in knapsack /home/cpp_test/欧阳文静/source.c:6\n    #1 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #2 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #3 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #4 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #5 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #6 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #7 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #8 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #9 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #10 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #11 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #12 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #13 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #14 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #15 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #16 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #17 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #18 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #19 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #20 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #21 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #22 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #23 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #24 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #25 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #26 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #27 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #28 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #29 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #30 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #31 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #32 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #33 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #34 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #35 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #36 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #37 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #38 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #39 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #40 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #41 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #42 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #43 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #44 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #45 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #46 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #47 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #48 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #49 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #50 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #51 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #52 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #53 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #54 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #55 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #56 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #57 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #58 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #59 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #60 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #61 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #62 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #63 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #64 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #65 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #66 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #67 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #68 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #69 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #70 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #71 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #72 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #73 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #74 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #75 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #76 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #77 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #78 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #79 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #80 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #81 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #82 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #83 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #84 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #85 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #86 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #87 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #88 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #89 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #90 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #91 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #92 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #93 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #94 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #95 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #96 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #97 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #98 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #99 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #100 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #101 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #102 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #103 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #104 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #105 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #106 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #107 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #108 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #109 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #110 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #111 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #112 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #113 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #114 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #115 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #116 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #117 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #118 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #119 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #120 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #121 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #122 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #123 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #124 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #125 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #126 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #127 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #128 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #129 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #130 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #131 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #132 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #133 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #134 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #135 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #136 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #137 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #138 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #139 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #140 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #141 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #142 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #143 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #144 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #145 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #146 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #147 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #148 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #149 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #150 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #151 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #152 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #153 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #154 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #155 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #156 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #157 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #158 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #159 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #160 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #161 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #162 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #163 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #164 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #165 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #166 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #167 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #168 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #169 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #170 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #171 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #172 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #173 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #174 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #175 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #176 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #177 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #178 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #179 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #180 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #181 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #182 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #183 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #184 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #185 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #186 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #187 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #188 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #189 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #190 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #191 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #192 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #193 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #194 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #195 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #196 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #197 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #198 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #199 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #200 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #201 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #202 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #203 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #204 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #205 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #206 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #207 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #208 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #209 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #210 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #211 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #212 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #213 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #214 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #215 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #216 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #217 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #218 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #219 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #220 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #221 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #222 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #223 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #224 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #225 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #226 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #227 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #228 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #229 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #230 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #231 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #232 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #233 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #234 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #235 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #236 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #237 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #238 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #239 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #240 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #241 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #242 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #243 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #244 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #245 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #246 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #247 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #248 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #249 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n    #250 0x5614ebf11dac in knapsack /home/cpp_test/欧阳文静/source.c:17\n\nSUMMARY: AddressSanitizer: stack-overflow /home/cpp_test/欧阳文静/source.c:6 in knapsack\n==9986==ABORTING\n"
+        ],
+        [
+            "9.6 0-1 Backpack",
+            "欧阳文静",
+            "int knapsack(int prices[],int weights[],int maxWeight){\n\t\n}",
+            1608048305.3741868,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n    15    20    17     6    13    18     9    19    16    14\n    16    20    18     6     7    13     9    14    10     5\n43\n\n\n# 参考答案:\n68\n\n# 我的答案:\n1194012832"
+        ],
+        [
+            "9.3 Subsequence 2",
+            "欧阳文静",
+            "#include <string.h>\nstruct Result LCS(char text1[],char text2[]){\n\tint len1 = strlen(text1);\n\tint len2 = strlen(text2);\n\tstruct Result result;\n\tfor (int i = 0; i < 100; ++ i){\n\t\tresult.LCS[i]=0;\n\t} \n\tif(len1==0||len2==0){\n\t\treturn result;\n\t}\n\tif(text1[len1-1]==text2[len2-1]){\n\t\t\n\t}\n\telse{\n\t\t\n\t}\n}",
+            1608048996.7886915,
+            50,
+            "# 答案不正确\n\n# 随机输入:\nCDBBACD\nCDEBFAD\n\n\n# 参考答案:\nCDBAD\n\n# 我的答案:\nà½yLß"
+        ]
+    ],
+    "table_name": "答案"
+}

@@ -1,0 +1,752 @@
+{
+    "__update_time__": 1608090017.5401833,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "0.1 简介1",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"Hello world\\n\");\n}",
+            1602310449.8418467,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.2 简介2",
+            "马天豪",
+            "#include<stdio.h>\n\nint main() {\n\tint x;\n\tx = 10;\n\tprintf(\"x is %d\", x);\n}",
+            1602310429.0177772,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.3 简介3",
+            "马天豪",
+            "# include<stdio.h>\n\nint main() {\n\tint size;\n\tscanf(\"%d\",&size);\n\tprintf(\"%d\\n\",size);\n}",
+            1602310717.7407258,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.4 简介4",
+            "马天豪",
+            "#include<stdio.h>\n\nint main() {\n\tfloat size;\n\tscanf(\"%f\", &size);\n\tprintf(\"%f\\n\", size);\n}",
+            1602311316.0907848,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.5 简介5",
+            "马天豪",
+            "#include<stdio.h>\n\nint main() {\n\tdouble size;\n\tscanf(\"%lf\", &size);\n\tprintf(\"%lf\\n\", size);\n}",
+            1602311410.098977,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.6 简介6",
+            "马天豪",
+            "#include <stdio.h>\n\ndouble sin(double x) {\n\tdouble x3, f3;\n\tdouble x5, f5;\n\tdouble x7, f7;\n\tdouble res;\n\tx3 = x * x * x;\n\tx5 = x * x * x * x * x;\n\tx7 = x * x * x * x * x * x * x;\n\tf3 = 3 * 2 * 1;\n\tf5 = 5 * 4 * 3 * 2 * 1;\n\tf7 = 7 * 6 * 5 * 4 * 3 * 2 * 1;\n\tres = x - x3 / f3 + x5 / f5 - x7 / f7;\n\treturn res;\n} \n\nint main() {\n\tdouble x;\n\tdouble y;\n\tscanf(\"%lf\", &x);\n\ty = sin(x);\n\tprintf(\"%lf\\n\", y);\n}",
+            1602312360.9686403,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.7 简介7",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint i = 0;\n\twhile (i < 10) {\n\t\ti += 1;\n\t\tprintf(\"hello, world\\n\");\n\t}\t\n}",
+            1602312509.485113,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.8 简介8",
+            "马天豪",
+            "#include <stdio.h>\n\ndouble power(double x, int exp) {\n\tdouble result = 1;\n\tint i = 0;\n\twhile (i < exp) {\n\t\ti += 1;\n\t\tresult = result * x;\n\t}\n\treturn result;\n}\n\nint main() {\n\tdouble x;\n\tscanf(\"%lf\", &x);\n\tprintf(\"%lf\\n\", power(x, 3));\n}",
+            1602312786.3395276,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.9 简介9",
+            "马天豪",
+            "#include <stdio.h>\n\nint factorial(int n) {\n\tint result = 1;\n\tint i = 0;\n\twhile (i < n) {\n\t\ti += 1;\n\t\tresult = result * i;\n\t}\n\treturn result;\n}\n\nint main() {\n\tint n;\n\tscanf(\"%d\",&n);\n\tprintf(\"%d\\n\",factorial(n));\n}",
+            1602312956.2856007,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.11 简介11",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint x;\n\tscanf(\"%d\", &x);\n\t\n\tif (x % 2 == 0) {\n\t\tprintf(\"x is even\\n\");\n\t}\n\telse {\n\t\tprintf(\"x is odd\\n\");\n\t}\n}",
+            1602313238.2646859,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.13 简介13",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint numbers[5];\n\t\n\tnumbers[0] = 10;\n\tnumbers[1] = 20;\n\tnumbers[2] = 30;\n\tnumbers[3] = 40;\n\tnumbers[4] = 50;\n\t\n\tprintf(\"%d\\n\",numbers[0]);\n\tprintf(\"%d %d\\n\",numbers[3], numbers[4]);\n}",
+            1602313487.7189193,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.14 简介14",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint numbers[5];\n\t\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tnumbers[i] = (i + 1) * 10;\n\t}\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tprintf(\"%d\\n\", numbers[i]);\n\t}\n}",
+            1602313636.0520916,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.15 简介15",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint numbers[5];\n\t\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tscanf(\"%d\", &numbers[i]);\n\t}\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tprintf(\"%d\\n\", numbers[i]);\n\t}\n}",
+            1602313740.9707139,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.16 简介16",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tchar hello[6] = \"hello\";\n\tchar hello2[7] = \"hello\\n\";\n\t\n\tprintf(\"%s\\n\", hello);\n\tprintf(\"%s\",hello);\n}",
+            1602313857.0342827,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.17 简介17",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tchar hello[6] = \"hello\";\n\tchar hello2[7] = \"hello\\n\";\n\t\n\tfor (int i = 0; i < 6; ++ i)\n\t\tputchar(hello2[i]);\n\t\n}",
+            1602314751.27125,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.19 简介19",
+            "马天豪",
+            "#include <stdio.h>\n\nint counter = 0;\n\nvoid printTimes() {\n\textern int counter;\n\t++ counter;\n\tprintf(\"visited %d times\\n\", counter);\n}\n\nint main() {\n\tprintTimes();\n\tprintTimes();\n\tprintTimes();\n\tprintTimes();\n\tprintTimes();\n}",
+            1602314629.8168075,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.20 简介20",
+            "马天豪",
+            "#include <stdio.h>\n\nint data = 10;\n\nint main() {\n\tdata = 20;\n\tif (data > 0) {\n\t\tint data = 30;\n\t\tprintf(\"%d\\n\", data);\n\t}\n\tprintf(\"%d\\n\",data);\n}",
+            1602314881.6570816,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.10 简介10",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tchar c;\n\tfor (int i = 0;i < 10; i += 1) {\n\t\tc = getchar();\n\t\tputchar(c);\n\t}\t\n}",
+            1602318622.6471517,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.1 Hello world",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"hello, world\\n\")\t;\n}",
+            1602829439.0259883,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.2 Hello world x3",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint i;\n\tfor (int i = 0; i < 3; ++ i) \n\tprintf(\"hello, world\\n\");\n}",
+            1602829646.8690162,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.1  Output 1",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"\\\\\");printf(\"\\\\\");printf(\"\\\"\");printf(\"\\n\")\t;\n\tprintf(\"\\\\\");printf(\"n\");printf(\"\\n\");\n}",
+            1603521135.3374696,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.3  Output 2",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"&#^-|!,@:=\\\\\\\\\");printf(\"\\\\\\\\\");printf(\"(\");printf(\"`\");\n\tprintf(\"%%\");printf(\"{\");printf(\">^_$\");printf(\"%%\");printf(\"+*\");\n\tprintf(\"\\'\");printf(\"<\");printf(\"/\");printf(\"?\");printf(\")\");\n\tprintf(\"}\");printf(\" \");printf(\"\\\\\");printf(\"\\\"\");printf(\"/\");\n\tprintf(\".~\");\n\tprintf(\"\\n\");\n}",
+            1603522359.448372,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.5  Variable",
+            "马天豪",
+            "#include <stdio.h>\n\tint year;\n\tdouble seconds;\n\tchar code;\nint main() {\n\t\n\n\tprintf(\"%ld\\n\", sizeof(year));\n\tprintf(\"%ld\\n\", sizeof(seconds));\n\tprintf(\"%ld\\n\", sizeof(code));\n}",
+            1603523484.1799798,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.7  Initialization",
+            "马天豪",
+            "#include <stdio.h>\n\tint year = 1990;\n\tdouble seconds = 1234.560000;\n\tchar code = 'C';\nint main() {\n\t\n\tprintf(\"%d\\n\", year); \n\tprintf(\"%lf\\n\", seconds);\n\tprintf(\"%c\\n\", code);\n}",
+            1603523661.7983246,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.9  Float",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tdouble f;\n\tscanf(\"%lf\",&f);\n\tint a;\n\ta=f;\n\tdouble b;\n\tb=f-a;\n\tprintf(\"%d\\n\",a);\n\tprintf(\"%lf\\n\",b);\n\t\n}",
+            1603525883.2137835,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.11  Digits",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint a;\n\tscanf(\"%d\",&a);\n\tprintf(\"%d\",a&1);\n\tprintf(\" \");\n\tprintf(\"%d\\n\",a&2);\n}",
+            1603527321.2205234,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.13 Equality",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint a,b;\n\tscanf(\"%d%d\",&a,&b);\n\tint eq = a == b;\n\tprintf(\"%d\",eq*a);\n}",
+            1603527681.9259746,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.15 Characters",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tchar a;\n\tscanf(\"%c\",&a);\n\tputchar(a+1);putchar(a+2);putchar(a+3);\n}",
+            1603530485.180232,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.3 Circle Area",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tdouble r;\n\tdouble PI=3.14;\n\tscanf(\"%lf\",&r);\n\tprintf(\"%lf\",PI*r*r);\n}",
+            1603530773.4492214,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.4 Rectangle Area",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tdouble a,b;\n\tscanf(\"%lf%lf\",&a,&b);\t\n\tprintf(\"%lf\",a*b);\n}",
+            1603530854.8223443,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.5 Celsius to Fahrenheit",
+            "马天豪",
+            "double celsiusToFahrenheit(double celsius) { \n\tdouble fahrenheit;\n\tfahrenheit = (9.0/5.0)*celsius+32;\n\treturn fahrenheit;\n} \n",
+            1603531481.266721,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.6 Date and Time",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint a,b,c,d,e;\n\tscanf(\"%d\",&a);\n\tb=a/60/60/24;\n\tprintf(\"%dd \",b);\n\tc=a/60/60-b*24;\n\tprintf(\"%d:\",c);\n\td=a/60-b*24*60-c*60;\n\tprintf(\"%d:\",d);\n\te=a-b*24*60*60-c*60*60-d*60;\n\tprintf(\"%d\",e);\n}",
+            1603531930.3251667,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.7 Cylinder Volume",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tdouble v,PI=3.14;\n\tint r,h;\n\tscanf(\"%d%d\",&r,&h);\n\tv=r*r*PI*h;\n\tprintf(\"%lf\",v);\n}",
+            1603532905.8293023,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.8 Feet to Meters",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tdouble f;\n\tscanf(\"%lf\",&f);\n\tprintf(\"%lf\",f*0.305);\n}",
+            1603532304.732036,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.9 Pounds into Kilograms",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tdouble p;\n\tscanf(\"%lf\",&p);\t\n\tprintf(\"%lf\",p*0.454);\n}",
+            1603532374.9805114,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.10 Sum of Digits",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint n,a,b,c;\n\tscanf(\"%d\",&n);\n\ta=n%10;\n\tb=n/10%10;\n\tc=n/10/10%10;\n\tprintf(\"%d\",a+b+c);\n\t\n}",
+            1603532652.640116,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "3.11 To Uppercase",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() {\n\tint a;\n\tscanf(\"%lc\",&a);\n\tputchar(a+32);\n}",
+            1603532813.0379536,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.2 Reverse",
+            "马天豪",
+            "#include<stdio.h>\nint main()\n{\n\tfor (int i = 0; i < 10; ++ i) \n\t{\n\t\tint m,n;\n\t\tint func(int n);\n\t\tscanf(\"%d\", &n);\n\t\tm = func(n);\n\t\tprintf(\"%d\\n\", m);\n\t}\n}\nint func(int n)\n{\n\tint i, m = 0;\n\twhile (n / 10 != 0)\n\t{\n\t\ti = n % 10;\n\t\tn = n / 10;\n\t\tm = m * 10 + i;\n\t}\n\tif (n != 0)\n\t{\n\t\tm = m * 10 + n;\n\t}\n\treturn m;\n}\n\n",
+            1604049836.2727225,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.1 Sum digits",
+            "马天豪",
+            "#include<stdio.h>\nint main()\n{\n\tfor (int i = 0; i < 10; ++ i) \n\t{\n\t\tint n,i,t,r=0;\n\t\tscanf(\"%d\",&n);\n\t\twhile(n!=0)\n\t\t{\n\t\t\tt=n%10;\n\t\t\tn=n/10;\n\t\t\tr +=t ;\n\t\t}\n\t\tprintf(\"%d\\n\",r);\n\t} \n\treturn 0; \n}\n\n",
+            1604040732.9371765,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.3 Pattern",
+            "马天豪",
+            "#include <stdio.h>\n\nint main()\n{\n\tint i,j,n;\n\tscanf(\"%d\",&n);\n\tfor(i=0;i<n;i++)\n    {\n        for(j=0;j<n-i-1;j++)\n            printf(\" \");\n        for(j=0;j<=i;j++)\n            printf(\"%d\",i+1-j);\n        printf(\"\\n\");\n    }\n}",
+            1604043802.1354282,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.4 GCD",
+            "马天豪",
+            "#include <stdio.h>\n\nint main()\n{ \n\tint m, n, a, b, t, c;\n\tfor (int i = 0; i < 5; ++ i) \n\t{\n\t\t\n\t\tscanf(\"%d %d\", &a, &b);\n\t\tm=a;   n=b;\n\t\twhile(b!=0) \n\t\t{ c=a%b; a=b;  b=c;}\n\t\tprintf(\"%d\\n\", a);\n\t}\n\t\n}\n\n",
+            1604044480.0584083,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.5 Characters",
+            "马天豪",
+            "#include <stdio.h>\n\nint main()\n{\n\tchar a,b;\n\tscanf(\"%c%c\",&a,&b);\n\tint m,n,i;\n\tm =(int)a;\n\tn =(int)b;\n\tfor (i = m;i<=n;++i)\n\t{\n\t\t\n\t\tputchar(i);\n\t\tif ((i-m+1)%10==0)\n\t\t\tputchar('\\n');\n\t}\n\t\n\n}",
+            1604046887.079114,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.6 Prime",
+            "马天豪",
+            "#include <stdio.h>\n \nint main()\n{\n\tint x,count = 1,n;\n\tscanf(\"%d\",&n);\n\n\tfor (int x = 2;;++ x)\n\t{\n\t\tint i;\n\t\tint isPrime=1;\n\t\tfor (i = 2; i < x; i++)\n\t\t{\n\t\t\tif (x%i==0)\n\t\t\t{\n\t\t\t\tisPrime = 0;\t\t\t\t\t\n\t\t\t}\n\t\t}\n\t\tif (isPrime == 1)\n\t\t{\n\t\t\t++ count;\n\t\t\tprintf(\"%d \", x);\n\t\t\tif ((count-1)%10==0)\n\t\t\tprintf(\"\\n\");\n\t\t}\n\t\t\n\t\tif (count==n+1)\n\t\t\tbreak;\n\t\t\t\n\t\n\t}\n\t\t\n\t\t\n\t\n}\n\n\n\t",
+            1604055307.0541344,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.7 Pattern",
+            "马天豪",
+            "#include <stdio.h>\n\nint main() \n{\n\tint n,i,j;\n\tscanf(\"%d\",&n);\n\tfor (i = 0; i < n; ++ i)\n\t{\n\t\tfor (j = 0;j < n-1-i; ++ j)\n\t\t{\n\t\t\tprintf(\"0\");\n\t\t}\n\t\tfor (j = 0;j <= i; ++ j)\n\t\t{\n\t\t\tprintf(\"1\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n}",
+            1604055783.9360178,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.8 Emirp",
+            "马天豪",
+            "#include <stdio.h>\n\nint func(int n)\n{\n    int i, m = 0;\n    while (n / 10 != 0)\n    {\n        i = n % 10;\n        n = n / 10;\n        m = m * 10 + i;\n    }\n    if (n != 0)\n    {\n        m = m * 10 + n;\n    }\n    return m;\n}\nint prime(int x)\n{\n\t\n\tint i;\n\tint isPrime=1;\n\tfor (i = 2; i < x; i++)\n\t{\n\t\tif (x%i==0)\n\t\t{\n\t\t\tisPrime = 0;\n\t\t\tbreak;\n\t\t}\n\t}\n\tif (isPrime == 1)\n\t{\n\t\treturn x;\n\t}\n\telse\n\t\treturn 0;\n\t\n}\n\n\nint emirp(int x)\n{\n    \n    int i,y;\n    y = func(x);\n    int isPrime=1;\n    for (i = 2; i < y; i++)\n    {\n        if (y%i==0)\n        {\n            isPrime = 0;\n            break;\n        }\n    }\n    if (isPrime == 1)\n    {\n        return x;\n    }\n    else\n        return 0;\n    \n}\n\n\nint main()\n{\n\tint n,count = 1;\n\tscanf(\"%d\",&n);\n\tfor (int i = 2;; ++ i) \n\t{\n\t\tif (prime(i) == i && emirp(i) == i)\n\t\t{\n\t\t\tprintf(\"%d \",i);\n\t\t\tcount++;\n\t\t\tif ((count-1)%10==0)\n\t\t\tprintf(\"\\n\");\n\t\t}\n\t\tif (count==n+1)\n\t\t\tbreak;\n\t}\n}\n\n\n\n\t",
+            1604128304.6939607,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.9 Palindromic prime",
+            "马天豪",
+            "#include <stdio.h>\n\nint prime(int x)\n{\n\tint i;\n\tint isPrime=1;\n\tfor (i = 2; i*i <= x; i++)\n\t{\n\t\tif (x%i==0)\n\t\t{\n\t\t\tisPrime = 0;\n\t\t\tbreak;\n\t\t}\n\t}\n\tif (isPrime == 1)\n\t{\n\t\treturn x;\n\t}\n\telse\n\t\treturn 0;\t\n}\nint func(int n)\n{\n    int i, m = 0;\n    while (n / 10 != 0)\n    {\n        i = n % 10;\n        n = n / 10;\n        m = m * 10 + i;\n    }\n    if (n != 0)\n    {\n        m = m * 10 + n;\n    }\n    return m;\n}\nint main()\n{\n\tint n,count = 1;\n\tscanf(\"%d\",&n);\n\tfor (int i = 2;; ++ i) \n\t{\n\t\tif (prime(i) == i && func(i) == i)\n\t\t{\n\t\t\tprintf(\"%d \",i);\n\t\t\tcount++;\n\t\t\tif ((count-1)%10==0)\n\t\t\tprintf(\"\\n\");\n\t\t}\n\t\tif (count==n+1)\n\t\t\tbreak;\n\t}\n}",
+            1604128696.1879613,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.10 Flag",
+            "马天豪",
+            "#include <stdio.h>\n\n\nint main()\n{\n\tint count1 = 1,n,count2 = 0,m;\n\tscanf(\"%d%d\",&m,&n);\n\t\n    if (n%4 == 0)\n\t{\n\t\twhile (count1<m/2+1)\n\t\t{\n\t\t\tif (count1%2 == 0)\n\t\t\t{\n\t\t\t\tfor (count2 = 0;count2<n/2;count2+=2)\n\t\t\t\t{\n\t\t\t\t\tprintf(\" *\");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\n\t\t\telse\n\t\t\t{\n\t\t\t\tfor (count2 = 0;count2<n/2;count2+=2)\n\t\t\t\t{\n\t\t\t\t\tprintf(\"* \");\n\t\t\t\t}\n\t\t\t\tfor (;count2>=n/2 && count2<n;count2++)\n\t\t\t\t{\n\t\t\t\t\tprintf(\"=\");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t\t\tcount1 ++;\n\t\t}\n\n\t\twhile (count1>=m/2+1 && count1<m+2)\n\t\t{\n\t\t\tif (count1%2 != 0)\n\t\t\t{\n\t\t\t\tfor (count2 = 0;count2<n;count2++)\n\t\t\t\t{\n\t\t\t\t\tprintf(\"=\");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tfor (count2 = 0;count2<n;count2++)\n\t\t\t\t{\n\t\t\t\t\tprintf(\" \");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t\tcount1++;\n\t\t}\n\t}\n\telse\n\t{\n\t\twhile (count1<m/2+1)\n\t\t{\n\t\t\tif (count1%2 == 0)\n\t\t\t{\n\t\t\t\tfor (count2 = 0;count2<n/2-1;count2+=2)\n\t\t\t\t{\n\t\t\t\t\tprintf(\" *\");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\n\t\t\telse\n\t\t\t{\n\t\t\t\tfor (count2 = 1;count2<2;count2++)\n\t\t\t\t{\n\t\t\t\t\tprintf(\"*\");\n\t\t\t\t}\n\t\t\t\tfor (count2 = 2;count2<n/2;count2+=2)\n\t\t\t\t{\n\t\t\t\t\tprintf(\" *\");\n\t\t\t\t}\n\t\t\t\tfor (;count2>=n/2 && count2<n+1;count2++)\n\t\t\t\t{\n\t\t\t\t\tprintf(\"=\");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t\t\tcount1 ++;\n\t\t}\n\n\t\twhile (count1>=m/2+1 && count1<m+2)\n\t\t{\n\t\t\tif (count1%2 != 0)\n\t\t\t{\n\t\t\t\tfor (count2 = 0;count2<n;count2++)\n\t\t\t\t{\n\t\t\t\t\tprintf(\"=\");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tfor (count2 = 0;count2<n;count2++)\n\t\t\t\t{\n\t\t\t\t\tprintf(\" \");\n\t\t\t\t}\n\t\t\t\tprintf(\"\\n\");\n\t\t\t}\n\t\t\tcount1++;\n\t\t}\n\t}\n}\n\n                              ",
+            1604131133.683298,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "4.16 Switch-statement",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint p,i = 0;\n\twhile (i < 10)\n\t{\n\t\ti++;\n\t\tscanf(\"%d\",&p);\n\t\tswitch (p)\n\t\t{\n\t\t\tcase 8:\n\t\t\tcase 21:\n\t\t\tcase 22:\n\t\t\tcase 1:printf(\"A\");break;\n\t\t\tcase 13:\n\t\t\tcase 17:\n\t\t\tcase 25:\n\t\t\tcase 6:printf(\"B\");break;\n\t\t\tcase 10:\n\t\t\tcase 18:\n\t\t\tcase 26:\n\t\t\tcase 5:printf(\"C\");break;\n\t\t\tcase 11:\n\t\t\tcase 15:\n\t\t\tcase 23:\n\t\t\tcase 2:printf(\"D\");break;\n\t\t\tcase 9:\n\t\t\tcase 19:\n\t\t\tcase 28:\n\t\t\tcase 30:\n\t\t\tcase 7:printf(\"E\");break;\n\t\t\tcase 14:\n\t\t\tcase 16:\n\t\t\tcase 24:\n\t\t\tcase 29:\n\t\t\tcase 3:printf(\"F\");break;\n\t\t\tcase 12:\n\t\t\tcase 20:\n\t\t\tcase 27:\n\t\t\tcase 4:printf(\"G\");break;\n\t\t}\n\t}\n\t\n\treturn 0;\n}",
+            1605076902.1308777,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-6",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tprintf(\"\\\\\\\"%%\\'\");\n\t\n\treturn 0;\n}",
+            1605076992.646013,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-7",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint a,b,num,i;\n\tscanf(\"%d %d\",&a,&num);\n\twhile(num % a != num)\n\t{\n\t\tb = num % a;\n\t\tnum = num/a;\n\t\tprintf(\"%d\",b);\n\t}\n\tprintf(\"%d\",num);\n\t\n\treturn 0;\n}",
+            1605077719.081208,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-4",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tchar a,b;\n\tscanf(\"%c %c\",&a,&b);\n\tint m,n,p;\n\tm = (int)a;\n\tn = (int)b;\n\tp = 0;\n\twhile (m <= n)\n\t{\n\t\t\n\t\tprintf(\"%d\t\",m);putchar(m);printf(\"\t\");\n\t\tm++;p++;\n\t\tif (p%3 == 0)\n\t\t{\n\t\t\tprintf(\"\\n\");\n\t\t}\n\t}\n\t\n\t\n\treturn 0;\n}",
+            1605078335.49242,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-1",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint n,i=0,a;\n\tfloat b;\n\tscanf(\"%d\",&n);\n\twhile(i < n)\n\t{\n\t\ti++;\n\t\tscanf(\"%d\",&a);\n\t\tscanf(\"%f\",&b);\n\t\tprintf(\"%010d\\n\",a);\n\t\tprintf(\"%.4f\\n\",b);\n\t\tprintf(\"%12.4f\\n\",b);\n\t}\n\t\n\treturn 0;\n}",
+            1605079323.0570302,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-2",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint n;\n\tscanf(\"%d\",&n);\n\tint a=0,b=0,c=1,d=0,i=1;\n\twhile (i < n)\n\t{\n\t\ti++;\n\t\td = c;\n\t\tc += b;\n\t\tb = a;\n\t\ta = d;\n\t}\n\tprintf(\"%d\",a+b+c);\n\t\n\treturn 0;\n}",
+            1605080385.5222743,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-3",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint n,i,j;\n\tscanf(\"%d\",&n);\n\tfor (i = 0;i < n/2;i++)\n\t{\n\t\tfor (j = 0;j < n/2;j++)\n\t\t{\n\t\t\tprintf(\"-\");\n\t\t}\n\t\tfor (j = 0;j < n/2;j++)\n\t\t{\n\t\t\tprintf(\"|\");\n\t\t}\n\t\tfor (j = 0;j < i;j++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\tfor (j = 0;j < n-(2*i+1);j++)\n\t\t{\n\t\t\tprintf(\"\\\\\");\n\t\t}\n\t\tfor (j = 0;j < i+1;j++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\t\n\tfor (i = 0;i < n/2;i++)\n\t{\n\t\tfor (j = 0;j < n/2;j++)\n\t\t{\n\t\t\tprintf(\"|\");\n\t\t}\n\t\tfor (j = 0;j < n/2;j++)\n\t\t{\n\t\t\tprintf(\"-\");\n\t\t}\n\t\tfor (j = 0;j < n/2-i;j++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\tfor (j = 0;j < 2*i+1;j++)\n\t\t{\n\t\t\tprintf(\"\\\\\");\n\t\t}\n\t\tfor (j = 0;j < n/2-i-1;j++)\n\t\t{\n\t\t\tprintf(\"/\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\t\n\treturn 0;\n}",
+            1605233721.4147604,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-5",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint n1,x,different,same,front,behind,co = 0,cn = 0;\n\tscanf(\"%d\",&n1);\n\tfor (int i = 0;i < n1;i++)\n\t{\n\t\tint n2;\n\t\tscanf(\"%d\",&n2);\n\t\tint num[999];\n\t\tfor (int j = 0;j < n2;j++)\n\t\t{\n\t\t\tscanf(\"%d\",&x);\n\t\t\tnum[j] = x;\n\t\t}\n\t\t\n\t\tfront = -1,behind = 0,different = 1;\n\t\twhile (behind < n2)\n\t\t{\n\t\t\tfront++;behind++;\n\t\t\tif (behind == n2)\n\t\t\t\tbreak;\n\t\t\tif (num[front] == num[behind])\n\t\t\t\tcontinue;\n\t\t\tdifferent++;\n\t\t}\n\t\tprintf(\"%d\",different);\n\t\t\n\t\tfront = -1,behind = 0,same = 0;\n\t\twhile (behind < n2)\n\t\t{\n\t\t\tfront++;behind++;\n\t\t\tif (num[front] != num[behind])\n\t\t\t\tcontinue;\n\t\t\twhile (behind < n2)\n\t\t\t{\n\t\t\t\tfront++;behind++;\n\t\t\tif (num[front] != num[behind])\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\tsame++;\n\t\t}\n\t\tprintf(\" %d\",same);\n\t\t\n\t\tfront = -1,behind = 0,same = 0;\n\t\tint max;\n\t\twhile (behind < n2)\n\t\t{\n\t\t\tfront++;behind++;\n\t\t\tif (num[front] == num[behind])\n\t\t\t\tcn++;\n\t\t\telse if(num[front] != num[behind] && cn >= co)\n\t\t\t{\n\t\t\t\tco = cn;\n\t\t\t\tmax = num[front];\n\t\t\t\tcn = 0;\n\t\t\t}\n\t\t\telse\n\t\t\t\tcn = 0;\n\t\t}\n\t\tfor (int i = 0;i < 100;i++)\n\t\t{\n\t\t\tnum[i] = 0;\n\t\t}\n\t\tprintf(\" %d\",max);\n\t\tprintf(\"\\n\");\n\t}\n\t\n\treturn 0;\n}",
+            1605250276.0158176,
+            100,
+            "# 答案不正确\n\n# 随机输入:\n5\n8 3 3 3 5 7 7 7 7\n24 1 1 1 2 2 3 3 3 3 4 4 4 5 5 5 6 6 7 7 8 8 8 9 9\n12 1 1 1 5 5 5 5 7 7 8 8 9\n6 2 2 5 6 6 6\n17 1 1 2 2 2 3 4 4 5 6 6 6 6 7 7 7 9\n\n\n# 参考答案:\n3 2 7\n9 9 3\n5 4 5\n3 2 6\n8 5 6\n\n\n# 我的答案:\n3 2 7\n9 9 3\n5 4 5\n3 2 5\n8 5 6\n"
+        ],
+        [
+            "5.11",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint i,j,n;\n\tscanf(\"%d\",&n);\n\tfor (i = 0;i < n/2;i++)\n\t{\n\t\tfor (j = 0;j < i;j++)\n\t\t{\n\t\t\tprintf(\"*\");\n\t\t}\n\t\tprintf(\"\\\\\");\n\t\tfor (j = 0;j < n-2*(i+1);j++)\n\t\t{\n\t\t\tprintf(\"+\");\n\t\t}\n\t\tprintf(\"/\");\n\t\tfor (j = 0;j < i;j++)\n\t\t{\n\t\t\tprintf(\"*\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (i = 0;i < n/2;i++)\n\t{\n\t\tfor (j = 0;j < n/2-i-1;j++)\n\t\t{\n\t\t\tprintf(\"*\");\n\t\t}\n\t\tprintf(\"/\");\n\t\tfor (j = n;j > n-2*i;j--)\n\t\t{\n\t\t\tprintf(\"+\");\n\t\t}\n\t\tprintf(\"\\\\\");\n\t\tfor (j = 0;j < n/2-i-1;j++)\n\t\t{\n\t\t\tprintf(\"*\");\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\t\n\treturn 0;\n}",
+            1605250032.597381,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.3 Reverse",
+            "马天豪",
+            "int reverse(int n)\n{\n\tint i,m = 0;\n\twhile (n/10 != 0)\n\t{\n\t\ti = n % 10;\n\t\tn = n / 10;\n\t\tm = m * 10 + i;\n\t}\n\tm = m * 10 + n;\n\treturn m;\n\t\n}",
+            1605852840.7978327,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.4 Largest",
+            "马天豪",
+            "int largest(int a, int b, int c)\n{\n\tif (a < b)\n\t\ta = b;\n\tif (a < c)\n\t\ta = c;\n\treturn a;\n}",
+            1605853155.0333824,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.5 GCD",
+            "马天豪",
+            "int gcd(int a, int b)\n{\n\tint c;\n\twhile (b)\n\t{\n\t\tc = a % b;\n\t\ta = b;\n\t\tb = c;\n\t}\n\treturn a;\n}",
+            1605853371.344186,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.1 Lower Case",
+            "马天豪",
+            "char toLowercase(char a)\n{\n\tchar b;\n\tint c;\n\tc = (int)a + 32;\n\tb = (char)c;\n\treturn b;\n}",
+            1605853581.5735106,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.2 Sum Digits",
+            "马天豪",
+            "int sumDigits(int n)\n{\n\tint a,b = 0;\n\twhile (n/10 != 0)\n\t{\n\t\ta = n % 10;\n\t\tn = n / 10;\n\t\tb += a;\n\t}\n\tb += n;\n\treturn b;\n}\n",
+            1605853830.1886098,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.6 LCM",
+            "马天豪",
+            "int lcm(int a, int b)\n{\n\tint c;\n\tint m = a,n = b;\n\twhile (b)\n\t{\n\t\tc = a % b;\n\t\ta = b;\n\t\tb = c;\n\t}\n\treturn m*n/a;\n}",
+            1605853980.5429885,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.7 Is Prime",
+            "马天豪",
+            "int isPrime(int n)\n{\n\tint i;\n\t_Bool flag = 1;\n\tfor (i = 2;i * i <= n;i++)\n\t{\n\t\tif (n % i == 0)\n\t\t{\n\t\t\tflag = 0;\n\t\t\tbreak;\n\t\t}\n\t}\n\tif (flag)\n\t{\n\t\treturn 1;\t\t\n\t}\n\n\telse\n\t{\n\t\treturn 0;\n\t}\t\t\n}",
+            1605854791.988161,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 1",
+            "马天豪",
+            "void print_pattern(int h){\n\tfor (int i = 1; i < h+1; ++ i){\n\t\tfor (int j = 1; j <h+1 ; ++ j){\n\t\t\tif(j==i||j==h+1-i){\n\t\t\t\tprintf(\"Y\");\n\t\t\t}\n\t\t\telse if((j>i &&j<h+1-i)||(j<i &&j>h+1-i)){\n\t\t\t\tprintf(\"G\");\n\t\t\t}\n\t\t\telse{\n\t\t\t\tprintf(\"B\");\n\t\t\t}\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n}",
+            1606290761.2571998,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.6 Character functions",
+            "马天豪",
+            "_Bool isDigit(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif (a >= 48 && a <= 57)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isLower(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif (a >= 97 && a <= 122)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isUpper(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif (a >= 65 && a <= 90)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isAlphabit(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif (a >= 65 && a <= 122)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isAlphabitOrNumber(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif ((a >= 65 && a <= 122) || (a >= 48 && a <= 57))\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isSpace(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif (a == 0 && a == 92 && a == 10)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isPrintable(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif (a >= 33 && a <= 126)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isGraphical(char c)\n{\n\tint a;\n\ta = (int)c;\n\tif (a >= 33 && a <= 126 && a != 92)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}\n_Bool isPunctuation(char c)\n{\n\t\tint a;\n\ta = (int)c;\n\tif ((a >= 33 && a < 48) || (a > 122 && a <= 126) || (a < 65 && a > 57) && a != 92)\n\t\treturn 1;\n\telse\n\t\treturn 0;\n}",
+            1605857714.43405,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.5 Grades",
+            "马天豪",
+            "#include<stdio.h>\n\nint main()\n{\n\tint g,a[100],b = 0;\n\tfor (int i = 0;i < 100;i++)\n    {\n        scanf(\"%d\",&g);\n        a[i] = g;\n    }\n\tfor (int i = 0; i < 99; ++ i)\n\t{\n\t\tif (a[i] > b)\n\t\t{\n\t\t\tb = a[i];\n\t\t}\t\n\t}\n\n\tfor (int i = 0; i < 100; ++ i)\n\t{\n\t\tif (a[i] >= b - 10)\n\t\t\tprintf(\"A\");\n\t\telse if (a[i] < b - 10 && a[i] >= b - 20)\n\t\t\tprintf(\"B\");\n\t\telse if (a[i] < b - 20 && a[i] >= b - 30)\n\t\t\tprintf(\"C\");\n\t\telse if (a[i] < b - 30 && a[i] >= b - 40)\n\t\t\tprintf(\"D\");\n\t\telse \n\t\t\tprintf(\"F\");\n\t}\n\t\n\t\n\treturn 0;\n}",
+            1606289186.9630425,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.1 Reverse",
+            "马天豪",
+            "#include <stdio.h>\n\nint main()\n{\n\tint a[10];\n\tfor (int i = 0; i < 10; ++ i) \n\t{\n\t\tscanf(\"%d\",&a[i]);\n\t}\n\tfor (int i = 9; i >= 0 ; -- i) \n\t{\n\t\tprintf(\"%d \",a[i]);\n\t}\n\t\n\treturn 0;\n}",
+            1606289695.5207515,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 Max",
+            "马天豪",
+            "#include <stdio.h>\n\nint main()\n{\n\tint a[10],max = 0;\n\tfor (int i = 0; i < 10; ++ i) \n\t{\n\t\tscanf(\"%d\",&a[i]);\n\t}\n\tfor (int i = 0; i < 10; ++ i) \n\t{\n\t\tif (a[i] > max)\n\t\t\tmax = a[i];\n\t}\n\tprintf(\"%d\",max);\n\t\n\treturn 0;\n}",
+            1606289830.2921028,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.8 Character pattern 2",
+            "马天豪",
+            "void print_pattern(int height,int width){\n\tint a=height/9,b=width-a*5;\n\tfor (int i = 1; i < a*5+1; ++ i){\n\t\tfor (int j = 1; j <width+1 ; ++ j){\n\t\t\tif(j<=5*a){\n\t\t\t\tif((i>2*a&&i<=3*a)||(j>2*a&&j<=3*a)){\n\t\t\t\t\tprintf(\" \");\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\tprintf(\"N\");\n\t\t\t\t}\n\t\t\t}\n\t\t\telse if((i>a&&i<=2*a)||(i>3*a&&i<=4*a)){\n\t\t\t\tprintf(\" \");\n\t\t\t}\n\t\t\telse{\n\t\t\t\tprintf(\"N\");\n\t\t\t}\n\t\t}\n\t\tprintf(\"\\n\");\n\t}\n\tfor (int i = a*5+1; i <a*9+1 ; ++ i){\n\t\tfor (int j = 1; j <width+1 ; ++ j){\n\t\t\tif((i>a*5&&i<=a*6)||(i>a*7&&i<=a*8)){\n\t\t\t\tprintf(\" \");\n\t\t\t}\n\t\t\telse{\n\t\t\t\tprintf(\"N\");\n\t\t\t}\n\t\t}\n\t\tprintf(\"\\n\");\n\t} \n}",
+            1606290782.3948839,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.3 Count occurrences",
+            "马天豪",
+            "#include <stdio.h>\n\nint main()\n{\n\tint a[100],count1,count2=0,num,d1,d2=100;\n\tfor (int i = 0; i < 100; ++ i) \n\t{\n\t\tscanf(\"%d\",&a[i]);\n\t}\n\tfor (int i = 0; i < 100; i ++)\n\t{\n\t\tcount1=0;\n\t\tfor (int j = 0; j < 100; ++ j)\n\t\t{\n\t\t\tif (a[i] == a[j])\n\t\t\t{\n\t\t\t\tcount1++;\n\t\t\t\td1=j;\n\t\t\t}\n\t\t}\n\t\tif (count2 < count1 || (count2 == count1 && d1 < d2))\n\t\t{\n\t\t\tcount2 = count1;\n\t\t\tnum = a[i];\n\t\t\td2 = d1;\n\t\t}\n\t}\n\tprintf(\"%d %d\",num,count2);\n\t\n\treturn 0;\n}",
+            1606309942.2103171,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.10 Character pattern 3",
+            "马天豪",
+            "#include<stdio.h>\nint get_bits(int i,int lines){\n\tint line=0;\n\tfor (int j = 0; j <32 ; ++ j){\n\t\tif((j-1)%(2*lines-2)==(i)||(j+i-1)%(2*lines-2)==0){\n\t\t\tint jia=1;\n\t\t\tif(j!=0){\n\t\t\t\tfor (int k = 0; k <32-j ; ++ k){\n\t\t\t\t\tjia*=2;\n\t\t\t\t}\n\t\t\t}\t\n\t\t\tline+=jia;\n\t\t}\n\t}\n\treturn line;\n}",
+            1606309981.0921986,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.4 Count occurrences",
+            "马天豪",
+            "#include<stdio.h>\n\nint main() {\n\tint x,a[11],b[11],j=1;\n\tfor (int i = 0; i <11 ; ++ i) {\n\t\ta[i]=0;\n\t}\n\tfor (int i = 0; i <100 ; ++ i) {\n\t\t scanf(\"%d\",&x);\n\t\tif (a[x]==0){\n\t\t\tb[j]=x;\n\t\t\tj++;\n\t\t}\n\t\ta[x]=a[x]+1;\n\t}\n\tfor (int i = 1; i < 11; ++ i){\n\t\tprintf(\"%d %d\\n\",b[i],a[b[i]]);\n\t} \n\treturn 0;\n}",
+            1606311100.9025426,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.7 Character array functions",
+            "马天豪",
+            "unsigned long strlen(const char text[]){\n\tint i=0;\n\twhile(text[i]!='\\0'){\n\t\ti++;\n\t}\n\treturn i;\n}\nchar * strcpy(char to[], const char from[]){\n\tint i=0;\n\twhile(from[i]!='\\0'){\n\t\tto[i]=from[i];\n\t\ti++;\n\t}\n\tto[i]='\\0';\n}\nchar * strcat(char to[], const char from[]){\n\tint i=0,j=strlen(to);\n\twhile(from[i]!='\\0'){\n\t\tto[j+i]=from[i];\n\t\ti++;\n\t}\n\tto[j+i]='\\0';\n}\nint strcmp(const char s1[], const char s2[]){\n\tint a=0,i=0;\n\twhile(a==0){\n\t\ta=s1[i]-s2[i];\n\t\ti++;\n\t\tif(s1[i]=='\\0'||s2[i]=='\\0')\n\t\t\tbreak;\n\t}\n\tif(a==0)\n\t\ta=s1[i]-s2[i];\n\treturn a;\n}\nint atoi(const char array[]){\n\tint x=0,i=0;\n\tif(array[0]=='-')\n\t\ti++;\n\twhile(array[i]!=0){\n\t\tx=x*10+array[i]-'0';\n\t\ti++;\n\t}\n\tif (array[0]=='-')\n\t\tx=-x;\n\treturn x;\n}\nvoid itoa(int value, char array[]){\n\tint i=-1,x=value,flag=0;\n\tif(x<0){\n\t\tx=-x;\n\t\tvalue=-value;\n\t\ti++;\n\t\tflag=1;\n\t}\n\twhile(x!=0){\n\t\tx/=10;\n\t\ti++;\n\t}\n\tfor (i; i >-1 ; -- i) {\n\t\tint a=value%10;\n\t\tvalue/=10;\n\t\tarray[i]=a+'0';\n\t}\n\tif(flag==1){\n\t\tarray[0]='-';\n\t}\n}\nvoid substring(char to[], const char text[], int start, int len){\n\tint i=0;\n\tfor (i; i <len ; ++ i) {\n\t\tto[i]=text[start+i];\n\t}\n\tto[i]='\\0';\n}\nvoid insert(char to[], int at, const char ins[]){\n\tint k=strlen(ins);\n\tfor (int i = strlen(to)-1;i>at-1 ;-- i) {\n\t\tto[i+k]=to[i];\n\t}\n\tfor (int i = at; i <at+k ; ++ i) {\n\t\tto[i]=ins[i-at];\n\t}\n}\n",
+            1606838441.8773289,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.10 Occurrences",
+            "马天豪",
+            "void countDigits(const char digits[], int count[]) \n{\n\tint num,i = 0;\n\tfor (int i = 0; i < 10; ++ i)\n\t\tcount[i] = 0;\n\twhile (digits[i] != '\\0')\n\t{\n\t\tnum = (int)digits[i]-48;\n\t\tcount[num]++;\n\t\ti++;\n\t}\n}",
+            1606460841.0831664,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.18 Anagram",
+            "马天豪",
+            "_Bool isAnagram(const char s1[], const char s2[])\n{\n\tint a[10]={0},b[10]={0},i=0;\n\twhile (s1[i] != '\\0')\n\t{\n\t\ta[s1[i]-'0']++;\n\t\tb[s2[i]-'0']++;\n\t\ti++;\n\t}\n\ti = 0;\n\tint flag = 1;\n\twhile (i < 10)\n\t{\n\t\tif (a[i] != b[i])\n\t\t\tflag = 0;\n\t\ti++;\n\t}\n\treturn flag;\n}",
+            1606462932.1509576,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.8 Input",
+            "马天豪",
+            "#include<stdio.h>\nint readLine(int array[], int max){\n\tint j=1,x;\n\tscanf(\"%d\",&x);\n\tarray[0]=x;\n\twhile(getchar()!='\\n'){\n\t\tscanf(\"%d\",&x);\n\t\tif(j<max)\n\t\tarray[j]=x;\n\t\tj++;\n\t}\n\tif(j>max)\n\t\tj=max;\n\treturn j;\n}\n",
+            1606907555.4063854,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.9 Distinct numbers",
+            "马天豪",
+            "#include<stdio.h>\nint readLineDistinct(int array[],int max){\nint j=1,x;\n\tscanf(\"%d\",&x);\n\tarray[0]=x;\n\twhile(getchar()!='\\n'){\n\t\tscanf(\"%d\",&x);\n\t\tint flag=1;\n\t\tfor (int i = 0; i < j ; ++ i) {\n\t\t\tif(array[i]==x)\n\t\t\t\tflag=0;\n\t\t}\n\t\tif(j<10 && flag==1){\n\t\t\tarray[j]=x;\n\t\t\tj++;\n\t\t}\n\t}\n\treturn j;\n}\t",
+            1606877946.9241,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.13 Parse Hex",
+            "马天豪",
+            "int parseHex(const char hexString[]){\n\tint x=0,i=0;\n\twhile(hexString[i]!='\\0') {\n\t\tif(hexString[i]>='0'&&hexString[i]<='9'){\n\t\t\tx=x*16+hexString[i]-'0';\n\t\t}\n\t\telse{\n\t\t\tx=x*16+hexString[i]-'A'+10;\n\t\t}\n\t\ti++;\n\t}\n\treturn x;\n}",
+            1606838522.859826,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.14 Parse Bin",
+            "马天豪",
+            "int parseBin(const char line[]){\n\tint x=0,i=0;\n\twhile(line[i]!='\\0') {\n\t\tx=x*2+line[i]-'0';\n\t\ti++;\n\t}\n\treturn x;\n}",
+            1606838537.8557012,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.15 Dec to Hex",
+            "马天豪",
+            "void decToHex(const char dec[], char hex[]){\n\tint i=0,x=0;\n\tfor (int i = 0; i <100 ; ++ i) {\n\t\thex[i]=0;\n\t}\n\twhile(dec[i]!='\\0'){\n\t\tx=x*10+dec[i]-'0';\n\t\ti++;\n\t}\n\ti=0;\n\tint j=x,add;\n\twhile(j>0){\n\t\tj/=16;\n\t\ti++;\n\t}\n\tfor(i;i>=1;i--){\n\t\tadd=x%16;\n\t\tif(add<10){\n\t\t\thex[i-1]=add+'0';\n\t\t}\n\t\telse{\n\t\t\thex[i-1]=add-10+'A';\n\t\t}\n\t\tx/=16;\n\t}\n}",
+            1606838556.1587758,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.16 Dec to Bin",
+            "马天豪",
+            "#include<stdio.h>\nvoid decToBin(const char dec[], char bin[]){\nint i=0,x=0;\n\tfor (i; i <100 ; ++ i) {\n\t\tbin[i]=0;\n\t}\n\ti=0;\n\twhile(dec[i]!='\\0'){\n\t\tx=x*10+dec[i]-'0';\n\t\ti++;\n\t}\n\ti=0;\n\tint j=x,add;\n\twhile(j>0){\n\t\tj/=2;\n\t\ti++;\n\t}\n\tfor(i;i>=1;i--){\n\t\tadd=x%2;\n\t\t\tbin[i-1]=add+'0';\n\t\tx/=2;\n\t}\n}",
+            1606838629.5083864,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.17 Sort",
+            "马天豪",
+            "void sort(char s[]){\n\tint a[10]={0},i=0,k=0;\n\twhile(s[i]!='\\0'){\n\t\ta[s[i]-'0']++;\n\t\ti++;\n\t}\n\tfor (int i = 0; i <10 ; ++ i) {\n\t\tfor (int j = 0; j <a[i] ; ++ j) {\n\t\t\ts[k]=i+'0';\n\t\t\tk++;\n\t\t}\n\t}\n}",
+            1606838674.5853355,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.19 Common prefix",
+            "马天豪",
+            "void commonPrefix(const char s1[], const char s2[], char prefix[])\n{\n\tfor (int i = 0; i < 100; ++ i)\n\t\tprefix[i] = 0;\n\tint i = 0;\n\twhile (s1[i] != '\\0')\n\t{\n\t\tif (s1[i] == s2[i])\n\t\t\tprefix[i] = s1[i];\n\t\telse\n\t\t\tbreak;\n\t\ti++;\n\t}\n}",
+            1606908093.8170736,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.11 Count letters",
+            "马天豪",
+            "int countLetters(const char s[])\n{\n\tint i = 0,n = 0;\n\twhile (s[i] != '\\0')\n\t{\n\t\tint a = (int)s[i];\n\t\tif ((a >= 65 && a <= 90)|| (a >= 97 && a <= 122))\n\t\t\tn++;\n\t\ti++;\n\t}\n\treturn n;\n}",
+            1607063588.7980695,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.12 Count letters",
+            "马天豪",
+            "void count(const char line[], int array[])\n{\n\tfor (int i = 0;i < 26 ; ++ i) \n\t\tarray[i] = 0;\n\tint i = 0;\n\twhile (line[i] != '\\0')\n\t{\n\t\tint a = (int)line[i];\n\t\tif (a >= 65 && a <= 90)\n\t\t\tarray[a-65]++;\n\t\tif (a >= 97 && a <= 122)\n\t\t\tarray[a-97]++;\n\t\ti++;\n\t}\n}",
+            1607064064.0635948,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.20 get ints",
+            "马天豪",
+            "void get_ints(char line[],char * ints[])\n{\n\tint j = 0,i = 0;\n\twhile (line[i] != '\\0')\n\t{\n\t\tint a = (int)line[i];\n\t\tif (a>=48 && a<=57)\n\t\t{\n\t\t\tints[j] = &line[i];\n\t\t\t*ints[j+1] = '\\n';\n\t\t\tj++;\n\t\t}\t\n\t\ti++;\n\t}\n}",
+            1607095342.3696504,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.21 get specific ints",
+            "马天豪",
+            "int get_int(char s[],char t[])\n{\n\tint len=0;while (s[len]!='\\0')len++;\n\tint len_=0;while (t[len_]!='\\0')len_++;\n\tfor(int i=0;i+len_-1<len;i++)\n\t{\n\t\tint flag=1; \n\t\tfor(int j=0;j<len_;j++)if(s[i+j]!=t[j])flag=0;\n\t\tif(!flag)continue;\n\t\t\n\t\tint k=i,ans=0;\n\t\twhile('0'>s[k]||s[k]>'9')k++;\n\t\twhile('0'<=s[k]&&s[k]<='9')ans=ans*10+s[k]-'0',k++;\t\t\n\t\treturn ans;\n\t}\n}",
+            1607425130.9315295,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.22 Sort pointers",
+            "马天豪",
+            "int cmp(char *a,char *b)\n{\t\n\tint x=0;\t\n\twhile(a[x]==b[x])x++;\n\treturn a[x]>=b[x]; \n}\nvoid sort_words(char *f[],int n)\n{\t\n\tfor(int i=0;i<n;i++)\n\t\tfor(int j=0;j<n-i-1;j++)\n\t\t\tif(cmp(f[j],f[j+1]))\n\t\t\t{\n\t\t\t\tchar *t=f[j];\n\t\t\t\tf[j]=f[j+1];\n\t\t\t\tf[j+1]=t;\n\t\t\t}\n}",
+            1607517403.5744936,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.23 Matrix",
+            "马天豪",
+            "void fill2d(Matrix m,int n)\n{\n\tfor (int i = 0; i < m.height; ++ i) \n\t{\n\t\tfor (int j = 0; j < m.width; ++ j)\n\t\t\tm.array2[i][j] = 888.00;\n\t}\n}\nvoid print2d(Matrix m)\n{\n\tfor (int i = 0; i < m.height; ++ i) \n\t{\n\t\tfor (int j = 0; j < m.width; ++ j)\n\t\t\tprintf(\"%.2f \",m.array2[i][j]);\n\t\tprintf(\"\\n\");\n\t}\n}\n\n\n",
+            1607515025.032122,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.7 Insertion sort",
+            "马天豪",
+            "void insertionSort(int data[],int n)\n{\n\tint i = 0;\n\twhile (i < 9)\n\t{\n\t\ti++;\n\t\tint j = 0;\n\t\tint flag = 1;\n\t\twhile (j < 10-i)\n\t\t{\n\t\t\tif (data[j] > data[j+1])\n\t\t\t\t{\n\t\t\t\t\tint a;\n\t\t\t\t\ta = data[j];\n\t\t\t\t\tdata[j] = data[j+1];\n\t\t\t\t\tdata[j+1]= a;\n\t\t\t\t\tflag = 0;\n\t\t\t\t}\n\t\t\tj++;\n\t\t}\n\t\tif (flag)\n\t\t\tbreak;\n\t}\n}",
+            1607668737.6006293,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.1 Rod cutting",
+            "马天豪",
+            "int max(int a,int b) {return (a > b ? a : b);}\nint getMaxCuttingPrice(int prices[][2],int priceCount,int len)\n{\n\tif (len == 0) return 0;\n\tint q = -1;\n\tfor (int i = 0; i < priceCount; ++ i)\n\t{\n\t\tq = max(q,prices[i][2] + getMaxCuttingPrice(prices,priceCount,len-i-1));\n\t}\n\treturn q;\n}",
+            1608087779.1493297,
+            100,
+            "ASAN:DEADLYSIGNAL\n=================================================================\n==25917==ERROR: AddressSanitizer: stack-overflow on address 0x7ffec0c82ff8 (pc 0x55f1b30dcb84 bp 0x7ffec0c83000 sp 0x7ffec0c83000 T0)\n    #0 0x55f1b30dcb83 in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:3\n    #1 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #2 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #3 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #4 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #5 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #6 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #7 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #8 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #9 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #10 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #11 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #12 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #13 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #14 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #15 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #16 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #17 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #18 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #19 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #20 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #21 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #22 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #23 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #24 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #25 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #26 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #27 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #28 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #29 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #30 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #31 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #32 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #33 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #34 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #35 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #36 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #37 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #38 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #39 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #40 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #41 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #42 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #43 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #44 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #45 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #46 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #47 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #48 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #49 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #50 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #51 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #52 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #53 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #54 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #55 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #56 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #57 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #58 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #59 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #60 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #61 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #62 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #63 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #64 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #65 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #66 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #67 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #68 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #69 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #70 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #71 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #72 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #73 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #74 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #75 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #76 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #77 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #78 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #79 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #80 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #81 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #82 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #83 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #84 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #85 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #86 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #87 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #88 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #89 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #90 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #91 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #92 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #93 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #94 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #95 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #96 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #97 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #98 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #99 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #100 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #101 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #102 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #103 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #104 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #105 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #106 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #107 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #108 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #109 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #110 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #111 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #112 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #113 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #114 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #115 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #116 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #117 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #118 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #119 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #120 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #121 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #122 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #123 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #124 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #125 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #126 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #127 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #128 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #129 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #130 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #131 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #132 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #133 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #134 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #135 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #136 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #137 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #138 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #139 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #140 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #141 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #142 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #143 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #144 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #145 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #146 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #147 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #148 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #149 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #150 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #151 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #152 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #153 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #154 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #155 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #156 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #157 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #158 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #159 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #160 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #161 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #162 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #163 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #164 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #165 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #166 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #167 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #168 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #169 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #170 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #171 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #172 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #173 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #174 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #175 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #176 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #177 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #178 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #179 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #180 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #181 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #182 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #183 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #184 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #185 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #186 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #187 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #188 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #189 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #190 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #191 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #192 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #193 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #194 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #195 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #196 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #197 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #198 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #199 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #200 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #201 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #202 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #203 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #204 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #205 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #206 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #207 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #208 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #209 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #210 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #211 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #212 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #213 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #214 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #215 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #216 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #217 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #218 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #219 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #220 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #221 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #222 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #223 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #224 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #225 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #226 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #227 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #228 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #229 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #230 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #231 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #232 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #233 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #234 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #235 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #236 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #237 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #238 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #239 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #240 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #241 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #242 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #243 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #244 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #245 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #246 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #247 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #248 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #249 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n    #250 0x55f1b30dcc1b in getMaxCuttingPrice /home/cpp_test/马天豪/source.c:8\n\nSUMMARY: AddressSanitizer: stack-overflow /home/cpp_test/马天豪/source.c:3 in getMaxCuttingPrice\n==25917==ABORTING\n"
+        ]
+    ],
+    "table_name": "答案"
+}

@@ -1,0 +1,16 @@
+{
+    "field_names": [
+        "名字",
+        "查询内容",
+        "config"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [],
+    "table_name": "查询"
+}

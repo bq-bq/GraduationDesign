@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1587614968.037707,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "upload_table",
+            "{\"name\":\"upload_table\",\"tag\":\"\",\"text\":\"\",\"init\":\"upload_table_obj_py\",\"files\":[\"me/upload_table.py\"],\"data\":[\"data\"],\"vars\":[],\"events\":[\"add\",\"delete\"],\"class\":{},\"attr\":{},\"style\":{}}",
+            null
+        ],
+        [
+            "change_pwd",
+            "{\"name\":\"change_pwd\",\"tag\":\"\",\"text\":\"\",\"init\":\"change_pwd_obj_py\",\"files\":[\"me/change_pwd.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            null
+        ],
+        [
+            "login",
+            "{\"name\":\"login\",\"tag\":\"\",\"text\":\"\",\"init\":\"login_panel_obj_py\",\"files\":[\"me/login_panel.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            null
+        ],
+        [
+            "user_list",
+            "{\"name\":\"user_list\",\"tag\":\"\",\"text\":\"\",\"init\":\"user_list_obj_py\",\"files\":[\"me/user_list.py\"],\"data\":[\"data\"],\"vars\":[],\"events\":[\"add\",\"delete\"],\"class\":{},\"attr\":{},\"style\":{}}",
+            null
+        ]
+    ],
+    "table_name": "component"
+}

@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595837220.0421576,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.4 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">参考</span><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">答案有200行，截止时间延长4天。</span></p><p>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap.put(key1, value1);\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap.put(key2, value2);\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap.put(key3, value3);\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap.put(key4, value4);\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <sstream>\n#include <string>\nusing namespace std;\nclass SZ\n{\n\tpublic:\n\t\tint key;\n\t\tint value;\n\t\tSZ() {}\n\t\tSZ(int key, int value)\n\t\t{\n\t\t\tthis->key = key;\n\t\t\tthis->value = value;\n\t\t}\n\t\toperator int()\n\t\t{\n\t\t\treturn this->value;\n\t\t}\n\t\toperator string()\n\t\t{\n\t\t\tstring result;\n\t\t\tstringstream s_s;\n\t\t\ts_s << this->value;\n\t\t\ts_s >> result;\n\t\t\treturn result;\n\t\t}\n};\nclass HT\n{\n\tprivate:\n\t\tSZ dict[10];\n\t\tint _size;\n\tpublic:\n\t\tHT(): _size(0) {}\n\t\t~HT(){}\n\t\ttemplate<typename K,typename V>\n\t\tvoid put(K key,V value)\n\t\t{\n\t\t\tint k;\n\t\t\tint val;\n\t\t\tk = str_to_int(key);\n\t\t\tval = str_to_int(value);\n\t\t\tSZ ling(k, val);\n\t\t\tdict[this->_size] = ling;\n\t\t\tthis->_size ++;\n\t\t}\n\t\tint size()\n\t\t{\n\t\t\treturn this->_size;\n\t\t}\n\t\tint str_to_int(int str)\n\t\t{\n\t\t\treturn str;\n\t\t}\n\t\tint str_to_int(string str)\n\t\t{\n\t\t\tstringstream s_s;\n\t\t\ts_s << str;\n\t\t\tint res;\n\t\t\ts_s >> res;\n\t\t\treturn res;\n\t\t}\n\t\tstring int_to_str(string v)\n\t\t{\n\t\t\treturn v;\n\t\t}\n\t\tstring int_to_str(int v)\n\t\t{\n\t\t\tstring result;\n\t\t\tstringstream s_s;\n\t\t\ts_s << v;\n\t\t\ts_s >> result;\n\t\t\treturn result;\n\t\t}\n\t\ttemplate < typename V>\n\t\tSZ operator[](const V &index)\n\t\t{\n\t\t\tint ling;\n\t\t\tling = str_to_int(index);\n\t\t\tfor (int i = 0; i <= 10;i++)\n\t\t\t{\n\t\t\t\tif(dict[i].key == ling)\n\t\t\t\t{\n\t\t\t\t\treturn dict[i];\n\t\t\t\t}\n\t\t\t}\n\t\t}\n};",
+            "",
+            1594951200,
+            1595854800,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

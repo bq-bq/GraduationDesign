@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1594262279.09424,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "2020-07-09 LAB",
+            "<p>实现一个Integer类使得main函数得到例子中的输出。</p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\"># 输入</span><br></p><p class=\"p1\" style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Courier; color: rgb(59, 35, 34); background-color: rgb(215, 211, 183);\"><span class=\"s1\" style=\"font-variant-ligatures: no-common-ligatures;\">20</span></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\"><br># 输出</span><br></p><p class=\"p1\" style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Courier; color: rgb(59, 35, 34); background-color: rgb(215, 211, 183);\"><span class=\"s1\" style=\"font-variant-ligatures: no-common-ligatures;\">10 20</span></p><p class=\"p1\" style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Courier; color: rgb(59, 35, 34); background-color: rgb(215, 211, 183);\"><span class=\"s1\" style=\"font-variant-ligatures: no-common-ligatures;\">110 120</span></p><p class=\"p1\" style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Courier; color: rgb(59, 35, 34); background-color: rgb(215, 211, 183);\"><span class=\"s1\" style=\"font-variant-ligatures: no-common-ligatures;\">230 240</span></p>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\tInteger x = 10;\n\tInteger y; // constructor initializes y to 0\n\tcin >> y;\n\tcout << x << \" \" << y << endl;\n\tInteger::increase_all(100);\n\tcout << x << \" \" << y << endl;\n\tInteger::increase_all(y);\n\tcout << x << \" \" << y << endl;\n}",
+            "#include<iostream>\n#include <string>\nusing namespace std;\nstatic  int data = 0;\nclass Integer{\n\tpublic:\n\tint value;\n\tInteger(){\n\t\tthis->value = 0;\n\t}\n\tInteger(int value1){\n\t\tthis->value = value1;\n\t}\n\tstatic void increase_all(int a){\n\t\tdata += a;\n\t}\n\tstatic void increase_all(Integer a){\n\t\tdata += (a.value + data);\n\t}\n};\nistream & operator >>(istream &in,Integer & a){\n\tin>>a.value;\n\treturn in;\n}\nostream & operator <<(ostream & out,Integer& a){\n\tint w = a.value + data;\n\tout<<w;\n\treturn out;\n}",
+            "# 答案不正确\n\n# 随机输入:\n55\n\n\n# 参考答案:\n10 55\n110 155\n265 310\n\n\n# 我的答案:\n10 55\n110 155\n165 210\n",
+            1594260000,
+            1594266000,
+            75,
+            1594262132.3741891
+        ]
+    ]
+}

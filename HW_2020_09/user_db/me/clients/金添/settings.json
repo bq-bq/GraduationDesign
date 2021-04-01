@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1607687351.9814951,
+    "field_names": [
+        "brand",
+        "theme",
+        "deploy"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "boolean"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "",
+            "Journal",
+            false
+        ]
+    ],
+    "table_name": "settings"
+}

@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1607987947.6795433,
+    "field_names": [
+        "brand",
+        "theme",
+        "deploy"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "boolean"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "程序设计 2020",
+            "Journal",
+            false
+        ]
+    ],
+    "table_name": "settings"
+}

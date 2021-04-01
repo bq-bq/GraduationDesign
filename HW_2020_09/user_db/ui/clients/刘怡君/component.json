@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1605788030.5564125,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "cal1",
+            "{\"name\":\"cal1\",\"tag\":\"\",\"text\":\"\",\"init\":\"yijun_cal_obj1\",\"files\":[\"刘怡君/cal1.py\"],\"data\":[],\"ref\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ]
+    ],
+    "table_name": "component"
+}

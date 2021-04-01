@@ -1,0 +1,19 @@
+{
+    "__update_time__": 1589529655.2923882,
+    "日记": {
+        "field_names": [
+            "日期",
+            "日记"
+        ],
+        "field_types": [
+            "text",
+            "text"
+        ],
+        "foreign_keys": {},
+        "posX": 0,
+        "posY": 0,
+        "primary_keys": [],
+        "table_name": "日记",
+        "table_type": "client"
+    }
+}

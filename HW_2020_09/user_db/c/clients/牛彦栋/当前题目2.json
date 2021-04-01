@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1607946213.5197182,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.5 Backpack",
+            "这个问题一般叫Knapsack问题。Knapsack与backpack同义。<br>\n给定一组物品，每种物品都有自己的重量和价格，在限定的总重量内，我们如何选择，才能使得物品的总价格最高。问题的名称来源于如何选择最合适的物品放置于给定背包中。<br>\n<br>\n\n我们有n种物品，物品j的重量为w<sub>j</sub>，价格为p<sub>j</sub>。我们假定所有物品的重量和价格都是非负的。背包所能承受的最大重量为W。<br>\n<br>\n如果不限定每种物品的数量，则问题称为无界背包问题。<br>\n<br>\n\n<b>算法</b> 在总重量不超过W的前提下，我们希望总价格最高。对于Y ≤ W，我们将在总重量不超过Y的前提下，总价格所能达到的最高值定义为A(Y)。A(W)即为问题的答案。<br>\n<br>\n显然，A(Y)满足：\n<ul>\n<li>A(0) = 0</li>\n<li>A(Y) = max { A(Y - 1), max { p<sub>j</sub> + A(Y - w<sub>j</sub>) | w<sub>j</sub> ≤ Y } }</li>\n</ul>\n其中，p<sub>j</sub>为第j种物品的价格。<br>\n<br>\n\n关于第二个公式的一个解释：总重量为Y时背包的最高价值可能有两种情况，第一种是该重量无法被完全填满，这对应于表达式A(Y - 1)。第二种是刚好填满，这对应于一个包含一系列刚好填满的可能性的集合，其中的可能性是指当最后放进包中的物品恰好是重量为w<sub>j</sub>的物品时背包填满并达到最高价值。而这时的背包价值等于重量为w<sub>j</sub>物品的价值和当没有放入该物品时背包的最高价值之和。故归纳为表达式p<sub>j</sub> + A(Y - w<sub>j</sub>)。最后把所有上述情况中背包价值的最大值求出就得到了A(Y)的值。<br>\n如果总重量为0，总价值也为0。然后依次计算A(0), A(1), ..., A(W)，并把每一步骤的结果存入表中供后续步骤使用，完成这些步骤后A(W)即为最终结果。如果把w1, ..., wn, W都除以它们的最大公因数，算法的时间将得到很大的提升。<br>\n<br>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>     9     6    10    11     8     4     5     7    12    13\n    11     6    12     9    14    10    13     8    15     7\n    48\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>84\n</pre>",
+            "#include \"source.c\"\n#include <stdio.h>\n\nvoid read(int array[], int length) {\n\tfor (int i = 0; i < length;  ++ i) {\n\t\tscanf(\"%d\", &array[i]);\n\t}\n}\n\nint main() {\n\tint prices[10];\n\tread(prices, 10);\n\tint weights[10];\n\tread(weights, 10);\n\tint maxWeight;\n\tscanf(\"%d\", &maxWeight);\n\t\n\tprintf(\"%d\", knapsack(prices, weights, maxWeight)); \n}",
+            "#define max(a,b) (a>b?a:b)\nint dp[110];\nint knapsack(int v[],int w[],int m)\n{\n\tint n=10;\n\tfor(int i=0;i<n;i++)\n\tfor(int j=w[i];j<=m;j++)\n\tdp[j]=max(dp[j],dp[j-w[i]]+v[i]);\n\treturn dp[m];\n}",
+            "",
+            1607654400,
+            1608210000,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

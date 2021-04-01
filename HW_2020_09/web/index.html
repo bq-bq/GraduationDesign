@@ -1,0 +1,265 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id='title'></title>
+    <link id='icon' rel="shortcut icon" href="web/easy.png">
+
+    <link rel="stylesheet" href="web/lib2/bootstrap/bootstrap.min.css">
+    <script src="web/lib2/bootstrap/jquery-3.2.1.js"></script>
+    <script src="web/lib2/bootstrap/popper.min.js"></script>
+    <script src="web/lib2/bootstrap/bootstrap.min.js"></script>
+<!--     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script> -->
+    <link href="web/lib/toaster/default.css" rel="stylesheet">
+    <script src="web/lib/toaster/umd.js"></script>
+    <!-- headers -->
+    <style type="text/css">
+      body {
+        padding-top: 3.7rem;
+      }
+      .source_draggable {
+        background-color: #ffebee;
+        /*border-style: solid;*/
+      }
+      .drop_source {
+        background-color: #e1f5fe;
+        /*border-color: grey;
+        border-style: solid;*/
+      }
+      .drop_target {
+        background-color: #ffe082;
+        /*border-color: lightgrey;*/
+        /*border-style: solid;*/
+      }
+      .modal-backdrop {
+        background-color: #eee;
+      }
+      .navbar-nav > li > a, .navbar-brand {
+          padding-top:0 !important; 
+          padding-bottom:0 !important;
+          height: 29px;
+      }
+      .navbar {min-height:59px !important;}
+    </style>
+  </head>
+
+  <body onload=brython()>
+
+<!-- TOAST -->
+<script type="text/javascript">
+  function success_toast(msg) {
+    console.log('* success_toast', msg)
+    new Toast(msg, Toast.TYPE_DONE, Toast.TIME_NORMAL);
+  }
+  function error_toast(msg) {
+    console.log('* error_toast', msg)
+    new Toast(msg, Toast.TYPE_ERROR, Toast.TIME_NORMAL);
+  }
+  function info_toast(msg) {
+    console.log('* info_toast', msg)
+    new Toast(msg, Toast.TYPE_INFO, Toast.TIME_NORMAL);
+  }
+  function warning_toast(msg) {
+    console.log('* warning_toast', msg)
+    new Toast(msg, Toast.TYPE_WARNING, Toast.TIME_NORMAL);
+  }
+</script>
+
+<!-- SPINNER -->
+<div id="spinner-modal" class="modal spinner-modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="spinnerModalLabel" aria-hidden="true">
+  <div class="d-flex justify-content-center modal-dialog-centered">
+    <div class="spinner-border text-primary" role="status" style="width: 1rem; height: 1rem;">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function show_spinner_modal() {
+    $('#spinner-modal').modal('show');
+  }
+  function hide_spinner_modal() {
+    // $('#spinner-modal').fadeOut();
+    $('#spinner-modal').modal('hide');
+  }
+  show_spinner_modal()
+</script>
+
+<!-- DATA MODAL -->
+<div id="data-modal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="dataModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <img id="data-modal-image" src="web/lib/icons/true/ios-document.svg" width="28" height="28">
+        <!-- <strong class="modal-title" id="exampleModalLabel">登陆</strong> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="data-modal-title"></div>
+        <div id="data-modal-input">
+<!--           <div id="data-modal-input" b-code="for input in inputs:" class="form-group">
+            <input type="{input['type']}" class="form-control" id="{input['id']}" placeholder="{input['placeholder']}">
+          </div>
+ -->        </div>
+        <button type="button" class="btn btn-primary float-right" data-dismiss="modal" id="data-modal-button">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function show_data_modal() {
+    $('#data-modal').modal('show');
+  }
+  function data_modal(image, message, inputs, button, callback) {
+    function onclick(ev) {
+      data = [];
+      for (var i = 0; i < inputs.length; ++ i) {
+        data.push($('#' + inputs[i]['id']).val().trim());
+      }
+      callback(data);
+    }
+    if (image == null) image = 'web/lib/icons/true/ios-document.svg'
+    $("#data-modal-image").attr('src', image);
+    // template.Template("data-modal-input").render(inputs=inputs)
+    $("#data-modal-title").empty();
+    if (message != null) {
+      $("#data-modal-title").append($('<p>' + message + '</p>'));
+    }
+    $("#data-modal-input").empty();
+    for (var i = 0; i < inputs.length; ++ i) {
+      form_group = $('<div></div>', {'class':'form-group'});
+      $("#data-modal-input").append(form_group); // type: text, number, datetime-local
+      form_control = $('<input></input>', {'type':inputs[i]['type'], 'class':'form-control', 'id':inputs[i]['id'], 'placeholder':inputs[i]['placeholder'], 'required':true, 'autocomplete':inputs[i]['id']});
+      form_group.append(form_control);
+    }
+    $("#data-modal-button").text(button)
+    $("#data-modal-button").unbind('click');
+    $("#data-modal-button").bind('click', onclick);
+    show_data_modal();
+  }
+</script>
+
+
+<!-- COMFIRM MODAL -->
+<div id="confirm-modal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="comfirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <img id="confirm-modal-image" src="web/lib/icons/true/ios-alert.svg" width="28" height="28">
+      </div>
+      <div class="modal-body">
+        <div>
+          <p id='confirm-modal-message'>{message}</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary float-left" data-dismiss="modal" id="confirm-modal-cancel-button">取消</button>
+          <button type="button" class="btn btn-primary  float-right" data-dismiss="modal" id="confirm-modal-ok-button">是的</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function show_confirm_modal() {
+    $('#confirm-modal').modal('show');
+  }
+  function confirm_modal(message, callback) {
+    $("#confirm-modal-message").html(message);
+    $("#confirm-modal-ok-button").unbind('click');
+    $("#confirm-modal-ok-button").bind('click', callback);
+    show_confirm_modal()
+  }
+</script>
+
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-primary">
+  <!-- <img src="web/easy.png"> -->
+  <b class="navbar-brand" href="#" id=brand></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto" id="main-nav">
+    </ul>
+    <ul class="navbar-nav navbar-right">
+<!--       <img src="web/lib/icons/bootstrap/person-fill.svg" width="28" height="28" id="login" hidden data-toggle="tooltip" data-placement="left" title="?">
+      <img src="web/lib/icons/bootstrap/person.svg"  width="28" height="28" id="logout" >
+ -->      
+      <img src="web/lib/icons/true/ios-body.svg" width="28" height="28" id="login" hidden data-toggle="tooltip" data-placement="left" title="?">
+      <img src="web/lib/icons/true/ios-finger-print.svg"  width="28" height="28" id="logout" >
+    </ul>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  var user_info = ''
+  function set_user_name(user_name) {
+    $('[data-toggle="tooltip"]').tooltip('dispose');    
+    $('[data-toggle="tooltip"]')[0].title = user_name;
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+  function _create_js_css_tag(script, script_url) {
+    elt = null;
+    if (script_url.endsWith(".js")) {
+      var elt = document.createElement('script');
+      elt.setAttribute("type","text/javascript");
+      // elt.setAttribute("src",script_url);
+      elt.appendChild( document.createTextNode(script) );
+    }
+    else if (script_url.endsWith(".css")) {
+      var elt = document.createElement("style");
+      elt.setAttribute("type", "text/css");
+      elt.appendChild( document.createTextNode(script) );
+    }
+    if (elt != null) {
+      document.getElementsByTagName("head")[0].appendChild(elt);
+    }
+  }
+  var _loaded_js_css_files = {};
+  function load_js_css_file(script_url) {
+    if (script_url in _loaded_js_css_files) return;
+    _loaded_js_css_files[script_url] = true;
+    $.ajax({
+      type: "GET",
+      async: false,
+      url: script_url,
+      dataType: 'text',
+      success(script, textStatus) {
+        _create_js_css_tag(script, script_url)
+      },
+      error() {
+        console.error('Fail to load: ' + script_url);
+      }
+    });
+  }
+</script>
+
+<!-- MAIN -->
+
+<div id=main>
+</div>
+
+<!-- <div class="text-center h6 small"><a href=http://www.beian.miit.gov.cn/ style="color:lightgrey;" onclick="/*window.open('http://www.beian.miit.gov.cn/');*/ return false;">粤ICP备20013397号</a></div> -->
+  </body>
+
+
+    <script type="text/javascript" src="web/lib2/brython/brython.js"></script>
+    <script type="text/javascript" src="web/lib2/brython/brython_stdlib.js"></script>
+<!--     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.8.8/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.8.8/brython_stdlib.min.js"></script> -->
+    <script type="text/python3" src="web/index.py"></script>
+    <link rel="stylesheet" href="web/lib2/summernote/summernote-bs4.min.css">
+    <script type="text/javascript" src="web/lib2/summernote/summernote-bs4.min.js"></script>
+<!--     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.js"></script> -->
+</html>

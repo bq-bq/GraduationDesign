@@ -1,0 +1,33 @@
+{
+    "__update_time__": 1590981298.919782,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "db_schema",
+            "{\"name\":\"db_schema\",\"tag\":\"\",\"text\":\"\",\"init\":\"database_schema_svg\",\"files\":[\"db/database_schema_svg.js\"],\"data\":[\"data\"],\"vars\":[\"select\"],\"events\":[\"change_data\",\"delete\",\"change_select\"],\"class\":{},\"attr\":{\"editable\":[\"True\",\"False\"]},\"style\":{\"font_size\":[\"13\",\"11\",\"12\",\"10\",\"14\",\"15\",\"16\",\"17\",\"18\",\"19\",\"20\"],\"node_margin\":[\"20\",\"10\",\"40\"],\"text_margin\":[\"2\",\"1\",\"4\",\"8\"]}}",
+            ""
+        ],
+        [
+            "登陆卡片",
+            "{\"name\": \"\\u767b\\u9646\\u5361\\u7247\", \"tag\": \"\", \"text\": \"\", \"init\": \"ui_login_card_py\", \"files\": [\"ui/login_card.py\"], \"data\": [], \"vars\": [], \"events\": [], \"class\": {\"\\u989c\\u8272\": [\"primary\", \"secondary\", \"success\", \"danger\", \"warning\", \"info\", \"light\", \"dark\"]}, \"attr\": {\"\\u5361\\u7247\\u6587\\u5b57\": [], \"\\u5361\\u7247\\u9898\\u76ee\": [], \"\\u6309\\u94ae\\u6587\\u5b57\": []}, \"style\": {\"margin\": [], \"width\": []}, \"from\": \"ui\"}",
+            ""
+        ],
+        [
+            "db_select",
+            "{\"name\":\"db_select\",\"tag\":\"\",\"text\":\"\",\"init\":\"db_select_py\",\"files\":[\"db/db_select.py\"],\"data\":[\"selected_db\",\"selected_table\"],\"ref\":[],\"events\":[\"change_db\"],\"class\":{},\"attr\":{},\"style\":{\"margin\":[]}}",
+            ""
+        ]
+    ],
+    "table_name": "component"
+}

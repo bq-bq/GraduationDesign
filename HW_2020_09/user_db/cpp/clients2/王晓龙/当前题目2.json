@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595854673.1611388,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <sstream>\nusing namespace std;\n\n\nclass Tuple\n{\npublic:\n\tint key;\n\tint val;\n\tbool ud;\n\t\t\tTuple() : ud(false){}\n\t\t\tTuple(int k, int v){\n\t\t\t\tud = true;\n\t\t\t\tkey = k;\n\t\t\t\tval = v;\n\t\t\t}\n\t\t\toperator int(){\n\t\t\t\treturn this->val;\n\t\t\t}\n\t\n\t\t\toperator string(){\n\t\t\t\tstring otcome;\n\t\t\t\tstringstream as;\n\t\t\t\tas << this->val;\n\t\t\t\tas >> otcome;\n\t\t\t\treturn otcome;\n\t\t\t}\n\t\n\t\t\tint str_to_int(string &str){\n\t\t\t\tstringstream as;\n\t\t\t\tas << str;\n\t\t\t\tint res;\n\t\t\t\tas >> res;\n\t\t\t\treturn res;\n\t\t\t}\n\t\n\t\t\tint str_to_int(int a) {\n\t\t\treturn a; }\n\t\n\t\t\ttemplate<typename K>\n\t\t\tTuple& operator= (K oth)\n\t\t\t{\n\t\t\t\tthis->val = str_to_int(oth);\n\t\t\t\tthis->ud = true;\n\t\t\t\treturn *this;\n\t\t\t}\n\t\t};\n\n#define max_index 100\n#define min_index 1\n\nclass HT{\n\tprivate:\n\t\tTuple dict[max_index+2];\n\t\tint _size;\npublic:\n\t\tHT(): _size(0) {}\n\t\t~HT(){}\n\t\tsize_t size(){\n\t\t\tsize_t count=0;\n\t\t\t int flag=0;\n\t\t\tfor (size_t i = 0; i <= max_index;i++)\n\t\t\t\tif(dict[i].ud==true)\n\t\t\t\t\tcount++;\n\t\t\t   else  flag++;\n\t\t\t\treturn count;\n\t\t}\n\t\n\t\tint str_to_int(int str) { return str; }\n\t\tint str_to_int(string str){\n\t\t\tstringstream as;\n\t\t\tas << str;\n\t\t\tint res;\n\t\t\tas >> res;\n\t\t\treturn res;\n\t\t}\n\t\n\t\tint find_index(int key){\n\t\t  return key%max_index;\n\t\t}\n\t\n\t\ttemplate < typename V>\n\t\tTuple & operator[](const V &index){\n\t\t\tint ling;\n\t\t\tling = str_to_int(index);\n\t\t\treturn dict[find_index(ling)];\n\t\t}\n\t\t\n};",
+            "In file included from main.cpp:1:0:\nsource.cpp: In member function ‘size_t HT::size()’:\nsource.cpp:64:16: error: ‘class Tuple’ has no member named ‘used’\n     if(dict[i].used==true)\n                ^\n",
+            1594951200,
+            1596200400,
+            0,
+            1595854645.7979934
+        ]
+    ]
+}

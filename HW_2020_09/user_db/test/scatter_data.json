@@ -1,0 +1,50 @@
+{
+    "__update_time__": 1590557015.1683056,
+    "field_names": [
+        "a",
+        "b",
+        "c",
+        "d"
+    ],
+    "field_types": [
+        "number",
+        "number",
+        "number",
+        "number"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            1,
+            4,
+            5,
+            2
+        ],
+        [
+            5,
+            9,
+            3,
+            6
+        ],
+        [
+            3,
+            4,
+            7,
+            9
+        ],
+        [
+            4,
+            6,
+            4,
+            2
+        ],
+        [
+            2,
+            8,
+            5,
+            7
+        ]
+    ],
+    "table_name": "scatter_data"
+}

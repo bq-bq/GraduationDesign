@@ -1,0 +1,41 @@
+{
+    "__update_time__": 1607650232.0677433,
+    "field_names": [
+        "file"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "c/2020_09_上交电子材料.zip"
+        ],
+        [
+            "c/1.pdf"
+        ],
+        [
+            "c/2.pdf"
+        ],
+        [
+            "c/签到码.jpg"
+        ],
+        [
+            "c/3.pdf"
+        ],
+        [
+            "c/4.pdf"
+        ],
+        [
+            "c/4.zip"
+        ],
+        [
+            "c/5.pdf"
+        ],
+        [
+            "c/6.pdf"
+        ]
+    ],
+    "table_name": "files"
+}

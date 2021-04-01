@@ -1,0 +1,83 @@
+{
+    "__update_time__": 1590842000.958266,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "按钮",
+            "{\"name\":\"按钮\",\"tag\":\"button\",\"text\":\"Button\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[\"text\"],\"events\":[\"click\"],\"class\":{\"BootStrap类型\":[\"btn\"],\"大小\":[\"\",\"btn-lg\",\"btn-sm\",\"btn-block\"],\"文字不换行\":[\"\",\"text-nowrap\"],\"颜色\":[\"btn-primary\",\"btn-secondary\",\"btn-success\",\"btn-danger\",\"btn-warning\",\"btn-info\",\"btn-light\",\"btn-dark\",\"btn-link\",\"btn-outlineprimary\",\"btn-outline-secondary\",\"btn-outline-success\",\"btn-outline-danger\",\"btn-outline-warning\",\"btn-outline-info\",\"btn-outline-light\",\"btn-outline-dark\",\"\"]},\"attr\":{\"type\":[\"button\"]},\"style\":{\"width\":[],\"margin\":[]}}",
+            ""
+        ],
+        [
+            "表格",
+            "{\"name\":\"表格\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_table_py\",\"files\":[\"ui/ui_table.py\"],\"data\":[\"data\",\"selected\",\"text_data\"],\"ref\":[\"data\"],\"events\":[\"change_data\",\"change_selected\"],\"class\":{},\"attr\":{\"deletable\":[\"false\",\"true\"],\"editable\":[\"false\",\"true\"],\"insertable\":[\"false\",\"true\"],\"row_selectable\":[\"false\",\"true\"],\"selected_col\":[],\"text_data_col\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\"],\"text_data_init\":[]},\"style\":{\"margin\":[],\"width\":[]}}",
+            ""
+        ],
+        [
+            "表单",
+            "{\"name\":\"表单\",\"tag\":\"\",\"text\":\"\",\"init\":\"form_obj_py\",\"files\":[\"ui/form.py\"],\"data\":[\"data\"],\"vars\":[\"var\"],\"events\":[\"change\"],\"class\":{},\"attr\":{\"data_columns\":[],\"editable\":[\"True\",\"False\"],\"field_names\":[],\"select_options\":[],\"title\":[]},\"style\":{\"margin\":[\"0px\",\"5px\",\"10px\",\"20px\",\"0 auto\"],\"size\":[\"small\",\"middle\",\"large\"],\"width\":[\"100px\",\"150px\",\"200px\",\"250px\",\"300px\",\"350px\",\"400px\",\"450px\",\"500px\"]}}",
+            ""
+        ],
+        [
+            "选择列表",
+            "{\"name\":\"选择列表\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_select_panel_py\",\"files\":[\"ui/ui_select_panel.py\"],\"data\":[\"data\"],\"vars\":[\"data\",\"selected\",\"text_data\"],\"events\":[\"change_data\",\"change_selected\"],\"class\":{},\"attr\":{\"expandable\":[\"false\",\"true\"],\"item_name\":[],\"key_column\":[],\"selected_cols\":[],\"text_data_col\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"],\"text_data_init\":[],\"width\":[]},\"style\":{}}",
+            ""
+        ],
+        [
+            "富文本",
+            "{\"name\":\"富文本\",\"tag\":\"\",\"text\":\"\",\"init\":\"summernote_obj_py\",\"files\":[\"ui/summernote.py\"],\"data\":[\"data\"],\"vars\":[\"data\"],\"events\":[\"change\"],\"class\":{},\"attr\":{\"data_column\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"],\"editable\":[\"True\",\"False\"]},\"style\":{\"margin\":[\"0px\",\"5px\",\"10px\",\"20px\",\"0 auto\"],\"width\":[]}}",
+            ""
+        ],
+        [
+            "纵向顺序布局",
+            "{\"name\":\"纵向顺序布局\",\"tag\":\"#VerticalFlowLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{\"文本居中\":[\"\",\"text-center\"]},\"attr\":{},\"style\":{\"margin\":[],\"padding\":[],\"width\":[]}}",
+            ""
+        ],
+        [
+            "横向顺序布局",
+            "{\"name\":\"横向顺序布局\",\"tag\":\"#FlowLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"height\":[],\"margin\":[],\"padding\":[]}}",
+            ""
+        ],
+        [
+            "横向格子布局",
+            "{\"name\":\"横向格子布局\",\"tag\":\"#GridLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"height\":[],\"margin\":[\"0px\",\"5px\",\"10px\",\"20px\"],\"padding\":[]}}",
+            ""
+        ],
+        [
+            "左右边缘布局",
+            "{\"name\":\"左右边缘布局\",\"tag\":\"#BorderLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"margin\":[],\"width\":[]}}",
+            ""
+        ],
+        [
+            "上下边缘布局",
+            "{\"name\":\"上下边缘布局\",\"tag\":\"#VerticalBorderLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"margin\":[],\"width\":[]}}",
+            ""
+        ],
+        [
+            "折叠布局",
+            "{\"name\":\"折叠布局\",\"tag\":\"#Accordion\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"button-color\":[\"btn-primary\",\"btn-secondary\",\"btn-success\",\"btn-danger\",\"btn-warning\",\"btn-info\",\"btn-light\",\"btn-dark\",\"btn-link\",\"btn-outlineprimary\",\"btn-outline-secondary\",\"btn-outline-success\",\"btn-outline-danger\",\"btn-outline-warning\",\"btn-outline-info\",\"btn-outline-light\",\"btn-outline-dark\",\"\"],\"button-text\":[],\"max-height\":[],\"width\":[],\"margin\":[]}}",
+            ""
+        ],
+        [
+            "数据分页器",
+            "{\"name\":\"数据分页器\",\"tag\":\"#RangeLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[\"data\"],\"vars\":[\"child_data\",\"data\"],\"events\":[\"change_data\"],\"class\":{},\"attr\":{\"card_title\":[],\"page-size\":[\"ALL\",\"1\",\"2\",\"3\",\"5\",\"10\",\"15\",\"20\",\"30\",\"50\",\"100\"],\"pagination-on-top\":[\"False\",\"True\"]},\"style\":{\"margin\":[],\"max-height\":[],\"width\":[]}}",
+            ""
+        ],
+        [
+            "控件重复器",
+            "{\"name\":\"控件重复器\",\"tag\":\"#RepeatLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[\"data\"],\"vars\":[\"child_data\",\"data\"],\"events\":[\"change_data\"],\"class\":{},\"attr\":{\"grid-layout\":[\"False\",\"True\"],\"layout-direction\":[\"Vertical\",\"Horizontal\"]},\"style\":{\"margin\":[],\"width\":[]}}",
+            ""
+        ]
+    ],
+    "table_name": "component"
+}

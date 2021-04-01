@@ -1,0 +1,43 @@
+{
+    "__update_time__": 1589529268.9648242,
+    "field_names": [
+        "page_id",
+        "show",
+        "ui_json"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "登录",
+            "登录前",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"login\",\"tag\":\"\",\"text\":\"\",\"init\":\"login_panel_obj_py\",\"files\":[\"me/login_panel.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}},\"init\":\"login_panel_obj_py\",\"files\":[\"me/login_panel.py\"],\"data\":{},\"vars\":{},\"events\":{},\"attr\":{},\"style\":{}}}"
+        ],
+        [
+            "密码",
+            "登录后",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"change_pwd\",\"tag\":\"\",\"text\":\"\",\"init\":\"change_pwd_obj_py\",\"files\":[\"me/change_pwd.py\"],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}},\"init\":\"change_pwd_obj_py\",\"files\":[\"me/change_pwd.py\"],\"data\":{},\"events\":{},\"vars\":{},\"style\":{},\"attr\":{}}}"
+        ],
+        [
+            "文件",
+            "登录后",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"upload_table\",\"tag\":\"\",\"text\":\"\",\"init\":\"upload_table_obj_py\",\"files\":[\"me/upload_table.py\"],\"data\":[\"data\"],\"vars\":[],\"events\":[\"add\",\"delete\"],\"class\":{},\"attr\":{},\"style\":{}},\"init\":\"upload_table_obj_py\",\"files\":[\"me/upload_table.py\"],\"data\":{\"data\":\"files\"},\"vars\":{},\"events\":{\"add\":\"@me_add_file\",\"delete\":\"@me_delete_file\"},\"attr\":{},\"style\":{}}}"
+        ],
+        [
+            "应用设定",
+            "登录后",
+            "{\"type\":\"VerticalFlowLayout\",\"children\":[{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"表单\",\"tag\":\"\",\"text\":\"\",\"init\":\"form_obj_py\",\"files\":[\"ui/form.py\"],\"data\":[\"data\"],\"vars\":[],\"events\":[\"change\"],\"class\":{},\"attr\":{\"field_names\":[],\"select_options\":[],\"title\":[]},\"style\":{\"margin\":[\"10px\",\"20px\",\"0px\"],\"size\":[\"small\",\"middle\",\"large\"],\"width\":[\"300px\",\"200px\",\"100px\"]}},\"init\":\"form_obj_py\",\"files\":[\"ui/form.py\"],\"data\":{\"data\":\"settings\"},\"vars\":{},\"events\":{\"change\":\"@同步\"},\"attr\":{\"field_names\":\"标题,主题,网站部署在外\",\"select_options\":\";Default,Journal,Solar,United,Sketchy,Minty,Litera,Cerulean,Sandstone,Pulse,Slate,Materia,Simplex,Lumen,Flatly,Cosmo,Superhero,Cyborg,Darkly,Lux,Spacelab,Yeti;False,True\",\"title\":\"应用设置\"},\"style\":{\"margin\":\"10px\",\"size\":\"middle\",\"width\":\"300px\"}}},{\"type\":\"UI_Placehoder\"}],\"config\":{\"__meta__\":{\"name\":\"纵向顺序布局\",\"tag\":\"#VerticalFlowLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"margin\":[],\"padding\":[]}},\"tag\":\"#VerticalFlowLayout\",\"data\":{},\"vars\":{},\"events\":{},\"attr\":{},\"style\":{\"margin\":\"0px\"}}}"
+        ],
+        [
+            "用户管理",
+            "网站作者",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"user_list\",\"tag\":\"\",\"text\":\"\",\"init\":\"user_list_obj_py\",\"files\":[\"me/user_list.py\"],\"data\":[\"data\"],\"vars\":[],\"events\":[\"add\",\"delete\"],\"class\":{},\"attr\":{},\"style\":{}},\"init\":\"user_list_obj_py\",\"files\":[\"me/user_list.py\"],\"data\":{\"data\":\"accounts\"},\"vars\":{},\"events\":{\"add\":\"@me_add_user\",\"delete\":\"@me_delete_user\"},\"attr\":{},\"style\":{}}}"
+        ]
+    ],
+    "table_name": "page"
+}

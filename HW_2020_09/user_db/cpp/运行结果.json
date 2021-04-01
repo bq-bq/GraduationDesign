@@ -1,0 +1,17 @@
+{
+    "__update_time__": 1600773636.682558,
+    "field_names": [
+        "结果"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "# 输入\n5\n6\n1\n3\n\n\n# 输出\n6 0 0 0 0 \n0 0 0 0 0 \n0 0 0 0 0 \n0 0 0 3 0 \n0 0 0 0 6 \n"
+        ]
+    ],
+    "table_name": "运行结果"
+}

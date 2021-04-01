@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1593078671.3127015,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.5 (C++)",
+            "<p>Define the Complex class.</p><pre style=\"font-size: 14px;\"># 输入\n5.8\n6.2\n\n\n# 输出\n++ c1 = 6.8 + 6.2 i \nc1 ++ = 6.8 + 6.2 i \nreal = 7.8</pre>",
+            "#include <iostream>\nusing namespace std;\n\n#include \"source.cpp\"\n\nint main(){\n    Complex c1;\n    cin >> c1;\n    cout << \"++ c1 = \" << ++ c1 << endl; // 实部 += 1\n    cout << \"c1 ++ = \" << c1 ++ << endl; // 实部 += 1\n\tdouble real = c1; // 获取实部\n    cout << \"real = \" << real << endl;\n}",
+            "class Complex\n{\n\tdouble real,imag;\n\npublic:\n\tComplex( double r=0, double i=0):real(r),imag(i){ };\n\tComplex & operator ++ (){\n\t\t++(this->real);\n\t\treturn *this;\n\t}\n\tComplex & operator ++ (int){\n\t\t//Complex mid(*this);\n\t\t//++(this->real);\n\t\treturn *this;\n\t}\n\tfriend ostream & operator<<( ostream & out,Complex & c);\n\tfriend istream & operator>>( istream & in,Complex & c);\n\n\t/*double operator = (double & real){\n\t   real = (this->real + 1);\n\t   return real;\n    }*/\n    operator double(){\n    \treturn this->real+1;\n    } \n};\n\nistream & operator >> (istream & in,Complex & c){\n\t   in >> c.real >> c.imag;\n\t   return in;\n   }\n\nostream & operator << (ostream & out,Complex & c){\n\t\tout << c.real <<\" + \"<< c.imag <<\" i\";\n\t\treturn out;\n\t}\n\n",
+            "# 答案不正确\n\n# 随机输入:\n4.4\n5.1\n\n\n# 参考答案:\n++ c1 = 5.4 + 5.1 i \nc1 ++ = 5.4 + 5.1 i \nreal = 6.4\n\n\n# 我的答案:\n++ c1 = 5.4 + 5.1 i\nc1 ++ = 5.4\nreal = 6.4\n",
+            1592532000,
+            1593090000,
+            75,
+            1593077783.9780936
+        ]
+    ]
+}

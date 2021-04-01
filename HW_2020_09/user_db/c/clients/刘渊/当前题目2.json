@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1607672145.859802,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.7 Insertion sort",
+            "<b><u>EXAMPLE INPUT</u></b>\n<pre>\n8 2 5 9 4 7 2 7 4 6\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>\n2 2 4 4 5 6 7 7 8 9 \n</pre>",
+            "#include \"source.c\"\n#include <stdio.h>\n\nvoid readData(int array[]) {\n\tint i;\n\tfor (i = 0; i < 10; ++ i) {\n\t\tscanf(\"%d\", &array[i]);\n\t}\n}\n\nvoid print(int array[]) {\n\tint i;\n\tfor (i = 0; i < 10; ++ i) {\n\t\tprintf(\"%d \", array[i]);\n\t}\n}\n\nint main() {\n\tint data[10];\n\treadData(data);\n\tinsertionSort(data, 10);\n\tprint(data);\n}",
+            "void insertionSort(int data[], int n)\n{\n\tfor (int m = 0; m < n; ++ m)\t\n\t{\t\n\t\tint k = 0;\n\t\tfor (int i = k; i < n; ++ i)\n\t\t{\n\t\t\tif(data[i] > data[m])\n\t\t\t{\n\t\t\t\tint a = data[m];\n\t\t\t\tdata[m] = data[i];\n\t\t\t\tdata[i] = a;\n\t\t\t}\n\t\t}\n\t\t++ k;\n\t}\n}",
+            "# 答案不正确\n\n# 随机输入:\n     4     3     7     3     1     2     7     3     3     7\n\n# 参考答案:\n1 2 3 3 3 3 4 7 7 7 \n\n# 我的答案:\n7 7 7 4 3 3 3 3 2 1 ",
+            1607667600,
+            1607673600,
+            50,
+            1607672097.2410696
+        ]
+    ]
+}

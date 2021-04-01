@@ -1,0 +1,256 @@
+{
+    "__update_time__": 1601013711.8360908,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "1.1 (C++)",
+            "test",
+            "#include <iostream>\nusing namespace std;\n\nint main() { \n\tcout << ENDL;\n}",
+            1601013710.2994938,
+            0,
+            "In file included from main.cpp:1:\n./source.cpp:5:10: error: use of undeclared identifier 'ENDL'\n        cout << ENDL;\n                ^\nmain.cpp:5:12: error: unknown type name 'Matrix5x5'\nvoid print(Matrix5x5 & matrix) {\n           ^\nmain.cpp:14:5: error: redefinition of 'main'\nint main() {\n    ^\n./source.cpp:4:5: note: previous definition is here\nint main() { \n    ^\nmain.cpp:15:2: error: unknown type name 'Matrix5x5'\n        Matrix5x5 m1, m2, m3;\n        ^\nmain.cpp:22:2: error: use of undeclared identifier 'm2'\n        m2.set(0, 0, value);\n        ^\nmain.cpp:24:2: error: use of undeclared identifier 'm2'\n        m2.set(3, 3, value);\n        ^\nmain.cpp:25:2: error: use of undeclared identifier 'm3'\n        m3 = m1 + m2;\n        ^\nmain.cpp:25:12: error: use of undeclared identifier 'm2'\n        m3 = m1 + m2;\n                  ^\nmain.cpp:26:8: error: use of undeclared identifier 'm3'\n        print(m3);\n              ^\n9 errors generated.\n"
+        ],
+        [
+            "测试1",
+            "test",
+            "#include <iostream>\nusing namespace std;\n\nint main() {\n\tcout << \"Today is 🥶\";\t\n}",
+            1587602624.8600738,
+            50,
+            "# 答案不正确\n\n# 随机输入:\nCPOQU DDDOR IFAVN\n\n# 参考答案:\nIFAVN DDDOR CPOQU\n\n# 我的答案:\nToday is 🥶"
+        ],
+        [
+            "测试2",
+            "test",
+            "#include <iostream>\n#include <string>\nusing namespace std;\n\nvoid sort(string words[], int size) {\n\t\n}\n\nint main() {\n\tstring words[10];\n\tfor (int i = 0; i < 10; ++ i) cin >> words[i];\n\tsort(words, 10);\n\tfor (int i = 0; i < 10; ++ i) cout << words[i] << ' ';\t\n}",
+            1587608748.9947886,
+            50,
+            "# 答案不正确\n\n# 随机输入:\nHSAFI JTQUV XAAMF ZBRVX PLIDA ZTLUN ALFSG BTWEQ BTPBS YTRJM \n\n# 参考答案:\nALFSG BTPBS BTWEQ HSAFI JTQUV PLIDA XAAMF YTRJM ZBRVX ZTLUN \n\n# 我的答案:\nHSAFI JTQUV XAAMF ZBRVX PLIDA ZTLUN ALFSG BTWEQ BTPBS YTRJM "
+        ],
+        [
+            "1.2 (C++)",
+            "test",
+            "#include <iostream>\nusing namespace std;\n\nint main() {\n\tcount << \"HELLO\";\n}",
+            1588254216.8346822,
+            0,
+            "In file included from main.cpp:1:\n./source.cpp:5:2: error: reference to overloaded function could not be resolved; did you mean to call it?\n        count << \"HELLO\";\n        ^~~~~\n/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/algorithm:1138:1: note: possible target for call\ncount(_InputIterator __first, _InputIterator __last, const _Tp& __value_)\n^\n/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference:308:1: note: possible target for call\ncount(__bit_iterator<_Cp, _IsConst> __first, __bit_iterator<_Cp, _IsConst> __last, const _Tp& __value_)\n^\nmain.cpp:5:12: error: unknown type name 'School'\nvoid print(School & school) {\n           ^\nmain.cpp:9:5: error: redefinition of 'main'\nint main() {\n    ^\n./source.cpp:4:5: note: previous definition is here\nint main() {\n    ^\nmain.cpp:10:2: error: unknown type name 'School'\n        School school;\n        ^\n4 errors generated.\n"
+        ],
+        [
+            "2.1 (C++)",
+            "test",
+            "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nclass Matrix\n{\npublic:\n\tint rows;\n\tint cols;\n\tdouble * data;\n\tMatrix(int rows, int cols) {\n\t\tthis->rows = rows;\n\t\tthis->cols = cols;\n\t}\n\tvoid print() {\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->cols; ++ j) {\n\t\t\t\tcout << \"    0\";\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n};",
+            1589460967.7859135,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.2 (C++)",
+            "test",
+            "\n#include <iostream>\n#include <iomanip>\nusing namespace std;\n\nclass Matrix \n{\npublic:\n\tint r;\n\tint w;\n\tdouble * v;\n\tMatrix(int r, int w, double v[]) {\n\t\tthis->r = r;\n\t\tthis->w = w;\n\t\tthis->v = v;\n\t}\n\tvoid print() {\n\t\tfor (int i = 0; i < this->r; ++ i) {\n\t\t\tfor (int j = 0; j < this->w; ++ j) {\n\t\t\t\tcout << setw(5) << this->v[i*this->w + j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n};\n",
+            1589453127.864161,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.6 (C++)",
+            "test",
+            "#include <cstring>\n#include <iostream>\nusing namespace std;\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * data;\n\t\n\tvoid __copy(int rows, int columns, const double * data=NULL) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tint num_data = rows * columns;\n\t\tthis->data = new double[num_data];\n\t\tif (data == NULL)\n\t\t\tmemset(this->data, 0, num_data * sizeof(double));\n\t\telse\n\t\t\tmemcpy(this->data, data, num_data * sizeof(double));\n\t}\n\t\n\tdouble & __get(int row, int col) const {\n\t\tint index = row * this->columns + col;\n\t\treturn this->data[index];\n\t}\n\t\npublic:\n\tMatrix(int rows, int columns, const double * data=NULL) {\n\t\tthis->__copy(rows, columns, data);\n\t}\n\t\n\t~Matrix() {\n\t\tdelete [] this->data;\n\t}\n\t\n\tMatrix(const Matrix & m) {\n\t\tthis->__copy(m.rows, m.columns, m.data);\n\t}\n\t\n\tMatrix & operator = (const Matrix & m) {\n\t\tdelete [] this->data;\n\t\tthis->__copy(m.rows, m.columns, m.data);\n\t}\n\t\n\tvoid print(ostream & out=cout, const char * spaces = \"    \") const {\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tout << spaces << this->__get(i, j);\n\t\t\t}\n\t\t\tout << endl;\n\t\t}\n\t}\n\t\n\tMatrix concatenateRows(const Matrix & matrix2) const {\n\t\tMatrix res(this->rows + matrix2.rows, this->columns);\n\t\t/*\n\t\tfor (int i = 0; i < this->rows; ++ i) \n\t\t\tfor (int j = 0; j < this->columns; ++ j)\n\t\t\t\tres.__get(i, j) = this->__get(i, j);\n\t\tfor (int i = 0; i < matrix2.rows; ++ i) \n\t\t\tfor (int j = 0; j < matrix2.columns; ++ j)\n\t\t\t\tres.__get(this->rows + i, j) = matrix2.__get(i, j);\n\t\t*/\n\t\tmemcpy(res.data, this->data, this->rows * this->columns * sizeof(double));\n\t\tmemcpy(res.data + this->rows * this->columns, matrix2.data, matrix2.rows * matrix2.columns * sizeof(double));\t\t\n\t\treturn res;\n\t}\n\t\n\tMatrix concatenateColumns(const Matrix & matrix2) const {\n\t\tMatrix res(this->rows, this->columns + matrix2.columns);\n\t\tfor (int i = 0; i < this->rows; ++ i) \n\t\t\tfor (int j = 0; j < this->columns; ++ j)\n\t\t\t\tres.__get(i, j) = this->__get(i, j);\n\t\tfor (int i = 0; i < matrix2.rows; ++ i) \n\t\t\tfor (int j = 0; j < matrix2.columns; ++ j)\n\t\t\t\tres.__get(i, this->columns + j) = matrix2.__get(i, j);\n\t\treturn res;\n\t}\n\t\n};",
+            1589437664.187341,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020/05/08",
+            "test",
+            "",
+            1588905152.726975,
+            0,
+            "main.cpp: In member function ‘double& Tensor::get(int, int, int, int)’:\nmain.cpp:68:78: error: ‘Tensor_get’ was not declared in this scope\n   return Tensor_get(this->dimensions, this->sizes, this->data, x0, x1, x2, x3);\n                                                                              ^\n"
+        ],
+        [
+            "2.3 (C++)",
+            "test",
+            "",
+            1588916958.803178,
+            0,
+            "main.cpp: In function ‘int main()’:\nmain.cpp:7:2: error: ‘cin’ was not declared in this scope\n  cin >> rows >> columns;\n  ^\nmain.cpp:11:2: error: ‘Matrix’ was not declared in this scope\n  Matrix matrix1(rows, columns, values);\n  ^\nmain.cpp:12:9: error: expected ‘;’ before ‘matrix2’\n  Matrix matrix2(matrix1);\n         ^\nmain.cpp:13:2: error: ‘matrix2’ was not declared in this scope\n  matrix2.print();\n  ^\n"
+        ],
+        [
+            "2.5 (C++)",
+            "test",
+            "",
+            1588916968.6461692,
+            0,
+            "main.cpp: In function ‘int main()’:\nmain.cpp:7:2: error: ‘cin’ was not declared in this scope\n  cin >> rows >> columns;\n  ^\nmain.cpp:11:2: error: ‘Matrix’ was not declared in this scope\n  Matrix matrix1(rows, columns, values);\n  ^\nmain.cpp:12:2: error: ‘matrix1’ was not declared in this scope\n  matrix1.print();\n  ^\nmain.cpp:13:2: error: ‘cout’ was not declared in this scope\n  cout << endl;\n  ^\nmain.cpp:13:10: error: ‘endl’ was not declared in this scope\n  cout << endl;\n          ^\n"
+        ],
+        [
+            "2020/05/14",
+            "test",
+            "",
+            1589426765.7263691,
+            0,
+            "main.cpp: In member function ‘void Tensor::print() const’:\nmain.cpp:76:64: error: ‘Tensor_print’ was not declared in this scope\n   return Tensor_print(this->dimensions, this->sizes, this->data);  \n                                                                ^\nmain.cpp:76:64: error: return-statement with a value, in function returning 'void' [-fpermissive]\n"
+        ],
+        [
+            "2.4 (C++)",
+            "test",
+            "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * data;\n\t\n\tvoid __copy(int rows, int columns, double data[]) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tint next = 0;\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = data[next];\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t}\n\t\npublic:\n\tdouble & get(int row, int column) const {\n\t\tint index = row * this->columns + column;\n\t\treturn this->data[index];\n\t}\n\t\n\tMatrix(int rows, int columns) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = 0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tMatrix(int rows, int columns, double data[]) {\n\t\tthis->__copy(rows, columns, data);\n\t}\n\n\tMatrix(const Matrix & that) {\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t}\n\n\tMatrix & operator = (const Matrix & that) {\n\t\tdelete [] this->data;\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t\treturn *this;\n\t}\n\n\t~Matrix() {\n\t\tdelete [] this->data;\n\t}\n\n\tvoid print() const {\n\t\tofstream out(\"1.txt\");\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << \"    \" << this->get(i, j);\n\t\t\t\tout << \"    \" << this->get(i, j);\n\t\t\t}\n\t\t\tcout << endl;\n\t\t\tout << endl;\n\t\t}\t\n\t}\n\n\tvoid set(int row, int column, double value) {\n\t\tthis->get(row-1, column-1) = value;\n\t}\n\n};",
+            1589970127.9334226,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.7 (C++)",
+            "test",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * data;\n\t\n\tvoid __copy(int rows, int columns, double data[]) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tint next = 0;\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = data[next];\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t}\n\t\npublic:\n\tdouble & get(int row, int column) const {\n\t\tint index = row * this->columns + column;\n\t\treturn this->data[index];\n\t}\n\t\n\tMatrix(int rows, int columns) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = 0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tMatrix(int rows, int columns, double data[]) {\n\t\tthis->__copy(rows, columns, data);\n\t}\n\n\tMatrix(const Matrix & that) {\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t}\n\n\tMatrix & operator = (const Matrix & that) {\n\t\tdelete [] this->data;\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t\treturn *this;\n\t}\n\n\t~Matrix() {\n\t\tdelete [] this->data;\n\t}\n\n\tvoid print() const {\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << \"    \" << this->get(i, j);\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\t\n\t}\n\n\tMatrix reshape(int rows, int columns) const {\n\t\tdouble * data = new double[rows * columns];\n\t\tint next = 0;\n\t\tfor (int i = 0; i < this->columns; ++ i) {\n\t\t\tfor (int j = 0; j < this->rows; ++ j) {\n\t\t\t\tdata[next] = this->get(j, i);\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t\tnext = 0;\n\t\tMatrix res(rows, columns);\n\t\tfor (int i = 0; i < columns; ++ i) {\n\t\t\tfor (int j = 0; j < rows; ++ j) {\n\t\t\t\tres.get(j, i) = data[next];\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t\tdelete [] data;\n\t\treturn res;\n\t}\n\n};",
+            1589563703.0618072,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.8 (C++)",
+            "test",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * data;\n\t\n\tvoid __copy(int rows, int columns, double data[]) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tint next = 0;\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = data[next];\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t}\n\t\npublic:\n\tdouble & get(int row, int column) const {\n\t\tint index = row * this->columns + column;\n\t\treturn this->data[index];\n\t}\n\t\n\tMatrix(int rows, int columns) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = 0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tMatrix(int rows, int columns, double data[]) {\n\t\tthis->__copy(rows, columns, data);\n\t}\n\n\tMatrix(const Matrix & that) {\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t}\n\n\tMatrix & operator = (const Matrix & that) {\n\t\tdelete [] this->data;\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t\treturn *this;\n\t}\n\n\t~Matrix() {\n\t\tdelete [] this->data;\n\t}\n\n\tvoid print() const {\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << \"    \" << this->get(i, j);\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\t\n\t}\n\n\tMatrix transpose() const {\n\t\tMatrix res(this->columns, this->rows);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tres.get(j, i) = this->get(i, j);\n\t\t\t}\n\t\t}\t\n\t\treturn res;\n\t}\n\n};",
+            1589970136.2138898,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.10 (C++)",
+            "test",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * data;\n\t\n\tvoid __copy(int rows, int columns, double data[]) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tint next = 0;\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = data[next];\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t}\n\t\npublic:\n\tdouble & get(int row, int column) const {\n\t\tint index = row * this->columns + column;\n\t\treturn this->data[index];\n\t}\n\t\n\tMatrix(int rows, int columns) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = 0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tMatrix(int rows, int columns, double data[]) {\n\t\tthis->__copy(rows, columns, data);\n\t}\n\n\tMatrix(const Matrix & that) {\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t}\n\n\tMatrix & operator = (const Matrix & that) {\n\t\tdelete [] this->data;\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t\treturn *this;\n\t}\n\n\t~Matrix() {\n\t\tdelete [] this->data;\n\t}\n\n\tvoid print() const {\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << \"    \" << this->get(i, j);\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\t\n\t}\n\n\tMatrix operator * (const Matrix & matrix2) const {\n\t\tMatrix res(this->rows, matrix2.columns);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < matrix2.columns; ++ j) {\n\t\t\t\tfor (int k = 0; k < this->columns; ++ k) {\n\t\t\t\t\tres.get(i, j) += this->get(i, k) * matrix2.get(k, j);\n\t\t\t\t}\n\t\t\t}\n\t\t}\t\n\t\treturn res;\n\t}\n\t\n\tMatrix operator * (double value) const {\n\t\tMatrix res(*this);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tres.get(i, j) *= value;\n\t\t\t}\n\t\t}\t\n\t\treturn res;\n\t}\n\n};",
+            1589534791.6182194,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.11 (C++)",
+            "test",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * data;\n\t\n\tvoid __copy(int rows, int columns, double data[]) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tint next = 0;\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = data[next];\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t}\n\t\npublic:\n\tdouble & get(int row, int column) const {\n\t\tint index = row * this->columns + column;\n\t\treturn this->data[index];\n\t}\n\t\n\tMatrix(int rows, int columns) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = 0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tMatrix(int rows, int columns, double data[]) {\n\t\tthis->__copy(rows, columns, data);\n\t}\n\n\tMatrix(const Matrix & that) {\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t}\n\n\tMatrix & operator = (const Matrix & that) {\n\t\tdelete [] this->data;\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t\treturn *this;\n\t}\n\n\t~Matrix() {\n\t\tdelete [] this->data;\n\t}\n\n\tvoid print() const {\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << \"    \" << this->get(i, j);\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\t\n\t}\n\t\n\tMatrix transpose() const {\n\t\tMatrix res(this->columns, this->rows);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tres.get(j, i) = this->get(i, j);\n\t\t\t}\n\t\t}\t\n\t\treturn res;\n\t}\n\n\tMatrix max() const {\n\t\tif (this->rows == 1 && this->columns == 1) {\n\t\t\treturn *this;\n\t\t}\n\t\tif (this->rows == 1) {\n\t\t\treturn this->transpose().max();\n\t\t}\n\t\telse {\n\t\t\tMatrix res(1, this->columns);\n\t\t\tfor (int i = 0; i < this->columns; ++ i) {\n\t\t\t\tfor (int j = 0; j < this->rows; ++ j) {\n\t\t\t\t\tres.get(0, i) = ::max(res.get(0, i), this->get(j, i));\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn res;\n\t\t}\n\t}\n\t\n\tMatrix min() const {\n\t\tif (this->rows == 1 && this->columns == 1) {\n\t\t\treturn *this;\n\t\t}\n\t\tif (this->rows == 1) {\n\t\t\treturn this->transpose().min();\n\t\t}\n\t\telse {\n\t\t\tMatrix res(1, this->columns, this->data);\n\t\t\tfor (int i = 0; i < this->columns; ++ i) {\n\t\t\t\tfor (int j = 0; j < this->rows; ++ j) {\n\t\t\t\t\tres.get(0, i) = ::min(res.get(0, i), this->get(j, i));\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn res;\n\t\t}\t\t\n\t}\n\t\n\tMatrix sum() const {\n\t\tif (this->rows == 1 && this->columns == 1) {\n\t\t\treturn *this;\n\t\t}\n\t\tif (this->rows == 1) {\n\t\t\treturn this->transpose().sum();\n\t\t}\n\t\telse {\n\t\t\tMatrix res(1, this->columns);\n\t\t\tfor (int i = 0; i < this->columns; ++ i) {\n\t\t\t\tfor (int j = 0; j < this->rows; ++ j) {\n\t\t\t\t\tres.get(0, i) += this->get(j, i);\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn res;\n\t\t}\t\t\n\t}\n\n\n};",
+            1589562243.727238,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.12 (C++)",
+            "test",
+            "#include <iostream>\nusing namespace std;\n#include <cmath>\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * data;\n\t\n\tvoid __copy(int rows, int columns, double data[]) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tint next = 0;\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = data[next];\n\t\t\t\t++ next;\n\t\t\t}\n\t\t}\n\t}\n\t\npublic:\n\tdouble & get(int row, int column) const {\n\t\tint index = row * this->columns + column;\n\t\treturn this->data[index];\n\t}\n\t\n\tMatrix(int rows, int columns) {\n\t\tthis->rows = rows;\n\t\tthis->columns = columns;\n\t\tthis->data = new double[rows * columns];\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tthis->get(i, j) = 0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tMatrix(int rows, int columns, double data[]) {\n\t\tthis->__copy(rows, columns, data);\n\t}\n\n\tMatrix(const Matrix & that) {\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t}\n\n\tMatrix & operator = (const Matrix & that) {\n\t\tdelete [] this->data;\n\t\tthis->__copy(that.rows, that.columns, that.data);\n\t\treturn *this;\n\t}\n\n\t~Matrix() {\n\t\tdelete [] this->data;\n\t}\n\n\tvoid print() const {\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << \"    \" << this->get(i, j);\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\t\n\t}\n\t\n\tMatrix pow(double exponent) const {\n\t\tMatrix res(*this);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tres.get(i, j) = ::pow(res.get(i, j), exponent);\n\t\t\t}\n\t\t}\n\t\treturn res;\n\t}\n\t\n\tMatrix exp() const {\n\t\tMatrix res(*this);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tres.get(i, j) = ::exp(res.get(i, j));\n\t\t\t}\n\t\t}\n\t\treturn res;\n\t}\n\t\n\tMatrix log() const {\n\t\tMatrix res(*this);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tres.get(i, j) = ::log(res.get(i, j));\n\t\t\t}\n\t\t}\n\t\treturn res;\n\t}\n\t\n\tMatrix abs() const {\n\t\tMatrix res(*this);\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tres.get(i, j) = ::abs(res.get(i, j));\n\t\t\t}\n\t\t}\n\t\treturn res;\n\t}\n\n};",
+            1589563714.240376,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.9 (C++)",
+            "test",
+            "",
+            1590031149.938858,
+            0,
+            "main.cpp:3:1: error: ‘Matrix’ does not name a type\n Matrix read() {\n ^\nmain.cpp: In function ‘int main()’:\nmain.cpp:16:2: error: ‘Matrix’ was not declared in this scope\n  Matrix matrix1 = read(); // calls copy constructor\n  ^\nmain.cpp:17:9: error: expected ‘;’ before ‘matrix2’\n  Matrix matrix2 = read();\n         ^\nmain.cpp:20:2: error: ‘cin’ was not declared in this scope\n  cin >> value;\n  ^\nmain.cpp:22:2: error: ‘matrix1’ was not declared in this scope\n  matrix1.print();\n  ^\nmain.cpp:23:2: error: ‘cout’ was not declared in this scope\n  cout << endl;\n  ^\nmain.cpp:23:10: error: ‘endl’ was not declared in this scope\n  cout << endl;\n          ^\nmain.cpp:24:2: error: ‘matrix2’ was not declared in this scope\n  matrix2.print();\n  ^\nmain.cpp:27:9: error: expected ‘;’ before ‘matrix3’\n  Matrix matrix3 = matrix1 + matrix2;\n         ^\nmain.cpp:28:2: error: ‘matrix3’ was not declared in this scope\n  matrix3.print();\n  ^\nmain.cpp:31:9: error: expected ‘;’ before ‘matrix4’\n  Matrix matrix4 = matrix1 - matrix2;\n         ^\nmain.cpp:32:2: error: ‘matrix4’ was not declared in this scope\n  matrix4.print();\n  ^\nmain.cpp:35:9: error: expected ‘;’ before ‘matrix5’\n  Matrix matrix5 = matrix1 + value;\n         ^\nmain.cpp:36:2: error: ‘matrix5’ was not declared in this scope\n  matrix5.print();\n  ^\nmain.cpp:39:9: error: expected ‘;’ before ‘matrix6’\n  Matrix matrix6 = matrix1 - value;\n         ^\nmain.cpp:40:2: error: ‘matrix6’ was not declared in this scope\n  matrix6.print();\n  ^\n"
+        ],
+        [
+            "6.1 (C++)",
+            "test",
+            "",
+            1590458445.8228006,
+            0,
+            "main.cpp: In function ‘int main4double()’:\nmain.cpp:9:2: error: ‘Matrix’ was not declared in this scope\n  Matrix<double> matrix1(3, 3);\n  ^\nmain.cpp:9:9: error: expected primary-expression before ‘double’\n  Matrix<double> matrix1(3, 3);\n         ^\nmain.cpp:10:2: error: ‘matrix1’ was not declared in this scope\n  matrix1.print();\n  ^\nmain.cpp:18:9: error: expected primary-expression before ‘double’\n  Matrix<double> matrix2(3, 3, values2);\n         ^\nmain.cpp:19:2: error: ‘matrix2’ was not declared in this scope\n  matrix2.print();\n  ^\nmain.cpp:22:9: error: expected primary-expression before ‘double’\n  Matrix<double> matrix3 = matrix2;\n         ^\nmain.cpp:23:2: error: ‘matrix3’ was not declared in this scope\n  matrix3.print();\n  ^\nmain.cpp: In function ‘int main4string()’:\nmain.cpp:36:2: error: ‘Matrix’ was not declared in this scope\n  Matrix<string> matrix1(3, 3);\n  ^\nmain.cpp:36:15: error: expected primary-expression before ‘>’ token\n  Matrix<string> matrix1(3, 3);\n               ^\nmain.cpp:36:29: error: ‘matrix1’ was not declared in this scope\n  Matrix<string> matrix1(3, 3);\n                             ^\nmain.cpp:45:15: error: expected primary-expression before ‘>’ token\n  Matrix<string> matrix2(3, 3, values2);\n               ^\nmain.cpp:45:38: error: ‘matrix2’ was not declared in this scope\n  Matrix<string> matrix2(3, 3, values2);\n                                      ^\nmain.cpp:49:15: error: expected primary-expression before ‘>’ token\n  Matrix<string> matrix3 = matrix2;\n               ^\nmain.cpp:49:17: error: ‘matrix3’ was not declared in this scope\n  Matrix<string> matrix3 = matrix2;\n                 ^\n"
+        ],
+        [
+            "7.1 (C++)",
+            "test",
+            "#include <cmath>\nclass Triangle : public GeometricObject\n{\n\tdouble side1;\n\tdouble side2;\n\tdouble side3;\npublic:\n\tTriangle() {\n\t\tside1 = side2 = side3 = 1.0;\n\t}\n\tTriangle(double side1, double side2, double side3) {\n\t\tthis->side1 = side1;\n\t\tthis->side2 = side2;\n\t\tthis->side3 = side3;\n\t}\n\tdouble getArea() const {\n\t\tdouble s = (side1 + side2 + side3) / 2;\n\t\treturn sqrt(s * (s - side1) * (s -side2) * (s - side3));\n\t}\n\tdouble getPerimeter() const {\n\t\treturn side1 + side2 + side3;\n\t}\n\tdouble getSide1() { return side1; }\n\tdouble getSide2() { return side2; }\n\tdouble getSide3() { return side3; }\n};",
+            1590801361.1039186,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 (C++)",
+            "test",
+            "",
+            1591240345.9907255,
+            0,
+            "main.cpp: In function ‘void test()’:\nmain.cpp:10:35: error: ‘split’ was not declared in this scope\n  vector<string> words = split(line);\n                                   ^\n"
+        ],
+        [
+            "8.1 (C++)",
+            "test",
+            "",
+            1591840631.098378,
+            0,
+            "main.cpp:23:1: error: ‘Full’ does not name a type\n Full readMatrix() {\n ^\nmain.cpp: In function ‘int main()’:\nmain.cpp:41:2: error: ‘Full’ was not declared in this scope\n  Full full1(3, 3);\n  ^\nmain.cpp:42:21: error: ‘full1’ was not declared in this scope\n  Matrix & matrix1 = full1; // down-casting\n                     ^\nmain.cpp:46:38: error: ‘readMatrix’ was not declared in this scope\n  const Matrix & matrix2 = readMatrix();\n                                      ^\nmain.cpp:50:7: error: expected ‘;’ before ‘full3’\n  Full full3 = matrix2;\n       ^\nmain.cpp:51:21: error: ‘full3’ was not declared in this scope\n  Matrix & matrix3 = full3;\n                     ^\n"
+        ],
+        [
+            "8.5 (C++)",
+            "test",
+            "class Point3D : public Point2D\n{\n\tdouble z;\npublic:\n\tPoint3D() {\n\t\tz = 0;\n\t}\n\tPoint3D(int x, int y, int z) {\n\t\tsetX(x);\n\t\tsetY(y);\n\t\tthis->z = z;\n\t}\n\tdouble getZ() const { return z; }\n\tvirtual double distance(Point2D & point2) {\n\t\tPoint3D & point3 = (Point3D &)point2; \n\t\tdouble dx = getX() - point3.getX();\n\t\tdouble dy = getY() - point3.getY();\n\t\tdouble dz = getZ() - point3.getZ();\n\t\treturn sqrt(dx * dx + dy * dy + dz * dz);\n\t}\n};\n\n/*\n#include <iostream>\nusing namespace std;\nvoid printDistance(Point3D & point1, Point3D & point2) {\n\tdouble dx = point1.getX() - point2.getX();\n\tdouble dy = point1.getY() - point2.getY();\n\tdouble dz = point1.getZ() - point2.getZ();\n\tdouble d = sqrt(dx * dx + dy * dy + dz * dz);\n\tcout << \"point1.distance(point2) = \" << d;\t\n}\n*/",
+            1591842682.7544477,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "8.6 (C++)",
+            "test",
+            "#include <vector>\n#include <iostream>\nusing namespace std;\n\nclass MyTensor : public Tensor<double> \n{\n\tvector<double> values;\n\t\n\tint _index(const vector<int> & indexes) const {\n\t\tint index = 0;\n\t\tfor (int i = 0; i < this->sizes.size(); ++ i) {\n\t\t\tindex *= sizes[i];\n\t\t\tindex += indexes[i];\n\t\t}\n\t\treturn index;\n\t}\n\t\npublic:\n\tint numel() const {\n\t\tif (this->sizes.size() == 0) return 0;\n\t\tint size = 1;\n\t\tfor (int i = 0; i < this->sizes.size(); ++ i) size *= sizes[i];\n\t\treturn size;\n\t}\n\t\n\tMyTensor(vector<int> sizes) : Tensor<double>(sizes) {\n\t\tthis->values.resize(this->numel());\n\t\tfor (int i = 0; i < this->numel(); ++ i) this->values[i] = 0;\n\t}\n\t\n\tvirtual double & get(const vector<int> & indexes) {\n\t\treturn values[this->_index(indexes)];\n\t}\n};",
+            1592448296.203388,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.3 (C++)",
+            "test",
+            "#include <cmath>\n\n//复数类\nclass Complex{\npublic:  //构造函数\n    Complex(double real = 0.0, double imag = 0.0): m_real(real), m_imag(imag){ }\npublic:  //运算符重载\n    //以成员函数的形式重载\n    Complex & operator+=(const Complex &c);\n    Complex & operator-=(const Complex &c);\n    Complex & operator*=(const Complex &c);\n    Complex & operator/=(const Complex &c);\npublic:  //成员函数\n    double real() const{ return m_real; }\n    double imag() const{ return m_imag; }\n    double m_real;  //实部\n    double m_imag;  //虚部\n};\n//重载+运算符\nComplex operator+(const Complex &c1, const Complex &c2){\n    Complex c;\n    c.m_real = c1.m_real + c2.m_real;\n    c.m_imag = c1.m_imag + c2.m_imag;\n    return c;\n}\n//重载-运算符\nComplex operator-(const Complex &c1, const Complex &c2){\n    Complex c;\n    c.m_real = c1.m_real - c2.m_real;\n    c.m_imag = c1.m_imag - c2.m_imag;\n    return c;\n}\n//重载*运算符  (a+bi) * (c+di) = (ac-bd) + (bc+ad)i\nComplex operator*(const Complex &c1, const Complex &c2){\n    Complex c;\n    c.m_real = c1.m_real * c2.m_real - c1.m_imag * c2.m_imag;\n    c.m_imag = c1.m_imag * c2.m_real + c1.m_real * c2.m_imag;\n    return c;\n}\n//重载/运算符  (a+bi) / (c+di) = [(ac+bd) / (c²+d²)] + [(bc-ad) / (c²+d²)]i\nComplex operator/(const Complex &c1, const Complex &c2){\n    Complex c;\n    c.m_real = (c1.m_real*c2.m_real + c1.m_imag*c2.m_imag) / (pow(c2.m_real, 2) + pow(c2.m_imag, 2));\n    c.m_imag = (c1.m_imag*c2.m_real - c1.m_real*c2.m_imag) / (pow(c2.m_real, 2) + pow(c2.m_imag, 2));\n    return c;\n}\n//重载==运算符\nbool operator==(const Complex &c1, const Complex &c2){\n    if( c1.m_real == c2.m_real && c1.m_imag == c2.m_imag ){\n        return true;\n    }else{\n        return false;\n    }\n}\n//重载!=运算符\nbool operator!=(const Complex &c1, const Complex &c2){\n    if( c1.m_real != c2.m_real || c1.m_imag != c2.m_imag ){\n        return true;\n    }else{\n        return false;\n    }\n}\n//重载+=运算符\nComplex & Complex::operator+=(const Complex &c){\n \tComplex x = *this + c;\n\t*this = x;\n    return *this;\n}\n//重载-=运算符\nComplex & Complex::operator-=(const Complex &c){\n\tComplex x = *this - c;\n\t*this = x;\n    return *this;\n}\n//重载*=运算符\nComplex & Complex::operator*=(const Complex &c){\n\tComplex x = *this * c;\n\t*this = x;\n    return *this;\n}\n//重载/=运算符\nComplex & Complex::operator/=(const Complex &c){\n\tComplex x = *this / c;\n\t*this = x;\n    return *this;\n}\n//重载输入运算符\nistream & operator>>(istream & in, Complex & A){\n    in >> A.m_real >> A.m_imag;\n    return in;\n}\n//重载输出运算符\nostream & operator<<(ostream & out, Complex & A){\n    out << A.m_real <<\" + \"<< A.m_imag <<\" i \";;\n    return out;\n}",
+            1593065128.5780919,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "10.1 (C++)",
+            "test",
+            "\n#include <stdexcept>\nusing namespace std;\n\ndouble Matrix::get(int row, int column) const {\n\t-- row;\n\t-- column;\n\tif (row < 0 || row >= rows) throw out_of_range(\"\");\n\tif (column < 0 || column >= columns) throw out_of_range(\"\");\n\tint idx = row * columns + column;\n\treturn elements[idx];\n}\n\nvoid Matrix::set(int row, int column, double value) {\n\t-- row;\n\t-- column;\n\tif (row < 0 || row >= rows) throw out_of_range(\"\");\n\tif (column < 0 || column >= columns) throw out_of_range(\"\");\n\tint idx = row * columns + column;\n\telements[idx] = value;\n}\n\nclass MatrixSizesDoNotMatchException {};\n\nMatrix Matrix::operator + (const Matrix & matrix2) const {\n\tif (rows != matrix2.rows || columns != matrix2.columns)\n\t\tthrow MatrixSizesDoNotMatchException();\n\tMatrix m(*this);\n\tfor (int i = 0; i < rows * columns; ++ i) \n\t\t\tm.elements[i] += matrix2.elements[i];\n\treturn m;\n}",
+            1593594351.8792357,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "10.2 (C++)",
+            "test",
+            "",
+            1593656181.170625,
+            0,
+            "main.cpp: In function ‘int main()’:\nmain.cpp:103:2: error: expected ‘catch’ before ‘}’ token\n  }\n  ^\nmain.cpp:103:2: error: expected ‘(’ before ‘}’ token\nmain.cpp:103:2: error: expected type-specifier before ‘}’ token\nmain.cpp:103:2: error: expected ‘)’ before ‘}’ token\nmain.cpp:103:2: error: expected ‘{’ before ‘}’ token\n"
+        ],
+        [
+            "A.1 (C++)",
+            "test",
+            "private:\n\tvoid get_node(int index, Node<E> * & prev_node, Node<E> * & node, Node<E> * & next_node) const {\n\t\tif (index < 0 || index >= _size) \n\t\t\tthrow NotSuchElementException();\n\t\tif (index < _size / 2) {\n\t\t\tnode = head;\n\t\t\tprev_node = 0;\n\t\t\tnext_node = node->next_node(prev_node);\n\t\t\tI(i, index) {\n\t\t\t\tprev_node = node;\n\t\t\t\tnode = next_node;\n\t\t\t\tnext_node = node->next_node(prev_node);\n\t\t\t}\n\t\t}\n\t\telse {\n\t\t\tnode = tail;\n\t\t\tnext_node = 0;\n\t\t\tprev_node = node->prev_node(next_node);\n\t\t\tI(i, (_size-1-index)) {\n\t\t\t\tnext_node = node;\n\t\t\t\tnode = prev_node;\n\t\t\t\tprev_node = node->prev_node(next_node);\n\t\t\t}\n\t\t}\n\t}\n\npublic:\n\tE & get(int index) const {\n\t\tNode<E> * node;\n\t\tNode<E> * prev_node;\n\t\tNode<E> * next_node;\n\t\tget_node(index, prev_node, node, next_node);\n\t\treturn node->element;\n\t}\n\tvoid set(int index, const E & e) {\n\t\tNode<E> * node;\n\t\tNode<E> * prev_node;\n\t\tNode<E> * next_node;\n\t\tget_node(index, prev_node, node, next_node);\n\t\tnode->element = e;\n\t}\n\n\tE & getFirst() const {\n\t\treturn get(0);\n\t}\n\n\tE & getLast() const {\n\t\treturn get(_size - 1);\n\t}\n\n\tvoid remove (int index) {\n\t\tNode<E> * node;\n\t\tNode<E> * prev_node;\n\t\tNode<E> * next_node;\n\t\tget_node(index, prev_node, node, next_node);\n\t\tif (prev_node != 0) prev_node->update_next_node(node, next_node);\n\t\tif (next_node != 0) next_node->update_prev_node(node, prev_node);\n\t\tif (prev_node == 0) head = next_node;\n\t\tif (next_node == 0) tail = prev_node;\n\t\tdelete node;\n\t\t-- _size;\n\t}\n\n\tvoid removeFirst () {\n\t\tremove(0);\n\t}\n\n\tvoid removeLast () {\n\t\tremove(_size-1);\n\t}\n\n\tvoid add(int index, const E & e) {\n\t\tif (index < 0 || index > _size) \n\t\t\tthrow NotSuchElementException();\n\t\tNode<E> * node = new Node<E>();\n\t\tnode->element = e;\n\t\tNode<E> * prev_node = tail;\n\t\tNode<E> * next_node = 0;\n\t\tNode<E> * next_next_node;\n\t\tif (index != _size)\n\t\t\tget_node(index, prev_node, next_node, next_next_node);\n\t\tif (next_node != 0)\n\t\t\tprev_node = next_node->prev_node(next_next_node);\n\t\tnode->update_prev_and_next_node(prev_node, next_node);\n\t\tif (prev_node != 0) prev_node->update_next_node(next_node, node);\n\t\tif (next_node != 0) next_node->update_prev_node(prev_node, node);\n\t\tif (prev_node == 0) head = node;\n\t\tif (next_node == 0) tail = node;\n\t\t++ _size;\n\t}\n\n\tvoid addFirst (const E & e) {\n\t\tadd(0, e);\n\t}\n\n\tvoid addLast (const E & e) {\n\t\tadd(_size, e);\n\t}\n\n\t// copy and clear\n\npublic:\n\tvoid clear() {\n\t\twhile (_size > 0) removeFirst();\n\t}\n\n\tvoid addAll(const LinkedList & list, int index=-1) {\n\t\tif (index == -1) index = _size;\n\t\tNode<E> * node = list.head;\n\t\tNode<E> * prev_node = 0;\n\t\tI(i, list._size) {\n\t\t\tadd(index + i, node->element);\n\t\t\tNode<E> * next_node = node->next_node(prev_node);\n\t\t\tprev_node = node;\n\t\t\tnode = next_node;\n\t\t}\n\t}\n\n\tLinkedList(const LinkedList & list) : _size(0), head(0), tail(0) {\n\t\taddAll(list);\n\t}\n\n\tLinkedList & operator = (const LinkedList & list) {\n\t\tclear();\n\t\taddAll(list);\n\t\treturn *this;\n\t}\n\n\t~LinkedList() {\n\t\tclear();\n\t}\n\n\tint indexOf(const E & e) const {\n\t\tNode<E> * node = head;\n\t\tNode<E> * prev_node = 0;\n\t\tI(i, _size) {\n\t\t\tif (node->element == e) return i;\n\t\t\tNode<E> * next_node = node->next_node(prev_node);\n\t\t\tprev_node = node;\n\t\t\tnode = next_node;\n\t\t}\n\t\treturn -1;\n\t}\n\n\tint lastIndexOf(const E & e) const {\n\t\tNode<E> * node = tail;\n\t\tNode<E> * next_node = 0;\n\t\tI(i, _size) {\n\t\t\tif (node->element == e) return i;\n\t\t\tNode<E> * prev_node = node->prev_node(next_node);\n\t\t\tnext_node = node;\n\t\t\tnode = prev_node;\n\t\t}\n\t\treturn -1;\n\t}\n\n\t// element-oriented ops\n\n\tbool contains(const E & e) const {\n\t\treturn indexOf(e) >= 0;\n\t}\n\n\tvoid removeFirstOccurrence(const E & e) {\n\t\tint index = indexOf(e);\n\t\tif (index == -1)\n\t\t\tthrow NotSuchElementException();\n\t\tremove(index);\n\t}\n\n\tvoid removeLastOccurrence(const E & e) {\n\t\tint index = lastIndexOf(e);\n\t\tif (index == -1)\n\t\t\tthrow NotSuchElementException();\n\t\tremove(index);\n\t}",
+            1594608291.9989154,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "A.5 (C++)",
+            "test",
+            "#include <map>\nusing namespace std;\n\n#define HT map",
+            1594975313.8418305,
+            0,
+            "main.cpp: In function ‘int main()’:\nmain.cpp:8:5: error: missing template arguments before ‘map’\n  HT map;\n     ^\nmain.cpp:13:5: error: missing template arguments before ‘[’ token\n  map[key1] = value1;\n     ^\nmain.cpp:18:5: error: missing template arguments before ‘[’ token\n  map[key2] = value2;\n     ^\nmain.cpp:23:5: error: missing template arguments before ‘[’ token\n  map[key3] = value3;\n     ^\nmain.cpp:28:5: error: missing template arguments before ‘[’ token\n  map[key4] = value4;\n     ^\nmain.cpp:30:13: error: missing template arguments before ‘.’ token\n  cout << map.size() << endl;\n             ^\nmain.cpp:31:18: error: missing template arguments before ‘[’ token\n  cout << (int)map[key1] << endl;\n                  ^\nmain.cpp:32:21: error: missing template arguments before ‘[’ token\n  cout << (string)map[key2] << endl;\n                     ^\nmain.cpp:33:21: error: missing template arguments before ‘[’ token\n  cout << (string)map[key3] << endl;\n                     ^\nmain.cpp:34:18: error: missing template arguments before ‘[’ token\n  cout << (int)map[key4] << endl;\n                  ^\n"
+        ]
+    ],
+    "table_name": "答案"
+}

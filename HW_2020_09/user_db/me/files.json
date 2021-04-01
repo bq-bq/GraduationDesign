@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1585356053.8772302,
+    "field_names": [
+        "file"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "me/change_pwd.py"
+        ],
+        [
+            "me/login_panel.py"
+        ],
+        [
+            "me/upload_table.py"
+        ]
+    ],
+    "table_name": "files"
+}

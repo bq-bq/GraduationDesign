@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595486657.8484862,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <vector>\n#include <string>\n#include <stdexcept>\n#include <iostream>\nusing namespace std;\n\n#define I(i,n) for (size_t i = 0; i < n; ++ i)\n\nclass NoSuchKeyException {};\nclass Type{\npublic:\n    string key1;\n    int key2;\n\n    Type():key1(string()),key2(0){}\n    Type(int num):key2(num),key1(string()){}\n    Type(string str):key2(0),key1(str){}\n    Type(const Type& other) : key1(other.key1), key2(other.key2){}\n\n    bool operator== (const Type& other) const{\n        if(key1 != other.key1) return false;\n        if(key2 != other.key2) return false;\n        return true;\n    }\n    Type& operator=(const Type& other){\n        this->key1 = other.key1;\n        this->key2 = other.key2;\n        return *this;\n    }\n\n    operator string() { return key1; }\n    operator int(){ return key2; }\n};\n\nstring _itos(int num){\n    string res;\n    while(num > 0){\n        res.push_back(num%10+'0');\n        num /= 10;\n    }\n    int size = res.length();\n    I(i, size/2){\n        char tmp = res[i];\n        res[i] = res[size-1-i];\n        res[size-1-i] = tmp;\n    }\n    return res;\n}\n\nsize_t circular_shift(size_t bits, int shift_bits) {\n    const int num_bits = 8 * sizeof(size_t);\n    shift_bits = shift_bits % num_bits;\n    return bits << shift_bits | bits >> (num_bits - shift_bits);\n}\n\nsize_t hash_function(Type key){\n    string tmp_key;\n    if(key.key2 == 0) tmp_key = (string)key;\n    else tmp_key = _itos((int)key);\n    size_t code = 0;\n    I(i, tmp_key.size())\n        code ^= circular_shift(tmp_key[i], i * 5);\n    return code;\n}\n\nclass HT{\nprivate:\n    class Tuple{\n    public:\n        Type key;\n        Type val;\n        bool in_use;\n        Tuple():in_use(false) {}\n        Tuple(const Tuple& other):key(other.key),val(other.val),in_use(other.in_use){}\n        \n        Tuple & operator=(const Tuple& other){\n            this->key = other.key;\n            this->val = other.val;\n            this->in_use = other.in_use;\n            return *this;\n        }\n    };\n\n    vector<Tuple> tuples;\n    size_t _size;\n\n    size_t canonical_index(Type key) const {\n        size_t hash_code = hash_function(key);\n        return hash_code % tuples.size();\n    }\n\n    size_t indexOfKey(Type key) const{\n        size_t index = canonical_index(key);\n        while (true) { \n            if (!tuples[index].in_use) return index;\n            if (tuples[index].key == key) return index;\n            index = (index + 1) % tuples.size();\n        }\n    }\n\npublic:\n    HT(): _size(0){\n        tuples.resize(2);\n    }\n\n    size_t size() const { return _size; }\n\n    Type & operator [] (Type key){\n        size_t index = indexOfKey(key);\n        if (!tuples[index].in_use) {\n            tuples[index].key = key;\n            ++_size;\n            if (2 * _size > tuples.size())\n                _double_tuples();\n            tuples[index].in_use = true;\n        }\n        return tuples[index].val;\n    }\n\n    void clear() {\n        I(i, tuples.size())\n            tuples[i].in_use = false;\n        _size = 0;\n    }\n\n    void _double_tuples() {\n        vector<Tuple> non_empty_tuples;\n        I(i, tuples.size())\n            if (tuples[i].in_use)\n                non_empty_tuples.push_back(tuples[i]);\n        clear();\n        tuples.resize(tuples.size() * 2);\n        I(i, non_empty_tuples.size()){\n            size_t index = indexOfKey(non_empty_tuples[i].key);\n            tuples[index] = non_empty_tuples[i];\n            ++_size;\n        }\n        ++_size;\n    }\n};",
+            "# 答案正确",
+            1594951200,
+            1596200400,
+            100,
+            1595486646.4661183
+        ]
+    ]
+}

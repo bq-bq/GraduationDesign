@@ -31,7 +31,7 @@
 
 ***
 
-### 中期报告
+### 中期报告 3.8
 
 #### 目前已经完成的工作
 
@@ -82,3 +82,30 @@
 
     <img src=".\src\run.png" style="zoom:40%;" />
 
+------
+
+### 中期报告 4.1
+
+#### 目前已完成的工作
+
+- 因为原来HW_2020_09的servo中core使用的pyramid，waitress，container库在QPython均无法使用，修改为website中的core2。并且进行一部分函数的修改，使得服务器能够正常地运行。
+- 在安卓系统中，使用QPython进行服务器的搭建以及尝试运行。（目前可以在安卓系统中打开服务器并且在pc端获取该页面）
+
+#### 后期拟完成的研究工作
+
+- 相关的数据库的操作
+- 进行毕业论文的编写
+
+#### 运行示例
+
+- Android平台的运行
+
+  <img src=".\src\android_run.png" style="zoom:50%;" />
+
+- Android本地的网页
+
+  <img src=".\src\android_website.png" style="zoom:50%;" />
+
+- PC端获取的网页
+
+  <img src=".\src\pc_website.png" style="zoom:50%;" />

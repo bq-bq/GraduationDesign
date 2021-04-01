@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1608035285.8929007,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.3 Subsequence 2",
+            "<h3>Longest common subsequence problem (最长公共字串)</h3>\n\n如果字符串一的所有字符按其在字符串中的顺序出现在另外一个字符串二中，则字符串一称之为字符串二的子串。注意，并不要求子串（字符串一）的字符必须连续出现在字符串二中。请编写一个函数，输入两个字符串，求它们的最长公共子序列，并打印出最长公共子序列。<br><br>\n\n例如：输入两个字符串BDCABA和ABCBDAB，字符串BCBA和BDAB都是是它们的最长公共子序列，则输出BDAB。<br><br>\n\n当然这里，我们也是要先找递归的。假设我的两个sequence，一个是X，长度为n；另一个是Y，长度为m。\n现在假设我有两个point，一个是i，指在X的最后一个元素上，另一个是j，指在Y的最后一个元素上。我们的递归应该是分三种情况的。\n<ol>\n<li>如果X[i] == Y[j] 那么LCS(X[i],Y[j]) = X[i] + LCS(X[i-1],Y[j-1])<br>\n这个很明显，因为发现了一组公共元素，就看剩下的有多少公共元素。</li>\n\n<li>如果X[i] != Y[j] 那么 LCS(X[i],Y[j]) = max_len( LCS(X[i-1], Y[j]), LCS(X[i], Y[j-1]) )<br>\n这个其实也很容易相同，就是如果发现不同的，就去掉X或Y的最后一个，然后和另一个完整的比较，这样去掉X还是Y的最后一个，就有两种可能，所以就是要找中间max的一个。</li>\n\n<li>如果 i=0 或者 j=0，就return ''<br>\n因为有一个sequence已经完了。</li>\n\n</ol>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>\nBDCABA\nABCBDAB\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>\nBDAB\n</pre>",
+            "struct Result\n{\n\tchar LCS[100];\n};\n\n#include \"source.c\"\n\n#include <stdio.h>\n\nint main() {\n\tchar text1[100];\n\tchar text2[100];\n\tscanf(\"%s\", text1);\n\tscanf(\"%s\", text2);\n\t\n\tstruct Result result = LCS(text1, text2);\n\tprintf(\"%s\", result.LCS);\n}",
+            "#include<string.h>\n#define max(a,b) (a > b ? a : b)\n\nstruct Result re;\nint dp[1005][1005];\nint memory = 0;\nvoid longestCommonSubsequence(char a[], char b[])\n{\n        int n1 = strlen(a);\n        int n2 = strlen(b);\n        for(int i = 1;i < n1+1;i++)\n        for(int j = 1;j < n2+1;j++)\n        {\n            if(a[i-1] == b[j-1])\n            dp[i][j] = 1 + dp[i-1][j-1];\n            else\n            dp[i][j] = max(dp[i-1][j],dp[i][j-1]);\n        }\n}\nvoid PrintCommonSubsequence(char a[], char b[])\n{\n    int n1 = strlen(a);\n    int n2 = strlen(b);\n    int ans = 0;\n    while(n1 != 0 && n2 != 0)\n    {\n        if(a[n1-1] == b[n2-1])\n        {\n            re.LCS[ans++] = a[n1-1];\n            n1--;\n            n2--;\n        }\n        else if(dp[n1-1][n2] < dp[n1][n2-1])\n        n2--;\n        else if(dp[n1][n2-1] <= dp[n1-1][n2])\n        n1--;\n    }\n\tmemory = ans;\n}\n\t\nstruct Result LCS(char a[], char b[]) {\n\tlongestCommonSubsequence(a, b);\n\tPrintCommonSubsequence(a, b);\n\tfor (int i = memory - 1; i > (memory-1)/2; -- i) {\n\t\tchar temp = re.LCS[i];\n\t\tre.LCS[i] = re.LCS[memory-1-i];\n\t\tre.LCS[memory-1-i] = temp;\n\t}\n\treturn re;\n}\n",
+            "# 答案不正确\n\n# 随机输入:\nCAADBFB\nCCAEDBFDBF\n\n\n# 参考答案:\nCADBFB\n\n# 我的答案:\nBFBDA",
+            1607654400,
+            1608210000,
+            100,
+            1607928796.64722
+        ]
+    ]
+}

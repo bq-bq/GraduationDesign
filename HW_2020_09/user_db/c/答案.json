@@ -1,0 +1,152 @@
+{
+    "__update_time__": 1607731164.053303,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "0.1",
+            "c",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"Hello world\\n\");\n}",
+            1600772694.420416,
+            0,
+            "clang: warning: argument unused during compilation: '-pie' [-Wunused-command-line-argument]\nmain.c:1:10: fatal error: 'source' file not found\n#include \"source\"\n         ^~~~~~~~\n1 error generated.\n"
+        ],
+        [
+            "0.1 简介1",
+            "c",
+            "#include <stdio.h>\n\nint main() {\n\tprintf(\"Hello world\\n\");\n}\n",
+            1600924875.0700345,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "0.5 简介5",
+            "c",
+            "",
+            1600924456.285017,
+            0,
+            "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o: In function `_start':\n(.text+0x20): undefined reference to `main'\ncollect2: error: ld returned 1 exit status\n"
+        ],
+        [
+            "0.4 简介4",
+            "c",
+            "",
+            1600924459.305999,
+            0,
+            "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o: In function `_start':\n(.text+0x20): undefined reference to `main'\ncollect2: error: ld returned 1 exit status\n"
+        ],
+        [
+            "5.5 Characters",
+            "c",
+            "#include <stdio.h>\n\nint main() {\n\tchar first = getchar();\n\tchar last = getchar();\n\tfor (int i = 0; i < last - first + 1; ++ i) {\n\t\tputchar(first + i);\n\t\tif ((i + 1) % 10 == 0) putchar('\\n');\n\t}\n}",
+            1604295282.2703822,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.4 GCD",
+            "c",
+            "#include <stdio.h>\n\n/*\nint find_gcd_slower(int x, int y) {\n\tint min = (x < y ? x : y);\n\tfor (int i = 0; i < min; ++ i) {\n\t\tint div = min - i;\n\t\tif (x % div == 0 && y % div == 0) return div;\n\t}\n}\n*/\n\nint find_gcd_faster(int x, int y) {\n\twhile (x != y) {\n\t\tif (x > y) x -= y;\n\t\telse y -= x;\n\t}\n\treturn x;\n}\n\nvoid test_find_gcd() {\n\tint num1, num2;\n\tscanf(\"%d %d\", &num1, &num2);\n\tprintf(\"%d\\n\", find_gcd_faster(num1, num2));\n}\n\nint main() {\n\tfor (int i = 0; i < 5; ++ i) \n\t\ttest_find_gcd();\n}",
+            1604148902.173554,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.2 Reverse",
+            "c",
+            "#include <stdio.h>\n\nint reverse(int num) {\n\tint reversed = 0;\n\twhile (num > 0) {\n\t\treversed = reversed * 10 + num % 10;\n\t\tnum /= 10;\n\t}\n\treturn reversed;\n}\n\nvoid test_reverse() {\n\tint num;\n\tscanf(\"%d\", &num);\n\tprintf(\"%d\\n\", reverse(num));\n}\n\nint main() {\n\tfor (int i = 0; i < 10; ++ i) \n\t\ttest_reverse();\n}",
+            1604149547.8178825,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.3 Pattern",
+            "c",
+            "#include <stdio.h>\n\nint main() {\n\tint num;\n\tscanf(\"%d\", &num);\n\tfor (int i = 0; i < num; ++ i) {\n\t\tfor (int j = 0; j < num - 1 - i; ++ j) putchar(' ');\n\t\tfor (int j = 0; j < i + 1; ++ j) printf(\"%d\", i + 1 - j);\n\t\tputchar('\\n');\n\t}\n}",
+            1604143939.2199564,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.6 Prime",
+            "c",
+            "#include <stdio.h>\n\nint is_prime(int num) {\n\tfor (int i = 2; i <= num / 2; ++ i)\n\t\tif (num % i == 0) return 0;\n\treturn 1;\n}\n\nint find_next_prime(int start_from) {\n\twhile (1) {\n\t\tif (is_prime(start_from)) return start_from;\n\t\t++ start_from;\n\t}\n}\n\nint main() {\n\tint nums;\n\tscanf(\"%d\", &nums);\n\tint next_start = 2;\n\tfor (int i = 0; i < nums; ++ i) {\n\t\tint next_prime = find_next_prime(next_start);\n\t\tprintf(\"%d \", next_prime);\n\t\tnext_start = next_prime + 1;\n\t\tif ((i + 1) % 10 == 0) putchar('\\n');\n\t}\n}",
+            1604149306.6253376,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.7 Pattern",
+            "c",
+            "#include <stdio.h>\n\nint main() {\n\tint n;\n\tscanf(\"%d\", &n);\n\tfor (int i = 0; i < n; ++ i) {\n\t\tfor (int j = 0; j < n - 1 - i; ++ j) putchar('0');\n\t\tfor (int j = 0; j < i + 1; ++ j) putchar('1');\n\t\tputchar('\\n');\n\t}\n}",
+            1604144929.0172927,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.8 Emirp",
+            "c",
+            "#include <stdio.h>\n\nint is_prime(int num) {\n\tfor (int i = 2; i <= num / 2; ++ i)\n\t\tif (num % i == 0) return 0;\n\treturn 1;\n}\n\nint reverse(int num) {\n\tint reversed = 0;\n\twhile (num > 0) {\n\t\treversed = reversed * 10 + num % 10;\n\t\tnum /= 10;\n\t}\n\treturn reversed;\n}\n\nint find_next_emirp(int start_from) {\n\twhile (1) {\n\t\tif (is_prime(start_from) && is_prime(reverse(start_from)))\n\t\t\treturn start_from;\n\t\t++ start_from;\n\t}\n}\n\nint main() {\n\tint nums;\n\tscanf(\"%d\", &nums);\n\tint next_start = 2;\n\tfor (int i = 0; i < nums; ++ i) {\n\t\tint next_emirp = find_next_emirp(next_start);\n\t\tprintf(\"%d \", next_emirp);\n\t\tnext_start = next_emirp + 1;\n\t\tif ((i + 1) % 10 == 0) putchar('\\n');\n\t}\n}",
+            1604149533.5853002,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.9 Palindromic prime",
+            "c",
+            "#include <stdio.h>\n\nint is_prime(int num) {\n\tfor (int i = 2; i <= num / 2; ++ i)\n\t\tif (num % i == 0) return 0;\n\treturn 1;\n}\n\nint reverse(int num) {\n\tint reversed = 0;\n\twhile (num > 0) {\n\t\treversed = reversed * 10 + num % 10;\n\t\tnum /= 10;\n\t}\n\treturn reversed;\n}\n\nint find_next_palindromic_prime(int start_from) {\n\tfor (int i = start_from; ; ++ i) {\n\t\tif (i == reverse(i) && is_prime(i)) return i;\n\t}\n}\n\nint main() {\n\tint nums;\n\tscanf(\"%d\", &nums);\n\tint next_start = 2;\n\tfor (int i = 0; i < nums; ++ i) {\n\t\tint palindromic_prime = find_next_palindromic_prime(next_start);\n\t\tprintf(\"%d \", palindromic_prime);\n\t\tnext_start = palindromic_prime + 1;\n\t\tif ((i + 1) % 10 == 0) putchar('\\n');\n\t}\n}",
+            1604150470.904269,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "5.10 Flag",
+            "c",
+            "#include <stdio.h>\n\nint main() {\n\tint height, weight;\n\tscanf(\"%d %d\", &height, &weight);\n\tfor (int h = 0; h < height; ++ h) {\n\t\tfor (int w = 0; w < weight; ++ w) {\n\t\t\tif (h < height / 2 && w < weight / 2) {\n\t\t\t\tif ((h + w) % 2 == 0) putchar('*');\n\t\t\t\telse putchar(' ');\n\t\t\t}\n\t\t\telse {\n\t\t\t\tif (h % 2 == 0) putchar('=');\n\t\t\t\telse putchar(' ');\n\t\t\t}\n\t\t}\n\t\tputchar('\\n');\n\t}\n}",
+            1604146680.447299,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-midterm-3",
+            "c",
+            "#include <stdio.h>\n\nint main() {\n\tint n;\n\tscanf(\"%d\", &n);\n\tfor (int i = 0; i < n / 2; ++ i) {\n\t\tfor (int j = 0; j < n / 2; ++ j) {\n\t\t\tputchar('-');\n\t\t}\n\t\tfor (int j = 0; j < n / 2; ++ j) {\n\t\t\tputchar('|');\n\t\t}\n\t\tfor (int j = 0; j < i; ++ j) {\n\t\t\tputchar('*');\n\t\t}\n\t\tputchar('\\\\');\n\t\tfor (int j = 0; j < n - 1 - i * 2 - 1; ++ j) {\n\t\t\tputchar('+');\n\t\t}\n\t\tputchar('/');\n\t\tfor (int j = 0; j < i; ++ j) {\n\t\t\tputchar('*');\n\t\t}\n\t\tputchar('\\n');\n\t}\n\tfor (int i = 0; i < n / 2; ++ i) {\n\t\tfor (int j = 0; j < n / 2; ++ j) {\n\t\t\tputchar('|');\n\t\t}\n\t\tfor (int j = 0; j < n / 2; ++ j) {\n\t\t\tputchar('-');\n\t\t}\n\t\tfor (int j = 0; j < n / 2 - i - 1; ++ j) {\n\t\t\tputchar('*');\n\t\t}\n\t\tputchar('/');\n\t\tfor (int j = 0; j < i * 2; ++ j) {\n\t\t\tputchar('+');\n\t\t}\n\t\tputchar('\\\\');\n\t\tfor (int j = 0; j < n / 2 - i - 1; ++ j) {\n\t\t\tputchar('*');\n\t\t}\n\t\tputchar('\\n');\n\t}\n}",
+            1605065169.7412264,
+            53,
+            "# 答案不正确\n\n# 随机输入:\n10\n\n\n# 参考答案:\n-----|||||\\\\\\\\\\\\\\\\\\/\n-----|||||/\\\\\\\\\\\\\\//\n-----|||||//\\\\\\\\\\///\n-----|||||///\\\\\\////\n-----|||||////\\/////\n|||||-----/////\\////\n|||||-----////\\\\\\///\n|||||-----///\\\\\\\\\\//\n|||||-----//\\\\\\\\\\\\\\/\n|||||-----/\\\\\\\\\\\\\\\\\\\n\n\n# 我的答案:\n-----|||||\\++++++++/\n-----|||||*\\++++++/*\n-----|||||**\\++++/**\n-----|||||***\\++/***\n-----|||||****\\/****\n|||||-----****/\\****\n|||||-----***/++\\***\n|||||-----**/++++\\**\n|||||-----*/++++++\\*\n|||||-----/++++++++\\\n"
+        ],
+        [
+            "6.10 Character pattern 3",
+            "c",
+            "#include <stdio.h>\n\nint get_bits(int i, int lines) {\n\tint s = 0;\n\tfor (int j = 0; j < 32; j += 2 * (lines - 1)) {\n\t\tif (i + j < 32)\n\t\t\ts |= (1U << 31 >> (j + i));\n\t\tif (j + 2 * (lines - 1) - i < 32)\n\t\t\ts |= (1U << 31 >> (j + 2 * (lines - 1) - i));\n\t}\n\treturn s;\n}",
+            1606230677.3310366,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.6 0-1 Backpack",
+            "c",
+            "int knapsack(int p[], int w[], int maxWeight) {\n\tint A[11][100];\n\tfor (int j = 0; j < 11; ++ j) A[j][0] = 0;\n\tfor (int y = 0; y <= maxWeight; ++ y) A[0][y] = 0;\n\tfor (int y = 1; y <= maxWeight; ++ y) {\n\t\tfor (int j = 1; j < 11; ++ j) {\n\t\t\tA[j][y] = A[j-1][y];\n\t\t\tif (w[j-1] <= y) {\n\t\t\t\tint p2 = p[j-1] + A[j-1][y-w[j-1]];\n\t\t\t\tA[j][y] = (A[j][y] > p2 ? A[j][y] : p2);\n\t\t\t}\n\t\t}\n\t}\n\treturn A[10][maxWeight];\n}",
+            1607731162.9393587,
+            50,
+            "# 答案不正确\n\n# 随机输入:\n    15     7    17    10    16    13     5    20    14     9\n    15     9    18    10     7     8    16     5    14    19\n51\n\n\n# 参考答案:\n10\n\n# 我的答案:\n78"
+        ]
+    ],
+    "table_name": "答案"
+}

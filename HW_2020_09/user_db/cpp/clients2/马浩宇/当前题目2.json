@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1595477083.118665,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.4 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">参考</span><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 1rem;\">答案有200行，截止时间延长4天。</span></p><p>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap.put(key1, value1);\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap.put(key2, value2);\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap.put(key3, value3);\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap.put(key4, value4);\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <vector>\nusing namespace std;\n\nstring i_to_string(const int & a) {\n\tstring res;\n\tint temp = a;\n\twhile(temp > 0) {\n\t\tint num = temp % 10;\n\t\tres.push_back(num + '0');\n\t\ttemp = temp / 10;\n\t}\n\tfor(int i = 0 ; i < res.size() / 2 ; i ++){\n\t\tchar a = res[i];\n\t\tres[i] = res[res.size() - i - 1];\n\t\tres[res.size() - i - 1] = a;\n\t}\n\treturn res;\n}\n\n\nclass KeyAndValue\n{\nprivate:\n\tint key_i;\n\tstring key_s;\npublic:\n\tKeyAndValue() : key_i(0), key_s(string()) {}\n\tKeyAndValue(int a) : key_i(a), key_s(string()) {}\n\tKeyAndValue(string s) : key_i(0), key_s(s) {}\n\n\toperator int() { return key_i; } \n\toperator string() { return key_s; }\n\n\toperator int() const { return key_i; } \n \toperator string() const { return key_s; } \n\n\tbool operator == (const KeyAndValue & other) {\n\t\tif(key_i != other.key_i || key_s != other.key_s) return false;\n\t\telse return true;\n\t}\n};\n\nclass element\n{\nprivate:\n\tKeyAndValue key;\n\tKeyAndValue value;\npublic:\n\tbool in_use;\n\tKeyAndValue key1() const{ return key;}\n\tKeyAndValue value1() const{ return value;}\n\tKeyAndValue & key2() {return key;}\n\tKeyAndValue & value2() { return value;}\n\n\telement() : in_use(false) {}\n\telement(KeyAndValue a, KeyAndValue b): key(a), value(b), in_use(true) {}\n};\n\nsize_t circular_shift(size_t bits, int shift_bits) {\n\tconst int num_bits = 8 * sizeof(size_t);\n\tshift_bits = shift_bits % num_bits;\n\treturn bits << shift_bits | bits >> (num_bits - shift_bits);\n}\n\nsize_t hash_function (const KeyAndValue & key) {\n\tstring temp;\n\tif((int)key == 0) temp = string(key);\n\telse temp = i_to_string((int)key);\n\tsize_t code = 0;\n\tfor(int i = 0 ; i < temp.size() ; i++) {\n\t\tcode ^= circular_shift(temp[i], i * 5);\n\t}\n\treturn code;\n}\n\n\nclass HT\n{\nprivate:\n\tvector<element> tuples;\n\tsize_t _size;\n\n\tsize_t indexOfKey1(const KeyAndValue & key) const {\n\t\tsize_t hash_code = hash_function(key);\n\t\treturn hash_code % tuples.size();\n\t}\n\n\tsize_t indexOfKey(const KeyAndValue & key) const {\n\t\tsize_t index = indexOfKey1(key);\n\t\twhile(true) {\n\t\t\tif(! tuples[index].in_use) return index;\n\t\t\tif(tuples[index].key1() == key) return index;\n\t\t\tindex = (index + 1) % tuples.size();\n\t\t}\n\t}\npublic:\n\tHT() : _size(0) {\n\t\ttuples.resize(2);\n\t}\n\n\tvoid put (KeyAndValue a, KeyAndValue b) {\n\t\tsize_t index = indexOfKey(a);\n\t\ttuples[index].value2() = b;\n\t\ttuples[index].key2() = a;\n\t\tif(tuples[index].in_use == 1) return;\n\t\t_size ++;\n\t\ttuples[index].in_use = 1;\n\t\tif(2 * _size > tuples.size())\n\t\t\t_double_tuples();\n\t}\n\n\tvoid clear() {\n\t\tfor(int i = 0; i < tuples.size() ; i ++) {\n\t\t\ttuples[i].in_use = 0;\t\n\t\t}\n\t\t_size = 0;\n\t}\n\n\tvoid _double_tuples() {\n\t\tvector<element> non_empty_tuples;\n\t\tfor(int i = 0 ; i < tuples.size() ; i ++) {\n\t\t\tif(tuples[i].in_use)\n\t\t\t\tnon_empty_tuples.push_back(tuples[i]);\n\t\t}\n\t\tclear();\n\t\ttuples.resize(tuples.size() * 2);\n\t\tclear();\n\t\tfor (int i = 0 ; i < non_empty_tuples.size() ; i ++)\n\t\t\tput(non_empty_tuples[i].key1(), non_empty_tuples[i].value1());\n\t}\n\n\tKeyAndValue operator [] (const KeyAndValue & a) {\n\t\tsize_t index = indexOfKey(a);\n\t\treturn tuples[index].value1();\n\t}\n\n\tsize_t size() { return _size; }\n};",
+            "# 答案正确",
+            1594951200,
+            1595854800,
+            100,
+            1595471742.2982216
+        ]
+    ]
+}

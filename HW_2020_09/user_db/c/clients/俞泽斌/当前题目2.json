@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1607954317.827615,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "9.4 Matrix multiplication",
+            "矩阵链相乘，求最小的乘法次数<br>\n<br>\n\nGiven a sequence of matrices, we want to find the most efficient way to multiply these matrices together. The problem is not actually to perform the multiplications, but merely to decide in which order to perform the multiplications.<br>\n\nWe have many options because matrix multiplication is associative. In other words, no matter how we parenthesize the product, the result will be the same. For example, if we had four matrices A, B, C, and D, we would have:<br>\n(ABC)D = (AB)(CD) = A(BCD) = A(BC)D = ....<br>\n<br>\n\nHowever, the order in which we parenthesize the product affects the number of simple arithmetic operations needed to compute the product, or the efficiency. For example, suppose A is a 10 × 30 matrix, B is a 30 × 5 matrix, and C is a 5 × 60 matrix. Then,<br>\n(AB)C = (10×30×5) + (10×5×60) = 1500 + 3000 = 4500 operations<br>\nA(BC) = (30×5×60) + (10×30×60) = 9000 + 18000 = 27000 operations.<br>\n<br>\n\nClearly the first method is the more efficient. Now that we have identified the problem, how do we determine the optimal parenthesization of a product of n matrices? We could go through each possible parenthesization (brute force), but this would require time exponential in the number of matrices, which is very slow and impractical for large n. The solution, as we will see, is to break up the problem into a set of related subproblems. By solving subproblems one time and reusing these solutions many times, we can drastically reduce the time required. This is known as dynamic programming.<br>\n<br>\n\n先形式化一下我们的input，矩阵链{A<sub>1</sub>，A<sub>2</sub>，...，A<sub>n</sub>}，其中对于矩阵A<sub>i</sub>，它是一个P<sub>i-1</sub> * P<sub>i</sub>的矩阵。m[i,j] 表示{A<sub>i</sub>,A<sub>i+1</sub>,..., A<sub>j</sub>}相乘的最小的乘法次数<br>\n<br>\n\n这个递归的思路其实和第一个问题有点类似，先看怎么递归。<br>\n<br>\n\n首先我们要找出一个点来分隔这个链，相当于这个点把这个问题转换为了 该点前一部分的矩阵链的最小的乘法次数问题和该点后一部分的矩阵链的最小的乘法次数问题。<br>\n<br>\n\n但是这个点怎么找呢？和第一个例子一样，我们直接遍历的来找。<br>\n<br>\n\n所以我们的递归应该是这样的：<br>\nm[i,j] = min<sub>i&lt;=k&lt;=j</sub> (m[i,k] + m[k+1,j] + P<sub>i-1</sub>*P<sub>k</sub>*P<sub>j</sub>)<br>\n<br>\n\n当然，这是对于i!=j的情况，当i==j的时候呢？显然 是0了，因为我们的矩阵链就一个矩阵。<br>\n<br>\n\n<b><u>EXAMPLE INPUT</u></b>\n<pre>9     6    10    11     8     4     5     7    12    13\n</pre>\n\n<b><u>EXAMPLE OUTPUT</u></b>\n<pre>2816\n</pre>",
+            "#include \"source.c\"\n#include <stdio.h>\n\nint main() {\n\tint dimensions[10];\n\tfor (int i = 0; i < 10; ++ i) {\n\t\tscanf(\"%d\", &dimensions[i]);\n\t}\n\tprintf(\"%d\", getMultiplications(9, dimensions));\n}",
+            "int dp[10][10];//从i到j相乘所需要的最少计算次数 \nint memeo[10][10];//储存从i到j在哪里截断 \nint getMultiplications(int n,int *dimensions){\n\tint i,j,k,l,tmp;\n\tfor (i = 0; i <=n; ++ i) {\n\t\tdp[i][i]=0;\n\t\tmemeo[i][i]=i;\n\t}\n\tfor(l=2;l<=n;l++){//遍历长度从2到n \n\t\tfor(i=1;i<=n-l+1;i++){\n\t\t\tj=i+l-1;\n\t\t\tdp[i][j]=100000000;\n\t\t\tfor(k=i;k<j;k++){//在k处截断，分成i~k，k+1~j，两部分 \n\t\t\t\ttmp=dp[i][k]+dp[k+1][j]+dimensions[i-1]*dimensions[k]*dimensions[j];\n\t\t\t\tif(tmp<dp[i][j]){\n\t\t\t\t\tdp[i][j]=tmp,memeo[i][j]=k; \n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\treturn tmp;\n}",
+            "# 答案不正确\n\n# 随机输入:\n8     8     9     11    14    15    4     13    8     9     \n\n# 参考答案:\n3388\n\n# 我的答案:\n3644",
+            1607654400,
+            1608210000,
+            50,
+            1607954315.8580885
+        ]
+    ]
+}

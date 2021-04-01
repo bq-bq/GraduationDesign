@@ -1,0 +1,17 @@
+{
+    "__update_time__": 1583851643.540523,
+    "field_names": [
+        "file"
+    ],
+    "field_types": [
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "q/code.py"
+        ]
+    ],
+    "table_name": "files"
+}

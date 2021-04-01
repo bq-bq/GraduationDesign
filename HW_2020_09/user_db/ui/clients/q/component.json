@@ -1,0 +1,33 @@
+{
+    "__update_time__": 1587897327.171469,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "设置编辑器",
+            "{\"name\":\"设置编辑器\",\"tag\":\"\",\"text\":\"\",\"init\":\"config_editor_obj\",\"files\":[\"ui/config_editor.py\"],\"data\":[],\"vars\":[\"item\"],\"events\":[],\"class\":{},\"attr\":{\"config_column\":[],\"config_names\":[],\"item_name\":[],\"key_column\":[],\"options\":[]},\"style\":{}}",
+            ""
+        ],
+        [
+            "代码框",
+            "{\"name\":\"代码框\",\"tag\":\"\",\"text\":\"\",\"init\":\"code_obj\",\"files\":[\"q/code.py\"],\"data\":[\"names\"],\"vars\":[\"code\"],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}}",
+            ""
+        ],
+        [
+            "登陆卡片",
+            "{\"name\": \"\\u767b\\u9646\\u5361\\u7247\", \"tag\": \"\", \"text\": \"\", \"init\": \"ui_login_card_py\", \"files\": [\"ui/login_card.py\"], \"data\": [], \"vars\": [], \"events\": [], \"class\": {\"\\u989c\\u8272\": [\"primary\", \"secondary\", \"success\", \"danger\", \"warning\", \"info\", \"light\", \"dark\"]}, \"attr\": {\"\\u5361\\u7247\\u6587\\u5b57\": [], \"\\u5361\\u7247\\u9898\\u76ee\": [], \"\\u6309\\u94ae\\u6587\\u5b57\": []}, \"style\": {\"margin\": [], \"width\": []}, \"from\": \"ui\"}",
+            ""
+        ]
+    ],
+    "table_name": "component"
+}

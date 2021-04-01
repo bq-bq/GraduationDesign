@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1594868837.6788726,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.2 (C++)",
+            "<p>In this exercise, please add a member function, removeAll, into the linked-list class.</p><p># 输入</p><p>9<br><span style=\"font-size: 1rem;\">77 57 70 21 31 95 14 77 95<br></span><span style=\"font-size: 1rem;\">77</span></p><p><span style=\"font-size: 1rem;\"># 输出</span><br></p><p>57<br><span style=\"font-size: 1rem;\">70<br></span><span style=\"font-size: 1rem;\">21<br></span><span style=\"font-size: 1rem;\">31<br></span><span style=\"font-size: 1rem;\">95<br></span><span style=\"font-size: 1rem;\">14<br></span><span style=\"font-size: 1rem;\">95</span></p><div><br></div>",
+            "#include <iostream>\nusing namespace std;\n\ntemplate <typename E>\nstruct Node\n{\n\tE element;\n\tNode * next_node;\n\tNode * prev_node;\n};\n\n#define I(i,n) for (int i = 0; i < n; ++ i)\n\nclass NotSuchElementException {};\n\ntemplate <typename E>\nclass LinkedList\n{\n\tint _size;\n\tNode<E> * head;\n\tNode<E> * tail;\n\npublic:\n\tLinkedList() : _size(0), head(0), tail(0) {}\n\n\tint size() const { return _size; }\n\nprivate:\n\tNode<E> * get_node(int index) const {\n\t\tif (index < 0 || index >= _size) \n\t\t\tthrow NotSuchElementException();\n\t\tif (index < _size / 2) {\n\t\t\tNode<E> * node = head;\n\t\t\tI(i, index) node = node->next_node;\n\t\t\treturn node;\n\t\t}\n\t\telse {\n\t\t\tNode<E> * node = tail;\n\t\t\tI(i, (_size-1-index)) node = node->prev_node;\n\t\t\treturn node;\n\t\t}\n\t}\n\npublic:\n\tE & get(int index) const {\n\t\tNode<E> * node = get_node(index);\n\t\treturn node->element;\n\t}\n\tvoid set(int index, const E & e) {\n\t\tNode<E> * node = get_node(index);\n\t\tnode->element = e;\n\t}\n\n\tE & getFirst() const {\n\t\treturn get(0);\n\t}\n\n\tE & getLast() const {\n\t\treturn get(_size - 1);\n\t}\n\n\tvoid remove (int index) {\n\t\tNode<E> * node = get_node(index);\n\t\tNode<E> * prev_node = node->prev_node;\n\t\tNode<E> * next_node = node->next_node;\n\t\tif (prev_node != 0) prev_node->next_node = next_node;\n\t\tif (next_node != 0) next_node->prev_node = prev_node;\n\t\tif (prev_node == 0) head = next_node;\n\t\tif (next_node == 0) tail = prev_node;\n\t\tdelete node;\n\t\t-- _size;\n\t}\n\n\tvoid removeFirst () {\n\t\tremove(0);\n\t}\n\n\tvoid removeLast () {\n\t\tremove(_size-1);\n\t}\n\n\tvoid add(int index, const E & e) {\n\t\tif (index < 0 || index > _size) \n\t\t\tthrow NotSuchElementException();\n\t\tNode<E> * node = new Node<E>();\n\t\tnode->element = e;\n\t\tNode<E> * next_node = (index == _size ? 0 : get_node(index));\n\t\tNode<E> * prev_node = (next_node == 0 ? tail : next_node->prev_node);\n\t\tnode->next_node = next_node;\n\t\tnode->prev_node = prev_node;\n\t\tif (prev_node != 0) prev_node->next_node = node;\n\t\tif (next_node != 0) next_node->prev_node = node;\n\t\tif (prev_node == 0) head = node;\n\t\tif (next_node == 0) tail = node;\n\t\t++ _size;\n\t}\n\n\tvoid addFirst (const E & e) {\n\t\tadd(0, e);\n\t}\n\n\tvoid addLast (const E & e) {\n\t\tadd(_size, e);\n\t}\n\npublic:\n\tvoid clear() {\n\t\twhile (_size > 0) removeFirst();\n\t}\n\n\tvoid addAll(const LinkedList & list, int index=-1) {\n\t\tif (index == -1) index = _size;\n\t\tNode<E> * node = list.head;\n\t\tI(i, list._size) {\n\t\t\tadd(index, node->element);\n\t\t\tnode = node->next_node;\n\t\t\t++ index;\n\t\t}\n\t}\n\n\tLinkedList(const LinkedList & list) : _size(0), head(0), tail(0) {\n\t\taddAll(list);\n\t}\n\n\tLinkedList & operator = (const LinkedList & list) {\n\t\tclear();\n\t\taddAll(list);\n\t}\n\n\t~LinkedList() {\n\t\tclear();\n\t}\n\n\tint indexOf(const E & e) const {\n\t\tNode<E> * node = head;\n\t\tI(i, _size) {\n\t\t\tif (node->element == e) return i;\n\t\t\tnode = node->next_node;\n\t\t}\n\t\treturn -1;\n\t}\n\n\tint lastIndexOf(const E & e) const {\n\t\tNode<E> * node = tail;\n\t\tI(i, _size) {\n\t\t\tif (node->element == e) return i;\n\t\t\tnode = node->prev_node;\n\t\t}\n\t\treturn -1;\n\t}\n\n\tbool contains(const E & e) const {\n\t\treturn indexOf(e) >= 0;\n\t}\n\n\tvoid removeFirstOccurrence(const E & e) {\n\t\tint index = indexOf(e);\n\t\tif (index == -1)\n\t\t\tthrow NotSuchElementException();\n\t\tremove(index);\n\t}\n\n\tvoid removeLastOccurrence(const E & e) {\n\t\tint index = lastIndexOf(e);\n\t\tif (index == -1)\n\t\t\tthrow NotSuchElementException();\n\t\tremove(index);\n\t}\n\n\tvoid removeAll(const E & e); // TODO\n};\n\n#include \"source.cpp\"\n\nint main() {\n\tint size;\n\tcin >> size;\n\tLinkedList<double> list;\n\tI(i, size) {\n\t\tint val;\n\t\tcin >> val;\n\t\tlist.addLast(val);\n\t}\n\tint val;\n\tcin >> val;\n\tlist.removeAll(val);\n\tI(i, list.size())\n\t\tcout << list.get(i) << endl;\n\n}\n",
+            "template <typename E>\nvoid LinkedList<E>::removeAll (const E & p) {\n    int i = 0;\n    while (i < _size) {\n        if (get(i)==p) {\n            remove(i);\n        }\n        else i++;\n    }\n}",
+            "",
+            1594864800,
+            1594870800,
+            0,
+            -2209017943.0
+        ]
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1601047100.0907352,
+    "field_names": [
+        "component_id",
+        "config_template",
+        "description"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "登陆卡片",
+            "{\"name\": \"\\u767b\\u9646\\u5361\\u7247\", \"tag\": \"\", \"text\": \"\", \"init\": \"ui_login_card_py\", \"files\": [\"ui/login_card.py\"], \"data\": [], \"vars\": [], \"events\": [], \"class\": {\"\\u989c\\u8272\": [\"primary\", \"secondary\", \"success\", \"danger\", \"warning\", \"info\", \"light\", \"dark\"]}, \"attr\": {\"\\u5361\\u7247\\u6587\\u5b57\": [], \"\\u5361\\u7247\\u9898\\u76ee\": [], \"\\u6309\\u94ae\\u6587\\u5b57\": []}, \"style\": {\"margin\": [], \"width\": []}, \"from\": \"ui\"}",
+            ""
+        ],
+        [
+            "ProCode",
+            "{\"name\":\"ProCode\",\"tag\":\"\",\"text\":\"\",\"init\":\"pro_code_py\",\"files\":[\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/anyword-hint.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/show-hint.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/show-hint.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/javascript/javascript.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/python/python.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/edit/closebrackets.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/edit/matchbrackets.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/display/fullscreen.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/display/fullscreen.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/theme/blackboard.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/keymap/sublime.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/search/searchcursor.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/search/search.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/css/css.min.js\",\"pro/pro_code.css\",\"pro/pro_code.py\"],\"data\":[\"data\"],\"ref\":[],\"events\":[\"change\"],\"class\":{},\"attr\":{\"editable\":[\"True\",\"False\"],\"save_button\":[\"True\",\"False\"],\"title\":[]},\"style\":{\"margin\":[\"0px\",\"5px\",\"10px\",\"20px\"],\"width\":[]},\"from\":\"cpp\"}",
+            "<p><br></p>"
+        ]
+    ],
+    "table_name": "component"
+}

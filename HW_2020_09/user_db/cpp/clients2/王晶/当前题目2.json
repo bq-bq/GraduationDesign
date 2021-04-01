@@ -1,0 +1,38 @@
+{
+    "__update_time__": 1596199475.8740702,
+    "field_names": [
+        "题目名",
+        "问题",
+        "主程序",
+        "答案",
+        "评语",
+        "开始时间",
+        "截止时间",
+        "分数",
+        "提交时间"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text",
+        "time",
+        "time",
+        "number",
+        "time"
+    ],
+    "rows": [
+        [
+            "A.5 (C++)",
+            "<p>写出一个键和值的类型都可以是string或int的哈希表类, HT。<br>本题难度大，参考答案有270行，截止时间延长8天。<br>注意<br></p><ol><li>HT不是一个模版类，但是HT的一个对象可以同时使用int和string的对象作为键。</li><li>HT中去掉了put函数，HT的[]操作符同时具有get和put的功能。</li></ol><p><span style=\"font-weight: bolder;\">EXAMPLE INPUT</span></p><pre style=\"font-size: 14px;\">1 2 3 4 5 6 7 8\n</pre><p><span style=\"font-weight: bolder;\">EXAMPLE OUTPUT</span></p><pre style=\"font-size: 14px;\">4\n2\n4\n6\n8</pre>",
+            "#include \"source.cpp\"\n\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main() {\n\tHT map;\n\t\n\tint key1;\n\tint value1;\n\tcin >> key1 >> value1;\n\tmap[key1] = value1;\n\t\n\tstring key2;\n\tstring value2;\n\tcin >> key2 >> value2;\n\tmap[key2] = value2;\n\t\n\tint key3;\n\tstring value3;\n\tcin >> key3 >> value3;\n\tmap[key3] = value3;\n\t\n\tstring key4;\n\tint value4;\n\tcin >> key4 >> value4;\n\tmap[key4] = value4;\n\t\n\tcout << map.size() << endl;\n\tcout << (int)map[key1] << endl;\n\tcout << (string)map[key2] << endl;\n\tcout << (string)map[key3] << endl;\n\tcout << (int)map[key4] << endl;\n}",
+            "#include <iostream>\n#include <sstream>\n#include <vector>\n#include <map> \n#include <algorithm>\nusing namespace std;\nint total = 0;\nclass V {\npublic:\n string s;\n int i;\n V(int _i) :i(_i) {\n }\n V(string _s) :s(_s) {\n }\n operator string() {\n  return s;\n }\n operator int() {\n  return i;\n }\n V& operator=(int val){\n   i=val;\n   return *this;\n }\n V& operator=(string val){\n  s=val;\n  return *this;\n }\n};\n\nclass HT {\n class Tuple1 {\n public:\n  int key;\n  V value;\n  Tuple1(int _key, int _value) :key(_key), value(_value) { total++; };\n  Tuple1(int _key, string _value) :key(_key), value(_value) { total++; };\n };\n class Tuple2 {\n public:\n  string key;\n  V value;\n  Tuple2(string _key, string _value) :key(_key), value(_value) { total++; };\n  Tuple2(string _key, int _value) :key(_key), value(_value) { total++; };\n  void operator=(int val){\n   value=val;\n  }\n  void operator=(string val){\n   value=val;\n  }\n };\n vector<Tuple1>t1;\n vector<Tuple2>t2;\n\npublic:\n int size() { return total; }\n void put(int _key, int _value) {\n  t1.push_back(Tuple1(_key, _value));\n }\n void put(int _key, string _value) {\n  t1.push_back(Tuple1(_key, _value));\n }\n void put(string _key, int _value) {\n  t2.push_back(Tuple2(_key, _value));\n }\n void put(string _key, string _value) {\n  t2.push_back(Tuple2(_key, _value));\n }\n V& operator [] (const int& key) {\n  for (int i = 0; i < t1.size(); ++i) {\n   if (t1[i].key == key) return t1[i].value;\n  }\n  put(key,5);\n  for (int i = 0; i < t1.size(); ++i) {\n   if (t1[i].key == key) {\n    return t1[i].value;\n   }\n  }\n }\n V& operator [] (const string& key) {\n  for (int i = 0; i < t2.size(); ++i) {\n   if (t2[i].key == key) return t2[i].value;\n  }\n  put(key,5);\n  for (int i = 0; i < t2.size(); ++i) {\n   if (t2[i].key == key) {\n    return t2[i].value;\n   }\n  }\n }\n\n};",
+            "main.cpp: In function ‘int main()’:\nmain.cpp:8:2: error: ‘HT’ was not declared in this scope\n  HT map;\n  ^\nmain.cpp:13:2: error: ‘map’ was not declared in this scope\n  map[key1] = value1;\n  ^\n",
+            1594951200,
+            1596200400,
+            0,
+            1596199318.164033
+        ]
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1590999045.8971462,
+    "field_names": [
+        "brand",
+        "theme",
+        "deploy"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "boolean"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "EXP-DB3",
+            "Journal",
+            false
+        ]
+    ],
+    "table_name": "settings"
+}

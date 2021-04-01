@@ -1,0 +1,7 @@
+{
+	"brand":"页面设计室",
+	"activities":[
+		{"id":"edit", "name":"编辑页面模块"},
+		{"id":"manange", "name":"管理页面模块"}
+	]
+}

@@ -1,0 +1,23 @@
+{
+    "__update_time__": 1605789292.8691413,
+    "field_names": [
+        "page_id",
+        "show",
+        "ui_json"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "两位加减法练习",
+            "",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"cal1\",\"tag\":\"\",\"text\":\"\",\"init\":\"yijun_cal_obj1\",\"files\":[\"刘怡君/cal1.py\"],\"data\":[],\"ref\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}},\"init\":\"yijun_cal_obj1\",\"files\":[\"刘怡君/cal1.py\"],\"data\":{},\"ref\":{},\"events\":{},\"attr\":{},\"style\":{}}}"
+        ]
+    ],
+    "table_name": "page"
+}

@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1590663463.2023554,
+    "field_names": [
+        "page_id",
+        "show",
+        "ui_json"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "mj",
+            "",
+            "{\"type\":\"BorderLayout\",\"children\":[{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"散点图\",\"tag\":\"\",\"text\":\"\",\"init\":\"mingjiong_Scatter_js\",\"files\":[\"https://cdn.plot.ly/plotly-1.2.0.min.js\",\"梁明炯/ScatterSimple.js\"],\"data\":[\"data1\"],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{\"使用第一列作为横坐标数据\":[\"True\",\"False\"],\"图例标题\":[],\"数据数目(组)\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"样式\":[\"markers\",\"makers+text\",\"lines+markers\"],\"横坐标标题\":[],\"纵坐标标题\":[]},\"style\":{}},\"init\":\"mingjiong_Scatter_js\",\"files\":[\"https://cdn.plot.ly/plotly-1.2.0.min.js\",\"梁明炯/ScatterSimple.js\"],\"data\":{\"data1\":\"plotlydata\"},\"vars\":{},\"events\":{},\"attr\":{\"使用第一列作为横坐标数据\":\"True\",\"数据数目(组)\":\"2\",\"样式\":\"markers\"},\"style\":{}}},{\"type\":\"UI_Placehoder\"},{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"slide\",\"tag\":\"\",\"text\":\"\",\"init\":\"mingjiong_slide2_py_obj\",\"files\":[\"梁明炯/slide2.py\"],\"data\":[\"data1\"],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{}},\"init\":\"mingjiong_slide2_py_obj\",\"files\":[\"梁明炯/slide2.py\"],\"data\":{\"data1\":\"picurl\"},\"vars\":{},\"events\":{},\"attr\":{},\"style\":{}}}],\"config\":{\"__meta__\":{\"name\":\"左右边缘布局\",\"tag\":\"#BorderLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"margin\":[],\"width\":[]}},\"tag\":\"#BorderLayout\",\"files\":[],\"data\":{},\"vars\":{},\"events\":{},\"attr\":{},\"style\":{}}}"
+        ],
+        [
+            "ts",
+            "",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"散点图\",\"tag\":\"\",\"text\":\"\",\"init\":\"mingjiong_Scatter_js\",\"files\":[\"https://cdn.plot.ly/plotly-1.2.0.min.js\",\"梁明炯/ScatterSimple.js\"],\"data\":[\"data1\"],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{\"使用第一列作为横坐标数据\":[\"True\",\"False\"],\"图例标题\":[],\"数据数目(组)\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"样式\":[\"markers\",\"makers+text\",\"lines+markers\"],\"横坐标标题\":[],\"纵坐标标题\":[]},\"style\":{}},\"init\":\"mingjiong_Scatter_js\",\"files\":[\"https://cdn.plot.ly/plotly-1.2.0.min.js\",\"梁明炯/ScatterSimple.js\"],\"data\":{\"data1\":\"plotlydata\"},\"vars\":{},\"events\":{},\"attr\":{\"使用第一列作为横坐标数据\":\"True\",\"数据数目(组)\":\"2\",\"样式\":\"markers\"},\"style\":{}}}"
+        ]
+    ],
+    "table_name": "page"
+}

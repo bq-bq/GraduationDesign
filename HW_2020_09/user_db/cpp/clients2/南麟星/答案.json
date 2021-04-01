@@ -1,0 +1,344 @@
+{
+    "__update_time__": 1595472034.666032,
+    "field_names": [
+        "题目名",
+        "用户名",
+        "答案",
+        "提交时间",
+        "分数",
+        "评语"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text",
+        "time",
+        "number",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "测试2",
+            "南麟星",
+            "#include <iostream>\n#include <string>\n#include <cstring>\nusing namespace std;\nvoid swap(char* p1,char* p2)\n{\n\tchar temp[10];\n\tstrcpy(temp,p1);\n\tstrcpy(p1,p2);\n\tstrcpy(p2,temp);\n}\nint main() {\n\tchar ch[10][10],*ch1[10];\n\tfor (int i = 0; i < 10; ++ i) \n\t\tcin >> *(ch + i);\n\tfor (int i = 0; i < 10; ++ i) \n\t\tch1[i] = *(ch + i);\n\tfor (int i = 0; i < 10; ++ i) \n\t{\n\t\tfor(int j = i + 1;j<10;j++)\n\t\t{\n\t\t\tif(strcmp (ch1[i],ch1[j]) > 0)\n\t\t\t{\n\t\t\t\tswap(ch1[i],ch1[j]);\n\t\t\t}\n\t\t}\n\t}\n\tfor(int f = 0;f < 10;f++)\n\t\tcout << ch1[f] << ' ';\n}",
+            1587612082.4633703,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.1 (C++)",
+            "南麟星",
+            "\n#include <iostream>\nusing namespace std;\nclass Matrix5x5\n{\npublic:\n\tint mm[5][5] = {{0,0,0,0,0}};\n\tdouble get(int row,int col){\n\t\treturn this->mm[row][col]; \n\t}\n\tvoid set(int shu1,int shu2,int value){\n\t\tthis->mm[shu1][shu2] = value;\n\t}\n};\nMatrix5x5 operator + (Matrix5x5 & m1, Matrix5x5 & m2)\n{\n\tMatrix5x5 m4;\n\tfor (int i = 0; i < 5; ++ i) {\n\t\tfor (int j = 0; j < 5; ++ j){\n\t\t\tm4.mm[i][j]=m1.mm[i][j] + m2.mm[i][j];\n\t\t} \n\t}\n\treturn m4;\n}",
+            1588042739.0233822,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "1.2 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\nclass School\n{\npublic:\n\tchar name[10] = \"NO_NAME\";\n\tint age = 0;\n\tvoid setName(char name[]){\n\t\tfor (int i = 0; i < 10; ++ i) {\n\t\t\tthis->name[i] = name[i];\n\t\t}\n\t}\n\tvoid setAge(int year){\n\t\tthis->age = year;\n\t}\n};\nvoid operator ++ (School & school){\n\tschool.age = school.age + 1;\n}",
+            1588212707.2227333,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020/05/08",
+            "南麟星",
+            "double & Tensor_get(int dimensions,int sizes[],double data[], int x0, int x1, int x2, int x3){\n\tif(dimensions == 2){\n\t\treturn data[x0 * 4 + x1];\n\t}\n\tif(dimensions == 3){\n\t\treturn data[x0 * 20 + x1 * 5 + x2];\n\t}\n\tif(dimensions == 4){\n\t\treturn data[x0 * 120 + x1 * 30 + x2 * 6 + x3];\n\t}\n}\n",
+            1588907859.0275538,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.1 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tint len = rows + column;\n\t\tthis->values = new double[len];\n\t\tfor (int i = 0; i < len; ++ i) values[i] = 0;\n\t}\n\t~Matrix() {delete [] this->values;}\n\tvoid print()\n\t{\n\t\tfor (int i = 0; i < this->rows; ++ i) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << 0 <<\"    \";\n\t\t\t}\n\t\t\tcout<< endl;\n\t\t}\n\t}\n};",
+            1589015492.7474627,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.2 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include <iomanip>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double value[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tint len = rows * column;\n\t\tthis->values = new double[len];\n\t\tfor (int i = 0; i < len; ++ i) {\n\t\t\tthis->values[i] = value[i];\n\t\t}\n\t}\n\t~Matrix(){\n\t\tdelete [] this->values;\n\t}\n\tvoid print(){\n\t\tfor (int k = 0; k < this->rows; ++ k) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout << setw(5) << setfill(' ') << right <<this->values[k*this->columns + j];\n\t\t\t}\n\t\t\tcout<<endl;\n\t\t} \n\t}\t\n};",
+            1589159628.3357797,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.3 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double value[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tint len = rows * column;\n\t\tthis->values = new double[len];\n\t\tfor (int i = 0; i < len; ++ i) {\n\t\t\tthis->values[i] = value[i];\n\t\t}\n\t}\n\tMatrix(Matrix & matrix){\n\t\tthis->rows = matrix.rows;\n\t\tthis->columns = matrix.columns;\n\t\tint len = matrix.rows * matrix.columns;\n\t\tthis->values = new double[len];\n\t\tfor (int i = 0; i < len; ++ i) {\n\t\t\tthis->values[i] = matrix.values[i];\n\t\t}\n\t}\n\t~Matrix(){\n\t\tdelete [] this->values;\n\t}\n\tvoid print(){\n\t\tfor (int k = 0; k < this->rows; ++ k) {\n\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\tcout <<\"    \"<<this->values[k*this->columns + j];\n\t\t\t}\n\t\t\tcout<<endl;\n\t\t} \n\t}\t\n};",
+            1589165912.8609314,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.5 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tvalues = NULL;\n\t}\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tint len = rows * column;\n\t\tthis->values = new double[len];\n\t\tfor (int i = 0; i < len; ++ i) this->values[i] = values[i]; \n\t}\n\t~Matrix(){delete [] this->values;}\n\tvoid print(){\n\t\t\tfor (int k = 0; k < this->rows; ++ k) {\n\t\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\t\tcout <<\"    \"<<this->values[k*this->columns + j];\n\t\t\t\t}\n\t\t\t\tcout<<endl;\n\t\t\t} \n\t\t}\n\t Matrix getRow(int row){\n\t\treturn Matrix(1,columns,values+columns*(row-1));\n\t}\n\t Matrix getColumn(int column){\n\t\tdouble tmp[rows];\n\t\t for (int i = 0; i < rows; ++ i){\n\t\t\t tmp[i] = values[column-1+i*columns];\n\t\t }\n\t\t return Matrix(rows,1,tmp);\n\t}\n};",
+            1589176522.0145538,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.6 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tint len = rows * column;\n\t\tthis->values = new double[len];\n\t\tfor (int i = 0; i < len; ++ i) this->values[i] = values[i]; \n\t}\n\t~Matrix(){delete [] this->values;}\n\tvoid print(){\n\t\t\tfor (int k = 0; k < this->rows; ++ k) {\n\t\t\t\tfor (int j = 0; j < this->columns; ++ j) {\n\t\t\t\t\tcout <<\"    \"<<this->values[k*this->columns + j];\n\t\t\t\t}\n\t\t\t\tcout<<endl;\n\t\t\t} \n\t\t}\n\tMatrix concatenateRows(const Matrix & matrix2){\n\t\tdouble temp[rows * columns+matrix2.rows * matrix2.columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i) {\n\t\t\ttemp[i] = values[i];\n\t\t}\n\t\tint j =0;\n\t\tfor (int i = rows * columns; i < matrix2.rows * matrix2.columns+rows * columns; ++ i) {\n\t\t\ttemp[i] = matrix2.values[j];\n\t\t\tj++;\n\t\t}\n\t\treturn Matrix(rows+matrix2.rows,columns,temp);\n\t}\n\tMatrix concatenateColumns(const Matrix & matrix2){\n\t\tdouble temp[rows * columns+matrix2.rows * matrix2.columns];\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\ttemp[i*(columns+matrix2.columns) + j] = values[i*columns+j];\n\t\t\t}\n\t\t}\n\t\tfor (int i = 0; i < matrix2.rows; ++ i) {\n\t\t\tfor (int j = 0; j < matrix2.columns; ++ j) {\n\t\t\t\ttemp[i*(columns+matrix2.columns) + j+columns] = matrix2.values[i*matrix2.columns+j];\n\t\t\t}\n\t\t}\n\t\treturn Matrix(rows,columns+matrix2.columns,temp);\n\t}\n};",
+            1589187337.068696,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020/05/14",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nvoid Tensor_print(int dimensions, const int sizes[], const double data[]){\n\tif(dimensions == 1){\n\t\tcout << \"Tensor of \"<<sizes[0]<<endl;\n\t\tfor (int k = 0; k < sizes[0]; ++ k) {\n\t\t\tcout<<data[k]<<endl;\n\t\t} \n\t}\n\tif(dimensions == 2){\n\t\tcout << \"Tensor of \"<<sizes[0]<<\"x\"<<sizes[1]<<endl;\n\t\tfor (int k = 0; k < sizes[0]; ++ k) {\n\t\t\tfor (int j = 0; j < sizes[1]; ++ j){\n\t\t\t\tcout <<\"    \"<<data[sizes[0]*k+j];\n\t\t\t}\n\t\t\tcout<<endl;\n\t\t}\n\t}\n\tif(dimensions == 3){\n\t\tcout << \"Tensor of \"<<sizes[0]<<\"x\"<<sizes[1]<<\"x\"<<sizes[2]<<endl;\n\t\tfor (int i = 0; i < sizes[0]; ++ i) {\n\t\t\tcout << \"data[\"<<i<<\"]\"<<endl;\n\t\t\tfor (int j = 0; j < sizes[1]; ++ j) {\n\t\t\t\tfor (int k = 0; k < sizes[2]; ++ k) {\n\t\t\t\t\tcout<<\"    \"<<data[sizes[1]*j+k];\n\t\t\t\t}\n\t\t\t\tcout << endl;\n\t\t\t}\n\t\t}\n\t}\n\tif (dimensions==4){\n\t\tcout << \"Tensor of \"<<sizes[0]<<\"x\"<<sizes[1]<<\"x\"<<sizes[2]<<\"x\"<<sizes[3]<<endl;\n\t\tfor (int i = 0; i < sizes[0]; ++ i){\n\t\t\tfor (int j = 0; j < sizes[1]; ++ j) {\n\t\t\t\tcout << \"data[\"<<i<<\"]\"<<\"[\"<<j<<\"]\"<<endl;\n\t\t\t\tfor (int a = 0; a < sizes[2]; ++ a) {\n\t\t\t\t\tfor (int k = 0; k < sizes[3]; ++ k) {\n\t\t\t\t\t\tcout<<\"    \"<<data[sizes[2]*j+k];\n\t\t\t\t\t}\n\t\t\t\t\tcout << endl;\n\t\t\t\t}\n\t\t\t}\n\t\t} \n\t}\n}",
+            1589424202.0307837,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.4 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*column];\n\t\tfor (int i = 0; i < rows * columns; ++ i) values[i] = 0;\n\t}\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows * columns; ++ i) this->values[i] = values[i];\n\t}\n\t~Matrix(){\n\t\tdelete [] values;\n\t}\n\tvoid print (){\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tcout << \"    \"<<values[i * columns+j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tvoid set(int row, int column, double value){\n\t\tvalues[columns * (row-1) + column-1] = value;\n\t}\n\tMatrix & operator = (Matrix & s2){\n\t\trows = s2.rows;\n\t\tcolumns = s2.columns;\n\t\tdelete [] this->values;\n\t\tthis->values = new double[rows * columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tvalues[i] = s2.values[i];\n\t\t} \n \t\treturn (*this);\n\t}\n};",
+            1589948794.7439673,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.7 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows * columns; ++ i) this->values[i] = values[i];\n\t}\n\tMatrix(const Matrix & matrix2){\n\t\trows = matrix2.rows;\n\t\tcolumns = matrix2.columns;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tvalues[i] = matrix2.values[i];\n\t\t} \n\t}\n\t~Matrix(){\n\t\tdelete [] values;\n\t}\n\tvoid print (){\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tcout << \"    \"<<values[i * columns+j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tMatrix reshape(int r, int c) const{\n\t\tdouble temp[r * c];\n\t\tint p = 0,t = 0;\n\t\tfor (int i = 0; i < r; ++ i){\n\t\t\tfor (int j = 0; j < c; ++ j) {\n\t\t\t\ttemp[j*r +i]=values[p*columns + t];\n\t\t\t\tp++;\n\t\t\t\tif(p>=rows){\n\t\t\t\t\tp = 0;\n\t\t\t\t\tt++;\n\t\t\t\t}\n\t\t\t}\n\t\t} \n\t\treturn Matrix(r,c,temp);\n\t}\n};",
+            1589952588.5003748,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.8 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows * columns; ++ i) this->values[i] = values[i];\n\t}\n\tMatrix(const Matrix & matrix2){\n\t\trows = matrix2.rows;\n\t\tcolumns = matrix2.columns;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tvalues[i] = matrix2.values[i];\n\t\t} \n\t}\n\t~Matrix(){\n\t\tdelete [] values;\n\t}\n\tvoid print (){\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tcout << \"    \"<<values[i * columns+j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tMatrix transpose(){\n\t\tint temp;\n\t\ttemp = rows;\n\t\trows = columns;\n\t\tcolumns = temp;\n\t\tdouble tem[rows*columns];\n\t\tfor (int i = 0; i < columns; ++ i){\n\t\t\tfor (int j = 0; j < rows; ++ j){\n\t\t\t\ttem[columns*j + i] = values[i*rows+j];\n\t\t\t} \n\t\t} \n\t\treturn Matrix(rows,columns,tem);\n\t}\n};",
+            1589953881.6659522,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.10 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows * columns; ++ i) this->values[i] = values[i];\n\t}\n\tMatrix(const Matrix & matrix2){\n\t\trows = matrix2.rows;\n\t\tcolumns = matrix2.columns;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tvalues[i] = matrix2.values[i];\n\t\t} \n\t}\n\t~Matrix(){\n\t\tdelete [] values;\n\t}\n\tvoid print (){\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tcout << \"    \"<<values[i * columns+j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tMatrix operator * (double value) const{\n\t\tdouble temp[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i)temp[i] = value * values[i]; \n\t\treturn Matrix(rows,columns,temp);\n\t}\n\tMatrix operator * (const Matrix & matrix2) const{\n\t\tdouble temp[rows * matrix2.columns];\n\t\tfor (int i = 0; i < rows; ++ i){\n\t\t\tfor (int j = 0; j < matrix2.columns; ++ j) {\n\t\t\t\tfor (int k = 0; k < columns; ++ k) {\n\t\t\t\t\ttemp[i*matrix2.columns+j] += values[i*columns+k]*matrix2.values[k*matrix2.columns+j];\n\t\t\t\t}\n\t\t\t}\n\t\t} \n\t\treturn Matrix(rows,matrix2.columns,temp);\n\t}\n};",
+            1589961888.7300217,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.11 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows * columns; ++ i) this->values[i] = values[i];\n\t}\n\tMatrix(const Matrix & matrix2){\n\t\trows = matrix2.rows;\n\t\tcolumns = matrix2.columns;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tvalues[i] = matrix2.values[i];\n\t\t} \n\t}\n\t~Matrix(){\n\t\tdelete [] values;\n\t}\n\tvoid print (){\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tcout << \"    \"<<values[i * columns+j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tMatrix min() const{\n\t\tif(rows == 1){\n\t\t\tdouble Min=values[0];\n\t\t\tfor (int i = 0; i < columns; ++ i) {\n\t\t\t\tif(values[i]<Min)\n\t\t\t\t\tMin=values[i];\n\t\t\t}\n\t\t\treturn Matrix(1,1,&Min);\n\t\t}\n\t\tif(rows > 1){\n\t\t\tdouble temp[columns];\n\t\t\tfor (int t = 0; t < columns; ++ t)\n\t\t\t\ttemp[t] = values[t];\n\t\t\tfor (int i = 0; i < columns; ++ i){\n\t\t\t\tfor (int j = 0; j < rows; ++ j) {\n\t\t\t\t\tif(values[j*columns+i]<temp[i])\n\t\t\t\t\t\ttemp[i] = values[j*columns+i];\n\t\t\t\t}\n\t\t\t} \n\t\treturn Matrix(1,columns,temp);\n\t\t}\n\t}\n\tMatrix max() const{\n\t\tif(rows == 1){\n\t\t\tdouble Max=0;\n\t\t\tfor (int i = 0; i < columns; ++ i) {\n\t\t\t\tif(values[i]>Max)\n\t\t\t\t\tMax=values[i];\n\t\t\t}\n\t\t\treturn Matrix(1,1,&Max);\n\t\t}\n\t\tif(rows > 1){\n\t\t\tdouble temp[columns];\n\t\t\tfor (int t = 0; t < columns; ++ t)\n\t\t\t\ttemp[t] = 0;\n\t\t\tfor (int i = 0; i < columns; ++ i){\n\t\t\t\tfor (int j = 0; j < rows; ++ j) {\n\t\t\t\t\tif(values[j*columns+i]>temp[i])\n\t\t\t\t\t\ttemp[i] = values[j*columns+i];\n\t\t\t\t}\n\t\t\t} \n\t\treturn Matrix(1,columns,temp);\n\t\t}\n\t}\n\t\tMatrix sum() const{\n\t\tif(rows == 1){\n\t\t\tdouble Sum=0;\n\t\t\tfor (int i = 0; i < columns; ++ i)\n\t\t\t\tSum += values[i];\n\t\t\treturn Matrix(1,1,&Sum);\n\t\t}\n\t\tif(rows > 1){\n\t\t\tdouble temp[columns];\n\t\t\tfor (int t = 0; t < columns; ++ t)\n\t\t\t\ttemp[t] = 0;\n\t\t\tfor (int i = 0; i < columns; ++ i){\n\t\t\t\tfor (int j = 0; j < rows; ++ j) {\n\t\t\t\t\ttemp[i] += values[j*columns+i];\n\t\t\t\t}\n\t\t\t} \n\t\treturn Matrix(1,columns,temp);\n\t\t}\n\t}\n};\t",
+            1589966029.59198,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.12 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include<cmath>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows * columns; ++ i) this->values[i] = values[i];\n\t}\n\tMatrix(const Matrix & matrix2){\n\t\trows = matrix2.rows;\n\t\tcolumns = matrix2.columns;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tvalues[i] = matrix2.values[i];\n\t\t} \n\t}\n\t~Matrix(){\n\t\tdelete [] values;\n\t}\n\tvoid print (){\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tcout << \"    \"<<values[i * columns+j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tMatrix pow(double exponent){\n\t\tdouble temp[rows*columns];\n\t\tfor (int k = 0; k < columns*rows; ++ k) \n\t\t\ttemp[k] = values[k];\n\t\tfor (int i = 0; i < rows*columns; ++ i) {\n\t\t\ttemp[i] = std::pow(values[i],exponent);\n\t\t}\t\n\t\treturn Matrix(rows,columns,temp);\n\t}\n\tMatrix exp(){\n\t\tdouble temp[rows*columns];\n\t\tfor (int k = 0; k < columns*rows; ++ k) \n\t\t\ttemp[k] = values[k];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\ttemp[i] = std::exp(values[i]);\n\t\t} \n\t\treturn Matrix(rows,columns,temp);\n\t}\n\tMatrix log(){\n\t\tdouble temp[rows*columns];\n\t\tfor (int k = 0; k < columns*rows; ++ k) \n\t\t\ttemp[k] = values[k];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\ttemp[i] = std::log(values[i]);\n\t\t} \n\t\treturn Matrix(rows,columns,temp);\n\t}\n\tMatrix abs(){\n\t\tdouble temp[rows*columns];\n\t\tfor (int k = 0; k < columns*rows; ++ k) \n\t\t\ttemp[k] = values[k];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\ttemp[i] = std::abs(values[i]);\n\t\t} \n\t\treturn Matrix(rows,columns,temp);\n\t}\n};\t",
+            1589968734.3409476,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2.9 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass Matrix{\nprivate:\n\tint rows;\n\tint columns;\n\tdouble * values;\npublic:\n\tMatrix(int rows, int column, double values[]){\n\t\tthis->rows = rows;\n\t\tthis->columns = column;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows * columns; ++ i) this->values[i] = values[i];\n\t}\n\tMatrix(const Matrix & matrix2){\n\t\trows = matrix2.rows;\n\t\tcolumns = matrix2.columns;\n\t\tthis->values = new double[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tvalues[i] = matrix2.values[i];\n\t\t} \n\t}\n\t~Matrix(){\n\t\tdelete [] values;\n\t}\n\tvoid print (){\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tcout << \"    \"<<values[i * columns+j];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tMatrix operator + (const Matrix & matrix2) const{\n\t\tdouble temp[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\ttemp[i] = values[i] + matrix2.values[i];\n\t\t} \n\t\treturn Matrix(rows,columns,temp);\n\t}\n\tMatrix operator + (double value) const{\n\t\tdouble temp[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\ttemp[i] = values[i] + value;\n\t\t} \n\t\treturn Matrix(rows,columns,temp);\n\t}\n\tMatrix operator - (const Matrix & matrix2) const{\n\t\tdouble temp[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\ttemp[i] = values[i] - matrix2.values[i];\n\t\t} \n\t\treturn Matrix(rows,columns,temp);\n\t}\n\tMatrix operator - (double value) const{\n\t\tdouble temp[rows*columns];\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\ttemp[i] = values[i] - value;\n\t\t} \n\t\treturn Matrix(rows,columns,temp);\n\t}\n};\t",
+            1590027029.524158,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.1 (C++)",
+            "南麟星",
+            "#include <cstring>\ntemplate <typename T>\nclass Matrix{\nprivate:\n\tT * values;\n\tint rows, columns;\npublic:\n\tMatrix() {}\n\tMatrix(int r, int c) {\n\t\trows = r, columns = c;\n\t\tif(r == 0 || c == 0) {\n\t\t\tvalues = NULL;\n\t\t}\n\t\telse {values = new T[r * c];\n\t\t\tmemset(values, 0, sizeof(T) * r * c);\n\t\t}\n\t}\n\tMatrix(int r, int c, const T * v) {\n\t\trows = r, columns = c;\n\t\tvalues = new T[r * c];\n\t\tfor(int i = 0; i < rows * columns; i ++) {\n\t\t\tvalues[i] = v[i];\n\t\t}\n\t}\n\tMatrix(const Matrix & m) {\n\t\trows = m.rows, columns = m.columns;\n\t\tvalues = new T[rows * columns];\n\t\tfor(int i = 0; i < rows * columns; i ++) {\n\t\t\tvalues[i] = m.values[i];\n\t\t}\n\t}\n\t~Matrix() {\n\t\tdelete[] values;\n\t}\n\tvoid print() {\n\t\tfor(int r = 0; r < rows; r ++) {\n\t\t\tfor(int c = 0; c < columns; c ++) {\n\t\t\t\tcout << \"    \" << values[r * columns + c];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tMatrix & operator = ( Matrix & m1) {\n\t\trows = m1.rows;\n\t\tcolumns = m1.columns;\n\t\tif(values != NULL) delete[] values;\n\t\tvalues = new T[m1.rows * m1.columns];\n\t\t//memcpy(values, m1.values, sizeof(T) * rows * columns);\n\t\tfor(int i = 0; i < rows * columns; i ++) {\n\t\t\tvalues[i] = m1.values[i];\n\t\t}\n\t\treturn *this;\n\t}\n\tT & get(int r, int c) {\n\t\treturn values[(r - 1) * columns + c - 1];\n\t}\n};",
+            1590582038.587778,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.3 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include <string>\n#include <cstring>\n#include <vector>\nusing namespace std;\n\nconst int MIN = INT16_MIN;\nconst int MAX = INT16_MAX;\nconst int max_size = 64;\n\ntemplate <typename T>\nclass Matrix{\nprivate:\n\tvector<T> values;\n\tint rows, columns;\npublic:\n\tMatrix() {}\n\tMatrix(int r, int c) {\n\t\trows = r, columns = c;\n\t\tvalues.reserve(max_size);\n\t\tvalues.resize(r * c, 0);\n\t}\n\tMatrix(int r, int c, vector<T> v) {\n\t\trows = r, columns = c;\n\t\tvalues.reserve(max_size);\n\t\tvalues.resize(r * c);\n\t\tfor(int i = 0; i < rows * columns; i ++) {\n\t\t\tvalues[i] = v[i];\n\t\t}\n\t}\n\tvoid print() {\n\t\tfor(int r = 0; r < rows; r ++) {\n\t\t\tfor(int c = 0; c < columns; c ++) {\n\t\t\t\tcout << \"    \" << values[r * columns + c];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tT & get(int r, int c) {\n\t\treturn values[(r - 1) * columns + c - 1];\n\t}\n\tMatrix getColumn(int c){\n\t\tvector<T> m(rows);\n\t\tfor (int i = 0; i < rows; ++ i) \n\t\t\tm[i] = values[c-1+i*columns];\n\t\treturn Matrix(rows,1,m);\n\t}\n\tMatrix getRow(int r){\n\t\tvector<T> m(columns);\n\t\tfor (int i = 0; i < columns; ++ i) \n\t\t\tm[i] = values[(r-1)*columns+i];\n\t\treturn Matrix(1,columns,m);\n\t}\n\tMatrix concatenateRows(Matrix & matrix2){\n\t\tvector<T> m((rows+matrix2.rows)*columns);\n\t\tint p = 0;\n\t\tfor (int i = 0; i < rows*columns; ++ i) \n\t\t\tm[i]=values[i];\n\t\tfor (int j = rows*columns; j <rows*columns+matrix2.rows*matrix2.columns ; ++ j) {\n\t\t\tm[j] = matrix2.values[p];\n\t\t\tp++;\n\t\t}\n\t\treturn Matrix(rows+matrix2.rows,columns,m);\n\t}\n\tMatrix concatenateColumns(Matrix & matrix2){\n\t\tvector<T> m(rows*(columns+matrix2.columns));\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j) {\n\t\t\t\tm[i*(columns+matrix2.columns)+j]=values[i*columns+j];\n\t\t\t}\n\t\t}\n\t\tfor (int i = 0; i <matrix2.rows; ++ i) {\n\t\t\tfor (int j = 0; j < matrix2.columns; ++ j) {\n\t\t\t\tm[i*(columns+matrix2.columns)+j+columns]=matrix2.values[i*columns+j];\n\t\t\t}\n\t\t}\n\t\treturn Matrix(rows,columns+matrix2.columns,m);\n\t}\n\tMatrix max() const {\n\t\tif(rows == 1) {\n\t\t\tint max = MIN;\n\t\t\tMatrix m(1, 1);\n\t\t\tfor(int i = 0; i < columns; i ++) {\n\t\t\t\tif(values[i] > max) max = values[i];\n\t\t\t}\n\t\t\tm.values[0] = max/2;\n\t\t\treturn m;\n\t\t}\n\t\tMatrix m(1, this -> columns);\n\t\tfor(int i = 0; i < columns; i ++) {\n\t\t\tint max = MIN;\n\t\t\tfor(int j = 0; j < rows; j ++) {\n\t\t\t\tif(values[i + columns * j] > max) max = values[i + columns * j];\n\t\t\t}\n\t\t\tm.values[i] = max;\n\t\t}\n\t\t\n\t\treturn m;\n\t}\n\tMatrix min() const {\n\t\tif(rows == 1) {\n\t\t\tint min = MAX;\n\t\t\tMatrix m(1, 1);\n\t\t\tfor(int i = 0; i < columns; i ++) {\n\t\t\t\tif(values[i] < min) min = values[i];\n\t\t\t}\n\t\t\tm.values[0] = min/2;\n\t\t\treturn m;\n\t\t}\n\t\tMatrix m(1, this -> columns);\n\t\tfor(int i = 0; i < columns; i ++) {\n\t\t\tint min = MAX;\n\t\t\tfor(int j = 0; j < rows; j ++) {\n\t\t\t\tif(values[i + columns * j] < min) min = values[i + columns * j];\n\t\t\t}\n\t\t\tm.values[i] = min;\n\t\t}\n\t\treturn m;\n\t}\n\tMatrix sum() const {\n\t\tif(rows == 1) {\n\t\t\tMatrix m(1, 1);\n\t\t\tfor(int i = 0; i < columns; i ++) {\n\t\t\t\tm.values[0] += values[i];\n\t\t\t}\n\t\t\treturn m;\n\t\t}\n\t\tMatrix m(1, this -> columns);\n\t\tfor(int i = 0; i < columns; i ++) {\n\t\t\tdouble sum = 0;\n\t\t\tfor(int j = 0; j < rows; j ++) {\n\t\t\t\tsum += values[i + columns * j];\n\t\t\t}\n\t\t\tm.values[i] = sum/2;\n\t\t}\n\t\treturn m;\n\t}\n\t\tMatrix transpose() {\n\t\tint new_rows = columns, new_columns = rows;\n\t\tint count = 0;\n\t\tvector<T> new_values(rows * columns);\n\t\tfor(int i = 0; i < columns; i ++) {\n\t\t\tfor(int j = 0; j < rows; j ++) {\n\t\t\t\tnew_values[count ++] = this -> values[i + columns * j];\n\t\t\t}\n\t\t}\n\t\tfor(int i = 0; i < rows * columns; i ++) {\n\t\t\tvalues[i] = new_values[i];\n\t\t}\n\t\trows = new_rows, columns = new_columns;\n\t\treturn *this;\n\t}\n\tMatrix operator * (const Matrix & m) {\n\t\tMatrix m4 = m;\n\t\tm4.transpose();\n\t\tvector<T> pp(rows*m.columns);\n\t\tfor(int r = 0; r < rows; r ++) {\n\t\t\tfor(int c = 0; c < m.columns; c ++) {\n\t\t\t\tfor(int k = 0; k < columns; k ++) {\n\t\t\t\t\tpp[r * m.columns + c] += this -> values[r * columns + k] *\n\t\t\t\t\tm4.values[k * m.columns + c];\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn Matrix(rows,m.columns,pp);\n\t}\n\tMatrix operator * (double c) {\n\t\tMatrix m4 (rows,columns,values);\n\t\tm4.transpose();\n\t\tfor(int i = 0; i < rows * columns; i ++) {\n\t\t\tthis -> values[i] = m4.values[i] * c;\n\t\t}\n\t\treturn *this;\n\t}\n\tMatrix operator +(const Matrix & m2) const {\n\t\tMatrix m4 = m2;\n\t\tm4.transpose();\n\t\tvector<T> m(rows*columns);\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tm[i] =m4.values[i] +m4.values[i];\n\t\t} \n\t\treturn Matrix(rows,columns,m);\n\t}\n\tMatrix operator +(const double value) const {\n\t\tMatrix m4 (rows,columns,values);\n\t\tm4.transpose();\n\t\tvector<T> m(rows*columns);\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tm[i] =m4.values[i] +value;\n\t\t} \n\t\treturn Matrix(rows,columns,m);\n\t}\n\tMatrix operator -(const Matrix & m2) const {\n\t\tMatrix m4 = m2;\n\t\tm4.transpose();\n\t\tvector<T> m(rows*columns);\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tm[i] =m4.values[i] - values[i];\n\t\t} \n\t\treturn Matrix(rows,columns,m);\n\t}\n\tMatrix operator -(const double value) const {\n\t\tvector<T> m(rows*columns);\n\t\tfor (int i = 0; i < rows*columns; ++ i){\n\t\t\tm[i] = values[i] - value;\n\t\t} \n\t\treturn Matrix(rows,columns,m);\n\t}\n\tMatrix reshape(int r, int c) const{\n\t\tMatrix m(r, c, this -> values);\n\t\tint count = 0, cycle = 0;\n\t\tfor(int i = 0; i < this -> columns; i ++) {\n\t\t\tfor(int j = 0; j < this -> rows; j ++) {\n\t\t\t\tm.values[cycle + (m.columns * count ++)] = this -> values[i + columns * j];\n\t\t\t\tif(count >= m.rows) {\n\t\t\t\t\tcount = 0;\n\t\t\t\t\tcycle ++;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn m;\n\t}\n};",
+            1590594489.9132504,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "6.2 (C++)",
+            "南麟星",
+            "#include <cstring>\n#include <iostream>\nusing namespace std;\ntemplate <typename T>\nclass Matrix{\nprivate:\n\tT * values;\n\tint rows, columns;\npublic:\n\tMatrix() {}\n\tMatrix(int r, int c) {\n\t\trows = r, columns = c;\n\t\tif(r == 0 || c == 0) {\n\t\t\tvalues = NULL;\n\t\t}\n\t\telse {values = new T[r * c];\n\t\t\tmemset(values, 0, sizeof(T) * r * c);\n\t\t}\n\t}\n\t~Matrix() {\n\t\tdelete[] values;\n\t}\n\tvoid print() {\n\t\tfor(int r = 0; r < rows; r ++) {\n\t\t\tfor(int c = 0; c < columns; c ++) {\n\t\t\t\tcout << \"    \" << values[r * columns + c];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\n};",
+            1590631396.514385,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.1 (C++)",
+            "南麟星",
+            "#include <string>\n#include<math.h>\nusing namespace std;\nclass Triangle : public GeometricObject\n{\nprivate:\n\tdouble side1;\n\tdouble side2;\n\tdouble side3;\npublic:\n\tTriangle(double side1 = 1,double side2 = 1,double side3 = 1){\n\t\tthis->side1 = side1;\n\t\tthis->side2 = side2;\n\t\tthis->side3 = side3;\n\t}\n\tdouble getSide1(){\n\t\treturn side1;\n\t}\n\tdouble getSide2(){\n\t\treturn side2;\n\t}\n\tdouble getSide3(){\n\t\treturn side3;\n\t}\n\tdouble getArea(){\n\t\tdouble s = (side1 + side2 + side3)/2;\n\t\tdouble area = sqrt(s * (s - side1) * (s - side2) * (s - side3));\n\t\treturn area;\n\t}\n\tdouble getPerimeter(){\n\t\tdouble s = side1 + side2 + side3;\n\t\treturn s;\n\t}\n};",
+            1591183197.9004252,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.3 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include <string>\n#include<vector>\n#include<cmath>\ntemplate <typename A>\nvector<A> map2(const vector<A> & x ,const vector<A> & y,A (*add)(const A &,const A &)) {\n\tvector<A> res;\n\tfor (int i = 0; i < x.size(); ++ i){\n\t\tres.push_back(add(x[i],y[i]));\n\t}\n\treturn res;\n}\ntemplate <typename A>\nvector<A> map2(const vector<A> & x ,int y,A (*add)(const A &,const A &)) {\n\tvector<A> res;\n\tfor (int i = 0; i < x.size(); ++ i){\n\t\tres.push_back(add(x[i],y));\n\t}\n\treturn res;\n}",
+            1591185796.6749685,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "7.2 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include <string>\n#include <vector>\nusing namespace std;\nvector<string> split(const string & line, \n\t\t\t\t\tconst string & delimiter=\" \") {\n\tvector<string> words;\n\tint st = 0;\n\twhile (st < line.size()) {\n\t\tint end = line.find(delimiter, st);\n\t\tif (end == st) st += delimiter.size();\n\t\telse {\n\t\t\tif (end == -1) {\n\t\t\t\twords.push_back(line.substr(st));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\twords.push_back(line.substr(st, end-st));\n\t\t\tst = end + delimiter.size();\n\t\t}\n\t}\n\treturn words;\n}",
+            1591236275.235691,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "8.1 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include <cstring>\n#include <cmath>\n#include<vector>\nusing std::cout;\nclass Full:public Matrix\n{\nprivate:\n\tint rows;\n\tint columns;\n\tstd::vector<double> values;\npublic:\n\tFull(int r, int c,const double v[]=0):rows(r),columns(c),values(rows*columns){\n\n\t\tif(v!=NULL){\n\t\tfor (int i = 0; i < r*c; ++ i) \n\t\t\tvalues[i] = v[i];\n\t\t}\t\n\t}\n\tFull(const Matrix & m) {\n\t\trows = m.size(1), columns = m.size(2);\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j){\n\t\t\tvalues.push_back(m.get(i,j));\n\t\t\t} \n\t\t}\n\t}\n\n\tvoid print() const {\n\t\tfor(int r = 0; r < rows; r ++) {\n\t\t\tfor(int c = 0; c < columns; c ++) {\n\t\t\t\tcout << \"    \" << values[r * columns + c];\n\t\t\t}\n\t\t\tcout << endl;\n\t\t}\n\t}\n\tvoid set(int row, int column, double value) override{\n\t\tvalues[row  * columns + column ] = value;\n\t}\n\tint size(int dimension) const override{\n\tif(dimension==1) return rows;\n\tif(dimension==2) return columns;\n\telse return 0;\n\t}\n\tdouble get(int row, int column) const override{\n\t\treturn values[row*columns+column];\n\t}\n\tMatrix & operator = (const Matrix & matrix2) override{\n\t\trows = matrix2.size(1), columns = matrix2.size(2);\n\t\tfor (int i = 0; i < rows; ++ i) {\n\t\t\tfor (int j = 0; j < columns; ++ j){\n\t\t\tvalues[i * columns + j]=matrix2.get(i,j);\n\t\t\t} \n\t\t}\n\t\treturn *this;\n\t}\n};",
+            1591806695.6169894,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "8.3 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include<algorithm>\n#include<vector>\nusing namespace std;\nbool Comp1(const Entry &a,const Entry &b){\n\treturn a.row<b.row;\n}\nbool Comp2(const Entry &a,const Entry &b){\n\treturn (a.row==b.row&&a.column<b.column);\n}\nclass Sparse:public Matrix\n{\nprivate:\n\tint rows,columns;\n\tvector<Entry> entry;\npublic:\n\tSparse(int out_rows,int out_column){\n\t\trows = out_rows;\n\t\tcolumns = out_column;\n\t\tentry = vector<Entry>();\n\t}\n\tint size(int dimension) const{\n\t\tif(dimension==1) return rows;\n\t\tif(dimension==2) return columns;\n\t\telse return 0;\n\t}\n\tvoid set(int row, int column, double value){\n\t\tEntry e;\n\t\te.row = row;\n\t\te.column = column;\n\t\te.value = value;\n\t\tentry.push_back(e);\n\t}\n\tdouble get(int row, int column) const{\n\t\tfor (int i = 0; i < entry.size(); ++ i) {\n\t\t\tif(entry[i].row == row && entry[i].column == column) return entry[i].value;\n\t\t}\n\t}\n\tvoid print(){\n\t\tfor (int i = 0; i < entry.size(); ++ i) {\n\t\t\tcout << \"(\"<<entry[i].row<<\",\"<<entry[i].column<<\",\"<<entry[i].value<<\")\\n\";\n\t\t}\n\t}\n\tSparse operator + (Sparse & sparse2){\n\t\tSparse s(rows, columns);\n\t\tfor (int i = 0; i < this->entry.size(); ++ i) {\n\t\t\tfor (int j = 0; j < sparse2.entry.size(); ++ j) {\n\t\t\t\tif(this->entry[i].row == sparse2.entry[j].row && this->entry[i].column == sparse2.entry[j].column){\n\t\t\t\t\tEntry e;\n\t\t\t\t\te.row = sparse2.entry[j].row;\n\t\t\t\t\te.column = sparse2.entry[j].column;\n\t\t\t\t\te.value = this->entry[i].value + sparse2.entry[j].value;\n\t\t\t\t\tif(e.value) s.entry.push_back(e);\n\t\t\t\t\tthis->entry[i].value = 0;\n\t\t\t\t\tsparse2.entry[j].value = 0;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tfor(int i=0; i < this->entry.size(); i++){\n\t\t\tEntry e;\n\t\t\te.row = this->entry[i].row;\n\t\t\te.column = this->entry[i].column;\n\t\t\te.value = this->entry[i].value;\n\t\t\tif(e.value)s.entry.push_back(e);\n\t\t}\n\t\tfor(int i=0; i < sparse2.entry.size(); i++){\n\t\t\tEntry e;\n\t\t\te.row = sparse2.entry[i].row;\n\t\t\te.column = sparse2.entry[i].column;\n\t\t\te.value = sparse2.entry[i].value;\n\t\t\tif(e.value)s.entry.push_back(e);\n\t\t}\n\t\tsort(s.entry.begin(),s.entry.end(),Comp1);\n\t\tsort(s.entry.begin(),s.entry.end(),Comp2);\n\t\treturn s;\n\t}\n};",
+            1591840361.9023113,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "8.4 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include<algorithm>\n#include<vector>\nusing namespace std;\nbool Comp1(const Entry &a,const Entry &b){\n\treturn a.row<b.row;\n}\nbool Comp2(const Entry &a,const Entry &b){\n\treturn (a.row==b.row&&a.column<b.column);\n}\nclass Sparse:public Matrix\n{\nprivate:\n\tint rows,columns;\n\tvector<Entry> entry;\npublic:\n\tSparse(int out_rows,int out_column){\n\t\trows = out_rows;\n\t\tcolumns = out_column;\n\t\tentry = vector<Entry>();\n\t}\n\tint size(int dimension) const{\n\t\tif(dimension==1) return rows;\n\t\tif(dimension==2) return columns;\n\t\telse return 0;\n\t}\n\tvoid set(int row, int column, double value){\n\t\tEntry e;\n\t\te.row = row;\n\t\te.column = column;\n\t\te.value = value;\n\t\tentry.push_back(e);\n\t}\n\tdouble get(int row, int column) const{\n\t\tfor (int i = 0; i < entry.size(); ++ i) {\n\t\t\tif(entry[i].row == row && entry[i].column == column) return entry[i].value;\n\t\t}\n\t}\n\tvoid print(){\n\t\tfor (int i = 0; i < entry.size(); ++ i) {\n\t\t\tcout << \"(\"<<entry[i].row<<\",\"<<entry[i].column<<\",\"<<entry[i].value<<\")\\n\";\n\t\t}\n\t}\nSparse operator * (Sparse & sparse2)\n\t{\n\t\tSparse s(rows, sparse2.columns);\n\n\t\tfor(int i=0; i < this->entry.size(); i++)\n\t\t{\n\t\t\tfor(int j = 0 ;j< sparse2.entry.size(); j++)\n\t\t\t{\n\t\t\t\tif(this->entry[i].column == sparse2.entry[j].row ){\n\t\t\t\t   \n\t\t\t\t   Entry e;\n\t\t\t\t\te.row =this->entry[i].row;\n\t\t\t\t\te.column =  sparse2.entry[j].column;\n\t\t\t\t\te.value = this->entry[i].value * sparse2.entry[j].value;\n\t\t\t\t\tint isIns = 0;\n\t\t\t\t\tint index = -1;\n\t\t\t\t\tfor(int k = 0 ; k < s.entry.size();k++){\n\t\t\t\t\t\tif(s.entry[k].row == e.row && s.entry[k].column == e.column){\n\t\t\t\t\t\t\tisIns = 1;\n\t\t\t\t\t\t\tindex = k;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\tif(e.value && isIns == 0)\n\t\t\t\t\ts.entry.push_back(e);\n\t\t\t\t\tif(e.value && isIns == 1){\n\t\t\t\t\t\ts.entry[index].value += e.value;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t\n\t\t\t}\n\t\t}\n\t\t\n\t\tsort(s.entry.begin(),s.entry.end(),Comp1);\n\t\tsort(s.entry.begin(),s.entry.end(),Comp2);\n\t\t\n\t\treturn s;\n\t}\n};",
+            1591841016.072304,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "8.5 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include<algorithm>\n#include<vector>\nusing namespace std;\nclass Point3D:public Point2D\n{\nprivate:\n\tdouble x;\n\tdouble y;\n\tdouble z;\npublic:\n\tPoint3D(double x = 0,double y = 0,double z = 0){\n\t\tthis->x = x;\n\t\tthis->y = y;\n\t\tthis->z = z;\n\t}\n\tdouble getZ() {\n\t\treturn z;\n\t}\n\tdouble getX() {\n\t\treturn x;\n\t}\n\t\n\tdouble getY() {\n\t\treturn y;\n\t}\n\tdouble distance(Point2D & point2){\n\t\tPoint3D & p = dynamic_cast<Point3D &>(point2);\n\t\tdouble dx = getX() - p.getX();\n\t\tdouble dy = getY()- p.getY();\n\t\tdouble dz = getZ() - p.getZ();\n\t\treturn sqrt(dx * dx + dy * dy + dz * dz);\n\t}\n};",
+            1591845227.9718876,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "8.6 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\n\nclass MyTensor: public Tensor<double> {\nprivate:\n vector<double> tensor;\npublic:\n MyTensor(vector<int> Sizes) : Tensor(Sizes) {\n  sizes = Sizes;\n  int size = sizes.size();\n  int length = 1;\n  for(int i = 0; i < size; i ++) {\n   length *= sizes[i];\n  }\n  tensor.resize(length);\n }\n virtual double & get(const vector<int> & indexes) {\n  int size = indexes.size();\n  int i = 0;\n  for(int j = 0; j < size; j ++) {\n   i += indexes[j] * sizes[j];\n  }\n  if(i >= tensor.size()) {\n   cout << \"Wrong index.\" << endl;\n   return tensor[0];\n  }\n  else return tensor[i];\n }\n};",
+            1592451358.5092285,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.1 (C++)",
+            "南麟星",
+            "#include <iostream>\nusing namespace std;\nclass Circle\n{\npublic:\n\tdouble rads;\n\tCircle(double rad){\n\t\trads = rad;\n\t}\n};\nbool operator < (Circle c1,Circle c2){\n\tif(c1.rads < c2.rads) return 1;\n\telse return 0;\n}\nbool operator <= (Circle c1,Circle c2){\n\tif(c1.rads <= c2.rads) return 1;\n\telse return 0;\n}\nbool operator == (Circle c1,Circle c2){\n\tif(c1.rads == c2.rads) return 1;\n\telse return 0;\n}\nbool operator != (Circle c1,Circle c2){\n\tif(c1.rads != c2.rads) return 1;\n\telse return 0;\n}\nbool operator > (Circle c1,Circle c2){\n\tif(c1.rads > c2.rads) return 1;\n\telse return 0;\n}\nbool operator >= (Circle c1,Circle c2){\n\tif(c1.rads >= c2.rads) return 1;\n\telse return 0;\n}",
+            1592989047.974132,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.2 (C++)",
+            "南麟星",
+            "#include <vector>\n#include <iostream>\nusing namespace std;\n\nclass I\n{\npublic:\n\tvector<int> size;\n\tI(int x1,int x2,int x3){\n\t\tsize.resize(3);\n\t\tsize[0] = x1;\n\t\tsize[1] = x2;\n\t\tsize[2] = x3;\n\t}\n\tI(int x1,int x2,int x3,int x4){\n\t\tsize.resize(4);\n\t\tsize[0] = x1;\n\t\tsize[1] = x2;\n\t\tsize[2] = x3;\n\t\tsize[3] = x4;\n\t}\n\toperator vector<int>() {\n\t\treturn size;\n\t}\n\t\n};",
+            1592990253.0123591,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.3 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nclass Complex\n{\npublic:\n\tdouble reals;\n\tdouble imags;\n\tComplex(double real,double imag){\n\t\treals = real;\n\t\timags = imag;\n\t}\n\tdouble real(){\n\t\treturn reals;\n\t}\n\tdouble imag(){\n\t\treturn imags;\n\t}\n\tComplex operator +=(Complex x){\n\t\tthis->reals += x.reals;\n\t\tthis->imags += x.imags;\n\t\treturn *this;\n\t}\n\tComplex operator -=(Complex c2){\n\t\treals -= c2.reals;\n\t\timags -= c2.imags;\n\t\treturn *this;\n\t}\n\tComplex operator *=(Complex c2){\n\t\tdouble tem = reals;\n\t\treals = reals * c2.reals - c2.imags*imags;\n\t\timags = tem * c2.imags+imags*c2.reals;\n\t\treturn *this;\n\t}\n\tComplex operator/= (Complex c2){\n\t\tdouble tem = reals;\n\t\treals = (reals * c2.reals+imags*c2.imags)/(c2.reals*c2.reals+c2.imags*c2.imags);\n\t\timags = (imags*c2.reals-tem*c2.imags)/(c2.reals*c2.reals+c2.imags*c2.imags);\n\t\treturn *this;\n\t}\n};\nComplex operator +(Complex c1,Complex c2){\n\tComplex c3(c1.reals + c2.reals,c1.imags + c2.imags);\n\treturn c3;\n}\nComplex operator -(Complex c1,Complex c2){\n\tComplex c3(c1.reals - c2.reals,c1.imags - c2.imags);\n\treturn c3;\n}\nComplex operator *(Complex c1,Complex c2){\n\tComplex c3(c1.reals * c2.reals - c2.imags*c1.imags,c1.reals * c2.imags+c1.imags*c2.reals);\n\treturn c3;\n}\nComplex operator / (Complex c1,Complex c2){\n\tComplex c3((c1.reals * c2.reals+c1.imags*c2.imags)/(c2.reals*c2.reals+c2.imags*c2.imags),(c1.imags*c2.reals-c1.reals*c2.imags)/(c2.reals*c2.reals+c2.imags*c2.imags));\n\treturn c3;\n}\nComplex operator +(double c1,Complex c2){\n\tComplex c3(c1 + c2.reals,c2.imags);\n\treturn c3;\n}\nComplex operator -(Complex c1,double c2){\n\tComplex c3(c1.reals - c2,c1.imags);\n\treturn c3;\n}\nbool operator == (Complex c1,Complex c2){\n\tif(c1.reals == c2.reals && c1.imags == c2.imags) return 1;\n\telse return 0;\n}\nbool operator != (Complex c1,Complex c2){\n\tif(c1.reals != c2.reals && c1.imags != c2.imags) return 1;\n\telse return 0;\n}",
+            1593048504.81411,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.4 (C++)",
+            "南麟星",
+            "#include <fstream>\nusing namespace std;\nclass Complex\n{\npublic:\n\tdouble reals;\n\tdouble imags;\n\tComplex(double real,double imag){\n\t\treals = real;\n\t\timags = imag;\n\t}\n\tComplex(){\n\t\treals = 0;\n\t\timags = 0;\n\t}\n};\nostream & operator << (ostream & out,const Complex & m){\n\tout << m.reals<<\" + \"<<m.imags<<\" i\";\n\treturn out;\n}\nistream & operator >>(istream & in,Complex & m){\n\tin >> m.reals>>m.imags;\n\treturn in;\n}\nComplex operator +(Complex c1,Complex c2){\n\tComplex c3(c1.reals + c2.reals,c1.imags + c2.imags);\n\treturn c3;\n}\nComplex operator -(Complex c1,Complex c2){\n\tComplex c3(c1.reals - c2.reals,c1.imags - c2.imags);\n\treturn c3;\n}",
+            1593051264.3060865,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.5 (C++)",
+            "南麟星",
+            "#include <fstream>\nusing namespace std;\nclass Complex\n{\npublic:\n\tdouble reals;\n\tdouble imags;\n\tComplex(double real,double imag){\n\t\treals = real;\n\t\timags = imag;\n\t}\n\tComplex(){\n\t\treals = 0;\n\t\timags = 0;\n\t}\n\tComplex & operator ++(){\n\t\treals += 1;\n\t\treturn *this;\n\t}\n\tComplex operator ++(int){\n\t\tComplex m(*this);\n\t\treals += 1;\n\t\treturn m;\n\t}\n\toperator double(){\n\t\treturn reals;\n\t}\n};\nostream & operator << (ostream & out,const Complex & m){\n\tout << m.reals<<\" + \"<<m.imags<<\" i\";\n\treturn out;\n}\nistream & operator >>(istream & in,Complex & m){\n\tin >> m.reals>>m.imags;\n\treturn in;\n}\n",
+            1593052398.0980997,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.6 (C++)",
+            "南麟星",
+            "class Tensor\n{\npublic:\n\tvector<double > size;\n\tTensor(int x1,int x2,int x3){\n\t\tsize.resize(x1*x2*x3);\n\t}\n\tTensor(int x1,int x2,int x3,int x4){\n\t\tsize.resize(x1*x2*x3*x4);\n\t}\n\tdouble & operator ()(int r,int c,int x){\n\t\treturn size[r*c*x];\n\t}\n\tconst double & operator ()(int r,int c,int x)const{\n\t\treturn size[r*c*x];\n\t}\n\tdouble & operator ()(int r,int c,int x,int y){\n\t\treturn size[r*c*x*y];\n\t}\n\tconst double & operator ()(int r,int c,int x,int y)const{\n\t\treturn size[r*c*x*y];\n\t}\n};",
+            1593053959.7421703,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "9.7 (C++)",
+            "南麟星",
+            "class Tensor\n{\npublic:\n\tint dim;\n\tvector<int> size;\n\tvector<double> value;\n\tTensor(){\n\t\tdim = 0;\n\t\tsize.resize(10);\n\t\tvalue.resize(1000);\n\t}\n};\nostream & operator << (ostream & out,const Tensor & m){\n\tout << m.dim<<endl;\n\tint tep = 0;\n\tfor (int i = 0; i < m.dim; ++ i) {\n\t\tout<<m.size[i]<<\" \";\n\t}\n\tout<<endl;\n\tout<<endl;\n\tif(m.dim == 3){\n\t\tint tem = 0,y = 1;\n\t\tfor (int x = 0; x < m.size[0]; ++ x) {\n\t\t\tfor (int i = tem; i < m.size[1]*y; ++ i) {\n\t\t\t\tfor (int j = 0; j < m.size[2]; ++ j){\n\t\t\t\t\tout<<m.value[i*m.size[2] + j]<<\" \";\n\t\t\t\t} \n\t\t\t\tout<<endl;\n\t\t\t}\n\t\t\tout<<endl;\n\t\t\ttem = y * m.size[1];\n\t\t\ty++;\n\t\t}\n\t}\n\tif(m.dim == 4){\n\t\tint tmp = 0,y = 1;\n\t\tfor (int s = 0; s < m.size[0]; ++ s) {\n\t\t\tfor (int x = 0; x < m.size[1]; ++ x) {\n\t\t\t\tfor (int i = tep; i < m.size[2]*y; ++ i) {\n\t\t\t\t\tfor (int j = 0; j < m.size[3]; ++ j){\n\t\t\t\t\t\tout<<m.value[i*m.size[3] + j]<<\" \";\n\t\t\t\t\t} \n\t\t\t\t\tout<<endl;\n\t\t\t\t}\n\t\t\t\tout<<endl;\n\t\t\t\ttep = y * m.size[2];\n\t\t\t\ty++;\n\t\t\t}\n\t\t}\n\t}\n\treturn out;\n}\nistream & operator >>(istream & in,Tensor & m){\n\tin >> m.dim;\n\tint tep = 1;\n\tfor (int i = 0; i < m.dim; ++ i) {\n\t\tin>>m.size[i];\n\t}\n\tfor (int j = 0; j < m.dim; ++ j) {\n\t\ttep *= m.size[j];\n\t}\n\tfor (int k = 0; k < tep; ++ k) {\n\t\tin>>m.value[k];\n\t}\n\treturn in;\n}",
+            1593068235.1881425,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "10.1 (C++)",
+            "南麟星",
+            "#include<stdexcept>\n#include <vector>\n#include <iostream>\nusing namespace std;\n\nclass MatrixSizesDoNotMatchException {};\n\n\tdouble Matrix :: get(int row,int column) const{\n\t\tif(row > rows || column > columns){\n  \t\t\tthrow out_of_range(\" \");\n\t\t}\n \t\treturn elements[(row-1) * columns + column - 1];\n\t}\n\tvoid Matrix :: set(int row, int column, double value){\n \t\tif(row > size(1) || column > size(2)){\n  \t\t\tthrow out_of_range(\" \");\n \t\t}\n \t\telements[(row-1) * size(2) + column - 1] = value;\n\t}\n \n\tMatrix Matrix :: operator + (const Matrix & matrix2) const {\n\t\tif(rows != matrix2.rows || columns != matrix2.columns){\n  \t\t\tthrow MatrixSizesDoNotMatchException();\n\t\t}\n \t\tMatrix m(rows,columns);\n \t\tfor(int i=0;i < m.rows * m.columns; ++i){\n  \t\t\tm.elements[i] = elements[i] + matrix2.elements[i];\n \t\t}\n \t\treturn m;\n\t}",
+            1593653928.394134,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "10.2 (C++)",
+            "南麟星",
+            "\tcatch(NonPositiveValueException & NP) {\n\t\tcout << \"caught: NonPositiveValueException\" << endl;\n\t}\n\tcatch(out_of_range & ex) {\n\t\tcout << \"caught: out_of_range\" << endl;\n\t}",
+            1593655893.2021952,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "15.1 (C++)",
+            "南麟星",
+            "#include <vector>\n#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Table {\nprivate:\n vector<string> header;\n vector<vector<string> > rows;\n int number_rows;\n\npublic:\n Table(): number_rows(0) {}\n void addCol(string s) {\n  header.push_back(s);\n }\n vector<string> & operator [] (const int r) {\n  if(r == number_rows) {\n   number_rows ++;\n   rows.push_back(vector<string>());\n   return rows[r];\n  }\n  else return rows[number_rows - 1];\n }\n string json() const {\n  string out;\n  out += \"{\\n\";\n  out += \"\\theaders: [\";\n  for(int i = 0; i < header.size(); i ++) {\n   out = out + \"'\" + header[i] + \"',\";\n  }\n  out += \"],\\n\";\n  out += \"\\trows: [\\n\";\n  for(int i = 0; i < number_rows; i ++) {\n   out += \"\\t\\t[\";\n   for(int j = 0; j < rows[i].size(); j ++) {\n    out = out + \"'\" + rows[i][j] + \"',\";\n   }\n   out += \"],\\n\";\n  }\n  out += \"\\t],\\n\";\n  out += \"}\\n\";\n  return out;\n }\n \n};",
+            1594259111.0221207,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "2020-07-09 LAB",
+            "南麟星",
+            "#include <vector>\n#include <iostream>\nusing namespace std;\n\nclass Integer {\nprivate:\n\tstatic Integer * integers[20];\n\tstatic int size;\n\tint value;\npublic:\n\tInteger(): value(0) {\n\t\tintegers[size ++] = this;\n\t}\n\tInteger(int v): value(v) {\n\t\tintegers[size ++] = this;\n\t}\n\tvoid increase_one(int v) {\n\t\tvalue += v;\n\t}\n\tint & get_value() {\n\t\treturn value;\n\t}\n\tconst int & get_value() const {\n\t\treturn value;\n\t}\n\tstatic void increase_all(Integer v) {\n\t\tfor(int i = 0; i < size; i ++) {\n\t\t\tintegers[i] -> increase_one(v.get_value());\n\t\t}\n\t}\n\t\n};\n\nInteger * Integer::integers[20];\nint Integer::size = 0;\n\nostream & operator << (ostream & out, const Integer & i) {\n\tout << i.get_value();\n\treturn out;\n}\n\nistream & operator >> (istream & in, Integer & i) {\n\tin >> i.get_value();\n\treturn in;\n}\n",
+            1594263626.7879775,
+            100,
+            "# 答案正确"
+        ],
+        [
+            "A.3 (C++)",
+            "南麟星",
+            "#include <iostream>\n#include <fstream>\n#include <vector>\n#include <string>\n#include <stdexcept>\nusing namespace std;\n\n#define I(i,n) for (size_t i = 0; i < n; ++ i)\n\nclass NoSuchKeyException {};\n\nsize_t circular_shift(size_t bits, int shift_bits) {\n\tconst int num_bits = 8 * sizeof(size_t);\n\tshift_bits = shift_bits % num_bits;\n\treturn bits << shift_bits | bits >> (num_bits - shift_bits);\n}\n\nsize_t hash_function(const string & key) {\n\tsize_t code = 0;\n\tI(i, key.size())\n\t\tcode ^= circular_shift(key[i], i * 5);\n\treturn code;\n}\nsize_t hash_function(const int& key)\n{\n    size_t code=key;\n    for (int i = 0; i < 20; ++i)\n    {\n        code=((code*i+7)*code)^(code+3);\n    }\n    return code;\n}\n\ntemplate <typename V>\nclass HT\n{\n\tclass Tuple\n\t{\n\tpublic:\n\t\tint key;\n\t\tV val;\n\t\tbool in_use;\n\n\t\tTuple() : in_use(false) {}\n\t};\n\n\tvector<Tuple> tuples;\n\tsize_t _size;\n\n\tsize_t canonical_index(const int& key) const {\n\t\tsize_t hash_code = hash_function(key); // needs hash_function(K)\n\t\treturn hash_code % tuples.size();\n\t}\n\n\t// the returned tuple is either empty or with the same key\n\tsize_t indexOfKey(const int& key) const {\n\t\tsize_t index = canonical_index(key);\n\t\twhile (true) { // will enter a dead loop if there is not empty tuple\n\t\t\tif (! tuples[index].in_use) return index;\n\t\t\tif (tuples[index].key == key) return index;\n\t\t\tindex = (index + 1) % tuples.size();\n\t\t}\n\t}\n\npublic:\n\tHT() : _size(0) {\n\t\ttuples.resize(2);\n\t}\n\n\tbool containsKey(const int& key) const {\n\t\tsize_t index = indexOfKey(key);\n\t\treturn tuples[index].in_use;\n\t}\n\n\tconst V & operator [] (const int& key) const {\n\t\tsize_t index = indexOfKey(key);\n\t\tif (! tuples[index].in_use) \n\t\t\tthrow NoSuchKeyException();\n\t\treturn tuples[index].val;\n\t}\n\n\tV & operator [] (int& key) {\n\t\tsize_t index = indexOfKey(key);\n\t\tif (! tuples[index].in_use) \n\t\t\tthrow NoSuchKeyException();\n\t\treturn tuples[index].val;\n\t}\n\n\tvoid put(const int & key, const V & val) {\n\t\tsize_t index = indexOfKey(key);\n\t\ttuples[index].key = key;\n\t\ttuples[index].val = val;\n\t\tif (tuples[index].in_use) return;\n\t\ttuples[index].in_use = true;\n\t\t++ _size;\n\t\t// make sure empty > size / 2\n\t\tif (2 * _size > tuples.size())\n\t\t\t_double_tuples();\n\t}\n\n\tvoid _double_tuples() {\n\t\tvector<Tuple> non_empty_tuples;\n\t\tI(i, tuples.size())\n\t\t\tif (tuples[i].in_use)\n\t\t\t\tnon_empty_tuples.push_back(tuples[i]);\n\t\tclear();\n\t\ttuples.resize(tuples.size() * 2);\n\t\tI(i, non_empty_tuples.size())\n\t\t\tput(non_empty_tuples[i].key, non_empty_tuples[i].val);\n\t}\n\n\tstatic bool _between(size_t hole, size_t canonical, size_t tuple_index) {\n\t\tif (hole < tuple_index)\n\t\t\treturn canonical > hole && canonical <= tuple_index;\n\t\telse\n\t\t\treturn canonical > hole || canonical <= tuple_index;\n\t}\n\n\tvoid remove(const int & key) { \n\t\tsize_t index = indexOfKey(key);\n\t\tif (! tuples[index].in_use) \n\t\t\tthrow NoSuchKeyException();\n\t\ttuples[index].in_use = false;\n\t\t-- _size;\n\t\t// if there is a hole between a tuple and its canonical position\n\t\t// move the tuple to the hole\n\t\tsize_t hole = index;\n\t\tsize_t tuple_index = hole;\n\t\twhile (true) {\n\t\t\ttuple_index = (tuple_index + 1) % tuples.size();\n\t\t\tif (! tuples[tuple_index].in_use) return;\n\t\t\tsize_t canonical = canonical_index(tuples[tuple_index].key);\n\t\t\tif (_between(hole, canonical, tuple_index)) continue;\n\t\t\ttuples[hole] = tuples[tuple_index];\n\t\t\thole = tuple_index;\n\t\t\ttuples[hole].in_use = false;\n\t\t}\n\t}\n\n\tsize_t size() const { return _size; }\n\n\tvoid clear() {\n\t\tI(i, tuples.size())\n\t\t\ttuples[i].in_use = false;\n\t\t_size = 0;\n\t}\n    \n    vector<int> getKeys()\n    {\n        vector<int> tmp;\n        for (int i=0; i<tuples.size();++i)\n        {\n            if(tuples[i].in_use)\n                tmp.push_back(tuples[i].key);\n        }\n        return tmp;\n    }   \t\n};\n",
+            1595472032.401038,
+            100,
+            "# 答案正确"
+        ]
+    ],
+    "table_name": "答案"
+}

@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1601049022.178456,
+    "field_names": [
+        "page_id",
+        "show",
+        "ui_json"
+    ],
+    "field_types": [
+        "text",
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "登陆",
+            "登录前",
+            "{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"登陆卡片\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_login_card_py\",\"files\":[\"ui/login_card.py\"],\"data\":[],\"events\":[],\"class\":{\"颜色\":[\"primary\",\"secondary\",\"success\",\"danger\",\"warning\",\"info\",\"light\",\"dark\"]},\"attr\":{\"卡片文字\":[],\"卡片题目\":[],\"按钮文字\":[]},\"style\":{\"margin\":[],\"width\":[]},\"from\":\"ui\",\"ref\":[]},\"init\":\"ui_login_card_py\",\"files\":[\"ui/login_card.py\"],\"data\":{},\"ref\":{},\"events\":{},\"class\":\"primary\",\"attr\":{\"卡片文字\":\"该网页需要登陆\",\"卡片题目\":\"请登陆\",\"按钮文字\":\"前往ME登陆\"},\"style\":{\"margin\":\"10px\",\"width\":\"180px\"}}}"
+        ],
+        [
+            "程序",
+            "登录后",
+            "{\"type\":\"BorderLayout\",\"children\":[{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"选择列表\",\"tag\":\"\",\"text\":\"\",\"init\":\"ui_select_panel_py\",\"files\":[\"ui/ui_select_panel.py\"],\"data\":[\"data\",\"selected\",\"text_data\"],\"events\":[\"change_data\",\"change_selected\"],\"class\":{},\"attr\":{\"expandable\":[\"false\",\"true\"],\"item_name\":[],\"key_column\":[],\"selected_cols\":[],\"text_data_col\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"],\"text_data_init\":[],\"width\":[]},\"style\":{},\"ref\":[]},\"init\":\"ui_select_panel_py\",\"files\":[\"ui/ui_select_panel.py\"],\"data\":{\"data\":\"@pro_files\",\"selected\":\"$变量1\"},\"ref\":{},\"events\":{\"change_data\":\"@同步\"},\"attr\":{\"expandable\":\"true\",\"item_name\":\"程序\",\"text_data_col\":\"0\",\"width\":\"150px\"},\"style\":{}}},{\"type\":\"Custom_Component\",\"config\":{\"__meta__\":{\"name\":\"ProCode\",\"tag\":\"\",\"text\":\"\",\"init\":\"pro_code_py\",\"files\":[\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/anyword-hint.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/show-hint.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/show-hint.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/javascript/javascript.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/python/python.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/edit/closebrackets.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/edit/matchbrackets.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/display/fullscreen.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/display/fullscreen.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/theme/blackboard.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/keymap/sublime.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/search/searchcursor.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/search/search.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/css/css.min.js\",\"pro/pro_code.css\",\"pro/pro_code.py\"],\"data\":[\"data\"],\"ref\":[],\"events\":[\"change\"],\"class\":{},\"attr\":{\"editable\":[\"True\",\"False\"],\"save_button\":[\"True\",\"False\"],\"title\":[]},\"style\":{\"margin\":[\"0px\",\"5px\",\"10px\",\"20px\"],\"width\":[]},\"from\":\"cpp\"},\"init\":\"pro_code_py\",\"files\":[\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/lib/codemirror.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/anyword-hint.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/show-hint.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/hint/show-hint.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/javascript/javascript.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/python/python.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/edit/closebrackets.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/edit/matchbrackets.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/display/fullscreen.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/display/fullscreen.min.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/theme/blackboard.min.css\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/keymap/sublime.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/search/searchcursor.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/addon/search/search.js\",\"https://cdn.jsdelivr.net/npm/codemirror@5.41.0/mode/css/css.min.js\",\"pro/pro_code.css\",\"pro/pro_code.py\"],\"data\":{\"data\":\"$变量1\"},\"ref\":{},\"events\":{},\"attr\":{\"editable\":\"True\",\"save_button\":\"False\"},\"style\":{\"margin\":\"5px\"}}},{\"type\":\"UI_Placehoder\"}],\"config\":{\"__meta__\":{\"name\":\"左右边缘布局\",\"tag\":\"#BorderLayout\",\"text\":\"\",\"init\":\"\",\"files\":[],\"data\":[],\"vars\":[],\"events\":[],\"class\":{},\"attr\":{},\"style\":{\"margin\":[],\"width\":[]}},\"tag\":\"#BorderLayout\",\"files\":[],\"data\":{},\"ref\":{},\"events\":{},\"attr\":{},\"style\":{}}}"
+        ]
+    ],
+    "table_name": "page"
+}

@@ -1,0 +1,28 @@
+{
+    "__update_time__": 1590715848.388423,
+    "field_names": [
+        "first_name",
+        "last_name"
+    ],
+    "field_types": [
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [
+        [
+            "John",
+            "Smith"
+        ],
+        [
+            "Juliette",
+            "Brewer"
+        ],
+        [
+            "Raphael",
+            "Katinga"
+        ]
+    ],
+    "table_name": "result"
+}

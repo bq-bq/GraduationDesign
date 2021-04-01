@@ -1,0 +1,15 @@
+{
+    "__update_time__": 1589529521.9479911,
+    "field_names": [
+        "日期",
+        "日记"
+    ],
+    "field_types": [
+        "text",
+        "text"
+    ],
+    "foreign_keys": {},
+    "primary_keys": [],
+    "rows": [],
+    "table_name": "日记"
+}
